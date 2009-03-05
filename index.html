@@ -6,81 +6,21 @@
 	<title>JPoz</title>
 	<meta name="author" content="James Pozdena">
 	<style type="text/css" media="screen">
-	* {
+	 * {
      font-family: "Helvetica Neue", Arial, sans-serif;
      color: #1C1C1C;
    }
-   @-webkit-keyframes o1 {
-    0% {
-      color: #E2BF03;
-    }
-    100% {
-      opacity: 1;
-    }
-   }
-   @-webkit-keyframes o2 {
-    0% {opacity: 1;}
-    10% {
-      color: #E2BF03;
-    }
-    100% {opacity: 1;}
-   }
-   @-webkit-keyframes o3 {
-    0% {opacity: 1;}
-    20% {
-      color: #E2BF03;
-    }
-    100% {opacity: 1;}
-   }
-   @-webkit-keyframes o4 {
-    0% {opacity: 1;}
-    30% {
-      color: #E2BF03;
-    }
-    100% {opacity: 1;}
-   }
    .name {
+     line-height: .70;
+     height: 86px;
+     font-style: italic;
      text-align: left;
      font-size: 84px;
      font-weight: bold;
-     text-align: right;
      color: #141414;
    }
-   .o1 {
-     -webkit-animation-name: o1;
-     -webkit-animation-duration: 4s;
-     -webkit-animation-iteration-count: infinite;
-     -webkit-animation-timing-function: ease-in-out;
-   }
-   .o2 {
-     color: #BC0004 !important;
-     
-     -webkit-animation-name: o2;
-     -webkit-animation-duration: 4s;
-     -webkit-animation-iteration-count: infinite;
-     -webkit-animation-timing-function: ease-in-out;
-   }
-   .o3 {
-     color: #BC0004 !important;
-     
-     -webkit-animation-name: o3;
-     -webkit-animation-duration: 4s;
-     -webkit-animation-iteration-count: infinite;
-     -webkit-animation-timing-function: ease-in-out;
-   }
-   .o4 {
-     color: #BC0004 !important;
-     -webkit-animation-name: o4;
-     -webkit-animation-duration: 4s;
-     -webkit-animation-iteration-count: infinite;
-     -webkit-animation-timing-function: ease-in-out;
-   }
-   .o5 {
-     color: #BC0004 !important;
-   }
-   #pozdena {
-     color: #BC0004 !important;
-     font-style: italic;
+   .pozdena {
+     color: #BC0004;
    }
    .pronuc {
      float: right;
@@ -102,39 +42,67 @@
      text-align: justify;
      font-weight: bold;
      font-size: 34px;
+   }
+   #links {
+     text-align: right;
      border-bottom: 3px solid #3C3C3C;
      padding-bottom: 10px;
    }
+   #links a {
+     padding: 2px 3px 3px 3px;
+   }
    #main {
-     width: 610px;
-     text-align: right;
-     padding: 10px;
+     width: 615px;
+     text-align: left;
      margin: 100px auto;
    }
    .even {
-     color: #969696 !important;
+     color: #969696;
    }
    .odd {
-     color: #545454 !important;
+     color: #545454;
+   }
+   a {
+     text-decoration: none;
+   }
+   a:hover {
+     background: #BC0004;
+     color: #FFF;
+     text-decoration: none;
+   }
+   .github {
+     float: right;
+   }
+   .github img {
+     margin-top: 4px;
+   }
+   .github:hover {
+     background: none;
    }
 	</style>
 </head>
 <body>
   <div id='main'>
     <div class='name'>
-      <span class='pronuc'>(jāmz pauz-den-ā)<span class='extra'>aka JPoz</span></span>
-      <span class='o1'>J<span>ames<span id='pozdena'><span class='o2'>P<span><span class='o3'>o<span><span class='o4'>z<span><span class ='o5'>dena</span></span><span style="clear: both;"></span></div>
+      <span class='pronuc'>(jāmz pauz-den-ā)</span>James<span class='pozdena'>Pozdena</span>
+    </div>
     <div class='definition'>
       <span class='odd'>WEB DEVELOPER</span>
       <span class='even'>RUBYIST</span>
       <span class='odd'>RAILS CHAMPION</span>
-      <span class='even'>MERB WARRIOR</span>
-      <span class='odd'>GIT ADDICT</span>
+      <a href='http://www.merbivore.com/' class='even'>MERB WARRIOR</a>
+      <a href='http://www.github.com/jpoz/' class='odd'>GIT ADDICT</a>
       <span class='even'>COCOA TINKERER</span>
       <span class='odd'>JQUERY PROPONENT</span>
-      <span class='even'>PORTLAND NATIVE</span>
+      <a href='http://blog.jpoz.net/' class='even'>RANDOM BLOGGER</a>
+      <span class='odd'>PORTLAND NATIVE</span>
     </div>
-    <div class='info'><a href='mailto:jpoz@jpoz.net'>contact</a></div>
+    <div id="links">
+      <a href='http://revelationglobal.com/'>work</a>
+      <a href='http://www.github.com/jpoz/'>code</a>
+      <a href='http://blog.jpoz.net/'>blog</a>
+    </div>
+    <div class='info'><a href='mailto:jpoz@jpoz.net'>contact</a><a href='http://www.github.com/jpoz/' class='github'><img src='git.jpg' /></a></div>
   </div>
 </body>
 </html>
