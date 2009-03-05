@@ -6,19 +6,81 @@
 	<title>JPoz</title>
 	<meta name="author" content="James Pozdena">
 	<style type="text/css" media="screen">
-	 * {
+	* {
      font-family: "Helvetica Neue", Arial, sans-serif;
      color: #1C1C1C;
    }
+   @-webkit-keyframes o1 {
+    0% {
+      color: #E2BF03;
+    }
+    100% {
+      opacity: 1;
+    }
+   }
+   @-webkit-keyframes o2 {
+    0% {opacity: 1;}
+    10% {
+      color: #E2BF03;
+    }
+    100% {opacity: 1;}
+   }
+   @-webkit-keyframes o3 {
+    0% {opacity: 1;}
+    20% {
+      color: #E2BF03;
+    }
+    100% {opacity: 1;}
+   }
+   @-webkit-keyframes o4 {
+    0% {opacity: 1;}
+    30% {
+      color: #E2BF03;
+    }
+    100% {opacity: 1;}
+   }
    .name {
-     font-style: italic;
      text-align: left;
      font-size: 84px;
      font-weight: bold;
+     text-align: right;
      color: #141414;
    }
-   .pozdena {
-     color: #BC0004;
+   .o1 {
+     -webkit-animation-name: o1;
+     -webkit-animation-duration: 4s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: ease-in-out;
+   }
+   .o2 {
+     color: #BC0004 !important;
+     
+     -webkit-animation-name: o2;
+     -webkit-animation-duration: 4s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: ease-in-out;
+   }
+   .o3 {
+     color: #BC0004 !important;
+     
+     -webkit-animation-name: o3;
+     -webkit-animation-duration: 4s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: ease-in-out;
+   }
+   .o4 {
+     color: #BC0004 !important;
+     -webkit-animation-name: o4;
+     -webkit-animation-duration: 4s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: ease-in-out;
+   }
+   .o5 {
+     color: #BC0004 !important;
+   }
+   #pozdena {
+     color: #BC0004 !important;
+     font-style: italic;
    }
    .pronuc {
      float: right;
@@ -45,7 +107,8 @@
    }
    #main {
      width: 610px;
-     text-align: left;
+     text-align: right;
+     padding: 10px;
      margin: 100px auto;
    }
    .even {
@@ -60,7 +123,7 @@
   <div id='main'>
     <div class='name'>
       <span class='pronuc'>(jāmz pauz-den-ā)<span class='extra'>aka JPoz</span></span>
-      James<span class='pozdena'>Pozdena</span><span style="clear: both;"></span></div>
+      <span class='o1'>J<span>ames<span id='pozdena'><span class='o2'>P<span><span class='o3'>o<span><span class='o4'>z<span><span class ='o5'>dena</span></span><span style="clear: both;"></span></div>
     <div class='definition'>
       <span class='odd'>WEB DEVELOPER</span>
       <span class='even'>RUBYIST</span>
