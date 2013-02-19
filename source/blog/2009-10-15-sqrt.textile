@@ -1,0 +1,10 @@
+---
+layout: post
+title: Ruby square root
+---
+p. Today whoahbot "link":http://www.whoahbot.com/ challenged us to make our own square root function without using the standard lib. This is what Max and I came up with:
+
+Code!
+
+<script src="http://gist.github.com/211290.js"></script>
+

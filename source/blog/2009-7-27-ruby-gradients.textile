@@ -1,0 +1,35 @@
+---
+layout: post
+title: Ruby Gradient Generator
+---
+p. In the last couple of weeks I've been playing around with two things: "Heroku":http://heroku.com/ and "SeattleRb's PNG gem":http://seattlerb.rubyforge.org/png/.
+
+p. "Heroku":http://heroku.com/ is fun, easy to use and really really powerful (if you got the cash to pay for it). I've got 4 apps on Heroku now and together they took less effort to deploy then one rails app with Dreamhost (by alot!). There are tons of good blog posts about Heroku if you don't know what it is ( "link":http://deadprogrammersociety.blogspot.com/2009/04/heroku-why-havent-i-been-using-you-till.html, "link":http://blog.ngriffith.com/2008/11/getting-started-with-heroku-or-ruby-on-rails-in-the-cloud/ ).
+
+p. "SeattleRb's PNG gem":http://seattlerb.rubyforge.org/png/ is a Ruby only png creator. They just released v1.2.0 and if you haven't checked it out you should. I think it's a great project. I don't want to have to install ImageMagick to do some simple stuff with images. So I thought, why not combine the two and make a little Ruby gradient generator!
+
+p. It turned out to be even easier than I thought, thanks to both the PNG gem and Heroku.
+
+h2. Step 1: Make a PNG
+
+p. SeattleRb's PNG gem is pretty basic right now. You can't even draw any shapes, your only tools are a line and point. But that's okay because that's all we need. Below is the class I came up with to create nice smooth gradients. It takes a height, width, and two colors. Iterates over the height and width while slowly blending the two colors together. It has two output options: save to a file and "to_blob". We'll be using to_blob since you can't save any files to Heroku.
+
+png_gradient.rb
+<script src="http://gist.github.com/156966.js"></script>
+
+h2. Step 2: Make a web app
+
+p. Amazingly step one was the hard part. Setting up the web app is pretty easy. I wrote mine to respond to the API of (:height)/(:width)/(:color1)/(:color2)/output.png. All it took was one route with Sinatra, being sure to set the 'Content-Type' header to 'image/png'. I also made mine respond to an html request so I could have a slick ajax action with a link to download the png.
+
+main.rb
+<script src="http://gist.github.com/157538.js"></script>
+
+h2. Step 3: Enjoy
+
+p. Heroku made deployment a breeze. I even add some custom domains. You can checkout the project at:
+
+p. "http://gradient.jpoz.net":http://gradient.jpoz.net 
+
+p. Or checkout the source at:
+
+p. "http://github.com/jpoz/gradient/tree/master":http://github.com/jpoz/gradient/tree/master

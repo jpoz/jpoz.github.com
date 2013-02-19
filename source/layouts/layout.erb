@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
+
+
+    <title><%= data.page.title || "JPoz.net" %></title>
+
+    <link href='http://fonts.googleapis.com/css?family=Graduate|Raleway:100,400,600' rel='stylesheet' type='text/css'>
+
+    <script>
+      window.addEventListener("load",function() {
+        setTimeout(function(){
+          window.scrollTo(0, 0);
+        }, 0);
+      });
+    </script>
+
+    <%= stylesheet_link_tag "all" %>
+    <%= javascript_include_tag  "all" %>
+  </head>
+
+  <body id='body' class="<%= page_classes %>">
+
+    <div id='nav_back'></div>
+
+    <div id='sections'>
+      <section id='nav'>
+        <nav>
+          <h1 id='jpoz'>JPoz</h1>
+            <ul>
+              <a href="/"><li class='selected' >Me</li></a>
+              <a href="/resume"><li>Resume</li></a>
+              <a href="/contact"><li>Contact</li></a>
+              <a href="https://www.github.com/jpoz" target='_blank'><li>Github</li></a>
+            </ul>
+
+          <h3>Blog</h3>
+          <ul>
+            <% blog.articles.each do |article| %>
+              <a href="<%= article.url %>"><li><%= article.title %></li></a>
+            <% end %>
+          </ul>
+        </nav>
+      </section>
+
+      <section actlike='PageContent' id='content'>
+
+        <header>
+          <a actlike='NavButton' class='btn' href='#'>≡</a>
+          <span id='title'><%= data.page.title || "JPoz.net" %></span>
+        </header>
+
+        <div id='page_content'>
+          <%= yield %>
+        </div>
+      </section>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+---
+layout: post
+title: Hash.to_url_params (nested)
+---
+
+Google couldn’t find me a good one. So I made this one:
+
+{% highlight ruby %}
+  class Hash  
+    def to_url_params  
+      elements = []  
+      self.each_pair do |key, value|  
+        elements << param_for(key, value).flatten  
+      end  
+      elements.join('&')  
+    end  
+    private  
+    def param_for(key, value, parent = nil)  
+      if value.is_a?(Hash)  
+        temp = []  
+        value.each_pair do |key2, value2|  
+          temp << param_for(key2, value2, parent ? parent + "[#{key}]" : key.to_s)  
+        end  
+        return temp  
+      else  
+        return ["#{parent ? parent + "[#{key}]" : key.to_s}=#{value}"]  
+      end  
+    end  
+  end
+{% endhighlight %}
+
+Will transform:
+
+{% highlight ruby %}
+  {:person =>{:name => 'Bobby', :age=>'28'}}
+{% endhighlight %}
+
+Into:
+
+{% highlight ruby %}
+  person[name]=Bobby&person[age]=28
+{% endhighlight %}

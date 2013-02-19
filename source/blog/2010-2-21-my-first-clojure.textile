@@ -1,0 +1,12 @@
+---
+layout: post
+title: My first Clojure
+---
+
+p. My first attempt at Clojure went pretty well. Not really sure if it's "good" Clojure, but I'm very happy it works. :-)
+
+p. The first problem I set out for myself with Clojure was to calculate a simple liner regression (OLS). I wanted to find the relationship between 2 sets of numbers. The output being a y = mx+b equation. Clojure needed to calculate m (the beta) and b (the y intercept). Below is what I came up with. Two equations: olsbeta and yintercept with 2 utility functions sum and multsum.
+
+<script src="http://gist.github.com/310655.js?file=gistfile1.clj"></script>
+
+p. Which returns: <code>y = 61.272186542107434*x + -39.06195591883866</code>

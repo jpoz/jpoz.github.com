@@ -1,0 +1,46 @@
+---
+layout: post
+title: Apple Push Notification Service Gem
+---
+
+p. Woo hoo I've written my first gem! Over the last couple of months I've been playing around with Apple's new <strong>A</strong>pple <strong>P</strong>ush <strong>N</strong>otification <strong>S</strong>ervice (*APNS*). I've written up a little gem to incapsulate the main functionality of APNS. I named it APNS for obvious reasons and put up the "code":http://github.com/jpoz/APNS/ on github. It's easy to install using github's gem server:
+
+h2. Installation:
+
+p(. @gem sources -a http://gems.github.com@
+ @sudo gem install jpoz-apns@
+
+
+h2. Setup:
+
+p. All the basic setup is done on the class. APNS has 4 configuration variables: host, pem, pass and port. For development you probably only have to set 1, maybe 2 of these variables to get going. APNS.host's default is Apple's development server and the port is the same across development and production. Here's an example to setup for a *production* environment. For development you don't need to set host.
+
+<script src="http://gist.github.com/145180.js"></script>
+
+h2. Example:
+
+p. Notifications can be set two ways: just text, or as a hash of attributes.
+
+<script src="http://gist.github.com/145181.js"></script>
+
+h2. Send other info along with aps
+
+You can send other application specific information as well.
+
+<script src="http://gist.github.com/145182.js"></script>
+
+This will add the other hash to the same level as the aps hash:
+
+<script src="http://gist.github.com/145183.js"></script>
+
+h2. Getting your iPhone's device token
+
+After you setup push notification for your application with Apple. You need to ask Apple for you application specific device token.
+
+ApplicationAppDelegate.m
+<script src="http://gist.github.com/145185.js"></script>
+    
+
+
+
+

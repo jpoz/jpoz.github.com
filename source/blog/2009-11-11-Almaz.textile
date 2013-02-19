@@ -1,0 +1,46 @@
+---
+layout: post
+title: Almaz - A rack middleware that logs to Redis
+---
+
+h1. Almaz
+
+p. You know what really grinds my gears: looking through log files. Especially when you have 3 slices running all having their own separate logs! Grrrrr. Introducing Almaz!
+
+p. "http://github.com/jpoz/almaz":http://github.com/jpoz/almaz
+
+p. An exact copy of the 1960s Soviet Union spy satellite, written in Ruby! Almaz has two parts: Almaz::Capture and Almaz::View.
+
+Almaz::Capture:
+
+# Counts all requests going to your server.
+# Records the URL.
+# Records the params.
+
+Almaz::View:
+
+# Show you the statistics.
+# Provides basic authentication.
+
+p. All the data is stored in Redis! And all the code for Almaz is in one file (including the view to show the statistics). 
+
+h2. Example:
+
+p. Here's a super basic Sinatra app. "Almaz":http://github.com/jpoz/almaz/blob/master/almaz.rb has been copied into the app's directory 
+
+<script src="http://gist.github.com/232169.js"></script>
+
+h2. Usage:
+
+p. Let your users run wild. Almaz will be watching everything, even request that you don't have a route for. Then go to yoursite.com/stats, type in your username and password and you can see all the stats for your site.
+
+h3. Notes:
+
+p. This has not been performance tested or scaled up in any means. So don't use it in production... yet :-)
+
+
+    
+
+
+
+

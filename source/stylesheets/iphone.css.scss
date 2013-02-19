@@ -1,0 +1,123 @@
+@media screen and (max-width: 768px){
+
+  #page_content {
+    min-height: 480px;
+  }
+
+  #nav_back{
+    width:0%;
+    height: 100%;
+    -webkit-transition: width 100ms ease;
+    -moz-transition: width 100ms ease;
+    -ms-transition: width 100ms ease;
+    -o-transition: width 100ms ease;
+    transition: width 100ms ease;
+  }
+
+  #sections {
+    width:100%;
+    overflow: hidden;
+
+    section {
+      -webkit-transition: left 100ms ease;
+      -moz-transition: left 100ms ease;
+      -ms-transition: left 100ms ease;
+      -o-transition: left 100ms ease;
+      transition: left 100ms ease;
+      position: absolute;
+
+      &#nav {
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width:90%;
+        z-index: 0;
+        display: none;
+      }
+
+      &#content {
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background: white;
+        width:100%;
+        z-index: 10;
+      }
+    }
+  }
+
+  .show_nav { 
+    #nav_back{
+      width:90%;
+    }
+  
+    #sections {
+      width:100%;
+      overflow: hidden;
+
+      section {
+        &#nav {
+          display: block;
+        }
+        &#content {
+          top: 0;
+          left: 90%;
+          overflow: hidden;
+          width:100%;
+        }
+      }
+    }
+  }
+
+  section#content {
+    .btn {
+      float: left;
+      display: inline-block;
+      color: #565656;
+      text-decoration: none;
+      font-size: 42px;
+      border: 1px solid #a2a2a2;
+      background: #f8f8f8;
+      line-height: 20px;
+      margin: 5px 5px;
+      padding: 0px 13px 10px 10px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      text-align: center;
+    }
+    #title {
+      margin-left: 5px;
+      float: left;
+      display: inline-block;
+      line-height: 45px;
+      font-size: 22px;
+      
+    }
+    header {
+      background: #e7e7e7;
+      height: 45px;
+      line-height: 40px;
+    }
+  }
+
+  body.index {
+
+    header {
+      display: block;
+    }
+
+    #TextFader {
+      width: 80%;
+      margin: 7% auto;
+      font-size: 27px;
+      line-height: 30px;
+    }
+
+  }
+
+  article {
+    h4 {
+      text-align: right;
+    }
+  }
+}

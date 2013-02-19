@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'imagePickerController:didFinishPickingImage:editingInfo: DEPRECATED'
+---
+
+Holly crap iPhone 3.0 why are you so frustrating! It took me way too long to figure out why you deprecated a function!
+
+While working on my app with the new 3.0 SDK I found a function I was using (imagePickerController:didFinishPickingImage:editingInfo:) on the UIImagePickerControllerDelegate was deprecated... I thought, well there must be a replacement. I searched in the documentation and found nothing. The only method left on the UIImagePickerControllerDelegate was for cancel! It took me reading through the API diff to figure out that Apple just hasn't written the documentation for it replacement method yet!
+
+-[UIImagePickerControllerDelegate imagePickerController:didFinishPickingMediaWithInfo:]
+
+There is literally no documentation for this method, no link in the API diff... no nothing. So I have no idea how to use it. Luckily the old function is still available. But interesting that it's now 'Media'. Maybe video is coming soon. OOOooo

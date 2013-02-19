@@ -1,0 +1,129 @@
+---
+layout: post
+title: Tokyo Cabinet benchmarking
+---
+
+p(date). 18 Feb 2009
+
+Tonight I did a little bit more hacking with Tokyo Cabinet. For a current project I’m looking for a super fast ultra light db that I can quickly dump CSVs into and quickly run some simple queries to get data out. And I thought Tokyo Cabinet would be a great candidate. So to be sure, I decided to put Tokyo Cabinet vs. Rufus-Tokyo vs. DataMapper (using do_posgres).
+
+The result were a little surprising. Tokyo Cabinets B-tree database engine is amazingly fast, eating 10,000 inserts in less than 0.15 seconds. The hash database engine came in a close second taking a little less than half a second for the same 10,000 inserts. And coming 91 times slower than the B-tree and 24 times slower than the hash is DataMapper with a little over 11 seconds.
+
+That’s all well and good and I assumed I would be getting just about the same results when I tried to pull data out, but Rufus and DataMapper switched. Although Tokyo Cabinet’s B-tree database engine was still the fastest, it’s hash tree engine was now slower than Datamapper.
+
+This came as quite a disappointment. Tokyo Cabinet is so easy to use and I really loved how the databases could be so easily created and destroyed. I can’t use the B-tree engine because it just won’t allow me to do the queries I want to do and I can’t justify using a database that is 43 times slower than it’s competitor. I’m hoping another API (maybe the dm-tokyo-cabinet-adapter) will be faster, but I think that’s enough benchmarking for one night.
+
+The details below:
+
+Insert 10,000 records from CSV (using FasterCSV)
+
+| | user | system | total | real |
+| Tokyo: B-tree | 0.120000 | 0.020000 | 0.140000 | (0.142824) |
+| Tokyo: Rufus | 0.450000 | 0.110000 | 0.560000 | (0.572258) |
+| DataMapper: Postgres | 11.230000 | 0.110000 | 12.210000 | (21.524662) |
+
+Get 100
+
+| |                     user    |   system   |  total   |    real |
+| Tokyo: B-tree       |  0.000000 |  0.000000 |  0.000000 | (  0.001434) |
+| Tokyo: Rufus        |  1.730000 |  0.010000 |  1.740000 | (  1.771523) |
+| DataMapper: Postgres | 0.040000 |  0.010000 |  0.050000 | (  0.268635) |
+
+Code used for beachmarking:
+
+{% highlight ruby %}
+require 'rubygems'  
+require 'fastercsv'  
+  
+require "tokyocabinet"  
+require 'rufus/tokyo'  
+require 'dm-core'  
+  
+require 'benchmark'  
+  
+include TokyoCabinet  
+  
+# setup for btree  
+`rm btree.bdb`  
+bdb = BDB::new  
+bdb.open("btree.bdb", BDB::OWRITER | BDB::OCREAT)  
+  
+# setup for hash  
+`rm hash.tdb`  
+t = Rufus::Tokyo::Table.new('hash.tdb')  
+  
+# setup for DataMapper  
+  
+DataMapper.setup(:default, 'postgres://localhost/dm_core_test')  
+  
+class Cell  
+  include DataMapper::Resource  
+  
+  property :id,         Serial  
+  property :x_cord,     Integer  
+  property :y_cord,     Integer  
+  property :value,      String  
+end  
+  
+Cell.auto_migrate!  
+  
+x = 0  
+y = 0  
+  
+Benchmark.bm do |bench|  
+  bench.report("Tokyo: B-tree") {  
+    FasterCSV.foreach("big.csv") do |row|  
+      y += 1  
+      row.each do |cell|  
+        x += 1  
+        bdb.put("#{x},#{y}", "#{cell}")  
+      end  
+      x = 0  
+    end  
+    y = 0  
+  }  
+  bench.report("Tokyo: Rufus") {  
+    FasterCSV.foreach("big.csv") do |row|  
+      y += 1  
+      row.each do |cell|  
+        x += 1  
+        t[cell.to_s] = { 'x' => x.to_s, 'y' => y.to_s }  
+      end  
+      x = 0  
+    end  
+    y = 0  
+  }  
+  bench.report("DataMapper: Postgres") {  
+    FasterCSV.foreach("big.csv") do |row|  
+      y += 1  
+      row.each do |cell|  
+        x += 1  
+        Cell.create( :x_cord => x, :y_cord => y, :value => cell.to_s)  
+      end  
+      x = 0  
+    end  
+    y = 0  
+  }  
+end  
+  
+Benchmark.bm do |bench|  
+  bench.report("Tokyo: B-tree") {  
+    100.times do |x|  
+      bdb.get("#{x+1},#{x+1}")  
+    end  
+  }  
+  bench.report("Tokyo: Rufus") {  
+    100.times do |x|  
+      t.query { |q|  
+          q.add 'x', :equals, (x+1).to_s  
+          q.add 'y', :equals, (x+1).to_s  
+      }  
+    end  
+  }  
+  bench.report("DataMapper: Postgres") {  
+    100.times do |x|  
+      Cell.first(:x_cord => (x+1), :y_cord => (x+1)).value  
+    end  
+  }  
+end
+{% endhighlight %}

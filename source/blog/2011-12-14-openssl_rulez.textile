@@ -1,0 +1,49 @@
+---
+layout: post
+title: Ciphers in Ruby rulez (not a good thing)
+---
+
+Ciphers can be tricky to work with. Even tricker if you're trying to get two seperate system's ciphers to work together. Ruby gives you an extra hurdle to get over by setting it's IV (initialization vector) to "OpenSSL for Ruby rulez!" by default.
+
+Stream ciphers start with an initial value or initialization vector to start their cipher rounds. To remain secure the IV must be as *random* as possible.
+
+Ruby's implementation of OpenSSL ciphers "Rulez" by default. Take a look at the cipher code in the current version of Ruby:
+
+{% highlight c %}
+
+StringValue(pass);
+GetCipher(self, ctx);
+if (NIL_P(init_v)) memcpy(iv, "OpenSSL for Ruby rulez!", sizeof(iv));
+else{
+    StringValue(init_v);
+    if (EVP_MAX_IV_LENGTH > RSTRING_LEN(init_v)) {
+  memset(iv, 0, EVP_MAX_IV_LENGTH);
+  memcpy(iv, RSTRING_PTR(init_v), RSTRING_LEN(init_v));
+    }
+    else memcpy(iv, RSTRING_PTR(init_v), sizeof(iv));
+}
+
+{% endhighlight %}
+
+Yup that's hardcoded in there.
+
+So word to the wise: Always make sure you're setting your IV when using encryption in Ruby! Here an example of how to set the IV manually:
+
+{% highlight ruby %}
+
+@cipher = OpenSSL::Cipher::Cipher.new('aes-256-cbc')
+@cipher.encrypt
+
+@cipher.key = @cipher.random_key
+@cipher.iv  = @cipher.random_iv # bye bye "OpenSSL for Ruby rulez!"
+
+@cipher.update("I'm gonna be encrypted")
+output = @cipher.final
+
+{% endhighlight %}
+
+h3. Where did all this come from?
+
+With the power of git we can see where all this came from. If we roll all the way back to 2003 we find a "TODO":https://github.com/ruby/ruby/blob/231247c010acba191b78ed2d1310c935e63ad919/ext/openssl/ossl_cipher.c#L132
+
+

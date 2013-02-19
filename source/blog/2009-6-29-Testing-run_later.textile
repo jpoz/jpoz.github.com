@@ -1,0 +1,19 @@
+---
+layout: post
+title: Testing run_later in Merb with RSpec
+---
+
+I couldn't find any posts about how to make sure the code I'm running inside my run_later block is getting called. Here's the situation.
+
+app/controllers/awesome.rb
+<script src="http://gist.github.com/137817.js"></script>
+
+app/controllers/awesome_spec.rb
+<script src="http://gist.github.com/137818.js"></script>
+
+This will fail, because Awesome.import_massive_junk just gets added to the work_queue and hasn't bee run in time for the test to finish and fail. You could just put 'sleep 1' in there, but that would just be stupid. Instead I found just calling the proc in the work_queue does the trick:
+
+app/controllers/awesome_spec.rb
+<script src="http://gist.github.com/137819.js"></script>
+
+Hope this helps someone out. If you find a better way let me know!

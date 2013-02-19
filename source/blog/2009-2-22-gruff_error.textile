@@ -1,0 +1,21 @@
+---
+layout: post
+title: 'Gruff Error: Magick::ImageMagickError: unable font'
+---
+
+Ahhh this took forever to figure out…
+
+First find out which fonts you can use:
+
+{% highlight bash %}
+jpoz$ identify -list font
+{% endhighlight %}
+
+Find one you like, then set the font path:
+
+{% highlight ruby %}
+g = Gruff::Line.new
+g.font  = "/Library/Fonts/Arial Bold.ttf"
+{% endhighlight %}
+
+Stupid freakin’ ImageMagick

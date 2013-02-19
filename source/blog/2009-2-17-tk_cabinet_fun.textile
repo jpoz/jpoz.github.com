@@ -1,0 +1,44 @@
+---
+layout: post
+title: Tokyo Cabinet and Rack fun!
+---
+
+p(date). 17 Feb 2009
+
+I started playing around with Tokyo Cabinet and Rufus-Tokyo tonight. I have to say I was pretty impressed. Tokyo Cabinet (with the help of rufus-tokyo) is so dead easy to use. It took me about an hour to install, learn and get a dead simple rack app up and running.
+
+I made a quick and dirty logger:
+
+{% highlight ruby %}
+require 'rubygems'  
+require 'rack'  
+require 'rufus/tokyo'  
+  
+class Logger  
+  
+  def initialize(t)  
+    @t = t  
+  end  
+  
+  def call(env)  
+    @t[Time.now.to_i.to_s] = { 'time' => Time.now.to_i.to_s, 'info' => env.inspect }  
+    array = @t.query { |q|  
+      q.order_by 'time'  
+    }  
+    output = "The data:"  
+    array.each { |d| output << "<br/>#{d.inspect}" }  
+    [200, {"Content-Type" => "text/html"}, output]  
+  end  
+  
+end  
+  
+rackApp = Rack::Builder.new do  
+  
+  map '/' do  
+    run Logger.new(Rufus::Tokyo::Table.new('visitors.tdb'))  
+  end  
+  
+end  
+  
+Rack::Handler::Mongrel.run rackApp, :Port => 9292
+{% endhighlight %}
