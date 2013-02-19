@@ -42,8 +42,12 @@ nav {
     font-family: 'Graduate', cursive;
     padding-left: 55px;
     background:
-      url('https://secure.gravatar.com/avatar/1d65f907bb281f74f20fd8efa01a9c69?s=45');
+      url('https://secure.gravatar.com/avatar/2f3eb765ee068dad6931a3cc7961a3b6?s=90');
     background-repeat:repeat-y;
+    -webkit-background-size: 45px 45px;
+       -moz-background-size: 45px 45px;
+         -o-background-size: 45px 45px;
+            background-size: 45px 45px;
     height: 45px;
     line-height: 45px;
   }
