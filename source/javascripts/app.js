@@ -49,7 +49,7 @@ var TextFader = new Class({
       setTimeout(function() {
         var o = 0.5 - 0.001 * index;
         sentence.tween('opacity', o)
-      }, index * 30);
+      }, index * 20);
     });
   }
 
