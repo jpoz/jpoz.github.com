@@ -1,118 +1,99 @@
-
-h4 {
-  font-weight: 100;
+body {
+  background: url(http://farm9.staticflickr.com/8528/8623533082_3a41e0f61b_k.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-#nav_back{
-    width:20%;
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-    z-index:-1;
-    background: #161618;
-}
+header {
+  background: #ddd;
+  width: 80%;
+  padding: 30px 30px 90px 30px;
+  margin-top: 100px;  
 
-#sections {
-  float:left;
-  width:100%;
-
-  section {
-    float:left;
-  
-    &#nav {
-      background: #161618;
-      width:20%;
-    }
-    &#content {
-      width:80%;
-    }
+  .contacts {
+    margin-top: 10px;
+    margin-bottom: -40px;  
   }
-}
-
-nav {
-  color: #a3a4a7;
-  -webkit-box-shadow: inset -5px -5px 21px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: inset -5px -5px 21px 0px rgba(0, 0, 0, 0.3);
-
-  #jpoz {
-    color: #bfc1c6;
-    font-family: 'Graduate', cursive;
-    padding-left: 55px;
-    background:
-      url('https://secure.gravatar.com/avatar/2f3eb765ee068dad6931a3cc7961a3b6?s=90');
-    background-repeat:repeat-y;
-    -webkit-background-size: 45px 45px;
-       -moz-background-size: 45px 45px;
-         -o-background-size: 45px 45px;
-            background-size: 45px 45px;
-    height: 45px;
-    line-height: 45px;
-  }
-
-  h1 {
-    margin: 0px;
-    padding: 0px 4px;
-  }
-
-  h3 {
-    margin: 0px;
-    padding: 3px 4px;
-    background: #131314;
-    border-top: 1px solid #38383c;
-    border-bottom: 1px solid #0b0b0b;
-  }
-
-  a {
-    color: #a3a4a7;
-    text-decoration: none;
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-
-    li {
-      border-top: 1px solid #38383c;
-      border-bottom: 1px solid #0b0b0b;
-      padding: 17px 10px;
-    }
-  }
-
-  .selected {
-
-  }
-
 }
 
 #content {
-  widht: 100%;
-  header {
-    .btn { display: none; }
-    #title {
-      font-weight: 600;
-      font-size: 32px;
-      margin-left: 10px;
-      height: 45px;
-      line-height: 45px;
+  float: right;
+  background: white;
+  width: 90%;
+  margin-top: -74px;
+  padding: 10px;
+
+  .contacts {
+    width: 80%;
+    margin: -80px auto 30px auto;
+
+    a.contact {
+      margin-right: 10px;
+      padding-left: 26px;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-    width: 100%;
+  }
+}
+
+.jpoz {
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 30px;
+
+  .net {
+      opacity: 0.5;
+  }
+}
+
+.contacts {
+
+  opacity: 0.8;
+
+  a.contact {
+    display: inline-block;
+    padding: 0px 10px;
+    color: black;
+    text-decoration: none;
+    background-repeat: no-repeat;
+
+    &.gmail {
+      background-image: url(/images/489-gmail@2x.png);
+      background-size: 23px;
+      line-height: 18px;  
+    }
+    &.github {
+      background-image: url(/images/488-github@2x.png);
+      background-size: 23px;
+      line-height: 25px;  
+    }
+    &.twitter {
+      background-image: url(/images/498-twitter@2x.png);
+      background-size: 23px;
+      line-height: 20px;  
+    }
+  }
+}
+
+i {
+  display: inline-block;
+  width: 23px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 30px;
+  margin-right: 4px;
+
+  &.gmail {
+    background-image: url(/images/489-gmail@2x.png);
+  }
+  &.github {
+    background-image: url(/images/488-github@2x.png);
+  }
+  &.twitter {
+    background-image: url(/images/498-twitter@2x.png);
   }
 
-  #page_content {
-    h1 {
-      margin-top: 10px;
-    }
-    article {
-      margin-left: 10px;
-    }
-    footer {
-      font-size: 10px;
-      color: #ededed;
-      text-align:center;
-    }
-  }
 }

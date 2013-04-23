@@ -8,7 +8,7 @@
 
     <title><%= data.page.title || "JPoz.net" %></title>
 
-    <link href='http://fonts.googleapis.com/css?family=Graduate|Raleway:100,400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:300|Raleway:100,400,600' rel='stylesheet' type='text/css'>
 
     <script>
       window.addEventListener("load",function() {
@@ -24,40 +24,20 @@
 
   <body id='body' class="<%= page_classes %>">
 
-    <div id='nav_back'></div>
-
-    <div id='sections'>
-      <section id='nav'>
-        <nav>
-          <h1 id='jpoz'>JPoz</h1>
-            <ul>
-              <a href="/"><li class='selected' >Me</li></a>
-              <a href="/resume"><li>Resume</li></a>
-              <a href="/contact"><li>Contact</li></a>
-              <a href="https://www.github.com/jpoz" target='_blank'><li>Github</li></a>
-            </ul>
-
-          <h3>Blog</h3>
-          <ul>
-            <% blog.articles.each do |article| %>
-              <a href="<%= article.url %>"><li><%= article.title %></li></a>
-            <% end %>
-          </ul>
-        </nav>
-      </section>
-
-      <section actlike='PageContent' id='content'>
-
-        <header>
-          <a actlike='NavButton' class='btn' href='#'>≡</a>
-          <span id='title'><%= data.page.title || "JPoz.net" %></span>
-        </header>
-
-        <div id='page_content'>
-          <%= yield %>
+      <header>
+        <div class='jpoz'>
+          <span>jpoz</span>
         </div>
-      </section>
-    </div>
+        <div class='contacts'>
+          <a class='contact gmail' href='mailto:contact@jpoz.net'>&nbsp;</a>
+          <a class='contact twitter' href='http://www.twitter.com/jpoz'>&nbsp;</a>
+          <a class='contact github' href='http://www.github.com/jpoz'>&nbsp;</a>
+        </div>
+      </header>
+
+      <div id='content'>
+        <%= yield %>
+      </div>
 
   </body>
 </html>
