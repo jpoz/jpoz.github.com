@@ -24,16 +24,18 @@
 
   <body id='body' class="<%= page_classes %>">
 
-      <header>
-        <div class='jpoz'>
-          <span>jpoz</span>
-        </div>
-        <div class='contacts'>
-          <a class='contact gmail' href='mailto:contact@jpoz.net'>&nbsp;</a>
+    <div id='header'>
+      <div class='header-img'>
+      </div>
+      <div class='header-title'>
+        <a href='/' class='jpoz'>jpoz</a>
+        <span class='contacts'>
           <a class='contact twitter' href='http://www.twitter.com/jpoz'>&nbsp;</a>
           <a class='contact github' href='http://www.github.com/jpoz'>&nbsp;</a>
-        </div>
-      </header>
+          <a class='contact simple' href='https://www.simple.com'>&nbsp</a>
+        </span>
+      </div>
+    </div>
 
       <div id='content'>
         <%= yield %>

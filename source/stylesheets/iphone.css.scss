@@ -1,3 +1,23 @@
 @media screen and (max-width: 768px){
-
+  body {
+    overflow: auto;
+  }
+  #header {
+    position: relative!important;
+    width: 100%;
+    max-width: none;
+    height: 75px;
+    .header-title {
+      padding: 50px 3% 3% 10%;
+    }
+  }
+  #content {
+    overflow: none;
+    padding-top: 100px;
+    padding-bottom: 400px;
+    padding-left: 0px;
+    padding-right: 0px;
+    left: 5%;
+    width: 90%;
+  }
 }

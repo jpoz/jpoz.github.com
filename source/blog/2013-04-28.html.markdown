@@ -1,0 +1,8 @@
+---
+title: Why I like Go
+
+---
+
+I like (Go)[http://golang.org] because it keeps me busy and rarely annoyed.
+
+

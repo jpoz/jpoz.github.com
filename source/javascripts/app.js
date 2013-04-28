@@ -1,33 +1,3 @@
-var PageContent = new Class({
-
-  initialize: function(el) {
-    this.element = el;
-    this.element.addEvent('click', this.click.bind(this));
-    this.element.addEvent('touch', this.click.bind(this));
-  },
-
-  click: function() {
-    $('body').removeClass('show_nav');
-  }
-
-})
-
-var NavButton = new Class({
-
-  initialize: function(el) {
-    this.element = el;
-    console.log(el);
-    this.element.addEvent('click', this.click.bind(this));
-    this.element.addEvent('touch', this.click.bind(this));
-  },
-
-  click: function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $('body').toggleClass('show_nav');
-  }
-
-});
 
 var TextFader = new Class({
   initialize: function(el) {
