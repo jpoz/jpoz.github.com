@@ -1,0 +1,23 @@
+---
+title: 'JPoz.net'
+---
+<div id='TextFader' actlike='TextFader'>
+  Hello!
+  My name is James.
+  I'm a developer.
+  I live in Portland Oregon.
+</div>
+
+<div id='toc'>
+  <% blog.articles.each_with_index do |article, i| %>
+    <article class="<%= (i == 0) ? 'first' : '' %>">
+      <div class='title'>
+        <a href="<%= article.url %>"><%= article.title %></a>
+        <span class='date'><%= article.date.strftime('%b %e %Y') %></span>
+      </div>
+      <div class='summary'>
+        <%= article.summary %>
+      </div>
+    </article>
+  <% end %>
+</div>

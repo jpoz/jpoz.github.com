@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
+
+
+    <title><%= data.page.title || "JPoz.net" %></title>
+
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:300|Raleway:100,400,600' rel='stylesheet' type='text/css'>
+
+    <script>
+      window.addEventListener("load",function() {
+        setTimeout(function(){
+          window.scrollTo(0, 0);
+        }, 0);
+      });
+    </script>
+
+    <%= stylesheet_link_tag "all" %>
+    <%= javascript_include_tag  "all" %>
+  </head>
+
+  <body id='body' class="<%= page_classes %>">
+
+    <div id='header'>
+      <div class='header-img'>
+      </div>
+      <div class='header-title'>
+        <a href='/' class='jpoz'>jpoz</a>
+        <span class='contacts'>
+          <a class='contact twitter' href='http://www.twitter.com/jpoz'>&nbsp;</a>
+          <a class='contact github' href='http://www.github.com/jpoz'>&nbsp;</a>
+          <a class='contact simple' href='https://www.simple.com'>&nbsp;</a>
+        </span>
+      </div>
+    </div>
+
+      <div id='content'>
+        <%= yield %>
+      </div>
+
+  </body>
+</html>
