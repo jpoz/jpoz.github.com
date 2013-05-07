@@ -113,3 +113,27 @@ body {
   padding-bottom: 100px;
   margin-right: 10px;
 }
+
+#toc {
+  article {
+    width: 80%;
+    margin: 5% auto;
+
+    .summary {
+      font-size: 18px;
+    }
+    .title {
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 10px;
+      .date {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+a {
+  color: black;
+}

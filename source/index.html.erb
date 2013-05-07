@@ -3,20 +3,21 @@ title: 'JPoz.net'
 ---
 <div id='TextFader' actlike='TextFader'>
   Hello!
-</div><div id='TextFader' actlike='TextFader'>
   My name is James.
-</div><div id='TextFader' actlike='TextFader'>
   I'm a developer.
-</div><div id='TextFader' actlike='TextFader'>
   I live in Portland Oregon.
 </div>
 
-<% blog.articles[0...5].each_with_index do |article, i| %>
-  <article class="<%= (i == 0) ? 'first' : '' %>">
-    <h1><a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e %Y') %></span></h1>
-    
-    <%= article.summary %>
-    
-    <div class="more"><a href="<%= article.url %>">read on &raquo;</a></div>
-  </article>
-<% end %>
+<div id='toc'>
+  <% blog.articles.each_with_index do |article, i| %>
+    <article class="<%= (i == 0) ? 'first' : '' %>">
+      <div class='title'>
+        <a href="<%= article.url %>"><%= article.title %></a>
+        <span class='date'><%= article.date.strftime('%b %e %Y') %></span>
+      </div>
+      <div class='summary'>
+        <%= article.summary %>
+      </div>
+    </article>
+  <% end %>
+</div>
