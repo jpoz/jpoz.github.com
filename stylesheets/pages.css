@@ -1,0 +1,9 @@
+/* line 2, pages.css.scss */
+#TextFader {
+  width: 80%;
+  margin: 5% auto;
+  font-size: 30px;
+  line-height: 50px; }
+  /* line 8, pages.css.scss */
+  #TextFader span {
+    opacity: 0.0; }

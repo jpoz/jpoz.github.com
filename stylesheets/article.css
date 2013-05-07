@@ -1,0 +1,15 @@
+/* line 1, article.css.scss */
+div.blog {
+  width: 90%;
+  font-size: 20px; }
+  /* line 6, article.css.scss */
+  div.blog .header {
+    margin-bottom: 37px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+    /* line 10, article.css.scss */
+    div.blog .header h1, div.blog .header h2, div.blog .header h3, div.blog .header h4 {
+      margin-bottom: 0.5em; }
+  /* line 15, article.css.scss */
+  div.blog p {
+    line-height: 24px;
+    margin-bottom: 1em; }

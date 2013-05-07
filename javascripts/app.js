@@ -24,3 +24,4 @@ var TextFader = new Class({
   }
 
 })
+;
