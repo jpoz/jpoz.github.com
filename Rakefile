@@ -73,6 +73,6 @@ task :publish => [:not_dirty, :prepare_git_remote_in_build_dir, :sync, :build] d
     else
       sh "git commit -m \"#{message}\""
     end
-    sh "git push origin master"
+    sh "git push -f origin master"
   end
 end
