@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
 
 
-    <title>Why I like Go</title>
+    <title>Makefile + GoLang FTW</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Comfortaa:300|Raleway:100,400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:300|Noto Sans:100,400,600' rel='stylesheet' type='text/css'>
 
     <script>
       window.addEventListener("load",function() {
@@ -40,16 +40,40 @@
       <div id='content'>
           <div class='blog'>
     <div class='header'>
-      <h1>Why I like Go</h1>
+      <h1>Makefile + GoLang FTW</h1>
       <h4>Apr 28 2013</h4>      
     </div>
     <article>
-      <p>I like Go because it keeps me busy and rarely annoyed.</p>
+      <p>I like Go (Golang) because it keeps me busy and rarely annoyed. One thing that was annoying me was the lack of a build in dependency managment system. This honsetly scared me when I first started to learn Go. I would never know when I ran <code>go get ...</code> if i was getting the version of the dependency that I was supposed to get!</p>
+
+<p>My solution: Keep everything in source control. This means that each project i work in has its own <code>GOPATH</code> and I commit all of <code>src/</code> to my repo. This might seem a bit bulky, but I&#39;ll never have to worry about accidental version or api changes in my projects.</p>
+
+<h3>Example Makefile</h3>
+
+<pre><code data-language="shell">default: run
+
+.PHONY: default run
+
+run:
+        GOPATH=`pwd` go run src/{project}/main.go
+</code></pre>
 
     </article>
   </div>
 
       </div>
+<script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3441225-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
   </body>
 </html>
