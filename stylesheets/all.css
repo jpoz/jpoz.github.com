@@ -425,7 +425,7 @@ body {
   max-width: 500px; }
   /* line 15, layout.css.scss */
   #header .header-img {
-    background-image: url(http://farm9.staticflickr.com/8477/8255845676_e0614d5e6c_h.jpg);
+    background-image: url(http://farm7.staticflickr.com/6230/6330609189_5307473daa_b.jpg);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -539,15 +539,69 @@ body {
 a {
   color: black; }
 
-/* line 2, pages.css.scss */
+/* line 1, pages.css.scss */
 #TextFader {
   width: 80%;
   margin: 5% auto;
   font-size: 30px;
   line-height: 50px; }
-  /* line 8, pages.css.scss */
+  /* line 7, pages.css.scss */
   #TextFader span {
     opacity: 0.0; }
+
+/* line 12, pages.css.scss */
+#resume {
+  width: 95%; }
+  /* line 14, pages.css.scss */
+  #resume h1 {
+    text-align: center; }
+  /* line 17, pages.css.scss */
+  #resume table.info {
+    width: 100%;
+    border-bottom: 1px solid black; }
+    /* line 20, pages.css.scss */
+    #resume table.info .right {
+      padding-bottom: 7px;
+      text-align: right; }
+  /* line 25, pages.css.scss */
+  #resume p, #resume h1, #resume h2, #resume h3, #resume table {
+    margin-bottom: 0.2em; }
+  /* line 28, pages.css.scss */
+  #resume .section {
+    margin-top: 10px;
+    margin-bottom: 20px; }
+    /* line 31, pages.css.scss */
+    #resume .section .job {
+      margin: 0px 0px 15px 0px; }
+      /* line 32, pages.css.scss */
+      #resume .section .job h2 {
+        font-size: 1.4em;
+        margin-bottom: .2em; }
+      /* line 36, pages.css.scss */
+      #resume .section .job .position {
+        margin-bottom: 1em;
+        margin-left: 1em; }
+        /* line 39, pages.css.scss */
+        #resume .section .job .position .desc {
+          border-bottom: 1px dotted black; }
+          /* line 41, pages.css.scss */
+          #resume .section .job .position .desc .date {
+            float: right; }
+          /* line 44, pages.css.scss */
+          #resume .section .job .position .desc .title {
+            font-weight: bold; }
+          /* line 47, pages.css.scss */
+          #resume .section .job .position .desc .title, #resume .section .job .position .desc .date {
+            padding-top: 5px;
+            display: inline-block;
+            background-color: #FFF;
+            line-height: 17px;
+            margin-bottom: -15px; }
+  /* line 60, pages.css.scss */
+  #resume ul {
+    margin: 5px 0px 5px 20px;
+    list-style-type: circle;
+    line-height: 18px; }
 
 /* line 1, article.css.scss */
 div.blog {
