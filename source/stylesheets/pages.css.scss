@@ -1,12 +1,66 @@
+#TextFader {
+  width: 80%;
+  margin: 5% auto;
+  font-size: 30px;
+  line-height: 50px;
 
-  #TextFader {
-    width: 80%;
-    margin: 5% auto;
-    font-size: 30px;
-    line-height: 50px;
+  span {
+    opacity: 0.0;
+  }
+}
 
-    span {
-      opacity: 0.0;
+#resume {
+  width: 95%;
+  h1 {
+    text-align: center;
+  }
+  table.info {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    .right {
+      padding-bottom: 7px;    
+      text-align: right;
     }
   }
+  p, h1, h2, h3, table {
+    margin-bottom: 0.2em;
+  }
+  .section {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    .job {
+      h2 {
+        font-size: 1.4em;
+        margin-bottom: .2em;
+      }
+      .position {
+        margin-bottom: 1em; 
+        margin-left: 1em;
+        .desc {
+          border-bottom: 1px dotted #000;
+          .date {
+            float: right;
+          }
+          .title {
+            font-weight: bold;
+          }
+          .title, .date {
+            padding-top: 5px;
+            display: inline-block;
+            background-color: #FFF;
+            line-height: 17px;
+            margin-bottom: -15px;
+          }
+        }
+      }
+      margin: 0px 0px 15px 0px;
+    }
+  }
+
+  ul {
+    margin: 5px 0px 5px 20px;
+    list-style-type: circle;
+    line-height: 18px;
+  }
+}
 
