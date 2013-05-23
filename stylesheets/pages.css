@@ -13,51 +13,53 @@
   width: 95%; }
   /* line 14, pages.css.scss */
   #resume h1 {
-    text-align: center; }
-  /* line 17, pages.css.scss */
+    text-align: center;
+    line-height: 40px; }
+  /* line 18, pages.css.scss */
   #resume table.info {
     width: 100%;
-    border-bottom: 1px solid black; }
-    /* line 20, pages.css.scss */
+    border-bottom: 1px solid black;
+    line-height: 20px; }
+    /* line 22, pages.css.scss */
     #resume table.info .right {
       padding-bottom: 7px;
       text-align: right; }
-  /* line 25, pages.css.scss */
+  /* line 27, pages.css.scss */
   #resume p, #resume h1, #resume h2, #resume h3, #resume table {
     margin-bottom: 0.2em; }
-  /* line 28, pages.css.scss */
+  /* line 30, pages.css.scss */
   #resume .section {
     margin-top: 10px;
     margin-bottom: 20px; }
-    /* line 31, pages.css.scss */
+    /* line 33, pages.css.scss */
     #resume .section .job {
       margin: 0px 0px 15px 0px; }
-      /* line 32, pages.css.scss */
+      /* line 34, pages.css.scss */
       #resume .section .job h2 {
         font-size: 1.4em;
         margin-bottom: .2em; }
-      /* line 36, pages.css.scss */
+      /* line 38, pages.css.scss */
       #resume .section .job .position {
         margin-bottom: 1em;
         margin-left: 1em; }
-        /* line 39, pages.css.scss */
+        /* line 41, pages.css.scss */
         #resume .section .job .position .desc {
           border-bottom: 1px dotted black; }
-          /* line 41, pages.css.scss */
+          /* line 43, pages.css.scss */
           #resume .section .job .position .desc .date {
             float: right; }
-          /* line 44, pages.css.scss */
+          /* line 46, pages.css.scss */
           #resume .section .job .position .desc .title {
             font-weight: bold; }
-          /* line 47, pages.css.scss */
+          /* line 49, pages.css.scss */
           #resume .section .job .position .desc .title, #resume .section .job .position .desc .date {
             padding-top: 5px;
             display: inline-block;
             background-color: #FFF;
             line-height: 17px;
             margin-bottom: -15px; }
-  /* line 60, pages.css.scss */
+  /* line 62, pages.css.scss */
   #resume ul {
     margin: 5px 0px 5px 20px;
     list-style-type: circle;
-    line-height: 18px; }
+    line-height: 20px; }
