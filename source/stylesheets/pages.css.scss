@@ -13,10 +13,12 @@
   width: 95%;
   h1 {
     text-align: center;
+    line-height: 40px;
   }
   table.info {
     width: 100%;
     border-bottom: 1px solid #000;
+    line-height: 20px;
     .right {
       padding-bottom: 7px;    
       text-align: right;
@@ -60,7 +62,7 @@
   ul {
     margin: 5px 0px 5px 20px;
     list-style-type: circle;
-    line-height: 18px;
+    line-height: 20px;
   }
 }
 
