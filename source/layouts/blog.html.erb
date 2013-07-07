@@ -2,8 +2,17 @@
   <div class='blog'>
     <div class='header'>
       <h1><%= data.page['title'] %></h1>
-      <h4><%= current_article.date.strftime('%b %e %Y') %></h4>      
+      <h4><%= current_article.date.strftime('%b %e %Y') %></h4>
     </div>
+
+    <% if data.page['header_image'] %>
+      <div class='header_image'
+        style="background: url('<%= data.page['header_image'] %>');">&nbsp;
+      </div>
+    <% end %>
+
+
+
     <article>
       <%= yield %>
     </article>

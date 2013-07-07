@@ -1,5 +1,5 @@
 #TextFader {
-  width: 80%;
+  width: 100%;
   margin: 5% auto;
   font-size: 30px;
   line-height: 50px;
@@ -7,6 +7,40 @@
   span {
     opacity: 0.0;
   }
+}
+
+#toc {
+
+  article {
+    padding: 50px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+
+    &.first {
+      border-top: 1px solid rgba(0,0,0,0.3);
+    }
+
+    .title {
+      a:hover {
+        text-decoration: underline;
+      }
+      a {
+        display: block;
+        font-size: 2.5em;
+        letter-spacing: -2px;
+        text-decoration: none;
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-weight: 800;
+        color: #333;
+        font-family: 'Open Sans', sans-serif;
+      }
+      div.date {
+        text-align: center;        
+        font-weight: 300;
+      }
+    }
+  }
+
 }
 
 #resume {

@@ -5,10 +5,10 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
 
-
     <title><%= data.page.title || "JPoz.net" %></title>
 
-    <link href='http://fonts.googleapis.com/css?family=Comfortaa:300|Noto Sans:100,400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css'>
 
     <script>
       window.addEventListener("load",function() {
@@ -24,22 +24,16 @@
 
   <body id='body' class="<%= page_classes %>">
 
-    <div id='header'>
-      <div class='header-img'>
-      </div>
-      <div class='header-title'>
-        <a href='/' class='jpoz'>jpoz</a>
-        <span class='contacts'>
-          <a class='contact twitter' href='http://www.twitter.com/jpoz'>&nbsp;</a>
-          <a class='contact github' href='http://www.github.com/jpoz'>&nbsp;</a>
-          <a class='contact simple' href='https://www.simple.com'>&nbsp;</a>
-        </span>
-      </div>
+    <a href='/' class='jpoz'>JPoz</a>
+    <div class='contacts'>
+      <a target='_blank' href='http://github.com/jpoz' class='contact github'>&nbsp;</a>
+      <a target='_blank' href='http://twitter.com/jpoz' class='contact twitter'>&nbsp;</a>
+      <a target='_blank' href='http://simple.com' class='contact simple'>&nbsp;</a>
     </div>
 
-      <div id='content'>
-        <%= yield %>
-      </div>
+    <div id='content'>
+      <%= yield %>
+    </div>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
