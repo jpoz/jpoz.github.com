@@ -1,15 +1,36 @@
 /* line 1, article.css.scss */
 div.blog {
-  width: 90%;
+  margin-top: 26px;
   font-size: 20px; }
   /* line 6, article.css.scss */
   div.blog .header {
     margin-bottom: 37px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
-    /* line 10, article.css.scss */
-    div.blog .header h1, div.blog .header h2, div.blog .header h3, div.blog .header h4 {
-      margin-bottom: 0.5em; }
-  /* line 15, article.css.scss */
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 50px;
+    padding-bottom: 50px; }
+  /* line 13, article.css.scss */
+  div.blog .header_image {
+    margin: 10px auto 50px auto;
+    width: 100%;
+    height: 10em; }
+  /* line 19, article.css.scss */
+  div.blog h1, div.blog h2, div.blog h3, div.blog h4 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-weight: 800;
+    color: #333;
+    font-family: "Open Sans", sans-serif; }
+  /* line 26, article.css.scss */
+  div.blog h1 {
+    font-size: 2.5em;
+    letter-spacing: -2px; }
+  /* line 30, article.css.scss */
+  div.blog h4 {
+    font-weight: 300; }
+  /* line 34, article.css.scss */
   div.blog p {
-    line-height: 24px;
-    margin-bottom: 1em; }
+    font-size: 19px;
+    margin-bottom: 1.7em;
+    line-height: 2em;
+    padding: 0; }

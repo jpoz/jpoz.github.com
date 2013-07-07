@@ -1,6 +1,6 @@
 /* line 1, pages.css.scss */
 #TextFader {
-  width: 80%;
+  width: 100%;
   margin: 5% auto;
   font-size: 30px;
   line-height: 50px; }
@@ -8,57 +8,83 @@
   #TextFader span {
     opacity: 0.0; }
 
-/* line 12, pages.css.scss */
+/* line 14, pages.css.scss */
+#toc article {
+  padding: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+  /* line 18, pages.css.scss */
+  #toc article.first {
+    border-top: 1px solid rgba(0, 0, 0, 0.3); }
+  /* line 23, pages.css.scss */
+  #toc article .title a:hover {
+    text-decoration: underline; }
+  /* line 26, pages.css.scss */
+  #toc article .title a {
+    display: block;
+    font-size: 2.5em;
+    letter-spacing: -2px;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-weight: 800;
+    color: #333;
+    font-family: "Open Sans", sans-serif; }
+  /* line 37, pages.css.scss */
+  #toc article .title div.date {
+    text-align: center;
+    font-weight: 300; }
+
+/* line 46, pages.css.scss */
 #resume {
   width: 95%; }
-  /* line 14, pages.css.scss */
+  /* line 48, pages.css.scss */
   #resume h1 {
     text-align: center;
     line-height: 40px; }
-  /* line 18, pages.css.scss */
+  /* line 52, pages.css.scss */
   #resume table.info {
     width: 100%;
     border-bottom: 1px solid black;
     line-height: 20px; }
-    /* line 22, pages.css.scss */
+    /* line 56, pages.css.scss */
     #resume table.info .right {
       padding-bottom: 7px;
       text-align: right; }
-  /* line 27, pages.css.scss */
+  /* line 61, pages.css.scss */
   #resume p, #resume h1, #resume h2, #resume h3, #resume table {
     margin-bottom: 0.2em; }
-  /* line 30, pages.css.scss */
+  /* line 64, pages.css.scss */
   #resume .section {
     margin-top: 10px;
     margin-bottom: 20px; }
-    /* line 33, pages.css.scss */
+    /* line 67, pages.css.scss */
     #resume .section .job {
       margin: 0px 0px 15px 0px; }
-      /* line 34, pages.css.scss */
+      /* line 68, pages.css.scss */
       #resume .section .job h2 {
         font-size: 1.4em;
         margin-bottom: .2em; }
-      /* line 38, pages.css.scss */
+      /* line 72, pages.css.scss */
       #resume .section .job .position {
         margin-bottom: 1em;
         margin-left: 1em; }
-        /* line 41, pages.css.scss */
+        /* line 75, pages.css.scss */
         #resume .section .job .position .desc {
           border-bottom: 1px dotted black; }
-          /* line 43, pages.css.scss */
+          /* line 77, pages.css.scss */
           #resume .section .job .position .desc .date {
             float: right; }
-          /* line 46, pages.css.scss */
+          /* line 80, pages.css.scss */
           #resume .section .job .position .desc .title {
             font-weight: bold; }
-          /* line 49, pages.css.scss */
+          /* line 83, pages.css.scss */
           #resume .section .job .position .desc .title, #resume .section .job .position .desc .date {
             padding-top: 5px;
             display: inline-block;
             background-color: #FFF;
             line-height: 17px;
             margin-bottom: -15px; }
-  /* line 62, pages.css.scss */
+  /* line 96, pages.css.scss */
   #resume ul {
     margin: 5px 0px 5px 20px;
     list-style-type: circle;
