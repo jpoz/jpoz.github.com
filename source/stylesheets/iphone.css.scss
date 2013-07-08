@@ -1,10 +1,15 @@
 @media screen and (max-width: 1024px){
   .jpoz {
     position: absolute;
+    left: 75px;
+  }
+  .jpoz_photos {
+    position: absolute;
+    left: 25px;
   }
   .contacts {
     position: absolute;
-    left: 75px;
+    left: 125px;
     top: 25px;
     width: auto;
     height: 50px;
