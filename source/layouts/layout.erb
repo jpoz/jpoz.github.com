@@ -24,11 +24,12 @@
 
   <body id='body' class="<%= page_classes %>">
 
-    <a href='/' class='jpoz'>JPoz</a>
-    <div class='contacts'>
+    <a href='/' class='jpoz <%= data.page.section == "photos" ? "inactive":"" %>'>JPoz</a>
+    <a href='/photos' class='jpoz_photos <%= data.page.section == "photos" ? "":"inactive" %>'>&nbsp;</a>
+    <div class='contacts <%= data.page.section == "photos" ? "inactive":"" %>'>
       <a target='_blank' href='http://github.com/jpoz' class='contact github'>&nbsp;</a>
       <a target='_blank' href='http://twitter.com/jpoz' class='contact twitter'>&nbsp;</a>
-      <a target='_blank' href='http://simple.com' class='contact simple'>&nbsp;</a>
+      <a target='_blank' href='http://instagram.com/jpoz' class='contact instagram'>&nbsp;</a>  
     </div>
 
     <div id='content'>

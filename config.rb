@@ -55,11 +55,21 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :blog do |blog|
+  blog.name   = "blog"
   blog.prefix = "blog"
   blog.permalink = ":year-:month-:day-:title"
   blog.layout = "blog"
   blog.default_extension = ".markdown"
 end
+
+activate :blog do |photos|
+  photos.name   = "photos"
+  photos.prefix = "photos"
+  photos.permalink = ":title"
+  photos.layout = "photo"
+  photos.default_extension = ".markdown"
+end
+
 
 activate :directory_indexes
 

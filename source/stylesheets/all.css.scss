@@ -11,6 +11,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.clear {
+  clear: both;
+}
+
 @import "layout";
 @import "pages";
 @import "article";

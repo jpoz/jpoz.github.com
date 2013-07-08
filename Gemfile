@@ -1,6 +1,6 @@
 source :rubygems
 
 gem 'rake'
-gem "middleman", "~>3.0.11"
-gem "middleman-blog"
+gem "middleman", :git => 'git@github.com:middleman/middleman.git'
+gem "middleman-blog", :git => 'https://github.com/middleman/middleman-blog'
 gem "redcarpet"

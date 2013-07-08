@@ -1,0 +1,14 @@
+<% wrap_layout :layout do %>
+  <div class='photo'>
+    <div class='header'>
+      <h1><%= data.page['title'] %></h1>
+    </div>
+
+    <% if data.page['header_image'] %>
+      <div class='header_image'
+        style="background: url('<%= data.page['header_image'] %>');">&nbsp;
+      </div>
+    <% end %>
+
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+---
+title: 'JPoz.net | Photos'
+section: 'photos'
+---
+<div id='photos'>
+  <% blog(:photos).articles.each_with_index do |photo, i| %>
+    <div class="photo">
+      <% if photo.data[:url_2] %>
+        <img style='width: 50%; float: left;' src='<%= photo.data[:url] %>' />
+        <img style='width: 50%; float: right;' src='<%= photo.data[:url_2] %>' />
+        <br class='clear'>
+      <% else %>
+        <img src='<%= photo.data[:url] %>' />
+      <% end %>
+    </div>
+  <% end %>
+</div>

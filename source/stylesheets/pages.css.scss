@@ -3,6 +3,7 @@
   margin: 5% auto;
   font-size: 30px;
   line-height: 50px;
+  text-align: center;
 
   span {
     opacity: 0.0;
@@ -42,6 +43,22 @@
     }
   }
 
+}
+
+#photos {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  img {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+      margin: 0px;
+      border: none;
+      padding: 0px;
+  }
+  .photo {
+    margin-bottom: 2px;
+  }
 }
 
 #resume {
