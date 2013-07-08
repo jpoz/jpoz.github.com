@@ -3,7 +3,7 @@ title: Concurrency Manager in Go
 
 ---
 
-Sometimes Go is just too damn fast. I recently ran into a situation where I was making too many calls too quickly to a third party API. The calls were coming from many different parts of my application. I need one place I could send call that would manage their execution while rate limiting the calls to the API.
+Sometimes Go is just too damn fast. I recently ran into a situation where I was making too many calls too quickly to a third party API. The calls were coming from all over my application. I needed one place I could send calls that would manage their execution while rate limiting the them to the API.
 
 Originally stolen from [here](http://michaelspeer.knome.net/2010/03/go-language-is-lovely.html), I added in rate limiting (with bursting) and the ability to give a go routine to the manager and wait for it's completion.
 
