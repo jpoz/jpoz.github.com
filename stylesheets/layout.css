@@ -108,3 +108,14 @@
       background-image: url(/images/86-camera@2x-white.png);
       background-size: 23px;
       line-height: 20px; }
+
+/* line 116, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+.more_link {
+  display: block;
+  background: #414141;
+  width: 100px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px 0px auto auto; }

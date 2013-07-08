@@ -42,67 +42,69 @@
   margin-bottom: 25px; }
   /* line 51, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #photos img {
+    display: block;
     max-width: 100%;
     height: auto;
     width: auto;
     margin: 0px;
     border: none;
     padding: 0px; }
-  /* line 59, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 60, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #photos .photo {
+    display: block;
     margin-bottom: 2px; }
 
-/* line 64, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 66, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
 #resume {
   width: 95%; }
-  /* line 66, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 68, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume h1 {
     text-align: center;
     line-height: 40px; }
-  /* line 70, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 72, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume table.info {
     width: 100%;
     border-bottom: 1px solid #000;
     line-height: 20px; }
-    /* line 74, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 76, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume table.info .right {
       padding-bottom: 7px;
       text-align: right; }
-  /* line 79, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 81, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume p, #resume h1, #resume h2, #resume h3, #resume table {
     margin-bottom: 0.2em; }
-  /* line 82, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 84, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume .section {
     margin-top: 10px;
     margin-bottom: 20px; }
-    /* line 85, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 87, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume .section .job {
       margin: 0px 0px 15px 0px; }
-      /* line 86, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+      /* line 88, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job h2 {
         font-size: 1.4em;
         margin-bottom: .2em; }
-      /* line 90, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+      /* line 92, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job .position {
         margin-bottom: 1em;
         margin-left: 1em; }
-        /* line 93, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+        /* line 95, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
         #resume .section .job .position .desc {
           border-bottom: 1px dotted #000; }
-          /* line 95, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 97, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .date {
             float: right; }
-          /* line 98, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 100, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title {
             font-weight: bold; }
-          /* line 101, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 103, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title, #resume .section .job .position .desc .date {
             padding-top: 5px;
             display: inline-block;
             background-color: #FFF;
             line-height: 17px;
             margin-bottom: -15px; }
-  /* line 114, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 116, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume ul {
     margin: 5px 0px 5px 20px;
     list-style-type: circle;

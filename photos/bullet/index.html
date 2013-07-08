@@ -24,23 +24,30 @@
 
   <body id='body' class="photos photos_bullet photos_bullet_index">
 
-    <a href='/' class='jpoz '>JPoz</a>
-    <a href='/photos' class='jpoz_photos inactive'>&nbsp;</a>
-    <div class='contacts '>
+    <a href='/' class='jpoz inactive'>JPoz</a>
+    <a href='/photos' class='jpoz_photos '>&nbsp;</a>
+    <div class='contacts inactive'>
       <a target='_blank' href='http://github.com/jpoz' class='contact github'>&nbsp;</a>
       <a target='_blank' href='http://twitter.com/jpoz' class='contact twitter'>&nbsp;</a>
       <a target='_blank' href='http://instagram.com/jpoz' class='contact instagram'>&nbsp;</a>  
     </div>
 
     <div id='content'>
-        <div class='photo'>
-    <div class='header'>
-      <h1>Fiona</h1>
+        <div id='photos'>
+    <div class='photo'>
+        
+          <img src='http://farm6.staticflickr.com/5523/9120865550_47ecec8725_b.jpg' />
+        
     </div>
-
-    
-
   </div>
+  <div class="fb-like" data-href="http://www.jpoz.net/photos/bullet/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="lucida grande"></div>
+
+  <a class='more_link' href='/photos'>More</a>
+
+  <footer>
+    <a href='http://twitter.com/jpoz'>@jpoz</a>
+  </footer>
+
 
     </div>
 <script type="text/javascript">
@@ -56,5 +63,15 @@
   })();
 
 </script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=436051099836208";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
   </body>
 </html>
