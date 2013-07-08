@@ -1,0 +1,8 @@
+---
+title: 'Bank'
+section: 'photos'
+url: 'http://farm8.staticflickr.com/7043/6914928699_b30cc48193_b.jpg'
+
+---
+
+Content

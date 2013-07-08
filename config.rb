@@ -48,6 +48,8 @@
 #   end
 # end
 
+page "/blog/index.html", :proxy => "/index.html"
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

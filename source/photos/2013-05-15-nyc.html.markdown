@@ -1,0 +1,10 @@
+---
+title: 'NYC'
+section: 'photos'
+url_2: 'http://farm3.staticflickr.com/2863/9121926794_129171c709_b.jpg'
+url: 'http://farm3.staticflickr.com/2874/9119696447_69ffd0ca74_b.jpg'
+
+
+---
+
+Content
