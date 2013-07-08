@@ -24,7 +24,6 @@
 }
 
 .contacts {
-  display: inline-block;
   color: black;
   text-decoration: none;
   background-repeat: no-repeat;
@@ -35,7 +34,7 @@
   width: 50px;
   text-align: center;
   padding-bottom: 7px;
-
+  
   a.contact:hover {
     opacity: 1;
   }
