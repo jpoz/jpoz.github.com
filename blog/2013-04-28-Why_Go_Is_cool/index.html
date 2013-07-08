@@ -52,10 +52,22 @@
 
 <pre><code data-language="shell">default: run
 
+package = {your_package}
+
 .PHONY: default run
 
-run:
-        GOPATH=`pwd` go run src/{project}/main.go
+run:format
+                 CGO_ENABLED=0 GOPATH=`pwd` go run -race $(package).go
+
+test:
+                 CGO_ENABLED=0 GOPATH=`pwd` go test -i src/$(package)/*.go  
+                 CGO_ENABLED=0 GOPATH=`pwd` go test src/$(package)/*.go
+
+build:test
+                 GOPATH=`pwd` go build -v $(package).go
+
+format:
+                 go fmt src/$(package)/*.go
 </code></pre>
 
     </article>
