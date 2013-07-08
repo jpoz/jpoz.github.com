@@ -1,4 +1,4 @@
-/* line 9, reset.css */
+/* line 9, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/reset.css */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,34 +16,34 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
   background: transparent; }
 
-/* line 18, reset.css */
+/* line 18, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/reset.css */
 body {
   line-height: 1; }
 
-/* line 21, reset.css */
+/* line 21, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/reset.css */
 ol, ul {
   list-style: none; }
 
-/* line 24, reset.css */
+/* line 24, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/reset.css */
 blockquote, q {
   quotes: none; }
 
 /* remember to define focus styles! */
-/* line 29, reset.css */
+/* line 29, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/reset.css */
 :focus {
   outline: 0; }
 
 /* remember to highlight inserts somehow! */
-/* line 34, reset.css */
+/* line 34, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/reset.css */
 ins {
   text-decoration: none; }
 
-/* line 37, reset.css */
+/* line 37, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/reset.css */
 del {
   text-decoration: line-through; }
 
 /* tables still need 'cellspacing="0"' in the markup */
-/* line 42, reset.css */
+/* line 42, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/reset.css */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -55,7 +55,7 @@ table {
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
-/* line 22, normalize.css */
+/* line 22, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 article,
 aside,
 details,
@@ -72,7 +72,7 @@ summary {
 /*
  * Corrects `inline-block` display not defined in IE 8/9.
  */
-/* line 32, normalize.css */
+/* line 32, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 audio,
 canvas,
 video {
@@ -82,7 +82,7 @@ video {
  * Prevents modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 41, normalize.css */
+/* line 41, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -90,7 +90,7 @@ audio:not([controls]) {
 /*
  * Addresses styling for `hidden` attribute not present in IE 8/9.
  */
-/* line 50, normalize.css */
+/* line 50, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 [hidden] {
   display: none; }
 
@@ -102,7 +102,7 @@ audio:not([controls]) {
  * 2. Prevents iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 64, normalize.css */
+/* line 64, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -114,7 +114,7 @@ html {
 /*
  * Removes default margin.
  */
-/* line 74, normalize.css */
+/* line 74, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 body {
   margin: 0; }
 
@@ -124,14 +124,14 @@ body {
 /*
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */
-/* line 86, normalize.css */
+/* line 86, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 a:focus {
   outline: thin dotted; }
 
 /*
  * Improves readability when focused and also mouse hovered in all browsers.
  */
-/* line 95, normalize.css */
+/* line 95, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 a:active,
 a:hover {
   outline: 0; }
@@ -143,21 +143,21 @@ a:hover {
  * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
  * Safari 5, and Chrome.
  */
-/* line 108, normalize.css */
+/* line 108, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 h1 {
   font-size: 2em; }
 
 /*
  * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
  */
-/* line 116, normalize.css */
+/* line 116, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /*
  * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 125, normalize.css */
+/* line 125, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 b,
 strong {
   font-weight: bold; }
@@ -165,14 +165,14 @@ strong {
 /*
  * Addresses styling not present in Safari 5 and Chrome.
  */
-/* line 133, normalize.css */
+/* line 133, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 dfn {
   font-style: italic; }
 
 /*
  * Addresses styling not present in IE 8/9.
  */
-/* line 141, normalize.css */
+/* line 141, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 mark {
   background: #ff0;
   color: #000; }
@@ -180,7 +180,7 @@ mark {
 /*
  * Corrects font family set oddly in Safari 5 and Chrome.
  */
-/* line 154, normalize.css */
+/* line 154, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 code,
 kbd,
 pre,
@@ -191,7 +191,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers.
  */
-/* line 163, normalize.css */
+/* line 163, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -200,21 +200,21 @@ pre {
 /*
  * Sets consistent quote types.
  */
-/* line 173, normalize.css */
+/* line 173, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 /*
  * Addresses inconsistent and variable font size in all browsers.
  */
-/* line 181, normalize.css */
+/* line 181, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 small {
   font-size: 80%; }
 
 /*
  * Prevents `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 190, normalize.css */
+/* line 190, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 sub,
 sup {
   font-size: 75%;
@@ -222,11 +222,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 197, normalize.css */
+/* line 197, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 sup {
   top: -0.5em; }
 
-/* line 201, normalize.css */
+/* line 201, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 sub {
   bottom: -0.25em; }
 
@@ -236,14 +236,14 @@ sub {
 /*
  * Removes border when inside `a` element in IE 8/9.
  */
-/* line 213, normalize.css */
+/* line 213, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 img {
   border: 0; }
 
 /*
  * Corrects overflow displayed oddly in IE 9.
  */
-/* line 221, normalize.css */
+/* line 221, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -253,7 +253,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE 8/9 and Safari 5.
  */
-/* line 233, normalize.css */
+/* line 233, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 figure {
   margin: 0; }
 
@@ -263,9 +263,9 @@ figure {
 /*
  * Define consistent border, margin, and padding.
  */
-/* line 245, normalize.css */
+/* line 245, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -273,7 +273,7 @@ fieldset {
  * 1. Corrects color not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 256, normalize.css */
+/* line 256, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 legend {
   border: 0;
   /* 1 */
@@ -285,7 +285,7 @@ legend {
  * 2. Corrects font size not being inherited in all browsers.
  * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
  */
-/* line 270, normalize.css */
+/* line 270, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 button,
 input,
 select,
@@ -301,7 +301,7 @@ textarea {
  * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 282, normalize.css */
+/* line 282, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 button,
 input {
   line-height: normal; }
@@ -313,7 +313,7 @@ input {
  * 3. Improves usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 297, normalize.css */
+/* line 297, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -326,7 +326,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements.
  */
-/* line 307, normalize.css */
+/* line 307, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 button[disabled],
 input[disabled] {
   cursor: default; }
@@ -335,7 +335,7 @@ input[disabled] {
  * 1. Addresses box sizing set to `content-box` in IE 8/9.
  * 2. Removes excess padding in IE 8/9.
  */
-/* line 317, normalize.css */
+/* line 317, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -348,7 +348,7 @@ input[type="radio"] {
  * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 328, normalize.css */
+/* line 328, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -361,7 +361,7 @@ input[type="search"] {
  * Removes inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 341, normalize.css */
+/* line 341, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -369,7 +369,7 @@ input[type="search"]::-webkit-search-decoration {
 /*
  * Removes inner padding and border in Firefox 4+.
  */
-/* line 350, normalize.css */
+/* line 350, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -379,7 +379,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE 8/9.
  * 2. Improves readability and alignment in all browsers.
  */
-/* line 360, normalize.css */
+/* line 360, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 textarea {
   overflow: auto;
   /* 1 */
@@ -392,23 +392,27 @@ textarea {
 /*
  * Remove most spacing between table cells.
  */
-/* line 373, normalize.css */
+/* line 373, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/normalize.css */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 6, all.css.scss */
+/* line 6, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/all.css.scss */
 html {
   min-height: 100%;
   position: relative; }
 
-/* line 8, all.css.scss */
+/* line 8, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/all.css.scss */
 body {
   height: 100%;
   text-align: left;
-  font-family: "Open Sans", sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
 
-/* line 1, layout.css.scss */
+/* line 14, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/all.css.scss */
+.clear {
+  clear: both; }
+
+/* line 1, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
 #content {
   outline: 0;
   background-color: #fff;
@@ -416,7 +420,7 @@ body {
   max-width: 960px;
   width: auto; }
 
-/* line 9, layout.css.scss */
+/* line 9, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
 .jpoz {
   color: white;
   background: #262626;
@@ -433,7 +437,35 @@ body {
   font-size: 12px;
   line-height: 52px; }
 
-/* line 26, layout.css.scss */
+/* line 25, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+.jpoz_photos {
+  color: white;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  position: fixed;
+  left: 75px;
+  top: 25px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 52px;
+  background-color: #262626;
+  background-image: url("/images/86-camera@2x-white.png");
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center; }
+
+/* line 46, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+.jpoz_photos.inactive, .jpoz.inactive {
+  opacity: 0.2; }
+/* line 49, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+.jpoz_photos.inactive:hover, .jpoz.inactive:hover {
+  opacity: 0.5; }
+
+/* line 54, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
 .contacts {
   color: black;
   text-decoration: none;
@@ -445,10 +477,13 @@ body {
   width: 50px;
   text-align: center;
   padding-bottom: 7px; }
-  /* line 38, layout.css.scss */
+  /* line 66, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+  .contacts.inactive {
+    display: none; }
+  /* line 70, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
   .contacts a.contact:hover {
     opacity: 1; }
-  /* line 41, layout.css.scss */
+  /* line 73, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
   .contacts a.contact {
     display: block;
     margin: 10px auto;
@@ -457,54 +492,60 @@ body {
     text-decoration: none;
     background-repeat: no-repeat;
     opacity: 0.8; }
-    /* line 50, layout.css.scss */
+    /* line 82, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.gmail {
       background-image: url(/images/489-gmail@2x-white.png);
       background-size: 23px;
       line-height: 18px; }
-    /* line 55, layout.css.scss */
+    /* line 87, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.github {
       background-image: url(/images/488-github@2x-white.png);
       background-size: 23px;
       line-height: 25px; }
-    /* line 60, layout.css.scss */
+    /* line 92, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.twitter {
       background-image: url(/images/498-twitter@2x-white.png);
       background-size: 23px;
       line-height: 20px; }
-    /* line 65, layout.css.scss */
+    /* line 97, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.instagram {
       background-image: url(/images/492-instagram@2x-white.png);
       background-size: 23px;
-      line-height: 20px; }
-    /* line 70, layout.css.scss */
+      line-height: 23px; }
+    /* line 102, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.simple {
       background-image: url(/images/394-bank@2x-white.png);
       background-size: 23px;
       line-height: 20px; }
+    /* line 107, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+    .contacts a.contact.photos {
+      background-image: url(/images/86-camera@2x-white.png);
+      background-size: 23px;
+      line-height: 20px; }
 
-/* line 1, pages.css.scss */
+/* line 1, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
 #TextFader {
   width: 100%;
   margin: 5% auto;
   font-size: 30px;
-  line-height: 50px; }
-  /* line 7, pages.css.scss */
+  line-height: 50px;
+  text-align: center; }
+  /* line 8, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #TextFader span {
     opacity: 0.0; }
 
-/* line 14, pages.css.scss */
+/* line 15, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
 #toc article {
   padding: 50px 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   text-align: center; }
-  /* line 19, pages.css.scss */
+  /* line 20, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article.first {
     border-top: 1px solid rgba(0, 0, 0, 0.3); }
-  /* line 24, pages.css.scss */
+  /* line 25, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article .title a:hover {
     text-decoration: underline; }
-  /* line 27, pages.css.scss */
+  /* line 28, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article .title a {
     display: block;
     font-size: 2.5em;
@@ -514,111 +555,127 @@ body {
     margin-bottom: 0.5em;
     font-weight: 800;
     color: #333;
-    font-family: "Open Sans", sans-serif; }
-  /* line 38, pages.css.scss */
+    font-family: 'Open Sans', sans-serif; }
+  /* line 39, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article .title div.date {
     text-align: center;
     font-weight: 300; }
 
-/* line 47, pages.css.scss */
+/* line 48, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+#photos {
+  margin-top: 25px;
+  margin-bottom: 25px; }
+  /* line 51, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+  #photos img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: 0px;
+    border: none;
+    padding: 0px; }
+  /* line 59, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
+  #photos .photo {
+    margin-bottom: 2px; }
+
+/* line 64, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
 #resume {
   width: 95%; }
-  /* line 49, pages.css.scss */
+  /* line 66, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume h1 {
     text-align: center;
     line-height: 40px; }
-  /* line 53, pages.css.scss */
+  /* line 70, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume table.info {
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000;
     line-height: 20px; }
-    /* line 57, pages.css.scss */
+    /* line 74, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume table.info .right {
       padding-bottom: 7px;
       text-align: right; }
-  /* line 62, pages.css.scss */
+  /* line 79, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume p, #resume h1, #resume h2, #resume h3, #resume table {
     margin-bottom: 0.2em; }
-  /* line 65, pages.css.scss */
+  /* line 82, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume .section {
     margin-top: 10px;
     margin-bottom: 20px; }
-    /* line 68, pages.css.scss */
+    /* line 85, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume .section .job {
       margin: 0px 0px 15px 0px; }
-      /* line 69, pages.css.scss */
+      /* line 86, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job h2 {
         font-size: 1.4em;
         margin-bottom: .2em; }
-      /* line 73, pages.css.scss */
+      /* line 90, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job .position {
         margin-bottom: 1em;
         margin-left: 1em; }
-        /* line 76, pages.css.scss */
+        /* line 93, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
         #resume .section .job .position .desc {
-          border-bottom: 1px dotted black; }
-          /* line 78, pages.css.scss */
+          border-bottom: 1px dotted #000; }
+          /* line 95, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .date {
             float: right; }
-          /* line 81, pages.css.scss */
+          /* line 98, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title {
             font-weight: bold; }
-          /* line 84, pages.css.scss */
+          /* line 101, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title, #resume .section .job .position .desc .date {
             padding-top: 5px;
             display: inline-block;
             background-color: #FFF;
             line-height: 17px;
             margin-bottom: -15px; }
-  /* line 97, pages.css.scss */
+  /* line 114, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume ul {
     margin: 5px 0px 5px 20px;
     list-style-type: circle;
     line-height: 20px; }
 
-/* line 1, article.css.scss */
+/* line 1, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
 div.blog {
   margin-top: 26px;
   font-size: 20px; }
-  /* line 6, article.css.scss */
+  /* line 6, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
   div.blog .header {
     margin-bottom: 37px;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-top: 50px;
     padding-bottom: 50px; }
-  /* line 13, article.css.scss */
+  /* line 13, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
   div.blog .header_image {
     margin: 10px auto 50px auto;
     width: 100%;
     height: 10em; }
-  /* line 19, article.css.scss */
+  /* line 19, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
   div.blog h1, div.blog h2, div.blog h3, div.blog h4 {
     text-align: center;
     margin-bottom: 0.5em;
     font-weight: 800;
     color: #333;
-    font-family: "Open Sans", sans-serif; }
-  /* line 26, article.css.scss */
+    font-family: 'Open Sans', sans-serif; }
+  /* line 26, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
   div.blog h1 {
     font-size: 2.5em;
     letter-spacing: -2px; }
-  /* line 30, article.css.scss */
+  /* line 30, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
   div.blog h4 {
     font-weight: 300; }
-  /* line 34, article.css.scss */
+  /* line 34, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
   div.blog p {
     font-size: 19px;
     margin-bottom: 1.7em;
     line-height: 2em;
     padding: 0; }
 
-@media screen and (max-width: 960px) {
-  /* line 2, iphone.css.scss */
+@media screen and (max-width: 1024px) {
+  /* line 2, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/iphone.css.scss */
   .jpoz {
     position: absolute; }
 
-  /* line 5, iphone.css.scss */
+  /* line 5, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/iphone.css.scss */
   .contacts {
     position: absolute;
     left: 75px;
@@ -627,12 +684,12 @@ div.blog {
     height: 50px;
     line-height: 50px;
     padding: 0px 10px 0px 10px; }
-    /* line 14, iphone.css.scss */
+    /* line 14, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/iphone.css.scss */
     .contacts a.contact {
       padding: 0px 3px;
       display: inline-block; }
 
-  /* line 20, iphone.css.scss */
+  /* line 20, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/iphone.css.scss */
   #content {
     margin-top: 75px;
     padding: 25px; } }
@@ -642,22 +699,22 @@ div.blog {
  * @author Craig Campbell
  * @version 1.0.4
  */
-/* line 8, github.css */
+/* line 8, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   word-wrap: break-word;
   padding: 6px 10px;
   line-height: 19px;
   margin-bottom: 20px; }
 
-/* line 16, github.css */
+/* line 16, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 code {
   border: 1px solid #eaeaea;
   margin: 0px 2px;
   padding: 0px 5px;
   font-size: 12px; }
 
-/* line 23, github.css */
+/* line 23, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre code {
   border: 0px;
   padding: 0px;
@@ -666,61 +723,61 @@ pre code {
   -webkit-border-radius: 0px;
   border-radius: 0px; }
 
-/* line 32, github.css */
+/* line 32, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre, code {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
   color: #333;
   background: #f8f8f8;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
 
-/* line 41, github.css */
+/* line 41, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre, pre code {
   font-size: 13px; }
 
-/* line 45, github.css */
+/* line 45, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .comment {
   color: #998; }
 
-/* line 49, github.css */
+/* line 49, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .support {
   color: #0086B3; }
 
-/* line 53, github.css */
+/* line 53, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .tag, pre .tag-name {
   color: navy; }
 
-/* line 57, github.css */
+/* line 57, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .keyword, pre .css-property, pre .vendor-prefix, pre .sass, pre .class, pre .id, pre .css-value, pre .entity.function, pre .storage.function {
   font-weight: bold; }
 
-/* line 61, github.css */
+/* line 61, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .css-property, pre .css-value, pre .vendor-prefix, pre .support.namespace {
   color: #333; }
 
-/* line 65, github.css */
+/* line 65, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .constant.numeric, pre .keyword.unit, pre .hex-color {
   font-weight: normal;
   color: #099; }
 
-/* line 70, github.css */
+/* line 70, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .entity.class {
   color: #458; }
 
-/* line 74, github.css */
+/* line 74, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .entity.id, pre .entity.function {
   color: #900; }
 
-/* line 78, github.css */
+/* line 78, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .attribute, pre .variable {
   color: teal; }
 
-/* line 82, github.css */
+/* line 82, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .string, pre .support.value {
   font-weight: normal;
   color: #d14; }
 
-/* line 87, github.css */
+/* line 87, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/github.css */
 pre .regexp {
   color: #009926; }

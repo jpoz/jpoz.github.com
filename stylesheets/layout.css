@@ -1,4 +1,4 @@
-/* line 1, layout.css.scss */
+/* line 1, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
 #content {
   outline: 0;
   background-color: #fff;
@@ -6,7 +6,7 @@
   max-width: 960px;
   width: auto; }
 
-/* line 9, layout.css.scss */
+/* line 9, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
 .jpoz {
   color: white;
   background: #262626;
@@ -23,7 +23,35 @@
   font-size: 12px;
   line-height: 52px; }
 
-/* line 26, layout.css.scss */
+/* line 25, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+.jpoz_photos {
+  color: white;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  position: fixed;
+  left: 75px;
+  top: 25px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 52px;
+  background-color: #262626;
+  background-image: url("/images/86-camera@2x-white.png");
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center; }
+
+/* line 46, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+.jpoz_photos.inactive, .jpoz.inactive {
+  opacity: 0.2; }
+/* line 49, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+.jpoz_photos.inactive:hover, .jpoz.inactive:hover {
+  opacity: 0.5; }
+
+/* line 54, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
 .contacts {
   color: black;
   text-decoration: none;
@@ -35,10 +63,13 @@
   width: 50px;
   text-align: center;
   padding-bottom: 7px; }
-  /* line 38, layout.css.scss */
+  /* line 66, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+  .contacts.inactive {
+    display: none; }
+  /* line 70, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
   .contacts a.contact:hover {
     opacity: 1; }
-  /* line 41, layout.css.scss */
+  /* line 73, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
   .contacts a.contact {
     display: block;
     margin: 10px auto;
@@ -47,28 +78,33 @@
     text-decoration: none;
     background-repeat: no-repeat;
     opacity: 0.8; }
-    /* line 50, layout.css.scss */
+    /* line 82, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.gmail {
       background-image: url(/images/489-gmail@2x-white.png);
       background-size: 23px;
       line-height: 18px; }
-    /* line 55, layout.css.scss */
+    /* line 87, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.github {
       background-image: url(/images/488-github@2x-white.png);
       background-size: 23px;
       line-height: 25px; }
-    /* line 60, layout.css.scss */
+    /* line 92, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.twitter {
       background-image: url(/images/498-twitter@2x-white.png);
       background-size: 23px;
       line-height: 20px; }
-    /* line 65, layout.css.scss */
+    /* line 97, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.instagram {
       background-image: url(/images/492-instagram@2x-white.png);
       background-size: 23px;
-      line-height: 20px; }
-    /* line 70, layout.css.scss */
+      line-height: 23px; }
+    /* line 102, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
     .contacts a.contact.simple {
       background-image: url(/images/394-bank@2x-white.png);
+      background-size: 23px;
+      line-height: 20px; }
+    /* line 107, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/layout.css.scss */
+    .contacts a.contact.photos {
+      background-image: url(/images/86-camera@2x-white.png);
       background-size: 23px;
       line-height: 20px; }

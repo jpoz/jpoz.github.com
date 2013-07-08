@@ -1,9 +1,9 @@
-@media screen and (max-width: 960px) {
-  /* line 2, iphone.css.scss */
+@media screen and (max-width: 1024px) {
+  /* line 2, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/iphone.css.scss */
   .jpoz {
     position: absolute; }
 
-  /* line 5, iphone.css.scss */
+  /* line 5, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/iphone.css.scss */
   .contacts {
     position: absolute;
     left: 75px;
@@ -12,12 +12,12 @@
     height: 50px;
     line-height: 50px;
     padding: 0px 10px 0px 10px; }
-    /* line 14, iphone.css.scss */
+    /* line 14, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/iphone.css.scss */
     .contacts a.contact {
       padding: 0px 3px;
       display: inline-block; }
 
-  /* line 20, iphone.css.scss */
+  /* line 20, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/iphone.css.scss */
   #content {
     margin-top: 75px;
     padding: 25px; } }
