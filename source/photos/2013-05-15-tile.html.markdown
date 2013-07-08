@@ -1,5 +1,6 @@
 ---
-title: 'Fiona'
+title: 'Tile'
+section: 'photos'
 url: 'http://farm9.staticflickr.com/8549/9002285491_a58b8ee695_b.jpg'
 
 ---

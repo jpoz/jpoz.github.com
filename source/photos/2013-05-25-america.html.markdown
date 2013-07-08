@@ -1,5 +1,5 @@
 ---
-title: 'Fiona'
+title: 'America'
 section: 'photos'
 url: 'http://farm6.staticflickr.com/5522/9119712787_8451dc3074_b.jpg'
 

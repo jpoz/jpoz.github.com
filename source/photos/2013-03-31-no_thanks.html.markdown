@@ -1,5 +1,6 @@
 ---
-title: 'Fiona'
+title: 'No Thanks'
+section: 'photos'
 url: 'http://farm9.staticflickr.com/8523/8608404436_debc9f6abf_b.jpg'
 
 

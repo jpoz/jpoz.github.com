@@ -1,5 +1,6 @@
 ---
-title: 'Fiona'
+title: 'Tuzzolo'
+section: 'photos'
 url: 'http://farm7.staticflickr.com/6099/6289823027_437296e215_b.jpg'
 
 
