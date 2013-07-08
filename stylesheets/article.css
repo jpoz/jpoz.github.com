@@ -34,3 +34,15 @@ div.blog {
     margin-bottom: 1.7em;
     line-height: 2em;
     padding: 0; }
+  /* line 41, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
+  div.blog a {
+    color: black;
+    text-decoration: none;
+    font-weight: 800; }
+  /* line 47, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
+  div.blog a:hover {
+    text-decoration: underline; }
+  /* line 51, /Users/jpoz/Dropbox/Ruby/jpoz.github.com/source/stylesheets/article.css.scss */
+  div.blog footer {
+    font-weight: 300;
+    margin: 75px 0px 50px 0px; }
