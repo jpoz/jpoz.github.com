@@ -1,14 +1,21 @@
 <% wrap_layout :layout do %>
-  <div class='photo'>
-    <div class='header'>
-      <h1><%= data.page['title'] %></h1>
+  <div id='photos'>
+    <div class='photo'>
+        <% if data.page[:url_2] %>
+          <img style='width: 50%; float: left;' src='<%= data.page[:url] %>' />
+          <img style='width: 50%; float: right;' src='<%= data.page[:url_2] %>' />
+          <br class='clear'>
+        <% else %>
+          <img src='<%= data.page[:url] %>' />
+        <% end %>
     </div>
-
-    <% if data.page['header_image'] %>
-      <div class='header_image'
-        style="background: url('<%= data.page['header_image'] %>');">&nbsp;
-      </div>
-    <% end %>
-
   </div>
+  <div class="fb-like" data-href="http://www.jpoz.net<%= current_page.url %>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="lucida grande"></div>
+
+  <a class='more_link' href='/photos'>More</a>
+
+  <footer>
+    <a href='http://twitter.com/jpoz'>@jpoz</a>
+  </footer>
+
 <% end %>

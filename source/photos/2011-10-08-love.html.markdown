@@ -1,5 +1,6 @@
 ---
 title: 'Fiona'
+section: 'photos'
 url: 'http://farm7.staticflickr.com/6169/6227559478_db200f6142_b.jpg'
 url_2: 'http://farm7.staticflickr.com/6234/6227565436_112a8150f5_b.jpg'
 

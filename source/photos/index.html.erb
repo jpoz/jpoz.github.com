@@ -4,7 +4,7 @@ section: 'photos'
 ---
 <div id='photos'>
   <% blog(:photos).articles.each_with_index do |photo, i| %>
-    <div class="photo">
+    <a href='<%= photo.url %>' class="photo">
       <% if photo.data[:url_2] %>
         <img style='width: 50%; float: left;' src='<%= photo.data[:url] %>' />
         <img style='width: 50%; float: right;' src='<%= photo.data[:url_2] %>' />
@@ -12,6 +12,6 @@ section: 'photos'
       <% else %>
         <img src='<%= photo.data[:url] %>' />
       <% end %>
-    </div>
+    </a>
   <% end %>
 </div>
