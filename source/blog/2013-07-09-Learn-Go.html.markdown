@@ -1,0 +1,65 @@
+---
+title: One Reason You Should Learn Go
+  
+---
+
+If you're still on the fence about Go. Here's something you should know. XML parsing in Go is awesome.
+
+Did you just let out a viseral grown when you read XML. Then Go is for you. I hate XML but I work on web tools so I've got to deal with it. 
+
+#### Real life example
+
+S3 returns XML. Really really ugly XML. But Go makes it super easy to deal with. Checkout this XML from S3:
+
+<pre><code data-language="xml"><?xml version="1.0" encoding="UTF-8"?>
+<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+  <Name>super-awesome-bucket</Name>
+  <Prefix>users/186</Prefix>
+  <Marker/>
+  <MaxKeys>1000</MaxKeys>
+  <IsTruncated>false</IsTruncated>
+  <Contents>
+    <Key>users/186/taco.txt</Key>
+    <LastModified>2013-07-09T22:01:47.000Z</LastModified>
+    <ETag>"8ba99404a19a173e3d964b981201061f"</ETag>
+    <Size>4305</Size>
+  </Contents>
+  <Contents>
+    <Key>users/186/waffle.txt</Key>
+    <LastModified>2013-07-09T22:01:41.000Z</LastModified>
+    <ETag>"8ba99404a19a173e3d964b981201061f"</ETag>
+    <Size>4305</Size>
+  </Contents>
+</ListBucketResult>
+</code></pre>
+
+I'm listing all the assest for user 186. All I really care about are the `Keys` inside of the `Contents` elements. Lets write some Go todo this:
+
+<pre><code data-language="go">package main
+
+import "fmt"
+import "encoding/xml"
+
+var payload = "" // above
+
+type BucketItem struct {
+	Key string
+}
+
+type ListBucketResult struct {
+	Contents []BucketItem
+}
+
+func main() {
+	result = &ListBucketResult{}
+
+	err = xml.Unmarshal([]byte(payload), result)
+	if err != nil {
+		return
+	}
+  
+  fmt.Printf("Keys: %v\n", result.Contents)
+}
+</code></pre>
+
+BAM!!! DONE.
