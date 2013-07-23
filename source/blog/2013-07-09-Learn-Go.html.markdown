@@ -33,7 +33,7 @@ S3 returns XML. Really really ugly XML. But Go makes it super easy to deal with.
 </ListBucketResult>
 </code></pre>
 
-I'm listing all the assest for user 186. All I really care about are the `Keys` inside of the `Contents` elements. Lets write some Go todo this:
+I'm listing all the assets for user 186. All I really care about are the `Keys` inside of the `Contents` elements. Lets write some Go todo this:
 
 <pre><code data-language="go">package main
 
