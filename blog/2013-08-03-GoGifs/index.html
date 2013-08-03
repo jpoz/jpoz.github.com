@@ -56,30 +56,31 @@
 
 <p>Here&#39;s the code:</p>
 
-<pre><code data-language="go">
-package main
+<pre><code data-language="go">package main
 
 import (
-  "os"
-  "image/gif"
-  "github.com/jpoz/gifencoder"
+    "github.com/jpoz/gifencoder"
+    "image/gif"
+    "os"
 )
 
 func main() {
-        file, _ := os.Open("nom.gif")
-        g,    _ := gif.DecodeAll(file)
+    file, _ := os.Open("nom.gif")
+    g, _ := gif.DecodeAll(file)
 
-        for _, img := range g.Image {
-            for x := 0; x < img.Bounds().Max.X/2; x++ {
-                for y := 0; y < img.Bounds().Max.Y; y++ {
-                    c := img.At(img.Bounds().Max.X-x, img.Bounds().Max.Y-y)
-                    img.Set(x, y, c)
-                }
+    for _, img := range g.Image { // iterate over frames
+        for x := 0; x < img.Bounds().Max.X/2; x++ { // half of the x space
+            for y := 0; y < img.Bounds().Max.Y; y++ { // all of the y space
+                // find the mirror pixel's color
+                c := img.At(img.Bounds().Max.X-x, img.Bounds().Max.Y-y)
+                // set it
+                img.Set(x, y, c)
             }
         }
+    }
 
-        file, _ = os.Create("new_nom.gif")
-        _ = gifencoder.EncodeAll(file, g)
+    file, _ = os.Create("new_nom.gif")
+    _ = gifencoder.EncodeAll(file, g)
 }
 </code></pre>
 
