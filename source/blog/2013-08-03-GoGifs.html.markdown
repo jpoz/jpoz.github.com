@@ -1,0 +1,53 @@
+---
+title: Making gifs with Go 
+  
+---
+
+Go's standard library has a gif decoder, but sadly no encoder. I found an encode on github [here](https://github.com/boppreh/gifencoder). Unfortunalty it written in the `main` package so i forked it and pulled it into its own package: [github.com/jpoz/gifencoder](https://github.com/jpoz/gifencoder). Now we can easily decode a gif, play around with it and encode it back to a file.
+
+For this example I'm going to do something pretty basic: Take a gif and mirror the animation. Below is my target gif:
+
+## nom.gif
+
+<div style='text-align: center'>
+  <img src='/images/nom.gif'/>
+</div>
+
+Here's the code:
+
+<pre><code data-language="go">
+package main
+
+import (
+  "os"
+  "image/gif"
+  "github.com/jpoz/gifencoder"
+)
+
+func main() {
+		file, _ := os.Open("nom.gif")
+		g,    _ := gif.DecodeAll(file)
+
+		for _, img := range g.Image {
+			for x := 0; x < img.Bounds().Max.X/2; x++ {
+				for y := 0; y < img.Bounds().Max.Y; y++ {
+					c := img.At(img.Bounds().Max.X-x, img.Bounds().Max.Y-y)
+					img.Set(x, y, c)
+				}
+			}
+		}
+
+		file, _ = os.Create("new_nom.gif")
+		_ = gifencoder.EncodeAll(file, g)
+}
+</code></pre>
+
+Here's what we get:
+
+## new_nom.gif
+
+<div style='text-align: center'>
+  <img src='/images/new_nom.gif'/>
+</div>
+
+
