@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+@import "reset";
+@import "normalize";
+
+body {
+  height:100%;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a.jpoz, a.jpoz_photos, div.contacts  {
+  display: none;
+}
+
+@import "pages";
+
+div#content {
+  #resume {
+    margin: 20px auto;
+  }
+}
