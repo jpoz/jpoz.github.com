@@ -24,7 +24,7 @@ func main() {
 
       // GoAndWait returns an chan error
       c := w.GoAndWait(func() (err error) {
-        fmt.Print( j , " - started\n")      
+        fmt.Print( j , " - started\n")
         time.Sleep( rand.Int63n( 1000000000 ) )
         return
       })
