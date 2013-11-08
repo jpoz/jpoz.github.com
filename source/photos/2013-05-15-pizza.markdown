@@ -1,8 +1,0 @@
----
-title: 'Pizza'
-section: 'photos'
-url: 'http://farm4.staticflickr.com/3823/9003435152_d80c324075_b.jpg'
-
----
-
-Content

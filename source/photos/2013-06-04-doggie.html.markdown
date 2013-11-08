@@ -1,7 +1,7 @@
 ---
 title: 'Doggie'
 section: 'photos'
-url: 'http://farm8.staticflickr.com/7435/9226470428_f62c30772d_b.jpg'
+url: 'http://farm3.staticflickr.com/2815/9550650160_99bba39eb3_b.jpg'
 
 ---
 
