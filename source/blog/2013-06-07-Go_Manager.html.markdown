@@ -73,6 +73,7 @@ func (m *manager) RateLimit(burst uint, timeout time.Duration) {
 	m.lock.Lock()
 
 	m.limiter = make(chan time.Time, burst)
+  m.timeout = timeout
 
 	go func() {
 		for t := range time.Tick(time.Millisecond * timeout) {
