@@ -1,3 +1,4 @@
+
 #TextFader {
   width: 100%;
   margin: 5% auto;
@@ -37,7 +38,7 @@
         font-family: 'Open Sans', sans-serif;
       }
       div.date {
-        text-align: center;        
+        text-align: center;
         font-weight: 300;
       }
     }
@@ -49,7 +50,7 @@
   margin-top: 25px;
   margin-bottom: 25px;
   img {
-      display: block;  
+      display: block;
       max-width: 100%;
       height: auto;
       width: auto;
@@ -62,7 +63,7 @@
   }
 }
 
-#resume {
+#resume, #cover {
   width: 95%;
   h1 {
     text-align: center;
@@ -73,7 +74,7 @@
     border-bottom: 1px solid #000;
     line-height: 20px;
     .right {
-      padding-bottom: 7px;    
+      padding-bottom: 7px;
       text-align: right;
     }
   }
@@ -89,7 +90,7 @@
         margin-bottom: .2em;
       }
       .position {
-        margin-bottom: 1em; 
+        margin-bottom: 1em;
         margin-left: 1em;
         .desc {
           border-bottom: 1px dotted #000;
@@ -116,6 +117,23 @@
     margin: 5px 0px 5px 20px;
     list-style-type: circle;
     line-height: 20px;
+  }
+}
+
+#cover {
+  padding-top: 30px;
+  p {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+  .tab {
+    width: 30px;
+    display: inline-block;
+  }
+  .light {
+    font-size: 16px;
+    color: #777;
   }
 }
 

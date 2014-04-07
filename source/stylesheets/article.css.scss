@@ -27,6 +27,11 @@ div.blog {
     font-size: 2.5em;
     letter-spacing: -2px;
   }
+  h2 {
+    margin-top: 2.5em;
+    font-size: 1.5em;
+    letter-spacing: -2px;
+  }
   h4 {
     font-weight: 300;
   }
@@ -37,5 +42,22 @@ div.blog {
     line-height: 2em;
     padding: 0;
   }
-  
+
+  p, li {
+    code {
+      font-size: 19px;
+    }
+    a {
+      font-size: 19px;
+      font-weight: 600;
+    }
+  }
+
+  ul {
+    list-style-type: circle;
+    margin-left: 20px;
+    li {
+      padding: 10px 0px;
+    }
+  }
 }
