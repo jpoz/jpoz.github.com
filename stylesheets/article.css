@@ -26,11 +26,30 @@ div.blog {
     font-size: 2.5em;
     letter-spacing: -2px; }
   /* line 30, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+  div.blog h2 {
+    margin-top: 2.5em;
+    font-size: 1.5em;
+    letter-spacing: -2px; }
+  /* line 35, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
   div.blog h4 {
     font-weight: 300; }
-  /* line 34, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+  /* line 39, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
   div.blog p {
     font-size: 19px;
     margin-bottom: 1.7em;
     line-height: 2em;
     padding: 0; }
+  /* line 47, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+  div.blog p code, div.blog li code {
+    font-size: 19px; }
+  /* line 50, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+  div.blog p a, div.blog li a {
+    font-size: 19px;
+    font-weight: 600; }
+  /* line 56, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+  div.blog ul {
+    list-style-type: circle;
+    margin-left: 20px; }
+    /* line 59, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+    div.blog ul li {
+      padding: 10px 0px; }
