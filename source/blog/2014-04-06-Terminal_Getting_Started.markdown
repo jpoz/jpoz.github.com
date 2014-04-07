@@ -147,6 +147,7 @@ Copying files is useful. Use `cp` to copy files or whole directories.
 <pre><code data-language="shell"># make a duplicate of a important file
 cp my_journal.txt copy_my_journal.txt
 
+# Notice the -r or recusive flag. This will duplicate the Documents folder and everything inside it
 cp -r ~/Documents ~/Documents_copy
 </code></pre>
 
