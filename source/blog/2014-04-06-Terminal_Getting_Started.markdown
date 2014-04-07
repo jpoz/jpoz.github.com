@@ -73,6 +73,24 @@ ls -a
 ls -al
 </code></pre>
 
+## pwd
+
+Now that you're moving around let make sure you can check where you are. The `pwd`
+command prints out your working/current directory.
+
+<pre><code data-language="shell"># pwd will print out which directory you are currently in
+pwd
+</code></pre>
+
+## mkdir
+
+Lets make some new folders on your computer. With the `mkdir` command you can
+make new directories.
+
+<pre><code data-language="shell"># give mkdir the folder you'd like to create as the first parameter
+mkdir my_new_folder
+</code></pre>
+
 ## cat
 
 I've found my file! Now what's in it? Meow meet `cat` aka the concatenate command.
@@ -108,7 +126,6 @@ next section with grep.
 Ah grep. I use this command so much sometimes I use it as a verb in sentences:
 "Oh just grep out of the value." as in "Oh just search and return the value"
 
-
 <pre><code data-language="shell"># grep can be used to search for text within
 # a file:
 grep apple /var/log/system.log
@@ -132,3 +149,14 @@ cp my_journal.txt copy_my_journal.txt
 
 cp -r ~/Documents ~/Documents_copy
 </code></pre>
+
+## Other helpful tips:
+
+* Using the up and down arrows you can cycle through the histroy of your commands.
+* Use `open .` to open your current directory in the Finder.
+* Hit Tab as much as you can. It auto completes for you.
+
+
+
+
+
