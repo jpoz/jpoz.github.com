@@ -115,7 +115,7 @@ tail -f /var/log/system.log
 head -n 1 /var/log/system.log
 </code></pre>
 
-## pipe
+## | "pipe"
 
 Sometimes one command isn't enough. The `|` character aka "pipe" allows us to
 take the output of one command and feed it into the next. We'll use this in the
@@ -156,8 +156,3 @@ cp -r ~/Documents ~/Documents_copy
 * Using the up and down arrows you can cycle through the histroy of your commands.
 * Use `open .` to open your current directory in the Finder.
 * Hit Tab as much as you can. It auto completes for you.
-
-
-
-
-
