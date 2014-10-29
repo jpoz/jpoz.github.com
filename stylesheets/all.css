@@ -616,67 +616,75 @@ footer {
     text-align: center;
     line-height: 40px; }
   /* line 72, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  #resume h2 a, #cover h2 a {
+    color: #777;
+    font-weight: 100; }
+  /* line 76, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  #resume h4, #cover h4 {
+    font-weight: 100;
+    line-height: 30px; }
+  /* line 80, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume table.info, #cover table.info {
     width: 100%;
     border-bottom: 1px solid #000;
     line-height: 20px; }
-    /* line 76, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 84, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume table.info .right, #cover table.info .right {
       padding-bottom: 7px;
       text-align: right; }
-  /* line 81, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 89, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume p, #resume h1, #resume h2, #resume h3, #resume table, #cover p, #cover h1, #cover h2, #cover h3, #cover table {
     margin-bottom: 0.2em; }
-  /* line 84, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 92, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume .section, #cover .section {
     margin-top: 10px;
     margin-bottom: 20px; }
-    /* line 87, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 95, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume .section .job, #cover .section .job {
       margin: 0px 0px 15px 0px; }
-      /* line 88, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+      /* line 96, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job h2, #cover .section .job h2 {
         font-size: 1.4em;
         margin-bottom: .2em; }
-      /* line 92, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+      /* line 100, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job .position, #cover .section .job .position {
         margin-bottom: 1em;
         margin-left: 1em; }
-        /* line 95, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+        /* line 103, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
         #resume .section .job .position .desc, #cover .section .job .position .desc {
           border-bottom: 1px dotted #000; }
-          /* line 97, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 105, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .date, #cover .section .job .position .desc .date {
             float: right; }
-          /* line 100, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 108, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title, #cover .section .job .position .desc .title {
             font-weight: bold; }
-          /* line 103, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 111, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title, #resume .section .job .position .desc .date, #cover .section .job .position .desc .title, #cover .section .job .position .desc .date {
             padding-top: 5px;
             display: inline-block;
             background-color: #FFF;
             line-height: 17px;
             margin-bottom: -15px; }
-  /* line 116, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 124, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume ul, #cover ul {
     margin: 5px 0px 5px 20px;
     list-style-type: circle;
     line-height: 20px; }
 
-/* line 123, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 131, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
 #cover {
   padding-top: 30px; }
-  /* line 125, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 133, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #cover p {
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 24px; }
-  /* line 130, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 138, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #cover .tab {
     width: 30px;
     display: inline-block; }
-  /* line 134, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 142, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #cover .light {
     font-size: 16px;
     color: #777; }
