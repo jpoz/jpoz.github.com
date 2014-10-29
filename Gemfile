@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rake'
 gem "middleman", :git => 'git@github.com:middleman/middleman.git'
