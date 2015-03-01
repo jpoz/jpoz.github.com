@@ -49,7 +49,25 @@ div.blog {
   /* line 56, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
   div.blog ul {
     list-style-type: circle;
-    margin-left: 20px; }
-    /* line 59, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+    margin-left: 3.7rem;
+    margin-bottom: 1.7rem; }
+    /* line 60, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
     div.blog ul li {
       padding: 10px 0px; }
+  /* line 66, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+  div.blog article.socks_5_explained table {
+    margin-bottom: 1.7rem; }
+    /* line 68, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+    div.blog article.socks_5_explained table.reply {
+      color: #777; }
+    /* line 71, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+    div.blog article.socks_5_explained table th {
+      font-size: 32px;
+      padding: 1rem;
+      border-spacing: 10px;
+      margin-right: 0.5rem;
+      border: 1px solid black; }
+    /* line 78, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/article.css.scss */
+    div.blog article.socks_5_explained table td {
+      padding: 1rem;
+      text-align: center; }
