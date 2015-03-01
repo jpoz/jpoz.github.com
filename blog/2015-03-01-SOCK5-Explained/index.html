@@ -83,11 +83,12 @@ The client then sends the number of authentication methods it supports. We
 aren&#39;t going to be using any authentication in this example. So we&#39;ll be using
 the no authentication method. The RFC specifies that &ldquo;implementations MUST
 support GSSAPI&rdquo;. So even though we&#39;re not using it we need to send that we
-accept it. So curl sends <code>2</code> for two authentication method. Then sends <code>0</code> for
+accept it. So curl sends <code>2</code> for two authentication methods. Then sends <code>0</code> for
 the &ldquo;NO AUTHENTICATION REQUIRED&rdquo; method and <code>1</code> for the &ldquo;GSSAPI&rdquo;
 authentication method.</p>
 
-<p>Next the proxy responds back with the socks version and authentication method it
+<p>Next the proxy needs to respond back to the authentication attempt. To respond
+the proxy will send back the socks version and authentication method it
 accepted:</p>
 
 <table class='reply'>
@@ -99,22 +100,24 @@ accepted:</p>
 <p>The first octet sent back is the socks version the proxy is using (again 5) and
 the authentication response in our case <code>0</code>.</p>
 
-<p>Now that we are authenticated and need to tell the proxy about the request we
-would like to make. The request will start off with us specifying the socks
-version again. Then telling the proxy which command we want to use.</p>
+<p>Now that the client has authenticated successfully with the proxy it needs to tell
+the proxy about the request it would like to make. The request will start off with
+specifying the socks version (again). Then telling the proxy which command
+it wants to use.</p>
 
-<p>There are three commands we can call:</p>
+<p>There are three commands the client can call:</p>
 
 <ul>
-<li><code>1</code> CONNECT command. This is command we&#39;ll be using. It will return the
+<li><code>1</code> CONNECT command. This is command curl will be using. It will return the
 address and port assigned to connect to our destination.</li>
 <li><code>2</code> BIND command. Used to establish secondary connection.</li>
 <li><code>3</code> UDP ASSOCIATE command. Used to support UDP requests.</li>
 </ul>
 
-<p>After the command octet there is one reserved octet that we need to set to <code>0</code>.</p>
+<p>After the command octet there is one reserved octet that the client needs
+to set to <code>0</code>.</p>
 
-<p>We then need to tell the proxy what type of destination address we&#39;ll be
+<p>The client then needs to tell the proxy what type of destination address it be
 sending over. The destination address can come in three forms:</p>
 
 <ul>
@@ -123,10 +126,10 @@ sending over. The destination address can come in three forms:</p>
 <li><code>4</code> IPv6</li>
 </ul>
 
-<p>Not really sure why they skipped <code>2</code>, but we&#39;ll be using a domain name
-(google.com in our example) so we&#39;ll have a type <code>3</code> address. Since domains
-can be a variable length we also need to send the length of our domain name.
-Since we&#39;re sending over <code>google.com</code> we send <code>10</code>.</p>
+<p>Not really sure why they skipped <code>2</code>, but we gave curl a domain name
+(google.com in our example) so curl will have a type <code>3</code> address. Since domains
+can be a variable length next the length of our domain name is sent.
+Since we&#39;re sending over <code>google.com</code> curl sends <code>10</code>.</p>
 
 <table>
   <th>5</th>
@@ -169,9 +172,9 @@ Since we&#39;re sending over <code>google.com</code> we send <code>10</code>.</p
 </tr>
 </tbody></table>
 
-<p>And finally the port we want to connect to. In our case port 80. The port is
-represented by two octets since a port can be larger than 255. The two octets
-are in network byte order (big endian).</p>
+<p>And finally the port the client wants to connect to. In our case port 80.
+The port is represented by two octets since a port can be larger than 255.
+The two octets are in network byte order (big endian).</p>
 
 <table>
   <th>0</th>
