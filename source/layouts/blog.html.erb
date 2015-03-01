@@ -13,14 +13,14 @@
 
 
 
-    <article>
+    <article class='<%= data.page['title'].underscore.gsub(/\s/,"_") %>'>
       <%= yield %>
     </article>
 
     <footer>
       Comments? <a href='http://twitter.com/jpoz'>@jpoz</a> on twitter!
     </footer>
-  
+
   </div>
 
 <% end %>

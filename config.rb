@@ -78,7 +78,8 @@ activate :directory_indexes
 set :markdown_engine, :redcarpet
 set :markdown,  :fenced_code_blocks => true,
                 :autolink => true, 
-                :smartypants => true
+                :smartypants => true,
+                :tables => true
 
 # Build-specific configuration
 configure :build do

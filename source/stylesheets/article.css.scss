@@ -8,7 +8,7 @@ div.blog {
     border-top: 1px solid rgba(0,0,0,0.3);
     border-bottom: 1px solid rgba(0,0,0,0.3);
     padding-top: 50px;
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
   }
   .header_image {
     margin: 10px auto 50px auto;
@@ -55,9 +55,30 @@ div.blog {
 
   ul {
     list-style-type: circle;
-    margin-left: 20px;
+    margin-left: 3.7rem;
+    margin-bottom: 1.7rem;
     li {
       padding: 10px 0px;
+    }
+  }
+
+  article.socks_5_explained {
+    table {
+      margin-bottom: 1.7rem;
+      &.reply {
+        color: #777;
+      }
+      th {
+        font-size: 32px;
+        padding: 1rem;
+        border-spacing: 10px;
+        margin-right: 0.5rem;
+        border: 1px solid black;
+      }
+      td {
+        padding: 1rem;
+        text-align: center;
+      }
     }
   }
 }
