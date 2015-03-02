@@ -3,7 +3,7 @@ title: SOCKS 5 Explained
 
 ---
 
-It's always good to know your tools you use well. In that vein of thinking I
+It's always good to know the tools you use well. In that vein of thinking I
 thought I should know how the proxy I use for each request from my machine
 works. I use a socks proxy to route my request behind a VPN.
 
