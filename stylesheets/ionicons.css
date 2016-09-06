@@ -17,7 +17,7 @@
   font-weight: normal;
   font-style: normal; }
 
-/* line 15, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-font.scss */
+/* line 15, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-font.scss */
 .ion, .ionicons,
 .ion-alert:before,
 .ion-alert-circled:before,
@@ -764,2934 +764,2934 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* line 741, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 741, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-alert:before {
   content: "\f101"; }
 
-/* line 742, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 742, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-alert-circled:before {
   content: "\f100"; }
 
-/* line 743, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 743, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-add:before {
   content: "\f2c7"; }
 
-/* line 744, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 744, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-add-circle:before {
   content: "\f359"; }
 
-/* line 745, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 745, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-alarm-clock:before {
   content: "\f35a"; }
 
-/* line 746, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 746, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-alert:before {
   content: "\f35b"; }
 
-/* line 747, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 747, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-apps:before {
   content: "\f35c"; }
 
-/* line 748, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 748, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-archive:before {
   content: "\f2c9"; }
 
-/* line 749, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 749, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-back:before {
   content: "\f2ca"; }
 
-/* line 750, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 750, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-down:before {
   content: "\f35d"; }
 
-/* line 751, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 751, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-dropdown:before {
   content: "\f35f"; }
 
-/* line 752, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 752, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-dropdown-circle:before {
   content: "\f35e"; }
 
-/* line 753, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 753, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-dropleft:before {
   content: "\f361"; }
 
-/* line 754, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 754, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-dropleft-circle:before {
   content: "\f360"; }
 
-/* line 755, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 755, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-dropright:before {
   content: "\f363"; }
 
-/* line 756, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 756, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-dropright-circle:before {
   content: "\f362"; }
 
-/* line 757, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 757, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-dropup:before {
   content: "\f365"; }
 
-/* line 758, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 758, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-dropup-circle:before {
   content: "\f364"; }
 
-/* line 759, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 759, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-forward:before {
   content: "\f30f"; }
 
-/* line 760, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 760, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-arrow-up:before {
   content: "\f366"; }
 
-/* line 761, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 761, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-attach:before {
   content: "\f367"; }
 
-/* line 762, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 762, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-bar:before {
   content: "\f368"; }
 
-/* line 763, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 763, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-bicycle:before {
   content: "\f369"; }
 
-/* line 764, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 764, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-boat:before {
   content: "\f36a"; }
 
-/* line 765, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 765, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-bookmark:before {
   content: "\f36b"; }
 
-/* line 766, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 766, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-bulb:before {
   content: "\f36c"; }
 
-/* line 767, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 767, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-bus:before {
   content: "\f36d"; }
 
-/* line 768, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 768, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-calendar:before {
   content: "\f2d1"; }
 
-/* line 769, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 769, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-call:before {
   content: "\f2d2"; }
 
-/* line 770, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 770, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-camera:before {
   content: "\f2d3"; }
 
-/* line 771, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 771, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-cancel:before {
   content: "\f36e"; }
 
-/* line 772, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 772, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-car:before {
   content: "\f36f"; }
 
-/* line 773, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 773, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-cart:before {
   content: "\f370"; }
 
-/* line 774, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 774, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-chat:before {
   content: "\f2d4"; }
 
-/* line 775, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 775, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-checkbox:before {
   content: "\f374"; }
 
-/* line 776, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 776, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-checkbox-blank:before {
   content: "\f371"; }
 
-/* line 777, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 777, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-checkbox-outline:before {
   content: "\f373"; }
 
-/* line 778, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 778, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-checkbox-outline-blank:before {
   content: "\f372"; }
 
-/* line 779, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 779, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-checkmark-circle:before {
   content: "\f375"; }
 
-/* line 780, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 780, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-clipboard:before {
   content: "\f376"; }
 
-/* line 781, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 781, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-close:before {
   content: "\f2d7"; }
 
-/* line 782, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 782, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-cloud:before {
   content: "\f37a"; }
 
-/* line 783, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 783, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-cloud-circle:before {
   content: "\f377"; }
 
-/* line 784, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 784, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-cloud-done:before {
   content: "\f378"; }
 
-/* line 785, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 785, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-cloud-outline:before {
   content: "\f379"; }
 
-/* line 786, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 786, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-color-palette:before {
   content: "\f37b"; }
 
-/* line 787, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 787, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-compass:before {
   content: "\f37c"; }
 
-/* line 788, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 788, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-contact:before {
   content: "\f2d8"; }
 
-/* line 789, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 789, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-contacts:before {
   content: "\f2d9"; }
 
-/* line 790, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 790, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-contract:before {
   content: "\f37d"; }
 
-/* line 791, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 791, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-create:before {
   content: "\f37e"; }
 
-/* line 792, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 792, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-delete:before {
   content: "\f37f"; }
 
-/* line 793, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 793, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-desktop:before {
   content: "\f380"; }
 
-/* line 794, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 794, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-document:before {
   content: "\f381"; }
 
-/* line 795, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 795, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-done:before {
   content: "\f383"; }
 
-/* line 796, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 796, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-done-all:before {
   content: "\f382"; }
 
-/* line 797, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 797, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-download:before {
   content: "\f2dd"; }
 
-/* line 798, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 798, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-drafts:before {
   content: "\f384"; }
 
-/* line 799, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 799, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-exit:before {
   content: "\f385"; }
 
-/* line 800, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 800, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-expand:before {
   content: "\f386"; }
 
-/* line 801, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 801, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-favorite:before {
   content: "\f388"; }
 
-/* line 802, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 802, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-favorite-outline:before {
   content: "\f387"; }
 
-/* line 803, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 803, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-film:before {
   content: "\f389"; }
 
-/* line 804, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 804, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-folder:before {
   content: "\f2e0"; }
 
-/* line 805, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 805, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-folder-open:before {
   content: "\f38a"; }
 
-/* line 806, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 806, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-funnel:before {
   content: "\f38b"; }
 
-/* line 807, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 807, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-globe:before {
   content: "\f38c"; }
 
-/* line 808, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 808, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-hand:before {
   content: "\f2e3"; }
 
-/* line 809, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 809, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-hangout:before {
   content: "\f38d"; }
 
-/* line 810, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 810, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-happy:before {
   content: "\f38e"; }
 
-/* line 811, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 811, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-home:before {
   content: "\f38f"; }
 
-/* line 812, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 812, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-image:before {
   content: "\f2e4"; }
 
-/* line 813, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 813, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-laptop:before {
   content: "\f390"; }
 
-/* line 814, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 814, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-list:before {
   content: "\f391"; }
 
-/* line 815, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 815, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-locate:before {
   content: "\f2e9"; }
 
-/* line 816, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 816, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-lock:before {
   content: "\f392"; }
 
-/* line 817, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 817, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-mail:before {
   content: "\f2eb"; }
 
-/* line 818, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 818, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-map:before {
   content: "\f393"; }
 
-/* line 819, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 819, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-menu:before {
   content: "\f394"; }
 
-/* line 820, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 820, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-microphone:before {
   content: "\f2ec"; }
 
-/* line 821, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 821, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-microphone-off:before {
   content: "\f395"; }
 
-/* line 822, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 822, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-more-horizontal:before {
   content: "\f396"; }
 
-/* line 823, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 823, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-more-vertical:before {
   content: "\f397"; }
 
-/* line 824, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 824, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-navigate:before {
   content: "\f398"; }
 
-/* line 825, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 825, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-notifications:before {
   content: "\f39b"; }
 
-/* line 826, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 826, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-notifications-none:before {
   content: "\f399"; }
 
-/* line 827, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 827, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-notifications-off:before {
   content: "\f39a"; }
 
-/* line 828, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 828, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-open:before {
   content: "\f39c"; }
 
-/* line 829, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 829, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-options:before {
   content: "\f39d"; }
 
-/* line 830, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 830, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-people:before {
   content: "\f39e"; }
 
-/* line 831, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 831, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-person:before {
   content: "\f3a0"; }
 
-/* line 832, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 832, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-person-add:before {
   content: "\f39f"; }
 
-/* line 833, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 833, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-phone-landscape:before {
   content: "\f3a1"; }
 
-/* line 834, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 834, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-phone-portrait:before {
   content: "\f3a2"; }
 
-/* line 835, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 835, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-pin:before {
   content: "\f3a3"; }
 
-/* line 836, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 836, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-plane:before {
   content: "\f3a4"; }
 
-/* line 837, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 837, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-playstore:before {
   content: "\f2f0"; }
 
-/* line 838, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 838, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-print:before {
   content: "\f3a5"; }
 
-/* line 839, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 839, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-radio-button-off:before {
   content: "\f3a6"; }
 
-/* line 840, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 840, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-radio-button-on:before {
   content: "\f3a7"; }
 
-/* line 841, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 841, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-refresh:before {
   content: "\f3a8"; }
 
-/* line 842, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 842, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-remove:before {
   content: "\f2f4"; }
 
-/* line 843, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 843, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-remove-circle:before {
   content: "\f3a9"; }
 
-/* line 844, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 844, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-restaurant:before {
   content: "\f3aa"; }
 
-/* line 845, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 845, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-sad:before {
   content: "\f3ab"; }
 
-/* line 846, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 846, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-search:before {
   content: "\f2f5"; }
 
-/* line 847, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 847, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-send:before {
   content: "\f2f6"; }
 
-/* line 848, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 848, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-settings:before {
   content: "\f2f7"; }
 
-/* line 849, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 849, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-share:before {
   content: "\f2f8"; }
 
-/* line 850, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 850, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-share-alt:before {
   content: "\f3ac"; }
 
-/* line 851, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 851, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-star:before {
   content: "\f2fc"; }
 
-/* line 852, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 852, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-star-half:before {
   content: "\f3ad"; }
 
-/* line 853, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 853, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-star-outline:before {
   content: "\f3ae"; }
 
-/* line 854, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 854, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-stopwatch:before {
   content: "\f2fd"; }
 
-/* line 855, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 855, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-subway:before {
   content: "\f3af"; }
 
-/* line 856, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 856, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-sunny:before {
   content: "\f3b0"; }
 
-/* line 857, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 857, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-sync:before {
   content: "\f3b1"; }
 
-/* line 858, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 858, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-textsms:before {
   content: "\f3b2"; }
 
-/* line 859, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 859, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-time:before {
   content: "\f3b3"; }
 
-/* line 860, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 860, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-train:before {
   content: "\f3b4"; }
 
-/* line 861, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 861, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-unlock:before {
   content: "\f3b5"; }
 
-/* line 862, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 862, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-upload:before {
   content: "\f3b6"; }
 
-/* line 863, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 863, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-volume-down:before {
   content: "\f3b7"; }
 
-/* line 864, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 864, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-volume-mute:before {
   content: "\f3b8"; }
 
-/* line 865, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 865, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-volume-off:before {
   content: "\f3b9"; }
 
-/* line 866, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 866, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-volume-up:before {
   content: "\f3ba"; }
 
-/* line 867, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 867, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-walk:before {
   content: "\f3bb"; }
 
-/* line 868, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 868, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-warning:before {
   content: "\f3bc"; }
 
-/* line 869, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 869, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-watch:before {
   content: "\f3bd"; }
 
-/* line 870, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 870, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-android-wifi:before {
   content: "\f305"; }
 
-/* line 871, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 871, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-aperture:before {
   content: "\f313"; }
 
-/* line 872, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 872, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-archive:before {
   content: "\f102"; }
 
-/* line 873, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 873, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-down-a:before {
   content: "\f103"; }
 
-/* line 874, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 874, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-down-b:before {
   content: "\f104"; }
 
-/* line 875, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 875, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-down-c:before {
   content: "\f105"; }
 
-/* line 876, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 876, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-expand:before {
   content: "\f25e"; }
 
-/* line 877, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 877, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-graph-down-left:before {
   content: "\f25f"; }
 
-/* line 878, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 878, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-graph-down-right:before {
   content: "\f260"; }
 
-/* line 879, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 879, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-graph-up-left:before {
   content: "\f261"; }
 
-/* line 880, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 880, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-graph-up-right:before {
   content: "\f262"; }
 
-/* line 881, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 881, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-left-a:before {
   content: "\f106"; }
 
-/* line 882, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 882, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-left-b:before {
   content: "\f107"; }
 
-/* line 883, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 883, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-left-c:before {
   content: "\f108"; }
 
-/* line 884, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 884, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-move:before {
   content: "\f263"; }
 
-/* line 885, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 885, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-resize:before {
   content: "\f264"; }
 
-/* line 886, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 886, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-return-left:before {
   content: "\f265"; }
 
-/* line 887, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 887, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-return-right:before {
   content: "\f266"; }
 
-/* line 888, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 888, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-right-a:before {
   content: "\f109"; }
 
-/* line 889, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 889, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-right-b:before {
   content: "\f10a"; }
 
-/* line 890, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 890, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-right-c:before {
   content: "\f10b"; }
 
-/* line 891, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 891, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-shrink:before {
   content: "\f267"; }
 
-/* line 892, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 892, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-swap:before {
   content: "\f268"; }
 
-/* line 893, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 893, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-up-a:before {
   content: "\f10c"; }
 
-/* line 894, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 894, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-up-b:before {
   content: "\f10d"; }
 
-/* line 895, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 895, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-arrow-up-c:before {
   content: "\f10e"; }
 
-/* line 896, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 896, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-asterisk:before {
   content: "\f314"; }
 
-/* line 897, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 897, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-at:before {
   content: "\f10f"; }
 
-/* line 898, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 898, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-backspace:before {
   content: "\f3bf"; }
 
-/* line 899, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 899, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-backspace-outline:before {
   content: "\f3be"; }
 
-/* line 900, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 900, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-bag:before {
   content: "\f110"; }
 
-/* line 901, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 901, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-battery-charging:before {
   content: "\f111"; }
 
-/* line 902, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 902, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-battery-empty:before {
   content: "\f112"; }
 
-/* line 903, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 903, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-battery-full:before {
   content: "\f113"; }
 
-/* line 904, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 904, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-battery-half:before {
   content: "\f114"; }
 
-/* line 905, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 905, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-battery-low:before {
   content: "\f115"; }
 
-/* line 906, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 906, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-beaker:before {
   content: "\f269"; }
 
-/* line 907, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 907, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-beer:before {
   content: "\f26a"; }
 
-/* line 908, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 908, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-bluetooth:before {
   content: "\f116"; }
 
-/* line 909, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 909, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-bonfire:before {
   content: "\f315"; }
 
-/* line 910, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 910, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-bookmark:before {
   content: "\f26b"; }
 
-/* line 911, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 911, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-bowtie:before {
   content: "\f3c0"; }
 
-/* line 912, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 912, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-briefcase:before {
   content: "\f26c"; }
 
-/* line 913, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 913, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-bug:before {
   content: "\f2be"; }
 
-/* line 914, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 914, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-calculator:before {
   content: "\f26d"; }
 
-/* line 915, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 915, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-calendar:before {
   content: "\f117"; }
 
-/* line 916, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 916, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-camera:before {
   content: "\f118"; }
 
-/* line 917, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 917, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-card:before {
   content: "\f119"; }
 
-/* line 918, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 918, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-cash:before {
   content: "\f316"; }
 
-/* line 919, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 919, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chatbox:before {
   content: "\f11b"; }
 
-/* line 920, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 920, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chatbox-working:before {
   content: "\f11a"; }
 
-/* line 921, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 921, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chatboxes:before {
   content: "\f11c"; }
 
-/* line 922, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 922, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chatbubble:before {
   content: "\f11e"; }
 
-/* line 923, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 923, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chatbubble-working:before {
   content: "\f11d"; }
 
-/* line 924, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 924, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chatbubbles:before {
   content: "\f11f"; }
 
-/* line 925, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 925, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-checkmark:before {
   content: "\f122"; }
 
-/* line 926, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 926, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-checkmark-circled:before {
   content: "\f120"; }
 
-/* line 927, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 927, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-checkmark-round:before {
   content: "\f121"; }
 
-/* line 928, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 928, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chevron-down:before {
   content: "\f123"; }
 
-/* line 929, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 929, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chevron-left:before {
   content: "\f124"; }
 
-/* line 930, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 930, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chevron-right:before {
   content: "\f125"; }
 
-/* line 931, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 931, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-chevron-up:before {
   content: "\f126"; }
 
-/* line 932, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 932, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-clipboard:before {
   content: "\f127"; }
 
-/* line 933, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 933, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-clock:before {
   content: "\f26e"; }
 
-/* line 934, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 934, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-close:before {
   content: "\f12a"; }
 
-/* line 935, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 935, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-close-circled:before {
   content: "\f128"; }
 
-/* line 936, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 936, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-close-round:before {
   content: "\f129"; }
 
-/* line 937, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 937, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-closed-captioning:before {
   content: "\f317"; }
 
-/* line 938, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 938, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-cloud:before {
   content: "\f12b"; }
 
-/* line 939, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 939, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-code:before {
   content: "\f271"; }
 
-/* line 940, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 940, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-code-download:before {
   content: "\f26f"; }
 
-/* line 941, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 941, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-code-working:before {
   content: "\f270"; }
 
-/* line 942, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 942, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-coffee:before {
   content: "\f272"; }
 
-/* line 943, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 943, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-compass:before {
   content: "\f273"; }
 
-/* line 944, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 944, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-compose:before {
   content: "\f12c"; }
 
-/* line 945, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 945, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-connection-bars:before {
   content: "\f274"; }
 
-/* line 946, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 946, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-contrast:before {
   content: "\f275"; }
 
-/* line 947, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 947, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-crop:before {
   content: "\f3c1"; }
 
-/* line 948, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 948, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-cube:before {
   content: "\f318"; }
 
-/* line 949, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 949, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-disc:before {
   content: "\f12d"; }
 
-/* line 950, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 950, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-document:before {
   content: "\f12f"; }
 
-/* line 951, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 951, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-document-text:before {
   content: "\f12e"; }
 
-/* line 952, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 952, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-drag:before {
   content: "\f130"; }
 
-/* line 953, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 953, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-earth:before {
   content: "\f276"; }
 
-/* line 954, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 954, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-easel:before {
   content: "\f3c2"; }
 
-/* line 955, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 955, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-edit:before {
   content: "\f2bf"; }
 
-/* line 956, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 956, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-egg:before {
   content: "\f277"; }
 
-/* line 957, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 957, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-eject:before {
   content: "\f131"; }
 
-/* line 958, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 958, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-email:before {
   content: "\f132"; }
 
-/* line 959, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 959, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-email-unread:before {
   content: "\f3c3"; }
 
-/* line 960, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 960, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-erlenmeyer-flask:before {
   content: "\f3c5"; }
 
-/* line 961, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 961, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-erlenmeyer-flask-bubbles:before {
   content: "\f3c4"; }
 
-/* line 962, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 962, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-eye:before {
   content: "\f133"; }
 
-/* line 963, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 963, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-eye-disabled:before {
   content: "\f306"; }
 
-/* line 964, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 964, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-female:before {
   content: "\f278"; }
 
-/* line 965, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 965, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-filing:before {
   content: "\f134"; }
 
-/* line 966, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 966, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-film-marker:before {
   content: "\f135"; }
 
-/* line 967, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 967, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-fireball:before {
   content: "\f319"; }
 
-/* line 968, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 968, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-flag:before {
   content: "\f279"; }
 
-/* line 969, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 969, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-flame:before {
   content: "\f31a"; }
 
-/* line 970, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 970, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-flash:before {
   content: "\f137"; }
 
-/* line 971, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 971, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-flash-off:before {
   content: "\f136"; }
 
-/* line 972, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 972, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-folder:before {
   content: "\f139"; }
 
-/* line 973, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 973, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-fork:before {
   content: "\f27a"; }
 
-/* line 974, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 974, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-fork-repo:before {
   content: "\f2c0"; }
 
-/* line 975, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 975, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-forward:before {
   content: "\f13a"; }
 
-/* line 976, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 976, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-funnel:before {
   content: "\f31b"; }
 
-/* line 977, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 977, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-gear-a:before {
   content: "\f13d"; }
 
-/* line 978, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 978, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-gear-b:before {
   content: "\f13e"; }
 
-/* line 979, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 979, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-grid:before {
   content: "\f13f"; }
 
-/* line 980, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 980, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-hammer:before {
   content: "\f27b"; }
 
-/* line 981, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 981, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-happy:before {
   content: "\f31c"; }
 
-/* line 982, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 982, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-happy-outline:before {
   content: "\f3c6"; }
 
-/* line 983, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 983, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-headphone:before {
   content: "\f140"; }
 
-/* line 984, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 984, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-heart:before {
   content: "\f141"; }
 
-/* line 985, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 985, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-heart-broken:before {
   content: "\f31d"; }
 
-/* line 986, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 986, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-help:before {
   content: "\f143"; }
 
-/* line 987, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 987, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-help-buoy:before {
   content: "\f27c"; }
 
-/* line 988, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 988, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-help-circled:before {
   content: "\f142"; }
 
-/* line 989, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 989, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-home:before {
   content: "\f144"; }
 
-/* line 990, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 990, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-icecream:before {
   content: "\f27d"; }
 
-/* line 991, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 991, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-image:before {
   content: "\f147"; }
 
-/* line 992, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 992, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-images:before {
   content: "\f148"; }
 
-/* line 993, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 993, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-information:before {
   content: "\f14a"; }
 
-/* line 994, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 994, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-information-circled:before {
   content: "\f149"; }
 
-/* line 995, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 995, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ionic:before {
   content: "\f14b"; }
 
-/* line 996, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 996, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-alarm:before {
   content: "\f3c8"; }
 
-/* line 997, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 997, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-alarm-outline:before {
   content: "\f3c7"; }
 
-/* line 998, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 998, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-albums:before {
   content: "\f3ca"; }
 
-/* line 999, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 999, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-albums-outline:before {
   content: "\f3c9"; }
 
-/* line 1000, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1000, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-americanfootball:before {
   content: "\f3cc"; }
 
-/* line 1001, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1001, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-americanfootball-outline:before {
   content: "\f3cb"; }
 
-/* line 1002, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1002, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-analytics:before {
   content: "\f3ce"; }
 
-/* line 1003, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1003, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-analytics-outline:before {
   content: "\f3cd"; }
 
-/* line 1004, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1004, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-back:before {
   content: "\f3cf"; }
 
-/* line 1005, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1005, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-down:before {
   content: "\f3d0"; }
 
-/* line 1006, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1006, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-forward:before {
   content: "\f3d1"; }
 
-/* line 1007, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1007, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-left:before {
   content: "\f3d2"; }
 
-/* line 1008, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1008, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-right:before {
   content: "\f3d3"; }
 
-/* line 1009, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1009, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-thin-down:before {
   content: "\f3d4"; }
 
-/* line 1010, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1010, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-thin-left:before {
   content: "\f3d5"; }
 
-/* line 1011, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1011, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-thin-right:before {
   content: "\f3d6"; }
 
-/* line 1012, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1012, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-thin-up:before {
   content: "\f3d7"; }
 
-/* line 1013, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1013, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-arrow-up:before {
   content: "\f3d8"; }
 
-/* line 1014, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1014, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-at:before {
   content: "\f3da"; }
 
-/* line 1015, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1015, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-at-outline:before {
   content: "\f3d9"; }
 
-/* line 1016, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1016, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-barcode:before {
   content: "\f3dc"; }
 
-/* line 1017, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1017, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-barcode-outline:before {
   content: "\f3db"; }
 
-/* line 1018, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1018, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-baseball:before {
   content: "\f3de"; }
 
-/* line 1019, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1019, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-baseball-outline:before {
   content: "\f3dd"; }
 
-/* line 1020, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1020, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-basketball:before {
   content: "\f3e0"; }
 
-/* line 1021, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1021, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-basketball-outline:before {
   content: "\f3df"; }
 
-/* line 1022, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1022, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-bell:before {
   content: "\f3e2"; }
 
-/* line 1023, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1023, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-bell-outline:before {
   content: "\f3e1"; }
 
-/* line 1024, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1024, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-body:before {
   content: "\f3e4"; }
 
-/* line 1025, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1025, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-body-outline:before {
   content: "\f3e3"; }
 
-/* line 1026, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1026, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-bolt:before {
   content: "\f3e6"; }
 
-/* line 1027, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1027, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-bolt-outline:before {
   content: "\f3e5"; }
 
-/* line 1028, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1028, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-book:before {
   content: "\f3e8"; }
 
-/* line 1029, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1029, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-book-outline:before {
   content: "\f3e7"; }
 
-/* line 1030, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1030, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-bookmarks:before {
   content: "\f3ea"; }
 
-/* line 1031, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1031, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-bookmarks-outline:before {
   content: "\f3e9"; }
 
-/* line 1032, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1032, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-box:before {
   content: "\f3ec"; }
 
-/* line 1033, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1033, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-box-outline:before {
   content: "\f3eb"; }
 
-/* line 1034, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1034, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-briefcase:before {
   content: "\f3ee"; }
 
-/* line 1035, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1035, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-briefcase-outline:before {
   content: "\f3ed"; }
 
-/* line 1036, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1036, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-browsers:before {
   content: "\f3f0"; }
 
-/* line 1037, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1037, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-browsers-outline:before {
   content: "\f3ef"; }
 
-/* line 1038, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1038, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-calculator:before {
   content: "\f3f2"; }
 
-/* line 1039, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1039, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-calculator-outline:before {
   content: "\f3f1"; }
 
-/* line 1040, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1040, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-calendar:before {
   content: "\f3f4"; }
 
-/* line 1041, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1041, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-calendar-outline:before {
   content: "\f3f3"; }
 
-/* line 1042, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1042, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-camera:before {
   content: "\f3f6"; }
 
-/* line 1043, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1043, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-camera-outline:before {
   content: "\f3f5"; }
 
-/* line 1044, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1044, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cart:before {
   content: "\f3f8"; }
 
-/* line 1045, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1045, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cart-outline:before {
   content: "\f3f7"; }
 
-/* line 1046, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1046, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-chatboxes:before {
   content: "\f3fa"; }
 
-/* line 1047, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1047, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-chatboxes-outline:before {
   content: "\f3f9"; }
 
-/* line 1048, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1048, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-chatbubble:before {
   content: "\f3fc"; }
 
-/* line 1049, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1049, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-chatbubble-outline:before {
   content: "\f3fb"; }
 
-/* line 1050, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1050, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-checkmark:before {
   content: "\f3ff"; }
 
-/* line 1051, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1051, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-checkmark-empty:before {
   content: "\f3fd"; }
 
-/* line 1052, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1052, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-checkmark-outline:before {
   content: "\f3fe"; }
 
-/* line 1053, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1053, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-circle-filled:before {
   content: "\f400"; }
 
-/* line 1054, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1054, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-circle-outline:before {
   content: "\f401"; }
 
-/* line 1055, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1055, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-clock:before {
   content: "\f403"; }
 
-/* line 1056, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1056, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-clock-outline:before {
   content: "\f402"; }
 
-/* line 1057, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1057, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-close:before {
   content: "\f406"; }
 
-/* line 1058, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1058, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-close-empty:before {
   content: "\f404"; }
 
-/* line 1059, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1059, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-close-outline:before {
   content: "\f405"; }
 
-/* line 1060, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1060, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloud:before {
   content: "\f40c"; }
 
-/* line 1061, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1061, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloud-download:before {
   content: "\f408"; }
 
-/* line 1062, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1062, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloud-download-outline:before {
   content: "\f407"; }
 
-/* line 1063, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1063, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloud-outline:before {
   content: "\f409"; }
 
-/* line 1064, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1064, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloud-upload:before {
   content: "\f40b"; }
 
-/* line 1065, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1065, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloud-upload-outline:before {
   content: "\f40a"; }
 
-/* line 1066, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1066, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloudy:before {
   content: "\f410"; }
 
-/* line 1067, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1067, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloudy-night:before {
   content: "\f40e"; }
 
-/* line 1068, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1068, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloudy-night-outline:before {
   content: "\f40d"; }
 
-/* line 1069, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1069, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cloudy-outline:before {
   content: "\f40f"; }
 
-/* line 1070, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1070, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cog:before {
   content: "\f412"; }
 
-/* line 1071, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1071, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-cog-outline:before {
   content: "\f411"; }
 
-/* line 1072, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1072, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-color-filter:before {
   content: "\f414"; }
 
-/* line 1073, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1073, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-color-filter-outline:before {
   content: "\f413"; }
 
-/* line 1074, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1074, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-color-wand:before {
   content: "\f416"; }
 
-/* line 1075, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1075, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-color-wand-outline:before {
   content: "\f415"; }
 
-/* line 1076, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1076, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-compose:before {
   content: "\f418"; }
 
-/* line 1077, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1077, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-compose-outline:before {
   content: "\f417"; }
 
-/* line 1078, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1078, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-contact:before {
   content: "\f41a"; }
 
-/* line 1079, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1079, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-contact-outline:before {
   content: "\f419"; }
 
-/* line 1080, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1080, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-copy:before {
   content: "\f41c"; }
 
-/* line 1081, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1081, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-copy-outline:before {
   content: "\f41b"; }
 
-/* line 1082, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1082, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-crop:before {
   content: "\f41e"; }
 
-/* line 1083, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1083, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-crop-strong:before {
   content: "\f41d"; }
 
-/* line 1084, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1084, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-download:before {
   content: "\f420"; }
 
-/* line 1085, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1085, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-download-outline:before {
   content: "\f41f"; }
 
-/* line 1086, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1086, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-drag:before {
   content: "\f421"; }
 
-/* line 1087, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1087, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-email:before {
   content: "\f423"; }
 
-/* line 1088, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1088, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-email-outline:before {
   content: "\f422"; }
 
-/* line 1089, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1089, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-eye:before {
   content: "\f425"; }
 
-/* line 1090, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1090, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-eye-outline:before {
   content: "\f424"; }
 
-/* line 1091, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1091, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-fastforward:before {
   content: "\f427"; }
 
-/* line 1092, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1092, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-fastforward-outline:before {
   content: "\f426"; }
 
-/* line 1093, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1093, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-filing:before {
   content: "\f429"; }
 
-/* line 1094, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1094, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-filing-outline:before {
   content: "\f428"; }
 
-/* line 1095, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1095, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-film:before {
   content: "\f42b"; }
 
-/* line 1096, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1096, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-film-outline:before {
   content: "\f42a"; }
 
-/* line 1097, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1097, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-flag:before {
   content: "\f42d"; }
 
-/* line 1098, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1098, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-flag-outline:before {
   content: "\f42c"; }
 
-/* line 1099, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1099, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-flame:before {
   content: "\f42f"; }
 
-/* line 1100, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1100, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-flame-outline:before {
   content: "\f42e"; }
 
-/* line 1101, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1101, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-flask:before {
   content: "\f431"; }
 
-/* line 1102, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1102, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-flask-outline:before {
   content: "\f430"; }
 
-/* line 1103, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1103, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-flower:before {
   content: "\f433"; }
 
-/* line 1104, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1104, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-flower-outline:before {
   content: "\f432"; }
 
-/* line 1105, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1105, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-folder:before {
   content: "\f435"; }
 
-/* line 1106, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1106, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-folder-outline:before {
   content: "\f434"; }
 
-/* line 1107, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1107, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-football:before {
   content: "\f437"; }
 
-/* line 1108, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1108, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-football-outline:before {
   content: "\f436"; }
 
-/* line 1109, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1109, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-game-controller-a:before {
   content: "\f439"; }
 
-/* line 1110, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1110, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-game-controller-a-outline:before {
   content: "\f438"; }
 
-/* line 1111, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1111, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-game-controller-b:before {
   content: "\f43b"; }
 
-/* line 1112, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1112, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-game-controller-b-outline:before {
   content: "\f43a"; }
 
-/* line 1113, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1113, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-gear:before {
   content: "\f43d"; }
 
-/* line 1114, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1114, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-gear-outline:before {
   content: "\f43c"; }
 
-/* line 1115, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1115, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-glasses:before {
   content: "\f43f"; }
 
-/* line 1116, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1116, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-glasses-outline:before {
   content: "\f43e"; }
 
-/* line 1117, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1117, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-grid-view:before {
   content: "\f441"; }
 
-/* line 1118, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1118, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-grid-view-outline:before {
   content: "\f440"; }
 
-/* line 1119, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1119, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-heart:before {
   content: "\f443"; }
 
-/* line 1120, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1120, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-heart-outline:before {
   content: "\f442"; }
 
-/* line 1121, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1121, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-help:before {
   content: "\f446"; }
 
-/* line 1122, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1122, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-help-empty:before {
   content: "\f444"; }
 
-/* line 1123, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1123, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-help-outline:before {
   content: "\f445"; }
 
-/* line 1124, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1124, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-home:before {
   content: "\f448"; }
 
-/* line 1125, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1125, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-home-outline:before {
   content: "\f447"; }
 
-/* line 1126, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1126, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-infinite:before {
   content: "\f44a"; }
 
-/* line 1127, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1127, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-infinite-outline:before {
   content: "\f449"; }
 
-/* line 1128, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1128, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-information:before {
   content: "\f44d"; }
 
-/* line 1129, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1129, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-information-empty:before {
   content: "\f44b"; }
 
-/* line 1130, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1130, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-information-outline:before {
   content: "\f44c"; }
 
-/* line 1131, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1131, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-ionic-outline:before {
   content: "\f44e"; }
 
-/* line 1132, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1132, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-keypad:before {
   content: "\f450"; }
 
-/* line 1133, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1133, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-keypad-outline:before {
   content: "\f44f"; }
 
-/* line 1134, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1134, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-lightbulb:before {
   content: "\f452"; }
 
-/* line 1135, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1135, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-lightbulb-outline:before {
   content: "\f451"; }
 
-/* line 1136, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1136, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-list:before {
   content: "\f454"; }
 
-/* line 1137, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1137, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-list-outline:before {
   content: "\f453"; }
 
-/* line 1138, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1138, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-location:before {
   content: "\f456"; }
 
-/* line 1139, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1139, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-location-outline:before {
   content: "\f455"; }
 
-/* line 1140, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1140, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-locked:before {
   content: "\f458"; }
 
-/* line 1141, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1141, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-locked-outline:before {
   content: "\f457"; }
 
-/* line 1142, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1142, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-loop:before {
   content: "\f45a"; }
 
-/* line 1143, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1143, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-loop-strong:before {
   content: "\f459"; }
 
-/* line 1144, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1144, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-medical:before {
   content: "\f45c"; }
 
-/* line 1145, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1145, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-medical-outline:before {
   content: "\f45b"; }
 
-/* line 1146, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1146, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-medkit:before {
   content: "\f45e"; }
 
-/* line 1147, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1147, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-medkit-outline:before {
   content: "\f45d"; }
 
-/* line 1148, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1148, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-mic:before {
   content: "\f461"; }
 
-/* line 1149, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1149, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-mic-off:before {
   content: "\f45f"; }
 
-/* line 1150, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1150, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-mic-outline:before {
   content: "\f460"; }
 
-/* line 1151, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1151, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-minus:before {
   content: "\f464"; }
 
-/* line 1152, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1152, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-minus-empty:before {
   content: "\f462"; }
 
-/* line 1153, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1153, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-minus-outline:before {
   content: "\f463"; }
 
-/* line 1154, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1154, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-monitor:before {
   content: "\f466"; }
 
-/* line 1155, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1155, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-monitor-outline:before {
   content: "\f465"; }
 
-/* line 1156, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1156, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-moon:before {
   content: "\f468"; }
 
-/* line 1157, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1157, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-moon-outline:before {
   content: "\f467"; }
 
-/* line 1158, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1158, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-more:before {
   content: "\f46a"; }
 
-/* line 1159, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1159, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-more-outline:before {
   content: "\f469"; }
 
-/* line 1160, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1160, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-musical-note:before {
   content: "\f46b"; }
 
-/* line 1161, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1161, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-musical-notes:before {
   content: "\f46c"; }
 
-/* line 1162, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1162, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-navigate:before {
   content: "\f46e"; }
 
-/* line 1163, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1163, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-navigate-outline:before {
   content: "\f46d"; }
 
-/* line 1164, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1164, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-nutrition:before {
   content: "\f470"; }
 
-/* line 1165, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1165, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-nutrition-outline:before {
   content: "\f46f"; }
 
-/* line 1166, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1166, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-paper:before {
   content: "\f472"; }
 
-/* line 1167, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1167, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-paper-outline:before {
   content: "\f471"; }
 
-/* line 1168, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1168, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-paperplane:before {
   content: "\f474"; }
 
-/* line 1169, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1169, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-paperplane-outline:before {
   content: "\f473"; }
 
-/* line 1170, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1170, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-partlysunny:before {
   content: "\f476"; }
 
-/* line 1171, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1171, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-partlysunny-outline:before {
   content: "\f475"; }
 
-/* line 1172, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1172, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pause:before {
   content: "\f478"; }
 
-/* line 1173, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1173, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pause-outline:before {
   content: "\f477"; }
 
-/* line 1174, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1174, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-paw:before {
   content: "\f47a"; }
 
-/* line 1175, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1175, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-paw-outline:before {
   content: "\f479"; }
 
-/* line 1176, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1176, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-people:before {
   content: "\f47c"; }
 
-/* line 1177, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1177, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-people-outline:before {
   content: "\f47b"; }
 
-/* line 1178, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1178, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-person:before {
   content: "\f47e"; }
 
-/* line 1179, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1179, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-person-outline:before {
   content: "\f47d"; }
 
-/* line 1180, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1180, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-personadd:before {
   content: "\f480"; }
 
-/* line 1181, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1181, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-personadd-outline:before {
   content: "\f47f"; }
 
-/* line 1182, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1182, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-photos:before {
   content: "\f482"; }
 
-/* line 1183, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1183, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-photos-outline:before {
   content: "\f481"; }
 
-/* line 1184, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1184, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pie:before {
   content: "\f484"; }
 
-/* line 1185, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1185, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pie-outline:before {
   content: "\f483"; }
 
-/* line 1186, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1186, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pint:before {
   content: "\f486"; }
 
-/* line 1187, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1187, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pint-outline:before {
   content: "\f485"; }
 
-/* line 1188, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1188, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-play:before {
   content: "\f488"; }
 
-/* line 1189, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1189, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-play-outline:before {
   content: "\f487"; }
 
-/* line 1190, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1190, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-plus:before {
   content: "\f48b"; }
 
-/* line 1191, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1191, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-plus-empty:before {
   content: "\f489"; }
 
-/* line 1192, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1192, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-plus-outline:before {
   content: "\f48a"; }
 
-/* line 1193, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1193, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pricetag:before {
   content: "\f48d"; }
 
-/* line 1194, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1194, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pricetag-outline:before {
   content: "\f48c"; }
 
-/* line 1195, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1195, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pricetags:before {
   content: "\f48f"; }
 
-/* line 1196, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1196, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pricetags-outline:before {
   content: "\f48e"; }
 
-/* line 1197, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1197, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-printer:before {
   content: "\f491"; }
 
-/* line 1198, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1198, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-printer-outline:before {
   content: "\f490"; }
 
-/* line 1199, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1199, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pulse:before {
   content: "\f493"; }
 
-/* line 1200, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1200, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-pulse-strong:before {
   content: "\f492"; }
 
-/* line 1201, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1201, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-rainy:before {
   content: "\f495"; }
 
-/* line 1202, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1202, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-rainy-outline:before {
   content: "\f494"; }
 
-/* line 1203, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1203, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-recording:before {
   content: "\f497"; }
 
-/* line 1204, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1204, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-recording-outline:before {
   content: "\f496"; }
 
-/* line 1205, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1205, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-redo:before {
   content: "\f499"; }
 
-/* line 1206, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1206, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-redo-outline:before {
   content: "\f498"; }
 
-/* line 1207, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1207, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-refresh:before {
   content: "\f49c"; }
 
-/* line 1208, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1208, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-refresh-empty:before {
   content: "\f49a"; }
 
-/* line 1209, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1209, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-refresh-outline:before {
   content: "\f49b"; }
 
-/* line 1210, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1210, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-reload:before {
   content: "\f49d"; }
 
-/* line 1211, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1211, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-reverse-camera:before {
   content: "\f49f"; }
 
-/* line 1212, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1212, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-reverse-camera-outline:before {
   content: "\f49e"; }
 
-/* line 1213, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1213, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-rewind:before {
   content: "\f4a1"; }
 
-/* line 1214, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1214, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-rewind-outline:before {
   content: "\f4a0"; }
 
-/* line 1215, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1215, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-rose:before {
   content: "\f4a3"; }
 
-/* line 1216, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1216, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-rose-outline:before {
   content: "\f4a2"; }
 
-/* line 1217, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1217, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-search:before {
   content: "\f4a5"; }
 
-/* line 1218, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1218, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-search-strong:before {
   content: "\f4a4"; }
 
-/* line 1219, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1219, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-settings:before {
   content: "\f4a7"; }
 
-/* line 1220, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1220, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-settings-strong:before {
   content: "\f4a6"; }
 
-/* line 1221, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1221, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-shuffle:before {
   content: "\f4a9"; }
 
-/* line 1222, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1222, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-shuffle-strong:before {
   content: "\f4a8"; }
 
-/* line 1223, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1223, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-skipbackward:before {
   content: "\f4ab"; }
 
-/* line 1224, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1224, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-skipbackward-outline:before {
   content: "\f4aa"; }
 
-/* line 1225, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1225, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-skipforward:before {
   content: "\f4ad"; }
 
-/* line 1226, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1226, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-skipforward-outline:before {
   content: "\f4ac"; }
 
-/* line 1227, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1227, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-snowy:before {
   content: "\f4ae"; }
 
-/* line 1228, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1228, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-speedometer:before {
   content: "\f4b0"; }
 
-/* line 1229, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1229, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-speedometer-outline:before {
   content: "\f4af"; }
 
-/* line 1230, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1230, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-star:before {
   content: "\f4b3"; }
 
-/* line 1231, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1231, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-star-half:before {
   content: "\f4b1"; }
 
-/* line 1232, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1232, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-star-outline:before {
   content: "\f4b2"; }
 
-/* line 1233, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1233, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-stopwatch:before {
   content: "\f4b5"; }
 
-/* line 1234, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1234, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-stopwatch-outline:before {
   content: "\f4b4"; }
 
-/* line 1235, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1235, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-sunny:before {
   content: "\f4b7"; }
 
-/* line 1236, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1236, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-sunny-outline:before {
   content: "\f4b6"; }
 
-/* line 1237, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1237, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-telephone:before {
   content: "\f4b9"; }
 
-/* line 1238, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1238, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-telephone-outline:before {
   content: "\f4b8"; }
 
-/* line 1239, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1239, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-tennisball:before {
   content: "\f4bb"; }
 
-/* line 1240, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1240, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-tennisball-outline:before {
   content: "\f4ba"; }
 
-/* line 1241, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1241, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-thunderstorm:before {
   content: "\f4bd"; }
 
-/* line 1242, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1242, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-thunderstorm-outline:before {
   content: "\f4bc"; }
 
-/* line 1243, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1243, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-time:before {
   content: "\f4bf"; }
 
-/* line 1244, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1244, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-time-outline:before {
   content: "\f4be"; }
 
-/* line 1245, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1245, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-timer:before {
   content: "\f4c1"; }
 
-/* line 1246, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1246, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-timer-outline:before {
   content: "\f4c0"; }
 
-/* line 1247, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1247, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-toggle:before {
   content: "\f4c3"; }
 
-/* line 1248, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1248, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-toggle-outline:before {
   content: "\f4c2"; }
 
-/* line 1249, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1249, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-trash:before {
   content: "\f4c5"; }
 
-/* line 1250, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1250, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-trash-outline:before {
   content: "\f4c4"; }
 
-/* line 1251, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1251, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-undo:before {
   content: "\f4c7"; }
 
-/* line 1252, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1252, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-undo-outline:before {
   content: "\f4c6"; }
 
-/* line 1253, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1253, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-unlocked:before {
   content: "\f4c9"; }
 
-/* line 1254, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1254, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-unlocked-outline:before {
   content: "\f4c8"; }
 
-/* line 1255, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1255, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-upload:before {
   content: "\f4cb"; }
 
-/* line 1256, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1256, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-upload-outline:before {
   content: "\f4ca"; }
 
-/* line 1257, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1257, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-videocam:before {
   content: "\f4cd"; }
 
-/* line 1258, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1258, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-videocam-outline:before {
   content: "\f4cc"; }
 
-/* line 1259, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1259, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-volume-high:before {
   content: "\f4ce"; }
 
-/* line 1260, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1260, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-volume-low:before {
   content: "\f4cf"; }
 
-/* line 1261, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1261, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-wineglass:before {
   content: "\f4d1"; }
 
-/* line 1262, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1262, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-wineglass-outline:before {
   content: "\f4d0"; }
 
-/* line 1263, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1263, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-world:before {
   content: "\f4d3"; }
 
-/* line 1264, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1264, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ios-world-outline:before {
   content: "\f4d2"; }
 
-/* line 1265, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1265, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ipad:before {
   content: "\f1f9"; }
 
-/* line 1266, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1266, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-iphone:before {
   content: "\f1fa"; }
 
-/* line 1267, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1267, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ipod:before {
   content: "\f1fb"; }
 
-/* line 1268, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1268, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-jet:before {
   content: "\f295"; }
 
-/* line 1269, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1269, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-key:before {
   content: "\f296"; }
 
-/* line 1270, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1270, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-knife:before {
   content: "\f297"; }
 
-/* line 1271, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1271, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-laptop:before {
   content: "\f1fc"; }
 
-/* line 1272, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1272, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-leaf:before {
   content: "\f1fd"; }
 
-/* line 1273, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1273, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-levels:before {
   content: "\f298"; }
 
-/* line 1274, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1274, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-lightbulb:before {
   content: "\f299"; }
 
-/* line 1275, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1275, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-link:before {
   content: "\f1fe"; }
 
-/* line 1276, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1276, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-load-a:before {
   content: "\f29a"; }
 
-/* line 1277, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1277, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-load-b:before {
   content: "\f29b"; }
 
-/* line 1278, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1278, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-load-c:before {
   content: "\f29c"; }
 
-/* line 1279, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1279, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-load-d:before {
   content: "\f29d"; }
 
-/* line 1280, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1280, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-location:before {
   content: "\f1ff"; }
 
-/* line 1281, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1281, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-lock-combination:before {
   content: "\f4d4"; }
 
-/* line 1282, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1282, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-locked:before {
   content: "\f200"; }
 
-/* line 1283, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1283, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-log-in:before {
   content: "\f29e"; }
 
-/* line 1284, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1284, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-log-out:before {
   content: "\f29f"; }
 
-/* line 1285, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1285, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-loop:before {
   content: "\f201"; }
 
-/* line 1286, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1286, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-magnet:before {
   content: "\f2a0"; }
 
-/* line 1287, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1287, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-male:before {
   content: "\f2a1"; }
 
-/* line 1288, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1288, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-man:before {
   content: "\f202"; }
 
-/* line 1289, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1289, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-map:before {
   content: "\f203"; }
 
-/* line 1290, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1290, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-medkit:before {
   content: "\f2a2"; }
 
-/* line 1291, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1291, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-merge:before {
   content: "\f33f"; }
 
-/* line 1292, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1292, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-mic-a:before {
   content: "\f204"; }
 
-/* line 1293, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1293, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-mic-b:before {
   content: "\f205"; }
 
-/* line 1294, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1294, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-mic-c:before {
   content: "\f206"; }
 
-/* line 1295, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1295, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-minus:before {
   content: "\f209"; }
 
-/* line 1296, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1296, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-minus-circled:before {
   content: "\f207"; }
 
-/* line 1297, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1297, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-minus-round:before {
   content: "\f208"; }
 
-/* line 1298, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1298, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-model-s:before {
   content: "\f2c1"; }
 
-/* line 1299, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1299, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-monitor:before {
   content: "\f20a"; }
 
-/* line 1300, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1300, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-more:before {
   content: "\f20b"; }
 
-/* line 1301, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1301, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-mouse:before {
   content: "\f340"; }
 
-/* line 1302, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1302, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-music-note:before {
   content: "\f20c"; }
 
-/* line 1303, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1303, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-navicon:before {
   content: "\f20e"; }
 
-/* line 1304, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1304, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-navicon-round:before {
   content: "\f20d"; }
 
-/* line 1305, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1305, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-navigate:before {
   content: "\f2a3"; }
 
-/* line 1306, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1306, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-network:before {
   content: "\f341"; }
 
-/* line 1307, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1307, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-no-smoking:before {
   content: "\f2c2"; }
 
-/* line 1308, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1308, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-nuclear:before {
   content: "\f2a4"; }
 
-/* line 1309, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1309, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-outlet:before {
   content: "\f342"; }
 
-/* line 1310, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1310, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-paintbrush:before {
   content: "\f4d5"; }
 
-/* line 1311, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1311, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-paintbucket:before {
   content: "\f4d6"; }
 
-/* line 1312, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1312, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-paper-airplane:before {
   content: "\f2c3"; }
 
-/* line 1313, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1313, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-paperclip:before {
   content: "\f20f"; }
 
-/* line 1314, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1314, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-pause:before {
   content: "\f210"; }
 
-/* line 1315, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1315, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-person:before {
   content: "\f213"; }
 
-/* line 1316, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1316, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-person-add:before {
   content: "\f211"; }
 
-/* line 1317, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1317, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-person-stalker:before {
   content: "\f212"; }
 
-/* line 1318, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1318, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-pie-graph:before {
   content: "\f2a5"; }
 
-/* line 1319, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1319, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-pin:before {
   content: "\f2a6"; }
 
-/* line 1320, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1320, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-pinpoint:before {
   content: "\f2a7"; }
 
-/* line 1321, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1321, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-pizza:before {
   content: "\f2a8"; }
 
-/* line 1322, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1322, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-plane:before {
   content: "\f214"; }
 
-/* line 1323, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1323, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-planet:before {
   content: "\f343"; }
 
-/* line 1324, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1324, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-play:before {
   content: "\f215"; }
 
-/* line 1325, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1325, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-playstation:before {
   content: "\f30a"; }
 
-/* line 1326, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1326, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-plus:before {
   content: "\f218"; }
 
-/* line 1327, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1327, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-plus-circled:before {
   content: "\f216"; }
 
-/* line 1328, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1328, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-plus-round:before {
   content: "\f217"; }
 
-/* line 1329, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1329, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-podium:before {
   content: "\f344"; }
 
-/* line 1330, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1330, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-pound:before {
   content: "\f219"; }
 
-/* line 1331, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1331, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-power:before {
   content: "\f2a9"; }
 
-/* line 1332, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1332, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-pricetag:before {
   content: "\f2aa"; }
 
-/* line 1333, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1333, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-pricetags:before {
   content: "\f2ab"; }
 
-/* line 1334, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1334, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-printer:before {
   content: "\f21a"; }
 
-/* line 1335, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1335, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-pull-request:before {
   content: "\f345"; }
 
-/* line 1336, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1336, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-qr-scanner:before {
   content: "\f346"; }
 
-/* line 1337, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1337, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-quote:before {
   content: "\f347"; }
 
-/* line 1338, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1338, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-radio-waves:before {
   content: "\f2ac"; }
 
-/* line 1339, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1339, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-record:before {
   content: "\f21b"; }
 
-/* line 1340, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1340, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-refresh:before {
   content: "\f21c"; }
 
-/* line 1341, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1341, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-reply:before {
   content: "\f21e"; }
 
-/* line 1342, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1342, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-reply-all:before {
   content: "\f21d"; }
 
-/* line 1343, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1343, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ribbon-a:before {
   content: "\f348"; }
 
-/* line 1344, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1344, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-ribbon-b:before {
   content: "\f349"; }
 
-/* line 1345, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1345, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-sad:before {
   content: "\f34a"; }
 
-/* line 1346, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1346, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-sad-outline:before {
   content: "\f4d7"; }
 
-/* line 1347, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1347, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-scissors:before {
   content: "\f34b"; }
 
-/* line 1348, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1348, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-search:before {
   content: "\f21f"; }
 
-/* line 1349, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1349, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-settings:before {
   content: "\f2ad"; }
 
-/* line 1350, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1350, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-share:before {
   content: "\f220"; }
 
-/* line 1351, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1351, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-shuffle:before {
   content: "\f221"; }
 
-/* line 1352, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1352, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-skip-backward:before {
   content: "\f222"; }
 
-/* line 1353, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1353, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-skip-forward:before {
   content: "\f223"; }
 
-/* line 1354, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1354, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-android:before {
   content: "\f225"; }
 
-/* line 1355, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1355, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-android-outline:before {
   content: "\f224"; }
 
-/* line 1356, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1356, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-angular:before {
   content: "\f4d9"; }
 
-/* line 1357, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1357, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-angular-outline:before {
   content: "\f4d8"; }
 
-/* line 1358, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1358, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-apple:before {
   content: "\f227"; }
 
-/* line 1359, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1359, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-apple-outline:before {
   content: "\f226"; }
 
-/* line 1360, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1360, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-bitcoin:before {
   content: "\f2af"; }
 
-/* line 1361, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1361, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-bitcoin-outline:before {
   content: "\f2ae"; }
 
-/* line 1362, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1362, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-buffer:before {
   content: "\f229"; }
 
-/* line 1363, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1363, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-buffer-outline:before {
   content: "\f228"; }
 
-/* line 1364, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1364, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-chrome:before {
   content: "\f4db"; }
 
-/* line 1365, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1365, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-chrome-outline:before {
   content: "\f4da"; }
 
-/* line 1366, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1366, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-codepen:before {
   content: "\f4dd"; }
 
-/* line 1367, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1367, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-codepen-outline:before {
   content: "\f4dc"; }
 
-/* line 1368, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1368, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-css3:before {
   content: "\f4df"; }
 
-/* line 1369, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1369, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-css3-outline:before {
   content: "\f4de"; }
 
-/* line 1370, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1370, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-designernews:before {
   content: "\f22b"; }
 
-/* line 1371, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1371, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-designernews-outline:before {
   content: "\f22a"; }
 
-/* line 1372, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1372, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-dribbble:before {
   content: "\f22d"; }
 
-/* line 1373, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1373, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-dribbble-outline:before {
   content: "\f22c"; }
 
-/* line 1374, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1374, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-dropbox:before {
   content: "\f22f"; }
 
-/* line 1375, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1375, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-dropbox-outline:before {
   content: "\f22e"; }
 
-/* line 1376, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1376, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-euro:before {
   content: "\f4e1"; }
 
-/* line 1377, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1377, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-euro-outline:before {
   content: "\f4e0"; }
 
-/* line 1378, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1378, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-facebook:before {
   content: "\f231"; }
 
-/* line 1379, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1379, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-facebook-outline:before {
   content: "\f230"; }
 
-/* line 1380, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1380, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-foursquare:before {
   content: "\f34d"; }
 
-/* line 1381, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1381, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-foursquare-outline:before {
   content: "\f34c"; }
 
-/* line 1382, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1382, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-freebsd-devil:before {
   content: "\f2c4"; }
 
-/* line 1383, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1383, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-github:before {
   content: "\f233"; }
 
-/* line 1384, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1384, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-github-outline:before {
   content: "\f232"; }
 
-/* line 1385, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1385, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-google:before {
   content: "\f34f"; }
 
-/* line 1386, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1386, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-google-outline:before {
   content: "\f34e"; }
 
-/* line 1387, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1387, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-googleplus:before {
   content: "\f235"; }
 
-/* line 1388, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1388, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-googleplus-outline:before {
   content: "\f234"; }
 
-/* line 1389, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1389, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-hackernews:before {
   content: "\f237"; }
 
-/* line 1390, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1390, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-hackernews-outline:before {
   content: "\f236"; }
 
-/* line 1391, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1391, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-html5:before {
   content: "\f4e3"; }
 
-/* line 1392, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1392, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-html5-outline:before {
   content: "\f4e2"; }
 
-/* line 1393, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1393, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-instagram:before {
   content: "\f351"; }
 
-/* line 1394, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1394, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-instagram-outline:before {
   content: "\f350"; }
 
-/* line 1395, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1395, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-javascript:before {
   content: "\f4e5"; }
 
-/* line 1396, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1396, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-javascript-outline:before {
   content: "\f4e4"; }
 
-/* line 1397, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1397, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-linkedin:before {
   content: "\f239"; }
 
-/* line 1398, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1398, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-linkedin-outline:before {
   content: "\f238"; }
 
-/* line 1399, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1399, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-markdown:before {
   content: "\f4e6"; }
 
-/* line 1400, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1400, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-nodejs:before {
   content: "\f4e7"; }
 
-/* line 1401, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1401, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-octocat:before {
   content: "\f4e8"; }
 
-/* line 1402, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1402, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-pinterest:before {
   content: "\f2b1"; }
 
-/* line 1403, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1403, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-pinterest-outline:before {
   content: "\f2b0"; }
 
-/* line 1404, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1404, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-python:before {
   content: "\f4e9"; }
 
-/* line 1405, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1405, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-reddit:before {
   content: "\f23b"; }
 
-/* line 1406, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1406, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-reddit-outline:before {
   content: "\f23a"; }
 
-/* line 1407, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1407, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-rss:before {
   content: "\f23d"; }
 
-/* line 1408, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1408, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-rss-outline:before {
   content: "\f23c"; }
 
-/* line 1409, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1409, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-sass:before {
   content: "\f4ea"; }
 
-/* line 1410, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1410, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-skype:before {
   content: "\f23f"; }
 
-/* line 1411, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1411, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-skype-outline:before {
   content: "\f23e"; }
 
-/* line 1412, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1412, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-snapchat:before {
   content: "\f4ec"; }
 
-/* line 1413, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1413, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-snapchat-outline:before {
   content: "\f4eb"; }
 
-/* line 1414, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1414, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-tumblr:before {
   content: "\f241"; }
 
-/* line 1415, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1415, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-tumblr-outline:before {
   content: "\f240"; }
 
-/* line 1416, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1416, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-tux:before {
   content: "\f2c5"; }
 
-/* line 1417, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1417, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-twitch:before {
   content: "\f4ee"; }
 
-/* line 1418, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1418, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-twitch-outline:before {
   content: "\f4ed"; }
 
-/* line 1419, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1419, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-twitter:before {
   content: "\f243"; }
 
-/* line 1420, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1420, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-twitter-outline:before {
   content: "\f242"; }
 
-/* line 1421, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1421, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-usd:before {
   content: "\f353"; }
 
-/* line 1422, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1422, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-usd-outline:before {
   content: "\f352"; }
 
-/* line 1423, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1423, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-vimeo:before {
   content: "\f245"; }
 
-/* line 1424, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1424, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-vimeo-outline:before {
   content: "\f244"; }
 
-/* line 1425, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1425, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-whatsapp:before {
   content: "\f4f0"; }
 
-/* line 1426, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1426, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-whatsapp-outline:before {
   content: "\f4ef"; }
 
-/* line 1427, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1427, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-windows:before {
   content: "\f247"; }
 
-/* line 1428, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1428, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-windows-outline:before {
   content: "\f246"; }
 
-/* line 1429, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1429, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-wordpress:before {
   content: "\f249"; }
 
-/* line 1430, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1430, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-wordpress-outline:before {
   content: "\f248"; }
 
-/* line 1431, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1431, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-yahoo:before {
   content: "\f24b"; }
 
-/* line 1432, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1432, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-yahoo-outline:before {
   content: "\f24a"; }
 
-/* line 1433, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1433, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-yen:before {
   content: "\f4f2"; }
 
-/* line 1434, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1434, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-yen-outline:before {
   content: "\f4f1"; }
 
-/* line 1435, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1435, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-youtube:before {
   content: "\f24d"; }
 
-/* line 1436, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1436, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-social-youtube-outline:before {
   content: "\f24c"; }
 
-/* line 1437, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1437, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-soup-can:before {
   content: "\f4f4"; }
 
-/* line 1438, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1438, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-soup-can-outline:before {
   content: "\f4f3"; }
 
-/* line 1439, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1439, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-speakerphone:before {
   content: "\f2b2"; }
 
-/* line 1440, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1440, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-speedometer:before {
   content: "\f2b3"; }
 
-/* line 1441, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1441, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-spoon:before {
   content: "\f2b4"; }
 
-/* line 1442, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1442, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-star:before {
   content: "\f24e"; }
 
-/* line 1443, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1443, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-stats-bars:before {
   content: "\f2b5"; }
 
-/* line 1444, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1444, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-steam:before {
   content: "\f30b"; }
 
-/* line 1445, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1445, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-stop:before {
   content: "\f24f"; }
 
-/* line 1446, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1446, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-thermometer:before {
   content: "\f2b6"; }
 
-/* line 1447, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1447, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-thumbsdown:before {
   content: "\f250"; }
 
-/* line 1448, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1448, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-thumbsup:before {
   content: "\f251"; }
 
-/* line 1449, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1449, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-toggle:before {
   content: "\f355"; }
 
-/* line 1450, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1450, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-toggle-filled:before {
   content: "\f354"; }
 
-/* line 1451, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1451, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-transgender:before {
   content: "\f4f5"; }
 
-/* line 1452, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1452, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-trash-a:before {
   content: "\f252"; }
 
-/* line 1453, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1453, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-trash-b:before {
   content: "\f253"; }
 
-/* line 1454, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1454, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-trophy:before {
   content: "\f356"; }
 
-/* line 1455, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1455, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-tshirt:before {
   content: "\f4f7"; }
 
-/* line 1456, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1456, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-tshirt-outline:before {
   content: "\f4f6"; }
 
-/* line 1457, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1457, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-umbrella:before {
   content: "\f2b7"; }
 
-/* line 1458, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1458, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-university:before {
   content: "\f357"; }
 
-/* line 1459, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1459, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-unlocked:before {
   content: "\f254"; }
 
-/* line 1460, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1460, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-upload:before {
   content: "\f255"; }
 
-/* line 1461, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1461, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-usb:before {
   content: "\f2b8"; }
 
-/* line 1462, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1462, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-videocamera:before {
   content: "\f256"; }
 
-/* line 1463, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1463, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-volume-high:before {
   content: "\f257"; }
 
-/* line 1464, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1464, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-volume-low:before {
   content: "\f258"; }
 
-/* line 1465, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1465, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-volume-medium:before {
   content: "\f259"; }
 
-/* line 1466, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1466, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-volume-mute:before {
   content: "\f25a"; }
 
-/* line 1467, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1467, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-wand:before {
   content: "\f358"; }
 
-/* line 1468, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1468, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-waterdrop:before {
   content: "\f25b"; }
 
-/* line 1469, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1469, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-wifi:before {
   content: "\f25c"; }
 
-/* line 1470, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1470, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-wineglass:before {
   content: "\f2b9"; }
 
-/* line 1471, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1471, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-woman:before {
   content: "\f25d"; }
 
-/* line 1472, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1472, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-wrench:before {
   content: "\f2ba"; }
 
-/* line 1473, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
+/* line 1473, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/_ionicons-icons.scss */
 .ion-xbox:before {
   content: "\f30c"; }

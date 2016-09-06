@@ -17,7 +17,7 @@ code {
     border: 1px solid #eaeaea;
     margin: 0px 2px;
     padding: 0px 5px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 pre code {
@@ -39,7 +39,7 @@ pre, code {
 }
 
 pre, pre code {
-    font-size: 13px;
+    font-size: 16px;
 }
 
 pre .comment {
