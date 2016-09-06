@@ -20,11 +20,11 @@ large projects under my belt. I thought I would write down what's worked and
 what hasn't worked. I'm not saying I have the be all end all answer but some
 little patterns and tricks have really helped.
 
-## Sub packages
+## What's worked:
 
 <p> </p>
 
-#### What's worked:
+### Sub packages
 
 <p> </p>
 
@@ -33,14 +33,12 @@ chunks for your team to work on. Not to mention in some cases you can import a
 subproject of another large project to make life easier. But the biggest
 benefit comes from how Go's import process works.
 
-/* One of the more powerful practices is using sub packages to manage the inner */
-
 When you import a package the compiler ensures the imported package's
 `init()` function is called before the `init()` function of the package it's
 being imported into. This means when you call: `import subpackage` you know
-that it is initialized and ready to use. Structuring your sub packages correctly
+that it is initialized and ready to use. If you structure your sub packages correctly
 you can precisely control how your project starts up and what gets initialized
-in first.
+in what order.
 
 That simple characteristic can be used to manage your own project's internal
 dependency's in a clean and testable way. Let's look at an example.
@@ -50,7 +48,7 @@ Below we have our logging package.
 <pre><code data-language="go">package logging
 
 import (
-	"log"
+  "log"
   "os"
 )
 
@@ -81,17 +79,7 @@ you build your project split out the different concerns: API server, DB connecti
 logging, return types just to name few.
 
 
-#### What hasn't worked:
-
-<p> </p>
-
-
-
-## Configuration
-
-<p> </p>
-
-#### What's worked:
+### Configuration
 
 <p> </p>
 
@@ -123,7 +111,6 @@ func init() {
   decoder.Decode(&Env)
 }
 ```
-
 
 Now in all the packages that depend on values from the environment, I can
 import the `config` package. Importing the package
