@@ -1,0 +1,26 @@
+{
+  "name": "jpoz.github.com",
+  "version": "1.0.0",
+  "description": "Source for http://www.jpoz.net/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpoz/jpoz.github.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpoz/jpoz.github.com/issues"
+  },
+  "homepage": "https://github.com/jpoz/jpoz.github.com#readme",
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0"
+  }
+}
