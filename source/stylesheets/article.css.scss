@@ -62,6 +62,18 @@ div.blog {
     }
   }
 
+  article.steal_all_of_your_i_messages {
+    .boom-script {
+      pre {
+        text-align: center;
+        padding: 1.3rem;
+        code {
+          font-size: 1.9rem;
+        }
+      }
+    }
+  }
+
   article.socks_5_explained {
     table {
       margin-bottom: 1.7rem;
