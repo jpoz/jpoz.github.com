@@ -1,0 +1,10 @@
+---
+title: 'Boat Ride'
+section: 'photos'
+url: 'https://farm1.staticflickr.com/623/23548387435_bba822293e_k_d.jpg'
+
+
+---
+
+Content
+

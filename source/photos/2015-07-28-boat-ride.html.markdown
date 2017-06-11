@@ -1,0 +1,10 @@
+---
+title: 'Hammock'
+section: 'photos'
+url: 'https://farm6.staticflickr.com/5566/14948557408_b8d9fb0d32_k_d.jpg'
+
+
+---
+
+Content
+

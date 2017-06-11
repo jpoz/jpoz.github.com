@@ -1,0 +1,10 @@
+---
+title: 'CocaCola'
+section: 'photos'
+url: 'https://farm2.staticflickr.com/1612/24406264533_655970f13a_k_d.jpg'
+
+
+---
+
+Content
+
