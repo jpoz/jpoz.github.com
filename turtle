@@ -1,0 +1,6 @@
+echo "beepBoopBop"
+for VARIABLE in clown+mask poop toilet miley+cyrus nicolas+cage adult+diaper+rash
+do
+  open https://www.amazon.com/s/field-keywords=$VARIABLE
+done
+open https://www.google.com/search?q=turtle&source=lnms&tbm=isch
