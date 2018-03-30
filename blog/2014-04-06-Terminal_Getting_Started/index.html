@@ -5,7 +5,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
 
-    <title>Terminal Getting Started</title>
+    <title>Command line Getting Started</title>
 
     <link href='http://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css'>
@@ -36,7 +36,7 @@
     <div id='content'>
         <div class='blog'>
     <div class='header'>
-      <h1>Terminal Getting Started</h1>
+      <h1>Command line Getting Started</h1>
       <h4>Apr  6 2014</h4>
     </div>
 
@@ -44,21 +44,23 @@
 
 
 
-    <article class='terminal_getting_started'>
-      <p>I pretty much do everything in the my terminal now, but when I was starting my
-developer journey I hated the command line. So for anyone that was like me and
-hates the command line here are some tips to get your over the hump and start
-loving the power of the command line.</p>
+    <article class='command_line_getting_started'>
+      <p>I work 90% of the time on the command line. But that wasn&#39;t always the case.
+When I was starting my developer journey I hated the command line.
+So for anyone thats like me and hates the command line, here are some tips to
+get your over the hump and start loving the power of the command line.</p>
 
 <h2>Basics</h2>
 
-<p>Before we get into commands you need to know a couple of basics:</p>
+<p>Before we get into commands, you need to know a couple of basics:</p>
 
 <ul>
+<li>To run a command, you type it into the command line, then hit return. Each line
+entered into the command line is a command.</li>
 <li>To stop any command use <code>control-c</code>. Some will stop on their own but this
-is the general way to stop any command in the terminal.</li>
-<li>Arguments and flags. To control our commands we&#39;ve got two tools: Arguments
-that we pass to the command and flag (or switches) to tune functionality of the
+is the general the best way to stop any command.</li>
+<li>Arguments and flags: To control our commands we&#39;ve got two tools: Arguments
+that we pass to the command and flags (or switches) to tune functionality of the
 command. Lets look at an example:</li>
 </ul>
 
@@ -67,14 +69,22 @@ command. Lets look at an example:</li>
 
 <p>Above we have one flag <code>-l</code> and one argument <code>project_dir</code>.</p>
 
-<ul>
-<li>How to try this stuff out: Open up your &ldquo;Terminal&rdquo; app in the Utilities folder
-of your Application directory.</li>
-</ul>
+<p>Open up your &ldquo;Terminal&rdquo; app in the Utilities folder
+of your Application directory.</p>
+
+<p>For the rest of this post I&#39;ll be writing example in the following formual.</p>
 
 <pre><code data-language="shell"># This stuff is a comment about the command below
 echo "This is a command you can copy and paste into your Terminal"
 </code></pre>
+
+<p>Pretty much anything that&#39;s grey and starts with a <code>#</code> is just a comment describing
+a command, and everything else is a command you can type into your command line and
+hit return (to run it).</p>
+
+<p>Type the example above by either copy and pasting into the command line or typing
+it our manually. Then hit return. The <code>echo</code> command just echos out anything you
+type into it. So, <code>echo &quot;hi&quot;</code> will write out &ldquo;hi&rdquo;. Pretty basic.</p>
 
 <h2>cd</h2>
 
