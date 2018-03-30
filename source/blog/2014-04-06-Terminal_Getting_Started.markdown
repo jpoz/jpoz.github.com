@@ -1,21 +1,23 @@
 ---
-title: Terminal Getting Started
+title: Command line Getting Started
 
 ---
 
-I pretty much do everything in the my terminal now, but when I was starting my
-developer journey I hated the command line. So for anyone that was like me and
-hates the command line here are some tips to get your over the hump and start
-loving the power of the command line.
+I work 90% of the time on the command line. But that wasn't always the case.
+When I was starting my developer journey I hated the command line.
+So for anyone thats like me and hates the command line, here are some tips to
+get your over the hump and start loving the power of the command line.
 
 ## Basics
 
-Before we get into commands you need to know a couple of basics:
+Before we get into commands, you need to know a couple of basics:
 
+* To run a command, you type it into the command line, then hit return. Each line
+entered into the command line is a command.
 * To stop any command use `control-c`. Some will stop on their own but this
-is the general way to stop any command in the terminal.
-* Arguments and flags. To control our commands we've got two tools: Arguments
-that we pass to the command and flag (or switches) to tune functionality of the
+is the general the best way to stop any command.
+* Arguments and flags: To control our commands we've got two tools: Arguments
+that we pass to the command and flags (or switches) to tune functionality of the
 command. Lets look at an example:
 
 <pre><code data-language="shell">ls -l project_dir
@@ -23,12 +25,22 @@ command. Lets look at an example:
 
 Above we have one flag `-l` and one argument `project_dir`.
 
-* How to try this stuff out: Open up your "Terminal" app in the Utilities folder
+Open up your "Terminal" app in the Utilities folder
 of your Application directory.
+
+For the rest of this post I'll be writing example in the following formual.
 
 <pre><code data-language="shell"># This stuff is a comment about the command below
 echo "This is a command you can copy and paste into your Terminal"
 </code></pre>
+
+Pretty much anything that's grey and starts with a `#` is just a comment describing
+a command, and everything else is a command you can type into your command line and
+hit return (to run it).
+
+Type the example above by either copy and pasting into the command line or typing
+it our manually. Then hit return. The `echo` command just echos out anything you
+type into it. So, `echo "hi"` will write out "hi". Pretty basic.
 
 ## cd
 
