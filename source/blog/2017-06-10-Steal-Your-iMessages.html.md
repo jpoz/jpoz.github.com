@@ -4,7 +4,7 @@ title: Steal all of your iMessages
 ---
 
 Apple touts the [security of its
-iMessage service](https://support.apple.com/en-us/HT20700://support.apple.com/en-us/HT207006).
+iMessage service](https://support.apple.com/en-us/HT207006).
 It turns out, locally, the data is sitting unencrypted ready for taking.
 
 As a proof of concept I made a small utility to read all the iMessage data on
