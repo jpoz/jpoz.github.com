@@ -1,4 +1,30 @@
 
+#countdown {
+  margin: 400px auto;
+  background: #535353;
+  color: #DDDDDD;
+  padding: 20px;
+
+  div {
+    width: 95%;
+    text-align: center;
+  }
+
+  .countdown_row {
+    display: flex;
+  }
+  .countdown_top {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+  }
+  .countdown_bottom {
+    font-size: 60px;
+    text-transform: uppercase;
+  }
+}
+
 #TextFader {
   width: 100%;
   margin: 5% auto;
