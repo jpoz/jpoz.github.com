@@ -539,7 +539,6 @@ var TextFader = new Class({
       }, index * 4);
     });
   }
-
 })
 ;
 

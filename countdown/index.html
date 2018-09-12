@@ -5,7 +5,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
 
-    <title>James R. Pozdena</title>
+    <title>COUNTDOWN TO FREEDOM</title>
 
     <link href='http://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css'>
@@ -23,7 +23,7 @@
     <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
   </head>
 
-  <body id='body' class="cover cover_index">
+  <body id='body' class="countdown countdown_index">
 
     <a href='/' class='jpoz '>JPoz</a>
     <a href='/photos' class='jpoz_photos inactive'>&nbsp;</a>
@@ -34,23 +34,40 @@
     </div>
 
     <div id='content'>
-      <div id='cover'>
-  <div>
-    <p>Greetings,</p>
-    </br>
-    <p><span class='tab'>&nbsp;</span>My name is James Pozdena. I love Airbnb, looked to see if you guys have any jobs that would fit me, and you do! Your Software Engineer, Full Stack position looks tailor-made for me. I've been doing Rails professionally for the last 6 years. Usually deploying with JRuby. From creating a project announced on the Today show the night before to creating a state of the art electronic health records platform for hospitals I've had my fair share of battles.
-    </p>
-    <p>A little about me: I'm currently living in Oregon but looking for my next home. I love using technology to make people happy. It is what drives me to keep improving my skill set as a developer and tech evangalist. I'm someone that works best in a team. I am highly engergetic and addicted to learning and teaching others.</p>
-    <p>I hope you'll give me a change to amaze you.</p>
-
-    <p>Best,</p>
-
-    <p>James Pozdena<br/>
-    <span class=light>jpoz@jpoz.net<br/>
-      503.348.0170</span></p>
-  <div>
+      <div id='countdown'>
+  <div class='countdown_row countdown_top'>
+    <div>Days</div>
+    <div>Hours</div>
+    <div>Minutes</div>
+    <div>Seconds</div>
+  </div>
+  <div class='countdown_row countdown_bottom'>
+    <div id='days'>999</div>
+    <div id='hours'>999</div>
+    <div id='minutes'>999</div>
+    <div id='seconds'>999</div>
+  </div>
 </div>
 
+<script>
+var deadline = new Date("Feb 25, 2019 18:00:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var t = deadline - now;
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+  var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((t % (1000 * 60)) / 1000);
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+  if (t < 0) {
+      clearInterval(x);
+      document.getElementById('countdown').innerHTML = "FREEDOM";
+  }
+}, 1000);
+</script>
 
     </div>
 <script type="text/javascript">
