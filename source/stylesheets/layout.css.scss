@@ -36,7 +36,7 @@
   font-weight: 300;
   font-size: 12px;
   line-height: 52px;
-  background-color: #262626;  
+  background-color: #262626;
   background-image: url('/images/86-camera@2x-white.png');
   background-repeat: no-repeat;
   background-size: 23px;
@@ -62,7 +62,7 @@
   width: 50px;
   text-align: center;
   padding-bottom: 7px;
- 
+
   &.inactive {
     display: none;
   }
@@ -82,32 +82,32 @@
     &.gmail {
       background-image: url(/images/489-gmail@2x-white.png);
       background-size: 23px;
-      line-height: 18px;  
+      line-height: 18px;
     }
     &.github {
       background-image: url(/images/488-github@2x-white.png);
       background-size: 23px;
-      line-height: 25px;  
+      line-height: 25px;
     }
     &.twitter {
       background-image: url(/images/498-twitter@2x-white.png);
       background-size: 23px;
-      line-height: 20px;  
+      line-height: 20px;
     }
     &.instagram {
       background-image: url(/images/492-instagram@2x-white.png);
       background-size: 23px;
-      line-height: 23px;  
+      line-height: 23px;
     }
     &.simple {
       background-image: url(/images/394-bank@2x-white.png);
       background-size: 23px;
-      line-height: 20px;  
+      line-height: 20px;
     }
     &.photos {
       background-image: url(/images/86-camera@2x-white.png);
       background-size: 23px;
-      line-height: 20px;  
+      line-height: 20px;
     }
 
   }
