@@ -10,7 +10,12 @@ title: 'SPEEDREAD'
   </div>
   <div class='speedread-controls'>
     Words per minute:
-    <input id='speedread-word-per-min' type='number' value='500'/>
+    <input
+      id='speedread-word-per-min'
+      type='number'
+      pattern="[0-9]*"
+      value='500'
+      />
 
     <button id='speedread-go-button'>
       Go
