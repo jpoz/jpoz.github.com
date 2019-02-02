@@ -7,8 +7,8 @@
 
     <title>SPEEDREAD</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css'>
 
     <script>
       window.addEventListener("load",function() {
@@ -43,7 +43,12 @@
   </div>
   <div class='speedread-controls'>
     Words per minute:
-    <input id='speedread-word-per-min' type='number' value='500'/>
+    <input
+      id='speedread-word-per-min'
+      type='number'
+      pattern="[0-9]*"
+      value='500'
+      />
 
     <button id='speedread-go-button'>
       Go
