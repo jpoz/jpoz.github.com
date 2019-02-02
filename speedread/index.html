@@ -5,7 +5,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes;" />
 
-    <title>COUNTDOWN</title>
+    <title>SPEEDREAD</title>
 
     <link href='http://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css'>
@@ -23,7 +23,7 @@
     <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
   </head>
 
-  <body id='body' class="countdown countdown_index">
+  <body id='body' class="speedread speedread_index">
 
     <a href='/' class='jpoz '>JPoz</a>
     <a href='/photos' class='jpoz_photos inactive'>&nbsp;</a>
@@ -34,45 +34,68 @@
     </div>
 
     <div id='content'>
-      <div id='countdown'>
-  <div class='countdown_row countdown_top'>
-    <div class='timebox'>
-      <div class='title'>Days</div>
-      <div class='time' id='days'>999</div>
-    </div>
-    <div class='timebox'>
-      <div class='title'>Hours</div>
-      <div class='time' id='hours'>999</div>
-    </div>
-    <div class='timebox'>
-      <div class='title'>Minutes</div>
-      <div class='time' id='minutes'>999</div>
-    </div>
-    <div class='timebox'>
-      <div class='title'>Seconds</div>
-      <div class='time' id='seconds'>999</div>
+      <div id='speedread'>
+  <div class='speedread-title'>
+    Insert text you'd like to speed read
+  </div>
+  <div class='speedread-input-container'>
+    <textarea id='speedread-input'></textarea>
+  </div>
+  <div class='speedread-controls'>
+    Words per minute:
+    <input id='speedread-word-per-min' type='number' value='500'/>
+
+    <button id='speedread-go-button'>
+      Go
+    </button>
+  </div>
+
+  <div id='speedread-overlay' class='speedread-overlay hidden'>
+    <div id='speedread-words' class='speedread-words'>
+      http://localhost:4567/speedread
     </div>
   </div>
 </div>
 
 <script>
-var deadline = new Date("Feb 25, 2019 18:00:00").getTime();
-var x = setInterval(function() {
-  var now = new Date().getTime();
-  var t = deadline - now;
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
-  var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((t % (1000 * 60)) / 1000);
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-  if (t < 0) {
-      clearInterval(x);
-      document.getElementById('countdown').innerHTML = "FREEDOM";
+  let input = document.getElementById('speedread-input');
+  let button = document.getElementById('speedread-go-button');
+  let overlay = document.getElementById('speedread-overlay');
+  let word_display = document.getElementById('speedread-words');
+  let words_per_min = document.getElementById('speedread-word-per-min');
+  let overlay_shown = false;
+
+  button.onclick = async function(e) {
+    let words = input.value.trim();
+    words = words.replace(/^\s{2,}/g, ' ⇥' );
+    words = words.replace(/\s{2,}/g, ' ');
+    words = words.replace(/\t/g, '⇥');
+    words = words.replace(/\n/g, ' ↩︎ ');
+
+    overlay.classList.remove("hidden");
+    overlay_shown = true;
+
+    let word_list = words.split(' ');
+    let word_size = word_list.length;
+
+    next_word = function(index) {
+      word = word_list[index];
+      word_display.innerHTML = word;
+      if (word_size > index && overlay_shown) {
+        let timeout = 60000 / words_per_min.value;
+        setTimeout(next_word, timeout, index+1)
+      } else {
+        overlay_shown = false;
+        overlay.classList.add("hidden");
+      }
+    }
+
+    next_word(0);
   }
-}, 1000);
+  overlay.onclick = function(e) {
+    overlay_shown = false;
+    overlay.classList.add("hidden");
+  }
 </script>
 
     </div>
