@@ -1,4 +1,4 @@
-/* line 9, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
+/* line 9, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,34 +16,34 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
   background: transparent; }
 
-/* line 18, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
+/* line 18, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
 body {
   line-height: 1; }
 
-/* line 21, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
+/* line 21, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
 ol, ul {
   list-style: none; }
 
-/* line 24, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
+/* line 24, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
 blockquote, q {
   quotes: none; }
 
 /* remember to define focus styles! */
-/* line 29, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
+/* line 29, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
 :focus {
   outline: 0; }
 
 /* remember to highlight inserts somehow! */
-/* line 34, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
+/* line 34, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
 ins {
   text-decoration: none; }
 
-/* line 37, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
+/* line 37, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
 del {
   text-decoration: line-through; }
 
 /* tables still need 'cellspacing="0"' in the markup */
-/* line 42, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
+/* line 42, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/reset.css */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -55,7 +55,7 @@ table {
 /*
  * Corrects `block` display not defined in IE 8/9.
  */
-/* line 22, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 22, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 article,
 aside,
 details,
@@ -72,7 +72,7 @@ summary {
 /*
  * Corrects `inline-block` display not defined in IE 8/9.
  */
-/* line 32, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 32, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 audio,
 canvas,
 video {
@@ -82,7 +82,7 @@ video {
  * Prevents modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-/* line 41, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 41, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -90,7 +90,7 @@ audio:not([controls]) {
 /*
  * Addresses styling for `hidden` attribute not present in IE 8/9.
  */
-/* line 50, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 50, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 [hidden] {
   display: none; }
 
@@ -102,7 +102,7 @@ audio:not([controls]) {
  * 2. Prevents iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-/* line 64, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 64, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -114,7 +114,7 @@ html {
 /*
  * Removes default margin.
  */
-/* line 74, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 74, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 body {
   margin: 0; }
 
@@ -124,14 +124,14 @@ body {
 /*
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */
-/* line 86, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 86, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 a:focus {
   outline: thin dotted; }
 
 /*
  * Improves readability when focused and also mouse hovered in all browsers.
  */
-/* line 95, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 95, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 a:active,
 a:hover {
   outline: 0; }
@@ -143,21 +143,21 @@ a:hover {
  * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
  * Safari 5, and Chrome.
  */
-/* line 108, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 108, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 h1 {
   font-size: 2em; }
 
 /*
  * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
  */
-/* line 116, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 116, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /*
  * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 125, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 125, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 b,
 strong {
   font-weight: bold; }
@@ -165,14 +165,14 @@ strong {
 /*
  * Addresses styling not present in Safari 5 and Chrome.
  */
-/* line 133, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 133, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 dfn {
   font-style: italic; }
 
 /*
  * Addresses styling not present in IE 8/9.
  */
-/* line 141, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 141, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 mark {
   background: #ff0;
   color: #000; }
@@ -180,7 +180,7 @@ mark {
 /*
  * Corrects font family set oddly in Safari 5 and Chrome.
  */
-/* line 154, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 154, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 code,
 kbd,
 pre,
@@ -191,7 +191,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers.
  */
-/* line 163, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 163, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -200,21 +200,21 @@ pre {
 /*
  * Sets consistent quote types.
  */
-/* line 173, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 173, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 /*
  * Addresses inconsistent and variable font size in all browsers.
  */
-/* line 181, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 181, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 small {
   font-size: 80%; }
 
 /*
  * Prevents `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 190, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 190, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 sub,
 sup {
   font-size: 75%;
@@ -222,11 +222,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 197, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 197, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 sup {
   top: -0.5em; }
 
-/* line 201, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 201, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 sub {
   bottom: -0.25em; }
 
@@ -236,14 +236,14 @@ sub {
 /*
  * Removes border when inside `a` element in IE 8/9.
  */
-/* line 213, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 213, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 img {
   border: 0; }
 
 /*
  * Corrects overflow displayed oddly in IE 9.
  */
-/* line 221, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 221, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -253,7 +253,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE 8/9 and Safari 5.
  */
-/* line 233, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 233, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 figure {
   margin: 0; }
 
@@ -263,7 +263,7 @@ figure {
 /*
  * Define consistent border, margin, and padding.
  */
-/* line 245, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 245, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -273,7 +273,7 @@ fieldset {
  * 1. Corrects color not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 256, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 256, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 legend {
   border: 0;
   /* 1 */
@@ -285,7 +285,7 @@ legend {
  * 2. Corrects font size not being inherited in all browsers.
  * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
  */
-/* line 270, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 270, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 button,
 input,
 select,
@@ -301,7 +301,7 @@ textarea {
  * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 282, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 282, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 button,
 input {
   line-height: normal; }
@@ -313,7 +313,7 @@ input {
  * 3. Improves usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 297, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 297, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -326,7 +326,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements.
  */
-/* line 307, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 307, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 button[disabled],
 input[disabled] {
   cursor: default; }
@@ -335,7 +335,7 @@ input[disabled] {
  * 1. Addresses box sizing set to `content-box` in IE 8/9.
  * 2. Removes excess padding in IE 8/9.
  */
-/* line 317, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 317, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -348,7 +348,7 @@ input[type="radio"] {
  * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 328, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 328, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -361,7 +361,7 @@ input[type="search"] {
  * Removes inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 341, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 341, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -369,7 +369,7 @@ input[type="search"]::-webkit-search-decoration {
 /*
  * Removes inner padding and border in Firefox 4+.
  */
-/* line 350, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 350, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -379,7 +379,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE 8/9.
  * 2. Improves readability and alignment in all browsers.
  */
-/* line 360, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 360, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 textarea {
   overflow: auto;
   /* 1 */
@@ -392,37 +392,37 @@ textarea {
 /*
  * Remove most spacing between table cells.
  */
-/* line 373, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
+/* line 373, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/normalize.css */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 6, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/print.css.scss */
+/* line 6, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/print.css.scss */
 body {
   height: 100%;
   text-align: left;
   font-family: 'Open Sans', sans-serif; }
 
-/* line 12, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/print.css.scss */
+/* line 12, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/print.css.scss */
 a.jpoz, a.jpoz_photos, div.contacts {
   display: none; }
 
-/* line 1, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 1, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
 #speedread {
   margin: 10% auto;
   background: #535353;
   color: #DDDDDD; }
-  /* line 6, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 6, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .hidden {
     display: none; }
-  /* line 10, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 10, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-title, #speedread .speedread-controls {
     text-align: center;
     font-size: 1.5em;
     text-transform: uppercase;
     padding-bottom: 0.5em;
     padding-top: 0.5em; }
-  /* line 18, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 18, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-controls button {
     background: transparent;
     border: 2px solid #64b24d;
@@ -440,24 +440,24 @@ a.jpoz, a.jpoz_photos, div.contacts {
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase; }
-  /* line 35, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 35, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-controls button:hover {
     background-color: #64b24d;
     color: white; }
-  /* line 39, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 39, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-controls input {
     background: transparent;
     border: none;
     border-bottom: 2px solid #DDDDDD;
     color: #DDDDDD;
     width: 100px; }
-  /* line 48, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 48, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-input-container textarea {
     box-sizing: border-box;
     width: 100%;
     min-height: 200px;
     resize: vertical; }
-  /* line 56, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 56, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-overlay {
     opacity: 0.99;
     background-color: #ccc;
@@ -467,7 +467,7 @@ a.jpoz, a.jpoz_photos, div.contacts {
     top: 0px;
     left: 0px;
     z-index: 1000; }
-    /* line 66, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 66, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
     #speedread .speedread-overlay .speedread-words {
       opacity: 1;
       background-color: #535353;
@@ -480,12 +480,12 @@ a.jpoz, a.jpoz_photos, div.contacts {
       font-size: 5vw;
       text-align: center; }
 
-/* line 81, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 81, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
 #countdown {
   margin: 10% auto;
   background: #535353;
   color: #DDDDDD; }
-  /* line 86, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 86, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #countdown .countdown_row {
     display: flex;
     align-items: flex-start;
@@ -493,46 +493,46 @@ a.jpoz, a.jpoz_photos, div.contacts {
     justify-content: center;
     height: 100%;
     padding: 50px; }
-  /* line 94, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 94, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #countdown .timebox {
     width: 140px;
     padding: 20px; }
-  /* line 98, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 98, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #countdown .title {
     text-align: center;
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
     padding-bottom: 15px; }
-  /* line 105, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 105, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #countdown .time {
     text-align: center;
     font-size: 60px;
     text-transform: uppercase; }
 
-/* line 112, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 112, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
 #TextFader {
   width: 100%;
   margin: 5% auto;
   font-size: 30px;
   line-height: 50px;
   text-align: center; }
-  /* line 119, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 119, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #TextFader span {
     opacity: 0.0; }
 
-/* line 126, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 126, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
 #toc article {
   padding: 50px 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   text-align: center; }
-  /* line 131, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 131, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article.first {
     border-top: 1px solid rgba(0, 0, 0, 0.3); }
-  /* line 136, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 136, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article .title a:hover {
     text-decoration: underline; }
-  /* line 139, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 139, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article .title a {
     display: block;
     font-size: 2.5em;
@@ -543,16 +543,16 @@ a.jpoz, a.jpoz_photos, div.contacts {
     font-weight: 800;
     color: #333;
     font-family: 'Open Sans', sans-serif; }
-  /* line 150, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 150, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article .title div.date {
     text-align: center;
     font-weight: 300; }
 
-/* line 159, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 159, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
 #photos {
   margin-top: 25px;
   margin-bottom: 25px; }
-  /* line 162, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 162, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #photos img {
     display: block;
     max-width: 100%;
@@ -561,91 +561,91 @@ a.jpoz, a.jpoz_photos, div.contacts {
     margin: 0px;
     border: none;
     padding: 0px; }
-  /* line 171, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 171, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #photos .photo {
     display: block; }
 
-/* line 176, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 176, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
 #resume, #cover {
   width: 95%; }
-  /* line 178, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 178, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume h1, #cover h1 {
     text-align: center;
     line-height: 40px; }
-  /* line 182, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 182, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume h2 a, #cover h2 a {
     color: #777;
     font-weight: 100; }
-  /* line 186, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 186, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume h4, #cover h4 {
     font-weight: 100;
     line-height: 30px; }
-  /* line 190, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 190, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume table.info, #cover table.info {
     width: 100%;
     border-bottom: 1px solid #000;
     line-height: 20px; }
-    /* line 194, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 194, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume table.info .right, #cover table.info .right {
       padding-bottom: 7px;
       text-align: right; }
-  /* line 199, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 199, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume p, #resume h1, #resume h2, #resume h3, #resume table, #cover p, #cover h1, #cover h2, #cover h3, #cover table {
     margin-bottom: 0.2em; }
-  /* line 202, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 202, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume .section, #cover .section {
     margin-top: 10px;
     margin-bottom: 20px; }
-    /* line 205, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 205, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume .section .job, #cover .section .job {
       margin: 0px 0px 15px 0px; }
-      /* line 206, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+      /* line 206, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job h2, #cover .section .job h2 {
         font-size: 1.4em;
         margin-bottom: .2em; }
-      /* line 210, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+      /* line 210, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job .position, #cover .section .job .position {
         margin-bottom: 1em;
         margin-left: 1em; }
-        /* line 213, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+        /* line 213, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
         #resume .section .job .position .desc, #cover .section .job .position .desc {
           border-bottom: 1px dotted #000; }
-          /* line 215, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 215, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .date, #cover .section .job .position .desc .date {
             float: right; }
-          /* line 218, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 218, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title, #cover .section .job .position .desc .title {
             font-weight: bold; }
-          /* line 221, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 221, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title, #resume .section .job .position .desc .date, #cover .section .job .position .desc .title, #cover .section .job .position .desc .date {
             padding-top: 5px;
             display: inline-block;
             background-color: #FFF;
             line-height: 17px;
             margin-bottom: -15px; }
-  /* line 234, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 234, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume ul, #cover ul {
     margin: 5px 0px 5px 20px;
     list-style-type: circle;
     line-height: 20px; }
 
-/* line 241, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 241, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
 #cover {
   padding-top: 30px; }
-  /* line 243, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 243, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #cover p {
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 24px; }
-  /* line 248, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 248, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #cover .tab {
     width: 30px;
     display: inline-block; }
-  /* line 252, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 252, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
   #cover .light {
     font-size: 16px;
     color: #777; }
 
-/* line 19, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/print.css.scss */
+/* line 19, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/print.css.scss */
 div#content #resume {
   margin: 20px auto; }
