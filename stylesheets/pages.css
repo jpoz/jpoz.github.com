@@ -1,19 +1,19 @@
-/* line 1, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 1, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
 #speedread {
   margin: 10% auto;
   background: #535353;
   color: #DDDDDD; }
-  /* line 6, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 6, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .hidden {
     display: none; }
-  /* line 10, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 10, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-title, #speedread .speedread-controls {
     text-align: center;
     font-size: 1.5em;
     text-transform: uppercase;
     padding-bottom: 0.5em;
     padding-top: 0.5em; }
-  /* line 18, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 18, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-controls button {
     background: transparent;
     border: 2px solid #64b24d;
@@ -31,24 +31,24 @@
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase; }
-  /* line 35, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 35, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-controls button:hover {
     background-color: #64b24d;
     color: white; }
-  /* line 39, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 39, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-controls input {
     background: transparent;
     border: none;
     border-bottom: 2px solid #DDDDDD;
     color: #DDDDDD;
     width: 100px; }
-  /* line 48, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 48, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-input-container textarea {
     box-sizing: border-box;
     width: 100%;
     min-height: 200px;
     resize: vertical; }
-  /* line 56, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 56, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #speedread .speedread-overlay {
     opacity: 0.99;
     background-color: #ccc;
@@ -58,7 +58,7 @@
     top: 0px;
     left: 0px;
     z-index: 1000; }
-    /* line 66, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 66, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
     #speedread .speedread-overlay .speedread-words {
       opacity: 1;
       background-color: #535353;
@@ -71,12 +71,12 @@
       font-size: 5vw;
       text-align: center; }
 
-/* line 81, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 81, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
 #countdown {
   margin: 10% auto;
   background: #535353;
   color: #DDDDDD; }
-  /* line 86, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 86, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #countdown .countdown_row {
     display: flex;
     align-items: flex-start;
@@ -84,46 +84,46 @@
     justify-content: center;
     height: 100%;
     padding: 50px; }
-  /* line 94, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 94, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #countdown .timebox {
     width: 140px;
     padding: 20px; }
-  /* line 98, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 98, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #countdown .title {
     text-align: center;
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
     padding-bottom: 15px; }
-  /* line 105, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 105, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #countdown .time {
     text-align: center;
     font-size: 60px;
     text-transform: uppercase; }
 
-/* line 112, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 112, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
 #TextFader {
   width: 100%;
   margin: 5% auto;
   font-size: 30px;
   line-height: 50px;
   text-align: center; }
-  /* line 119, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 119, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #TextFader span {
     opacity: 0.0; }
 
-/* line 126, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 126, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
 #toc article {
   padding: 50px 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   text-align: center; }
-  /* line 131, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 131, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article.first {
     border-top: 1px solid rgba(0, 0, 0, 0.3); }
-  /* line 136, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 136, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article .title a:hover {
     text-decoration: underline; }
-  /* line 139, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 139, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article .title a {
     display: block;
     font-size: 2.5em;
@@ -134,16 +134,16 @@
     font-weight: 800;
     color: #333;
     font-family: 'Open Sans', sans-serif; }
-  /* line 150, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 150, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #toc article .title div.date {
     text-align: center;
     font-weight: 300; }
 
-/* line 159, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 159, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
 #photos {
   margin-top: 25px;
   margin-bottom: 25px; }
-  /* line 162, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 162, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #photos img {
     display: block;
     max-width: 100%;
@@ -152,87 +152,87 @@
     margin: 0px;
     border: none;
     padding: 0px; }
-  /* line 171, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 171, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #photos .photo {
     display: block; }
 
-/* line 176, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 176, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
 #resume, #cover {
   width: 95%; }
-  /* line 178, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 178, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume h1, #cover h1 {
     text-align: center;
     line-height: 40px; }
-  /* line 182, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 182, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume h2 a, #cover h2 a {
     color: #777;
     font-weight: 100; }
-  /* line 186, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 186, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume h4, #cover h4 {
     font-weight: 100;
     line-height: 30px; }
-  /* line 190, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 190, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume table.info, #cover table.info {
     width: 100%;
     border-bottom: 1px solid #000;
     line-height: 20px; }
-    /* line 194, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 194, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume table.info .right, #cover table.info .right {
       padding-bottom: 7px;
       text-align: right; }
-  /* line 199, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 199, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume p, #resume h1, #resume h2, #resume h3, #resume table, #cover p, #cover h1, #cover h2, #cover h3, #cover table {
     margin-bottom: 0.2em; }
-  /* line 202, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 202, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume .section, #cover .section {
     margin-top: 10px;
     margin-bottom: 20px; }
-    /* line 205, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+    /* line 205, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
     #resume .section .job, #cover .section .job {
       margin: 0px 0px 15px 0px; }
-      /* line 206, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+      /* line 206, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job h2, #cover .section .job h2 {
         font-size: 1.4em;
         margin-bottom: .2em; }
-      /* line 210, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+      /* line 210, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
       #resume .section .job .position, #cover .section .job .position {
         margin-bottom: 1em;
         margin-left: 1em; }
-        /* line 213, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+        /* line 213, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
         #resume .section .job .position .desc, #cover .section .job .position .desc {
           border-bottom: 1px dotted #000; }
-          /* line 215, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 215, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .date, #cover .section .job .position .desc .date {
             float: right; }
-          /* line 218, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 218, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title, #cover .section .job .position .desc .title {
             font-weight: bold; }
-          /* line 221, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+          /* line 221, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
           #resume .section .job .position .desc .title, #resume .section .job .position .desc .date, #cover .section .job .position .desc .title, #cover .section .job .position .desc .date {
             padding-top: 5px;
             display: inline-block;
             background-color: #FFF;
             line-height: 17px;
             margin-bottom: -15px; }
-  /* line 234, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 234, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #resume ul, #cover ul {
     margin: 5px 0px 5px 20px;
     list-style-type: circle;
     line-height: 20px; }
 
-/* line 241, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+/* line 241, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
 #cover {
   padding-top: 30px; }
-  /* line 243, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 243, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #cover p {
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 24px; }
-  /* line 248, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 248, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #cover .tab {
     width: 30px;
     display: inline-block; }
-  /* line 252, /Users/james_pozdena/Dropbox/jpoz.github.com/source/stylesheets/pages.css.scss */
+  /* line 252, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/pages.css.scss */
   #cover .light {
     font-size: 16px;
     color: #777; }
