@@ -4,15 +4,15 @@
  * ----------------------------------------
  */
 @keyframes tracking-in-expand {
-  /* line 8, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/animations.scss */
+  /* line 8, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/animations.scss */
   0% {
     letter-spacing: -0.5em;
     opacity: 0; }
 
-  /* line 12, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/animations.scss */
+  /* line 12, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/animations.scss */
   40% {
     opacity: 0.6; }
 
-  /* line 15, /Users/james_pozdena/hack/jpoz.github.com/source/stylesheets/animations.scss */
+  /* line 15, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/animations.scss */
   100% {
     opacity: 1; } }
