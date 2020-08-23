@@ -247,7 +247,3 @@ We can now tell Github where to send our webhooks. Go back to your repository's 
 Make sure the content type is `application/json` and set the secret to something you'll remember. Something like: "DangerZone". We'll just be working with push events. So you can leave "Just the push event" selected. Click "Add webhook" to save your settings.
 
 When a new webhook is created Github sends a ping test. To see if we received it we can check ngrok.
-
-
-
-
