@@ -1,9 +1,0 @@
----
-title: 'Beach'
-section: 'photos'
-url: 'http://farm3.staticflickr.com/2858/10916952744_0a9ba75032_b.jpg'
-
-
----
-
-Content

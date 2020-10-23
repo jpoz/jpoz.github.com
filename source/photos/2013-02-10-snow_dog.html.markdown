@@ -1,9 +1,0 @@
----
-title: 'Snow Dog'
-section: 'photos'
-url: 'http://farm9.staticflickr.com/8352/8400201587_e254bc6815_b.jpg'
-
-
----
-
-Content

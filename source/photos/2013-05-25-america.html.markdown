@@ -1,8 +1,0 @@
----
-title: 'America'
-section: 'photos'
-url: 'http://farm6.staticflickr.com/5486/9547831423_40d1d3c07c_b.jpg'
-
----
-
-Content

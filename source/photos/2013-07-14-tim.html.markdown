@@ -1,9 +1,0 @@
----
-title: 'Tim'
-section: 'photos'
-url: 'http://farm6.staticflickr.com/5449/9547884813_6b245c9fd5_b.jpg'
-
-
----
-
-Content

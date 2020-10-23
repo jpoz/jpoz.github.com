@@ -1,8 +1,0 @@
----
-title: 'Doggie'
-section: 'photos'
-url: 'http://farm3.staticflickr.com/2815/9550650160_99bba39eb3_b.jpg'
-
----
-
-Content

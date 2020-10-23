@@ -1,8 +1,0 @@
----
-title: 'Tile'
-section: 'photos'
-url: 'http://farm8.staticflickr.com/7382/9547822005_ab8b96e9bf_b.jpg'
-
----
-
-Content
