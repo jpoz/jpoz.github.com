@@ -13,10 +13,13 @@ a.jpoz, a.jpoz_photos, div.contacts  {
   display: none;
 }
 
-@import "pages";
+@import "resume";
 
-div#content {
-  #resume {
+#resume {
     margin: 20px auto;
-  }
+
+    .job {
+        break-inside: avoid;
+    }
 }
+

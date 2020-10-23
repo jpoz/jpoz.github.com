@@ -1,0 +1,90 @@
+#resume, #cover {
+  width: 100%;
+  padding: 10px;
+  max-width: 800px;
+  box-sizing: border-box;
+
+  h1 {
+    text-align: center;
+    line-height: 40px;
+  }
+  h2 a {
+    color: #777;
+    font-weight: 100;
+  }
+  h4 {
+    font-weight: 100;
+    line-height: 30px;
+  }
+  table.info {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    line-height: 20px;
+    .right {
+      padding-bottom: 7px;
+      text-align: right;
+    }
+  }
+  p, h1, h2, h3, table {
+    margin-bottom: 0.2em;
+  }
+  .section {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    .job {
+      h2 {
+        font-size: 1.4em;
+        margin-bottom: .2em;
+      }
+      .position {
+        margin-bottom: 1em;
+        margin-left: 1em;
+        .desc {
+          border-bottom: 1px dotted #000;
+          .date {
+            float: right;
+          }
+          .title {
+            font-weight: bold;
+          }
+          .title, .date {
+            padding-top: 5px;
+            display: inline-block;
+            line-height: 17px;
+            margin-bottom: -15px;
+          }
+        }
+      }
+      margin: 0px 0px 15px 0px;
+    }
+  }
+  .tech_used {
+    font-weight: 300;
+    color: #8B8B8B;
+    font-style: italic;
+  }
+
+  ul {
+    margin: 5px 0px 5px 20px;
+    list-style-type: circle;
+    line-height: 20px;
+  }
+}
+
+#cover {
+  padding-top: 30px;
+  p {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+  .tab {
+    width: 30px;
+    display: inline-block;
+  }
+  .light {
+    font-size: 16px;
+    color: #777;
+  }
+}
+

@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+@import "reset";
+@import "normalize";
+
+body {
+  background: #F4F7F8;
+  font-family: 'Work Sans', sans-serif;
+  text-align: left;
+}
+
+main {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    max-width: 800px;
+}
+
+.hi {
+    color: #495057;
+    margin-top: 200px;
+    font-size: 25px;
+    text-align: center;
+
+    .low {
+        color: #B3B5B8;
+    }
+}
+
+nav {
+    margin-top: 24px;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        padding: 0px 19px;
+        color: #B3B5B8;
+        font-size: 50px;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background: none;
+        border: none;
+    }
+
+    a:hover {
+        color: #495057;
+    }
+
+    #github_link {
+        animation-duration: 0.5s;
+        animation-name: sneakpeak_link;
+    }
+    #github_link:before {
+        animation-duration: 0.5s;
+        animation-name: sneakpeak;
+    }
+
+    #resume_link {
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        animation-name: sneakpeak_link;
+    }
+    #resume_link:before {
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        animation-name: sneakpeak;
+    }
+
+    #twitter_link {
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+        animation-name: sneakpeak_link;
+    }
+    #twitter_link:before {
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+        animation-name: sneakpeak;
+    }
+
+}
+
+.tooltip {
+    position:relative;
+}
+
+.tooltip:hover:before {
+    transform: translate(-50%, calc(30% + 10px));
+    opacity:1;
+}
+
+.tooltip:before {
+    content: attr(data-text);
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    margin-top: -18px;
+    transform: translate(-50%, 0%);
+    // width: 100px;
+    padding: 7px 15px 7px 15px;
+    border-radius: 5px;
+
+    background: #495057;
+    color: #fff;
+
+    text-align: center;
+    font-size: 15px;
+
+    // display:none; /* hide by default */
+
+    opacity:0;
+    transition: opacity .3s, transform .3s;
+}
+
+@keyframes sneakpeak_link {
+  from {
+    color: #B3B5B8;
+  }
+
+  25% {
+    color: #495057;
+  }
+
+  75% {
+    color: #495057;
+  }
+
+  to {
+    color: #B3B5B8;
+  }
+}
+
+
+@keyframes sneakpeak {
+  from {
+    transform: translate(-50%, 0%);
+    opacity:0;
+  }
+
+  25% {
+    transform: translate(-50%, calc(30% + 10px));
+    opacity:1;
+  }
+
+  75% {
+    transform: translate(-50%, calc(30% + 10px));
+    opacity:1;
+  }
+
+  to {
+    transform: translate(-50%, 0%);
+    opacity:0;
+  }
+}
+
+
