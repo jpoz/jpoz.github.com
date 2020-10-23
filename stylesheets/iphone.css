@@ -1,15 +1,10 @@
 @media screen and (max-width: 1250px) {
-  /* line 2, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/iphone.css.scss */
   .jpoz {
     position: absolute;
     left: 75px; }
-
-  /* line 6, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/iphone.css.scss */
   .jpoz_photos {
     position: absolute;
     left: 25px; }
-
-  /* line 10, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/iphone.css.scss */
   .contacts {
     position: absolute;
     left: 125px;
@@ -18,12 +13,9 @@
     height: 50px;
     line-height: 50px;
     padding: 0px 10px 0px 10px; }
-    /* line 19, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/iphone.css.scss */
     .contacts a.contact {
       padding: 0px 3px;
       display: inline-block; }
-
-  /* line 25, /Users/jpoz/Dropbox/jpoz.github.com/source/stylesheets/iphone.css.scss */
   #content {
     margin-top: 75px;
     padding: 25px; } }

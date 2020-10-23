@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link href="/stylesheets/all.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+
+    <title>One Reason You Should Learn Go</title>
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <main>
+      <p>If you're still on the fence about Go. Here's something you should know. XML parsing in Go is awesome.</p>
+
+<p>Did you just let out a viseral grown when you read XML. Then Go is for you. I hate XML but I work on web tools so I've got to deal with it.</p>
+
+<h4 id="real-life-example">Real life example</h4>
+
+<p>S3 returns XML. Really really ugly XML. But Go makes it super easy to deal with. Checkout this XML from S3:</p>
+
+<pre><code data-language="xml"><?xml version="1.0" encoding="UTF-8"?>
+<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+  <Name>super-awesome-bucket</Name>
+  <Prefix>users/186</Prefix>
+  <Marker />
+  <MaxKeys>1000</MaxKeys>
+  <IsTruncated>false</IsTruncated>
+  <Contents>
+    <Key>users/186/taco.txt</Key>
+    <LastModified>2013-07-09T22:01:47.000Z</LastModified>
+    <ETag>"8ba99404a19a173e3d964b981201061f"</ETag>
+    <Size>4305</Size>
+  </Contents>
+  <Contents>
+    <Key>users/186/waffle.txt</Key>
+    <LastModified>2013-07-09T22:01:41.000Z</LastModified>
+    <ETag>"8ba99404a19a173e3d964b981201061f"</ETag>
+    <Size>4305</Size>
+  </Contents>
+</ListBucketResult>
+</code></pre>
+
+<p>I'm listing all the assets for user 186. All I really care about are the <code>Keys</code> inside of the <code>Contents</code> elements. Lets write some Go todo this:</p>
+
+<pre><code data-language="go">package main
+
+import "fmt"
+import "encoding/xml"
+
+var payload = "" // above
+
+type BucketItem struct {
+	Key string
+}
+
+type ListBucketResult struct {
+	Contents []BucketItem
+}
+
+func main() {
+	result = &amp;ListBucketResult{}
+
+	err = xml.Unmarshal([]byte(payload), result)
+	if err != nil {
+		return
+	}
+  
+  fmt.Printf("Keys: %v\n", result.Contents)
+}
+</code></pre>
+
+<p>BAM!!! DONE.</p>
+
+    </main>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7ZEMM6EGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K7ZEMM6EGS');
+    </script>
+  </body>
+</html>

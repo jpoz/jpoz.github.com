@@ -1,0 +1,170 @@
+<p>It's always good to know the tools you use well. In that vein of thinking I
+thought I should know how the proxy I use for each request from my machine
+works. I use a socks proxy to route my request behind a VPN.</p>
+
+<p>It is easy to setup:</p>
+
+<p><code>shell
+ssh -D 8888 mymachine.co
+</code>
+The command above runs a proxy on port <code>8888</code> through <code>mymachine.co</code>.</p>
+
+<p>To use the proxy via curl:</p>
+
+<p><code>shell
+curl --proxy socks5h://127.0.0.1:8888 google.com
+</code></p>
+
+<p>But how were each of my requests being routed through that connection? To
+understand that I made a little SOCKS proxy implementation myself while
+reading <a href="https://www.ietf.org/rfc/rfc1928.txt">RFC1928</a>.</p>
+
+<p>For this article we'll go over the curl command above.</p>
+
+<p>The request starts out by the client sending at least 3 octets. In our case
+curl will be sending 4 octets.</p>
+
+<table>
+  <th>5</th>
+  <th>2</th>
+  <th>0</th>
+  <th>1</th>
+  <td class="ion-arrow-right-a"></td>
+</table>
+
+<p>The first octet is the socks version the client is using. In our case <code>5</code>.
+The client then sends the number of authentication methods it supports. We
+aren't going to be using any authentication in this example. So we'll be using
+the no authentication method. The RFC specifies that "implementations MUST
+support GSSAPI". So even though we're not using it we need to send that we
+accept it. So curl sends <code>2</code> for two authentication methods. Then sends <code>0</code> for
+the "NO AUTHENTICATION REQUIRED" method and <code>1</code> for the "GSSAPI"
+authentication method.</p>
+
+<p>Next the proxy needs to respond back to the authentication attempt. To respond
+the proxy will send back the socks version and authentication method it
+accepted:</p>
+
+<table class="reply">
+  <td class="ion-arrow-left-a"></td>
+  <th>5</th>
+  <th>0</th>
+</table>
+
+<p>The first octet sent back is the socks version the proxy is using (again 5) and
+the authentication response in our case <code>0</code>.</p>
+
+<p>Now that the client has authenticated successfully with the proxy it needs to tell
+the proxy about the request it would like to make. The request will start off with
+specifying the socks version (again). Then telling the proxy which command
+it wants to use.</p>
+
+<p>There are three commands the client can call:</p>
+
+<ul>
+  <li><code>1</code> CONNECT command. This is command curl will be using. It will return the
+address and port assigned to connect to our destination.</li>
+  <li><code>2</code> BIND command. Used to establish secondary connection.</li>
+  <li><code>3</code> UDP ASSOCIATE command. Used to support UDP requests.</li>
+</ul>
+
+<p>After the command octet there is one reserved octet that the client needs
+to set to <code>0</code>.</p>
+
+<p>The client then needs to tell the proxy what type of destination address it be
+sending over. The destination address can come in three forms:</p>
+
+<ul>
+  <li><code>1</code> IPv4</li>
+  <li><code>3</code> Domain name</li>
+  <li><code>4</code> IPv6</li>
+</ul>
+
+<p>Not really sure why they skipped <code>2</code>, but we gave curl a domain name
+(google.com in our example) so curl will have a type <code>3</code> address. Since domains
+can be a variable length next the length of our domain name is sent.
+Since we're sending over <code>google.com</code> curl sends <code>10</code>.</p>
+
+<table>
+  <th>5</th>
+  <th>1</th>
+  <th>0</th>
+  <th>3</th>
+  <th>10</th>
+  <td class="ion-arrow-right-a"></td>
+</table>
+
+<p>The next 10 octets will be a UTF8 string of our destination domain:</p>
+
+<table><thead>
+<tr>
+  <th>103</th>
+  <th>111</th>
+  <th>111</th>
+  <th>103</th>
+  <th>108</th>
+  <th>101</th>
+  <th>46</th>
+  <th>99</th>
+  <th>111</th>
+  <th>109</th>
+  <td class="ion-arrow-right-a"></td>
+</tr>
+</thead><tbody>
+<tr>
+  <td>g</td>
+  <td>o</td>
+  <td>o</td>
+  <td>g</td>
+  <td>l</td>
+  <td>e</td>
+  <td>.</td>
+  <td>c</td>
+  <td>o</td>
+  <td>m</td>
+  <td> </td>
+</tr>
+</tbody></table>
+
+<p>And finally the port the client wants to connect to. In our case port 80.
+The port is represented by two octets since a port can be larger than 255.
+The two octets are in network byte order (big endian).</p>
+
+<table>
+  <th>0</th>
+  <th>80</th>
+  <td class="ion-arrow-right-a"></td>
+</table>
+
+<p>We've now completed our request. The proxy will now respond back if our
+connection was successful and what our binding address and port are.</p>
+
+<table class="reply">
+  <td class="ion-arrow-left-a"></td>
+  <th>5</th>
+  <th>0</th>
+  <th>0</th>
+  <th>1</th>
+  <th>127</th>
+  <th>0</th>
+  <th>0</th>
+  <th>1</th>
+  <th>205</th>
+  <th>176</th>
+</table>
+
+<p>Again we get back the version of the proxy we're using: <code>5</code>. Next is the
+reply field. In our case a <code>0</code>. Which means we have succeeded in connecting to
+our destination (see RFC for full list of responses). After the reply is a
+reserved octet which is set to <code>0</code>. Next is the information needed to connect
+to our destination.</p>
+
+<p>First we get the address type. Same types as we used in the CONNECT command. In
+our case we get back at IP4 address or type <code>1</code>. The IP address is the next 4
+octet. Since our proxy is running locally: <code>127</code>.<code>0</code>.<code>0</code>.<code>1</code>. Then the port
+in the next two octets, again in network byte order. In the example above:
+<code>205</code> &amp; <code>176</code> or port 52656.</p>
+
+<p>The client now knows a connection to google.com is waiting to be connected to
+at <code>127.0.0.1:52656</code>.</p>
+

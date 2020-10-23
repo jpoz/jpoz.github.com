@@ -1,0 +1,249 @@
+
+<h1 id="go-and-github-webhooks">Go and Github Webhooks</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Over the last couple years the Go programming language has been on a meteoric rise in popularity. Conceived in 2007 Go's main purpose was to increase a programmers efficiency in their day-to-day work. Go's standard library comes with built in modern tools to excel in today's web focus clustered multicore environments.</p>
+
+<p>Go is all about making the programmer's life easier. With built in support for JSON, HTML, HTTP, templating and concurrency Go is ready for any project.</p>
+
+<p>Describing Go to another programmer often feels like being the host of infomercial. Remember those long compile times? Gone! Remember the endless bickering over
+formatting and documentation? Gone!</p>
+
+<p>Documentation and formatting are taken care of at the language level. Getting the documentation for a particular library is as easy as going to godoc.org. Making sure your code is formatted properly is as easy as <code>go fmt</code>.</p>
+
+<h2 id="go-getting-started">Go Getting Started</h2>
+
+<p>Luckily if you're new to Go it's has a very user friendly installation process.</p>
+
+<p>Visit: http://golang.org/doc/install</p>
+
+<p>I would recommend using an installer. You can also download an archive or source and install it manually. The package install is nice in that it will take care of almost everything for you. You can download it at:</p>
+
+<p>http://golang.org/dl/</p>
+
+<p>I would also recommend the latest "stable" version. At the time of writing this the latest stable version is 1.3.1. Also make sure you grab the right one for your architecture and OS.</p>
+
+<h2 id="gopath">GOPATH</h2>
+
+<p>There is one very important environment variable that we will discuss next:
+GOPATH</p>
+
+<p>The <code>GOPATH</code> environment variable is a comma delimited list of locations where go will look for packages. It is where the source for your code with live alone with the code
+you need to import to run your code. Each location in the <code>GOPATH</code> needs to have three specific directories in it: bin, src and pkg.</p>
+
+<p>The <code>bin</code> directory is where the compiled binaries live.</p>
+
+<p>The <code>pkg</code> directory has all the installed package objects. You'll rarely have to go into the pkg directory yourself. If peek in you'll find a subdirectory for each operating system and architecture the packages that were build for it.</p>
+
+<p>Finally the <code>src</code> directory. This is where you'll spend most of your time. Nested in the <code>src</code> directory is the import path for each package.</p>
+
+<p>For our use case we're going to keep it simple and have just one location in our <code>GOPATH</code>. Depending on how you installed Go you might already have GOPATH set.
+To check run:</p>
+
+<p>$ echo $GOPATH</p>
+
+<p>This will print of the current value of the GOPATH environment variable. Lets set our GOPATH to a subdirectory in our <code>HOME</code> directory:</p>
+
+<p>$ export GOPATH=$HOME/go</p>
+
+<p>This would be a good time to add the line above your bash/zsh profile so when you start your next terminal session GOPATH is set for you.</p>
+
+<h2 id="what-we-are-going-to-build">What we are going to build</h2>
+
+<p>You can build almost anything with Go but today we're going to build ourselves a webserver that responds to Github Webhooks.</p>
+
+<p>Our goal will be to create a server that renders HTML from Markdown files hosted on Github. When a Markdown file is created or updated on Github our service will automatically render the markdown into HTML.</p>
+
+<h2 id="introduction-to-github-webhooks">Introduction to Github webhooks</h2>
+
+<p>Until now most of the interaction we've had with Github is pushing, viewing or
+requesting information from github. But what if we want github to provide us
+with some information when events happen on github? Well, this is where github
+webhooks come into play.</p>
+
+<p>https://developer.github.com/webhooks/</p>
+
+<p>Github webhooks provide the ability for your service to push data from Github.
+When and event happens on Github your service will get notified. By setting up
+a webhook you're telling github: when something happens tell me. When an event
+happens on github your service will recieve a post of JSON. The JSON or
+"payload" of the post will contain information about what event happened, when
+and to which repository.</p>
+
+<p>To view all supported events visit: https://developer.github.com/webhooks/#events</p>
+
+<h2 id="our-project">Our Project</h2>
+
+<p>You can uses these webhooks to start builds, notifiy your team on commits or
+anything else your mind can come up with. For our project we will be rendering
+Markdown files into HTML when they're created or updated on Github. A CMS of
+sorts for Markdown data.</p>
+
+<p>The basic idea is: someone updates a file on Github, github sends us an event
+then we update or create the needed HTML files from the Markdown files on Github.</p>
+
+<p>This project isn't just a weekend hacking project. What we'll be creating is the
+base for a tool used in production to keep HTML documents up-to-date and easy to
+edit at Simple (https://www.simple.com/).</p>
+
+<p>To make our web server we'll need to be able to connect and interact with the
+Github api. For this we'll use <code>go-github</code> written by Google. You can find
+the sounce code here:</p>
+
+<p>https://github.com/google/go-github</p>
+
+<p>To get you acclimatized to Go's ecosystem lets look at the godoc for this
+libary. To view the documenation prepend "godoc.org" into the url:</p>
+
+<p>https://godoc.org/github.com/google/go-github</p>
+
+<p>GoDoc has he ability to generate documentation for Go packages hosted on
+Bitbucket, GitHub, Launchpad and Google Project Hosting. It's an amazing tool
+one, if you plan on taking up Go, you should get accustom to.</p>
+
+<p>Take a minute to look over the <code>github</code> package documentation. You can see
+just about everything in Github's API is mapped out in this package. We will be
+using two sections of the package:</p>
+
+<p>WebHookPayload: http://godoc.org/github.com/google/go-github/github#WebHookPayload
+  Markdown fuction: http://godoc.org/github.com/google/go-github/github#Client.Markdown</p>
+
+<p>These two sections of the package will allow us to digest a webhook payload and
+render any markdown files that might have changed.</p>
+
+<h2 id="project-structure">Project structure</h2>
+
+<p>Time to start writing some Go code. Let setup our workspace so we can get
+started.</p>
+
+<p>The go tool is setup to work with pubic open source software. When you import
+packages into your go code you actually use the public locations of the code.
+For example when we import Google's go-github package we will actually import
+the location of the code on the public internet: "github.com/google/go-github"</p>
+
+<p>Similary the location of the package locally mirrors the package's location on
+the public internet. Inside our src directory Google's go-github package will
+be located in: src/github.com/google/go-github</p>
+
+<p>As you can see go code's directory structure is intrinsically linked to the
+public location of the code. Our project should too. You don't actually have to
+create a repo on github but make a directory structure where your code would be
+if hosted on github. The name of our project will be 'gowebhooks' so for me
+that would be:</p>
+
+<p>src/github.com/jpoz/gowebhooks</p>
+
+<p>To create the directory I'll run:</p>
+
+<p>$ mkdir -p $GOPATH/src/github.com/jpoz/gowebhooks</p>
+
+<p>And move into our project directory:</p>
+
+<p>$ cd $GOPATH/src/github.com/jpoz/gowebhooks</p>
+
+<p>Now lets talk about the structure of the files within our project directory. We going to build a web server executable and build a package the web server will import.</p>
+
+<p>Below is how we'll have our project structured:</p>
+
+<p>.
+├── cmd
+│   └── gowebhooks-server
+│       └── main.go
+└── gowebhooks.go</p>
+
+<p>To create the structure above run the following commands:</p>
+
+<p>$ touch gowebhooks.go
+  $ mkdir -p cmd/gowebhooks-server
+  $ touch cmd/gowebhooks-server/main.go</p>
+
+<p>We could write our whole server in one file but then we would be restricted to only using the 'main' package since all executables need to be in the 'main' package. Building our server and related code in its own package allows it to
+have the ability to be imported into other projects. Maybe not totally needed for this project but is a good practice.</p>
+
+<p>Our executable will be pretty simple. Just a file to load in our package and start it up.</p>
+
+<p>main.go</p>
+
+<p>```go
+package main</p>
+
+<p>import (
+  "github.com/jpoz/gowebhooks"
+)</p>
+
+<p>func main() {
+  gowebhooks.StartServer()
+}
+```</p>
+
+<p>Our <code>gowebhooks.go</code> file will have the meat of our project. To start lets make sure Go is installed properly and setup a simple webserver:</p>
+
+<p>gowebhooks.go</p>
+
+<p>```go
+package gowebhooks</p>
+
+<p>import (
+	"fmt"
+	"net/http"
+)</p>
+
+<p>func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello %s", r.URL.Path[1:])
+}</p>
+
+<p>func StartServer() {
+	http.HandleFunc("/", handler)</p>
+
+<pre><code>fmt.Println("Listening on 8080")
+http.ListenAndServe(":8080", nil) } ```
+</code></pre>
+
+<p>Lets run our project to make sure we've got everything working. In our project
+directory lets run:</p>
+
+<p>$ go run cmd/gowebhooks-server/main.go</p>
+
+<p>Navigate your browser to http://localhost:8080/ and you should see a page greeting you.</p>
+
+<h2 id="receiving-webhooks-from-github">Receiving webhooks from Github</h2>
+
+<p>First step in receiving webhooks is turning them on at github.com. Navigate to the project you'd like to receive webhooks from or create a new project to test out webhooks.</p>
+
+<p>I'm going to create a new project called "JollyRoger" (Captain Hook's Ship's Name).</p>
+
+<p>In the settings panel you'll find "Webhooks &amp; Services". There you should find a "Add Webhook" button. Click it and lets get started.</p>
+
+<p>To create our webhook we need to provide a "Payload URL". In this case we're going to want github to send webhooks to our local computer. Giving github "localhost" won't do us any good. Since we're not on the same network at github we need a public address for our local computer. To allow github to have connectivity to our local computer we'll need to tunnel a public address to our local computer.</p>
+
+<p>The Github documentation recommends "ngrok.com" for this task. Ngrok runs a small daemon on our local machine that tunnels traffic back and forth to a public address on their site. So any traffic that hit the given unique address will be proxied by ngrok.com to our local machine. Visa versa if we send anything to the daemon it will be proxied to
+ngrok.com and sent by their servers.</p>
+
+<p>To get ngrok install follow the instructions at "https://ngrok.com/download". Or if you're a homebrew user: <code>brew install ngrok</code></p>
+
+<p>We want to proxy all traffic from port 80 (default http port) from ngrok to our server's port locally (8080).</p>
+
+<p>Quick warning before we start up ngrok. When we start up the ngrok daemon we will be opening up port 8080 of our local computer to the <strong>entire</strong> internet. Sound a little scary but ngork gives us a unique subdomain and we can always shutdown the daemon to close the connection.</p>
+
+<p>To start tunneling traffic run:</p>
+
+<pre><code>$ ngrok 8080
+</code></pre>
+
+<p>You should see the tunnel starting up and tunnel status of "online". Below that should be your unique ngrok url. The url should look something like: http://1a2b3c4d.ngrok.com</p>
+
+<p>Leave that terminal running. In another terminal navigate back to your project directory and restart your server:</p>
+
+<pre><code>$ go run cmd/gowebhooks-server/main.go
+</code></pre>
+
+<p>Now navigate your browser to your unique ngrok url. You should see the same page as when you connected to the sever locally.</p>
+
+<h1 id="todo-go-over-ngrok-httpin-interface">TODO go over ngrok http/in interface</h1>
+
+<p>We can now tell Github where to send our webhooks. Go back to your repository's "Add webhook" page and enter in your unique ngrok url followed by <code>/webhook</code>. For me that's: <code>http://1a2b3c4d.ngrok.com/webhook</code>.</p>
+
+<p>Make sure the content type is <code>application/json</code> and set the secret to something you'll remember. Something like: "DangerZone". We'll just be working with push events. So you can leave "Just the push event" selected. Click "Add webhook" to save your settings.</p>
+
+<p>When a new webhook is created Github sends a ping test. To see if we received it we can check ngrok.</p>

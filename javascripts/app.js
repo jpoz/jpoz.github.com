@@ -23,4 +23,3 @@ var TextFader = new Class({
     });
   }
 })
-;

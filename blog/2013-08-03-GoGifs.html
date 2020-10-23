@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link href="/stylesheets/all.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+
+    <title>Making gifs with Go</title>
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <main>
+      <p>Go's standard library has a gif decoder, but sadly no encoder. I found an encode on github <a href="https://github.com/boppreh/gifencoder">here</a>. Unfortunalty it written in the <code>main</code> package so i forked it and pulled it into its own package: <a href="https://github.com/jpoz/gifencoder">github.com/jpoz/gifencoder</a>. Now we can easily decode a gif, play around with it and encode it back to a file.</p>
+
+<p>For this example I'm going to do something pretty basic: Take a gif and mirror the animation. Below is my target gif:</p>
+
+<h2 id="nomgif">nom.gif</h2>
+
+<div style="text-align: center">
+  <img src="/images/nom.gif" />
+</div>
+
+<p>Here's the code:</p>
+
+<pre><code data-language="go">package main
+
+import (
+	"github.com/jpoz/gifencoder"
+	"image/gif"
+	"os"
+)
+
+func main() {
+	file, _ := os.Open("nom.gif")
+	g, _ := gif.DecodeAll(file)
+
+	for _, img := range g.Image { // iterate over frames
+		for x := 0; x &lt; img.Bounds().Max.X/2; x++ { // half of the x space
+			for y := 0; y &lt; img.Bounds().Max.Y; y++ { // all of the y space
+				// find the mirror pixel's color
+				c := img.At(img.Bounds().Max.X-x, img.Bounds().Max.Y-y)
+				// set it
+				img.Set(x, y, c)
+			}
+		}
+	}
+
+	file, _ = os.Create("new_nom.gif")
+	_ = gifencoder.EncodeAll(file, g)
+}
+</code></pre>
+
+<p>Here's what we get:</p>
+
+<h2 id="newnomgif">new_nom.gif</h2>
+
+<div style="text-align: center">
+  <img src="/images/new_nom.gif" />
+</div>
+
+
+    </main>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7ZEMM6EGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K7ZEMM6EGS');
+    </script>
+  </body>
+</html>

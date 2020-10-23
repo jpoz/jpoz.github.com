@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link href="/stylesheets/all.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+
+    <title>Structuring a large Go project</title>
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <main>
+      <p>One of the things that really pulled me towards Go was it's solid stance on
+standardization. Tools like <code>go fmt</code> <code>golint</code> and <code>go vet</code> make it easy
+contribute software to large projects without arguing about how code should be
+structured.</p>
+
+<p>But when it comes to how large projects should be organized I've found little
+guidance or consensus from the community. Most say something along the
+line of "follow the standard lib". But we're not all building libraries. What
+about large applications? Say a large backend API project. How should it be
+organized?</p>
+
+<p>This question has always been in the back of my mind. Now with a few moderately
+large projects under my belt. I thought I would write down what's worked and
+what hasn't worked. I'm not saying I have the be all end all answer but some
+little patterns and tricks have really helped.</p>
+
+<h2 id="whats-worked">What's worked:</h2>
+
+<p> </p>
+
+<h3 id="sub-packages">Sub packages</h3>
+
+<p> </p>
+
+<p>Sub packages are great for keeping your code clean, testable and in manageable
+chunks for your team to work on. Not to mention in some cases you can import a
+subproject of another large project to make life easier. But the biggest
+benefit comes from how Go's import process works.</p>
+
+<p>When you import a package the compiler ensures the imported package's
+<code>init()</code> function is called before the <code>init()</code> function of the package it's
+being imported into. This means when you call: <code>import subpackage</code> you know
+that it is initialized and ready to use. If you structure your sub packages correctly
+you can precisely control how your project starts up and what gets initialized
+in what order.</p>
+
+<p>That simple characteristic can be used to manage your own project's internal
+dependency's in a clean and testable way. Let's look at an example.</p>
+
+<p>Below we have our logging package.</p>
+
+<pre><code data-language="go">package logging
+
+import (
+  "log"
+  "os"
+)
+
+var Log Logger
+
+func init() {
+  Log = log.New(os.Stdout, "project: ", log.Lshortfile)
+}
+</code></pre>
+
+<p>Now when we import our <code>logging</code> package into another package of our project
+the <code>logging.Log</code> is initialized and ready to use.</p>
+
+<pre><code data-language="go">package main
+
+import (
+	"github.com/you/yourproject/logging"
+)
+
+func main() {
+  logging.Log.Print("Hello Internet!")
+}
+
+</code></pre>
+
+<p>This is a pattern I've gotten a lot of mileage out of. Using sub packages while
+you build your project split out the different concerns: API server, DB connection,
+logging, return types just to name few.</p>
+
+<h3 id="configuration">Configuration</h3>
+
+<p> </p>
+
+<p>I usually start out a new project by building the configuration package first.</p>
+
+<p>I like to configure my project via the environment they live in. Even wrote
+<a href="github.com/jpoz/env">a nice package</a> to convert environment variables
+into structs.</p>
+
+<h3 id="config-via-the-environment">2. Config via the environment</h3>
+
+<h3 id="myprojectconfigenvgo">my_project/config/env.go`</h3>
+
+<p>```go
+package config</p>
+
+<p>import "github.com/jpoz/env/decoder"</p>
+
+<p>var Env *Environment</p>
+
+<p>type Environment struct {
+  Addr string <code>expand:"$HOST:$PORT"</code>
+  DNS string `expand:"postgres://$DB_USER:$DB_PASS@$DB_HOST:5432/my_project"
+}</p>
+
+<p>func init() {
+  Env = *Environment{}
+  decoder.Decode(&amp;Env)
+}
+```</p>
+
+<p>Now in all the packages that depend on values from the environment, I can
+import the <code>config</code> package. Importing the package</p>
+
+    </main>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7ZEMM6EGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K7ZEMM6EGS');
+    </script>
+  </body>
+</html>

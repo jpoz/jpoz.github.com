@@ -1,0 +1,169 @@
+<p>I work 90% of the time on the command line. But that wasn't always the case.
+When I was starting my developer journey I hated the command line.
+So for anyone thats like me and hates the command line, here are some tips to
+get your over the hump and start loving the power of the command line.</p>
+
+<h2 id="basics">Basics</h2>
+
+<p>Before we get into commands, you need to know a couple of basics:</p>
+
+<ul>
+  <li>To run a command, you type it into the command line, then hit return. Each line
+entered into the command line is a command.</li>
+  <li>To stop any command use <code>control-c</code>. Some will stop on their own but this
+is the general the best way to stop any command.</li>
+  <li>Arguments and flags: To control our commands we've got two tools: Arguments
+that we pass to the command and flags (or switches) to tune functionality of the
+command. Lets look at an example:</li>
+</ul>
+
+<pre><code data-language="shell">ls -l project_dir
+</code></pre>
+
+<p>Above we have one flag <code>-l</code> and one argument <code>project_dir</code>.</p>
+
+<p>Open up your "Terminal" app in the Utilities folder
+of your Application directory.</p>
+
+<p>For the rest of this post I'll be writing example in the following formual.</p>
+
+<pre><code data-language="shell"># This stuff is a comment about the command below
+echo "This is a command you can copy and paste into your Terminal"
+</code></pre>
+
+<p>Pretty much anything that's grey and starts with a <code>#</code> is just a comment describing
+a command, and everything else is a command you can type into your command line and
+hit return (to run it).</p>
+
+<p>Type the example above by either copy and pasting into the command line or typing
+it our manually. Then hit return. The <code>echo</code> command just echos out anything you
+type into it. So, <code>echo "hi"</code> will write out "hi". Pretty basic.</p>
+
+<h2 id="cd">cd</h2>
+
+<p>Moving around is the first thing you'll need to be able todo and <code>cd</code> or change
+directory is your friend.</p>
+
+<pre><code data-language="shell"># given no arguments cd will take you to your home directory
+cd
+
+# ~ is also an alias for your home directroy
+cd ~
+
+# moves into your Downloads folder that is in the current directory
+cd Download
+
+# moves into the Downloads folder that is inside the current directory
+# Having the ~/ in the front means this is an absolute path meaning it
+# will move to the same directory no matter what the current directory is
+cd ~/Downloads
+
+# Having the path start with / also makes it an absolute path from the "root"
+# or base of our machine.
+# This will move into our Utilities folder no matter what the current directory is
+cd /Applications/Utilities
+</code></pre>
+
+<p>For more information on <code>cd</code> checkout the <a href="http://en.wikipedia.org/wiki/Cd_\(command\)">wikipedia page on the cd command</a>.</p>
+
+<h2 id="ls">ls</h2>
+
+<p>Now that you're in the directory you want to be what's in there? That where <code>ls</code>
+comes in. The <code>ls</code> command lists directory contents.</p>
+
+<pre><code data-language="shell"># ls with no parameters list the directory you are currently in
+ls
+
+# Often you'll want to see the "hidden" files in a directoy.
+# Adding the -a flag will show all files
+ls -a
+
+# Need to know who owns a file? Maybe who can read or write to it?
+ls -al
+</code></pre>
+
+<h2 id="pwd">pwd</h2>
+
+<p>Now that you're moving around let make sure you can check where you are. The <code>pwd</code>
+command prints out your working/current directory.</p>
+
+<pre><code data-language="shell"># pwd will print out which directory you are currently in
+pwd
+</code></pre>
+
+<h2 id="mkdir">mkdir</h2>
+
+<p>Lets make some new folders on your computer. With the <code>mkdir</code> command you can
+make new directories.</p>
+
+<pre><code data-language="shell"># give mkdir the folder you'd like to create as the first parameter
+mkdir my_new_folder
+</code></pre>
+
+<h2 id="cat">cat</h2>
+
+<p>I've found my file! Now what's in it? Meow meet <code>cat</code> aka the concatenate command.
+Pretty simple just takes a file an puts it on the standard output.</p>
+
+<pre><code data-language="shell"># cat a file
+cat /etc/hosts
+</code></pre>
+
+<h2 id="tail-and-head">tail and head</h2>
+
+<p>OMG logs are the worst and the best all at once. When you don't want the full
+file use <code>tail</code> to get just a part from the end and <code>head</code> to get a part from
+the beginning.</p>
+
+<pre><code data-language="shell"># tail with the -f flag will wait for additional
+# data to be added on to the file. Try out the command below to watch your wifi
+# connectivity. Try turning on and off your wifi when its running
+tail -f /var/log/system.log
+
+# head is the opposite. To just get the first line of a file try:
+head -n 1 /var/log/system.log
+</code></pre>
+
+<h2 id="pipe">| "pipe"</h2>
+
+<p>Sometimes one command isn't enough. The <code>|</code> character aka "pipe" allows us to
+take the output of one command and feed it into the next. We'll use this in the
+next section with grep.</p>
+
+<h2 id="grep">grep</h2>
+
+<p>Ah grep. I use this command so much sometimes I use it as a verb in sentences:
+"Oh just grep out of the value." as in "Oh just search and return the value"</p>
+
+<pre><code data-language="shell"># grep can be used to search for text within
+# a file:
+grep apple /var/log/system.log
+
+# We can also use grep to search whole directories of files
+# Adding the -r recursivly searches the directores for files including the
+# given text. Below we search our Documents directory for passwords :)
+grep -r password ~/Documents
+
+# grep can also be used with | aka pipe. This allows us to search the output of
+# other commands. We can tail -f and grep the results:
+tail -f /var/log/system.log | grep apple
+</code></pre>
+
+<h2 id="cp">cp</h2>
+
+<p>Copying files is useful. Use <code>cp</code> to copy files or whole directories.</p>
+
+<pre><code data-language="shell"># make a duplicate of a important file
+cp my_journal.txt copy_my_journal.txt
+
+# Notice the -r or recusive flag. This will duplicate the Documents folder and everything inside it
+cp -r ~/Documents ~/Documents_copy
+</code></pre>
+
+<h2 id="other-helpful-tips">Other helpful tips:</h2>
+
+<ul>
+  <li>Using the up and down arrows you can cycle through the histroy of your commands.</li>
+  <li>Use <code>open .</code> to open your current directory in the Finder.</li>
+  <li>Hit Tab as much as you can. It auto completes for you.</li>
+</ul>

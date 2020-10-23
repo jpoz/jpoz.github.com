@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link href="/stylesheets/all.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+
+    <title>SPEEDREAD</title>
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id='speedread'>
+  <div class='speedread-title'>
+    Insert text you'd like to speed read
+  </div>
+  <div class='speedread-input-container'>
+    <textarea id='speedread-input'></textarea>
+  </div>
+  <div class='speedread-controls'>
+    Words per minute:
+    <input
+      id='speedread-word-per-min'
+      type='number'
+      pattern="[0-9]*"
+      value='500'
+      />
+
+    <button id='speedread-go-button'>
+      Go
+    </button>
+  </div>
+
+  <div id='speedread-overlay' class='speedread-overlay hidden'>
+    <div id='speedread-words' class='speedread-words'>
+      http://localhost:4567/speedread
+    </div>
+  </div>
+</div>
+
+<script>
+  let input = document.getElementById('speedread-input');
+  let button = document.getElementById('speedread-go-button');
+  let overlay = document.getElementById('speedread-overlay');
+  let word_display = document.getElementById('speedread-words');
+  let words_per_min = document.getElementById('speedread-word-per-min');
+  let overlay_shown = false;
+
+  button.onclick = async function(e) {
+    let words = input.value.trim();
+    words = words.replace(/^\s{2,}/g, ' ⇥' );
+    words = words.replace(/\s{2,}/g, ' ');
+    words = words.replace(/\t/g, '⇥');
+    words = words.replace(/\n/g, ' ↩︎ ');
+
+    overlay.classList.remove("hidden");
+    overlay_shown = true;
+
+    let word_list = words.split(' ');
+    let word_size = word_list.length;
+
+    next_word = function(index) {
+      word = word_list[index];
+      word_display.innerHTML = word;
+      if (word_size > index && overlay_shown) {
+        let timeout = 60000 / words_per_min.value;
+        setTimeout(next_word, timeout, index+1)
+      } else {
+        overlay_shown = false;
+        overlay.classList.add("hidden");
+      }
+    }
+
+    next_word(0);
+  }
+  overlay.onclick = function(e) {
+    overlay_shown = false;
+    overlay.classList.add("hidden");
+  }
+</script>
+
+    </main>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7ZEMM6EGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K7ZEMM6EGS');
+    </script>
+  </body>
+</html>
