@@ -2,41 +2,23 @@
 title: JPoz.net
 ---
 
-<p>Hi I'm James</p>
-<p>I write softare</p>
+
+<div class='hi'>
+  Hi! I'm James.
+  <span>
+  I write software.
+  </span>
+</div>
 
 <nav>
-  <a id='github_link' href='https://github.com/jpoz' target='_blank'></a>
-  <a id='resume_link' href='/resume.html' target='_blank'></a>
-  <a id='twitter_link' href='https://twitter.com/jpoz' target='_blank'></a>
+  <a id='github_link' class='tooltip' href='https://github.com/jpoz' target='_blank' data-text="Github">
+    <i class="fab fa-github-alt"></i>
+  </a>
+  <a id='resume_link' class='tooltip' href='/resume.html' data-text="Resume">
+    <i class="fas fa-file-user"></i>
+  </a>
+  <a id='twitter_link' class='tooltip' href='https://twitter.com/jpoz' target='_blank' data-text="Twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
 </nav>
 
-<script>
-  var gh = document.getElementById('github_link');
-  lottie.loadAnimation({
-    container: gh, // the dom element that will contain the animation
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '/animations/github.json' // the path to the animation json
-  });
-
-  var rl = document.getElementById('resume_link');
-  lottie.loadAnimation({
-    container: rl, // the dom element that will contain the animation
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '/animations/resume.json' // the path to the animation json
-  });
-
-
-  var tw = document.getElementById('twitter_link');
-  lottie.loadAnimation({
-    container: tw, // the dom element that will contain the animation
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: '/animations/twitter.json' // the path to the animation json
-  });
-</script>

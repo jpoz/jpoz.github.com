@@ -3,21 +3,8 @@
 @import "reset";
 @import "normalize";
 
-html{min-height:100%;position:relative}
-
-body {
-  height:100%;
-  text-align: left;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.clear {
-  clear: both;
-}
-
-
-@import "layout";
-// @import "pages";
+@import "site";
+@import "resume";
 // @import "article";
 // @import "iphone";
 // @import "github";
