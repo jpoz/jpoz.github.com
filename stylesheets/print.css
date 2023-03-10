@@ -430,6 +430,7 @@ a.jpoz, a.jpoz_photos, div.contacts {
     color: #777; }
 
 #resume {
-  margin: 20px auto; }
-  #resume .job {
+  margin: 20px auto;
+  font-size: 12px; }
+  #resume .position {
     break-inside: avoid; }
