@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const skills = [
+  ['Languages', 'Go, Python, TypeScript, Rust, WebAssembly'],
+  ['Agents and AI', 'Applied AI / LLMs / LLMOps, agent frameworks, MCP, LLM evaluation and observability, agent memory, agent identity and permissioning, coding agents (Claude Code, Cursor)'],
+  ['Platform', 'Agent runtimes, autonomous workflows, SDK/API design, distributed systems, concurrency, microservices, REST APIs'],
+  ['Data and Infra', 'Temporal, FastAPI, PostgreSQL, Kubernetes, Kata Containers, Kafka, DynamoDB, SQS, Redis, OpenTelemetry, Braintrust, incident response'],
+  ['Leadership', 'Technical leadership, architecture review, design documentation, mentoring'],
+];
+
+const jobs = [
+  {
+    company: 'Beacon Holdings',
+    title: 'Member of Technical Staff',
+    date: 'May 2026 - Present',
+    bullets: [
+      'Designing and building Go-based infrastructure for running agentic runtimes and autonomous workflows.',
+      'Building across a Go monorepo - runtime, sidecar agent, and CLI tooling, plus deploy configuration - for autonomous, multi-step workflows.',
+      'Run untrusted agent code in isolated Kata Containers microVMs on Kubernetes.',
+      'Designing the agent workspace: memory that carries across runs, plus agent identity and scoped permissions. Lead its design documents and technical design sessions.',
+      'Built custom MCP servers and an MCP platform that brings third-party MCP servers into our cloud agent platform, with OAuth and per-user credentials and tool access.',
+      'Built eval suites and run tracing to measure and improve agent quality.',
+    ],
+  },
+  {
+    company: 'AngelList',
+    title: 'Software Engineer (Applied AI)',
+    date: 'Feb 2025 - May 2026',
+    bullets: [
+      'Built and operated production LLM agents for internal operations and customer-facing product, plus the agent platform other teams built on.',
+      'Ran agent runs and long-running background jobs as durable Temporal workflows.',
+      'Built custom MCP servers and an MCP platform that brings third-party MCP servers into our cloud agent platform, with OAuth and per-user credentials and tool access.',
+      'Built eval suites and tracing (OpenTelemetry, Braintrust, homegrown) and iterated on agents using the results.',
+    ],
+  },
+  {
+    company: 'Reviso',
+    title: 'Co-Founder',
+    date: 'Oct 2023 - May 2025',
+    bullets: [
+      'Co-founded an AI document platform and built its custom AI rich-text editor from zero, owning technical direction and hands-on development.',
+      'Built eval suites and tracing for the AI editing features.',
+    ],
+  },
+  {
+    company: 'moonrepo (Y Combinator W23)',
+    title: 'Co-Founder & CTO',
+    date: 'Jan 2023 - Oct 2023',
+    bullets: [
+      'Built moon, an open-source build system and repository management tool written in Rust, and moonbase, its cloud caching and CI insights platform.',
+      'Led product and engineering as CTO, owning developer-facing tooling, public interfaces, and open-source community direction.',
+    ],
+  },
+  {
+    company: 'Coinbase',
+    location: 'Remote',
+    title: 'Senior Staff Software Engineer, Growth Foundations',
+    date: 'Nov 2020 - Feb 2023',
+    bullets: [
+      'Led technical initiatives on the Growth team through high-performance backend services in TypeScript and Go.',
+      'Architected and launched a consolidated notification system supporting multiple channels, apps, and organizations, sending billions of messages in its first quarter.',
+      'Initiated and led a Technical Architecture Review Process that raised design quality across teams.',
+      'Built on Temporal for durable workflow execution.',
+    ],
+  },
+  {
+    company: 'Monarch Money',
+    title: 'Principal Software Engineer',
+    date: 'Apr 2020 - Nov 2020',
+    bullets: ['Sole backend engineer; launched v1 of the budgeting platform in Python.'],
+  },
+  {
+    company: 'Airbnb',
+    title: 'Senior SWE → Engineering Manager, Service Excellence → Lead Engineer, Service Excellence → Staff SWE, Guest Store - Messaging',
+    date: 'Feb 2016 - Mar 2020',
+    bullets: [
+      'Technical lead for the next-generation messaging inbox, migrating customer service traffic from email to in-app messaging, saving the company millions in service cost per year.',
+      'Progressed through senior, management, and staff roles, leading service-excellence engineering work.',
+    ],
+  },
+  {
+    company: 'Simple Finance',
+    title: 'Software Architect / Backend Engineer',
+    date: 'Oct 2011 - Feb 2016',
+    bullets: ['Led backend architecture and scaling from 100 to 100,000+ customers.'],
+  },
+  {
+    company: 'Revelation, Inc.',
+    title: 'Web Developer',
+    date: '2008 - 2010',
+    bullets: [],
+  },
+];
+---
+
+<Layout title="James Pozdena">
+<div id='resume'>
+  <h1 class='name'>James Pozdena</h1>
+  <table class='info'>
+    <tr>
+      <td class='left'>Louisville, CO</td>
+      <td class='right'>
+        <a target="_blank" href="https://github.com/jpoz">github.com/jpoz</a>
+        {' | '}
+        <a target="_blank" href="https://www.linkedin.com/in/jpozdena/">linkedin.com/in/jpozdena</a>
+      </td>
+    </tr>
+  </table>
+
+  <div class='section'>
+    <h1>Professional Summary</h1>
+    <p>
+      Staff-level engineer building agent-platform infrastructure: Go-based infrastructure for running agentic
+      runtimes and autonomous workflows in production, with hands-on LLM agent work and heavy daily use of coding
+      agents (Claude Code, Cursor). Building on Temporal since Coinbase, with deep Go and Python experience in
+      distributed systems at scale, developer-facing SDK/API design, and the reliability, observability, and
+      evaluation concerns of non-deterministic systems. Founder/CTO and open-source lead who owns platform work
+      from design docs through day-2 operations.
+    </p>
+  </div>
+
+  <div class='section skills'>
+    <h1>Core Skills</h1>
+    <ul>
+      {skills.map(([label, items]) => <li><strong>{label}:</strong> {items}</li>)}
+    </ul>
+  </div>
+
+  <div class='section'>
+    <h1>Experience</h1>
+
+    {jobs.map((job) => (
+      <div class='job'>
+        <h2>{job.company}</h2>
+        {job.location && <h4>{job.location}</h4>}
+        <div class='position'>
+          <div class='desc'>
+            <span class='title'>{job.title}</span>
+            <span class='date'>{job.date}</span>
+          </div>
+          {job.bullets.length > 0 && (
+            <ul>
+              {job.bullets.map((bullet) => <li>{bullet}</li>)}
+            </ul>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+</Layout>

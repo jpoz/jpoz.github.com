@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@use "reset";
+@use "normalize";
+@use "resume";
+
+body {
+  height:100%;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a.jpoz, a.jpoz_photos, div.contacts  {
+  display: none;
+}
+
+
+#resume {
+    margin: 20px auto;
+
+    .job {
+        break-inside: avoid;
+    }
+}
+
