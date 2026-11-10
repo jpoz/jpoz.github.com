@@ -17,4 +17,7 @@ export interface Figure {
   az0: number;
   azSpeed: number; // 0 = gentle sway instead of a slow orbit
   exposure?: number;
+  // phone / portrait overrides: span (world units across viewport height), vertical
+  // center (0..1, bottom-up; default 0.64, above the text panel), and world target
+  narrow?: { span?: number; cy?: number; target?: [number, number, number] };
 }

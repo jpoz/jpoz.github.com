@@ -128,7 +128,8 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
     H = Math.floor(canvas.clientHeight * dpr);
     canvas.width = W;
     canvas.height = H;
-    cell = (canvas.clientWidth < 700 ? 4.5 : 5.5) * dpr;
+    // finer dots on phones: figures are drawn smaller there, so detail needs a finer screen
+    cell = (canvas.clientWidth < 700 ? 3.6 : 5.5) * dpr;
     const step = cell * 0.5;
     lw = Math.ceil(W / step);
     lh = Math.ceil(H / step);
@@ -226,9 +227,12 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
     const wide = canvas.clientWidth / canvas.clientHeight > 1.15;
     // full-bleed: centered, sized to fill the viewport (the UI panels sit on top)
     const cx = wide ? 0.56 : 0.5;
-    const cy = 0.5;
-    const fit = wide ? 1 : Math.min(Math.max(0.8 * (canvas.clientHeight / canvas.clientWidth), 1), 1.8);
-    const span = fig.span * fit * (1 + fig.spanE * explode);
+    // narrow: the text panel covers the bottom ~45%, so center in the open area above it
+    const cy = wide ? 0.5 : (fig.narrow?.cy ?? 0.64);
+    // on portrait screens size by width: the figure should span about the screen width
+    const fit = wide ? 1 : Math.min(Math.max(canvas.clientHeight / canvas.clientWidth, 1), 2.4);
+    const baseSpan = wide ? fig.span : (fig.narrow?.span ?? fig.span * fit);
+    const span = baseSpan * (1 + fig.spanE * explode);
     const az = fig.az0 + (fig.azSpeed ? t * fig.azSpeed : 0.22 * Math.sin(t * 0.25)) + sx * 0.9;
     const el = fig.el0 + (fig.el1 - fig.el0) * explode + sy * 0.3;
 
@@ -244,11 +248,12 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
     gl!.uniform1f(scene.u.uAz, az);
     gl!.uniform1f(scene.u.uEl, el);
     gl!.uniform1f(scene.u.uExposure, fig.exposure ?? 1);
+    const tgt = !wide && fig.narrow?.target ? fig.narrow.target : fig.target;
     gl!.uniform3f(
       scene.u.uTarget,
-      fig.target[0] + fig.targetE[0] * explode,
-      fig.target[1] + fig.targetE[1] * explode,
-      fig.target[2] + fig.targetE[2] * explode,
+      tgt[0] + fig.targetE[0] * explode,
+      tgt[1] + fig.targetE[1] * explode,
+      tgt[2] + fig.targetE[2] * explode,
     );
     gl!.drawArrays(gl!.TRIANGLES, 0, 3);
 
