@@ -1,24 +1,431 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const now = new Date();
+const rev = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}`;
+
+const links = [
+  { n: '01', label: 'GitHub', value: 'github.com/jpoz', href: 'https://github.com/jpoz', external: true },
+  { n: '02', label: 'Resume', value: '/resume', href: '/resume.html', external: false },
+  { n: '03', label: 'X', value: 'x.com/jpoz', href: 'https://x.com/jpoz', external: true },
+];
 ---
 
 <Layout title="JPoz.net">
-<div class='hi'>
-  Hi! I'm James.
-  <span>
-  I write software.
-  </span>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<canvas id="gearbox" aria-hidden="true"></canvas>
+
+<!-- console frame: corner brackets + edge readouts -->
+<div class="frame" aria-hidden="true">
+  <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+  <div class="edge top-left">JPOZ.NET <span>/ sys</span></div>
+  <div class="edge top-right">UTC <span id="clock">00:00:00</span></div>
+  <div class="edge bottom-left"><i class="led"></i>All systems nominal</div>
 </div>
 
-<nav>
-  <a id='github_link' class='tooltip' href='https://github.com/jpoz' target='_blank' data-text="Github">
-    <i class="fab fa-github-alt"></i>
-  </a>
-  <a id='resume_link' class='tooltip' href='/resume.html' data-text="Resume">
-    <i class="fas fa-file-user"></i>
-  </a>
-  <a id='twitter_link' class='tooltip' href='https://twitter.com/jpoz' target='_blank' data-text="Twitter">
-    <i class="fab fa-twitter"></i>
-  </a>
-</nav>
+<div class="home">
+  <div class="meta">
+    <span>JPOZ.NET</span>
+    <span>v<span id="rev">{rev}</span></span>
+    <span class="online"><i class="led"></i>online</span>
+  </div>
+
+  <h1 class="title">
+    Hi! I'm James.
+    <span>I build software.</span>
+  </h1>
+
+  <div class="flow" aria-label="1 human, n agents, software">
+    <span class="node">Human</span>
+    <span class="wire"></span>
+    <span class="node">N agents</span>
+    <span class="wire"></span>
+    <span class="node">Software</span>
+  </div>
+
+  <div class="links" role="navigation">
+    {links.map((l) => (
+      <a href={l.href} target={l.external ? '_blank' : undefined} rel={l.external ? 'noopener' : undefined}>
+        <span class="n">{l.n}</span>
+        <span class="k">{l.label}</span>
+        <span class="v">{l.value}</span>
+        <span class="arr">{l.external ? '↗' : '→'}</span>
+      </a>
+    ))}
+  </div>
+</div>
+
+<div class="titleblock">
+  <div><span>System</span><b id="tb-title">Service mesh</b></div>
+  <div><span id="tb-k1">Topology</span><b id="tb-v1">4 x 4 x 4 lattice</b></div>
+  <div><span id="tb-k2">Traffic</span><b id="tb-v2">packets in flight</b></div>
+  <div class="tb-fig">
+    <span>View</span>
+    <b id="tb-fig">1 / 9</b>
+    <button type="button" id="tb-prev" aria-label="Previous view">&larr;</button>
+    <button type="button" id="tb-next" aria-label="Next view">&rarr;</button>
+  </div>
+</div>
+
+<script>
+  import { startGearbox } from '../scripts/gearbox';
+  if (new URLSearchParams(location.search).has('clean')) document.documentElement.classList.add('clean');
+  const canvas = document.getElementById('gearbox') as HTMLCanvasElement | null;
+  const $ = (id: string) => document.getElementById(id);
+
+  if (canvas) {
+    try {
+      const gb = startGearbox(canvas, {
+        onFigure(fig, i, total) {
+          $('tb-title')!.textContent = fig.title;
+          $('tb-k1')!.textContent = fig.rows[0][0];
+          $('tb-v1')!.textContent = fig.rows[0][1];
+          $('tb-k2')!.textContent = fig.rows[1][0];
+          $('tb-v2')!.textContent = fig.rows[1][1];
+          $('tb-fig')!.textContent = `${i + 1} / ${total}`;
+        },
+      });
+      if (gb) {
+        $('tb-next')?.addEventListener('click', gb.next);
+        $('tb-prev')?.addEventListener('click', gb.prev);
+        window.addEventListener('keydown', (ev) => {
+          if (ev.key === 'ArrowRight') gb.next();
+          if (ev.key === 'ArrowLeft') gb.prev();
+        });
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  const pad = (n: number) => String(n).padStart(2, '0');
+
+  const rev = $('rev');
+  if (rev) {
+    const d = new Date();
+    rev.textContent = `${d.getFullYear()}.${pad(d.getMonth() + 1)}`;
+  }
+
+  const clock = $('clock');
+  const tick = () => {
+    const d = new Date();
+    if (clock) clock.textContent = `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}`;
+  };
+  tick();
+  setInterval(tick, 1000);
+</script>
 </Layout>
+
+<style is:global>
+  :root {
+    --paper: #EFE8E7;
+    --ink: #2A292C;
+    --ink-2: #6B6668;
+    --ink-3: #9A9395;
+    --rule: rgba(42, 41, 44, 0.22);
+    --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --inset: 24px;
+  }
+
+  body:has(#gearbox) {
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  #gearbox {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    z-index: 0;
+  }
+
+  .led {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--ink);
+    vertical-align: 1px;
+    animation: led 2.4s ease-in-out infinite;
+  }
+
+  @keyframes led {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+  }
+
+  /* ---------- console frame ---------- */
+
+  .frame {
+    position: fixed;
+    inset: var(--inset);
+    z-index: 1;
+    pointer-events: none;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+
+  .corner {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-color: var(--ink);
+    border-style: solid;
+    border-width: 0;
+  }
+  .corner.tl { top: 0; left: 0; border-top-width: 1px; border-left-width: 1px; }
+  .corner.tr { top: 0; right: 0; border-top-width: 1px; border-right-width: 1px; }
+  .corner.bl { bottom: 0; left: 0; border-bottom-width: 1px; border-left-width: 1px; }
+  .corner.br { bottom: 0; right: 0; border-bottom-width: 1px; border-right-width: 1px; }
+
+  .edge { position: absolute; background: var(--paper); padding: 1px 6px; }
+  .edge span { color: var(--ink-3); }
+  .edge.top-left { top: 4px; left: 30px; }
+  .edge.top-right { top: 4px; right: 30px; font-variant-numeric: tabular-nums; }
+  .edge.bottom-left { bottom: 4px; left: 30px; }
+  .edge.bottom-left .led { width: 5px; height: 5px; }
+
+  /* ---------- left column ---------- */
+
+  .home {
+    position: fixed;
+    z-index: 2;
+    left: 8vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(440px, 34vw);
+    padding: 26px 30px 30px;
+    color: var(--ink);
+  }
+
+  /* paper + border drawn on a layer above the dotted shadow */
+  .home::after,
+  .titleblock::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+  }
+
+  /* offset halftone shadow so the panel floats over the render */
+  .home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translate(10px, 10px);
+    z-index: -2;
+    background-image:
+      radial-gradient(circle, rgba(42, 41, 44, 0.35) 1.1px, transparent 1.6px),
+      radial-gradient(circle, rgba(42, 41, 44, 0.35) 1.1px, transparent 1.6px);
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+  }
+
+  .titleblock::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translate(8px, 8px);
+    z-index: -2;
+    background-image:
+      radial-gradient(circle, rgba(42, 41, 44, 0.35) 1.1px, transparent 1.6px),
+      radial-gradient(circle, rgba(42, 41, 44, 0.35) 1.1px, transparent 1.6px);
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+  }
+
+  .meta {
+    display: flex;
+    margin-top: 0;
+    gap: 22px;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding-bottom: 14px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .meta .online { color: var(--ink-2); }
+  .meta .led { width: 5px; height: 5px; }
+
+  .title {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: clamp(34px, 3.9vw, 60px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+  }
+
+  .title span {
+    display: block;
+    font-weight: 400;
+    color: var(--ink-2);
+  }
+
+  /* flow diagram: [HUMAN] --> [N AGENTS] --> [SOFTWARE] with traffic on the wires */
+  .flow {
+    display: flex;
+    align-items: center;
+    margin: 26px 0 30px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .flow .node {
+    padding: 5px 8px;
+    border: 1px solid var(--ink-2);
+    white-space: nowrap;
+  }
+
+  .flow .wire {
+    flex: 1;
+    height: 1px;
+    min-width: 18px;
+    position: relative;
+    background: repeating-linear-gradient(90deg, var(--ink-2) 0 4px, transparent 4px 8px);
+    background-size: 8px 1px;
+    animation: wire 0.6s linear infinite;
+  }
+
+  .flow .wire::after {
+    /* arrowhead */
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: -3px;
+    border-left: 5px solid var(--ink-2);
+    border-top: 3.5px solid transparent;
+    border-bottom: 3.5px solid transparent;
+  }
+
+  @keyframes wire {
+    from { background-position: 0 0; }
+    to { background-position: 8px 0; }
+  }
+
+  /* links as a table */
+  .links {
+    border-top: 1px solid var(--rule);
+  }
+
+  .links a {
+    display: grid;
+    grid-template-columns: 34px 1fr auto 22px;
+    align-items: baseline;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+
+  .links .n { color: var(--ink-3); font-size: 10.5px; }
+  .links .k { text-transform: uppercase; letter-spacing: 0.14em; font-weight: 500; }
+  .links .v { color: var(--ink-2); }
+  .links .arr { text-align: right; transition: transform 0.2s; }
+
+  /* halftone fill on hover, same 45deg dot grid as the render */
+  .links a:hover,
+  .titleblock button:hover {
+    background-image:
+      radial-gradient(circle, rgba(42, 41, 44, 0.2) 1px, transparent 1.5px),
+      radial-gradient(circle, rgba(42, 41, 44, 0.2) 1px, transparent 1.5px);
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+  }
+  .links a:hover .arr { transform: translateX(3px); }
+  .links a:focus-visible { outline: 1px solid var(--ink); outline-offset: -1px; }
+
+  /* ---------- status panel ---------- */
+
+  .titleblock {
+    position: fixed;
+    z-index: 2;
+    right: calc(var(--inset) + 30px);
+    bottom: calc(var(--inset) + 30px);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    pointer-events: none;
+  }
+
+  .titleblock div {
+    display: grid;
+    grid-template-columns: 86px 1fr;
+    min-width: 280px;
+    border-bottom: 1px solid var(--rule);
+    padding: 7px 12px;
+  }
+  .titleblock div:last-child { border-bottom: none; }
+  .titleblock span { color: var(--ink-3); }
+  .titleblock b { font-weight: 400; }
+
+  .titleblock .tb-fig {
+    grid-template-columns: 86px 1fr auto auto;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .titleblock button {
+    pointer-events: auto;
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    color: var(--ink);
+    background: none;
+    border: none;
+    border-left: 1px solid var(--rule);
+    padding: 2px 10px;
+    margin: -4px 0;
+    height: 28px;
+  }
+  .titleblock button:last-child { margin-right: -12px; }
+
+  /* ---------- narrow ---------- */
+
+  @media (max-aspect-ratio: 115/100) {
+    :root { --inset: 12px; }
+    .edge.bottom-left, .titleblock { display: none; }
+    .home {
+      left: 50%;
+      top: auto;
+      bottom: 6vh;
+      transform: translateX(-50%);
+      width: min(440px, calc(100vw - 48px));
+      box-sizing: border-box;
+      padding: 18px 18px 20px;
+    }
+    .title { font-size: clamp(30px, 8vw, 44px); }
+    .flow { margin: 18px 0 20px; }
+  }
+
+  /* ?clean hides all UI, for frame captures */
+  /* opacity (not display/visibility) keeps the same compositing path as the real page */
+  .clean .home, .clean .frame, .clean .titleblock, .clean astro-dev-toolbar { opacity: 0 !important; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .led, .flow .wire { animation: none; }
+  }
+</style>
