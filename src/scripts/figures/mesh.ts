@@ -100,5 +100,6 @@ export const Mesh: Figure = {
     span: 6.0, spanE: 0.18,
     el0: 1.05, el1: 0.85,
     az0: 0.35, azSpeed: 0.07,
-    exposure: 1.3,
+    exposure: 0.88,
+    narrow: { span: 11.5 },
 };

@@ -38,5 +38,6 @@ export const Recursion: Figure = {
     span: 4.0, spanE: 0.0,
     el0: 1.0, el1: 1.0,
     az0: -0.8, azSpeed: 0.05,
-    exposure: 0.8,
+    exposure: 1.0,
+    narrow: { span: 9.2 },   // fixed, so short phones (375x667) keep the cube clear of the header and panel
 };

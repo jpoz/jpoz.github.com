@@ -72,6 +72,7 @@ export const EventLoop: Figure = {
     target: [0, 0, 0], targetE: [0, 0, 0.25],
     span: 4.0, spanE: 0.25,
     el0: 0.55, el1: 0.7,
-    exposure: 0.92,
+    exposure: 0.86,
+    narrow: { span: 9.4 },
     az0: -0.8, azSpeed: 0.05,
 };

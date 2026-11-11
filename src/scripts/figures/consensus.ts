@@ -27,7 +27,7 @@ float map(vec3 p) {
   // quorum spokes: grow out from the core once the rings agree
   float L = 2.2*smoothstep(0.35, 1.0, e);
   vec2 sp = polarFold(rot(p.xy, spin), 6.0);
-  d = min(d, sdCapsule(vec3(sp, p.z - 0.03), vec3(0.55, 0.0, 0.0), vec3(0.55 + L, 0.0, 0.0), 0.07));
+  d = min(d, sdCapsule(vec3(sp, p.z - 0.075), vec3(0.55, 0.0, 0.0), vec3(0.55 + L, 0.0, 0.0), 0.075));
 
   for (int i = 0; i < 5; i++) {
     float fi = float(i);
@@ -68,5 +68,6 @@ export const Consensus: Figure = {
     span: 3.5, spanE: 0.06,
     el0: 1.0, el1: 0.8,
     az0: -0.9, azSpeed: 0.06,
-    exposure: 0.8,
+    exposure: 1.05,
+    narrow: { span: 7.5 },
 };

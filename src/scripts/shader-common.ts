@@ -150,7 +150,7 @@ void main() {
     float h = map(ro + rd*t);
     if (h < 0.0015) { hit = true; break; }
     t += h * 0.9;
-    if (t > 18.0) break;
+    if (t > 24.0) break;
   }
   gMarch = false;
 
@@ -158,20 +158,30 @@ void main() {
 
   vec3 p = ro + rd*t;
   vec3 n = calcNormal(p);
-  vec3 L = normalize(-0.6*right + 0.6*up + 0.6*dir);
+  // Lighting, tuned for halftone: every face should land on a readable dot size.
+  //  - key light from upper left, lower than before so tops and sides separate
+  //  - cool fill from the opposite side, so faces turned away from the key keep form
+  //    instead of collapsing into one flat dark tone
+  //  - less sky, so up-facing faces no longer wash out to bare paper
+  //  - softer shadows and an AO floor, so detail inside shadow stays legible
+  //  - a soft shoulder, so lit faces keep a fine dot tint instead of clipping to paper
+  vec3 L = normalize(-0.65*right + 0.38*up + 0.62*dir);
+  vec3 F = normalize(0.7*right - 0.1*up + 0.55*dir);
 
   float dif = max(dot(n, L), 0.0);
+  float fil = max(dot(n, F), 0.0);
   float sh = softShadow(p + n*0.004, L);
   float ao = ambientOcc(p, n);
   float sky = 0.5 + 0.5*dot(n, up);
-  float spec = pow(max(dot(reflect(-L, n), dir), 0.0), 20.0) * sh;
+  float spec = pow(max(dot(reflect(-L, n), dir), 0.0), 24.0) * sh;
   float rim = pow(1.0 - max(dot(n, dir), 0.0), 3.0);
 
-  sh = mix(0.4, 1.0, sh);
-  float shade = 0.1 + 0.7*dif*sh + 0.26*sky + 0.3*spec;
-  shade *= 0.55 + 0.45*ao;
-  shade -= 0.12*rim;
+  sh = mix(0.45, 1.0, sh);
+  float shade = 0.04 + 0.85*dif*sh + 0.16*fil + 0.1*sky + 0.25*spec;
+  shade *= 0.66 + 0.34*ao;
+  shade -= 0.1*rim;
   shade *= uExposure;
-  float ink = 0.05 + 0.95*pow(clamp(1.0 - shade, 0.0, 1.0), 1.35);
+  shade = 1.04*(1.0 - exp(-1.55*max(shade, 0.0)));   // soft shoulder
+  float ink = 0.04 + 0.96*pow(clamp(1.0 - shade, 0.0, 1.0), 1.15);
   outColor = vec4(ink, 1.0, 0.0, 1.0);
 }`;

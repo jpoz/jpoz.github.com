@@ -37,13 +37,6 @@ const links = [
     <span>I build software.</span>
   </h1>
 
-  <div class="flow" aria-label="1 human, n agents, software">
-    <span class="node">Human</span>
-    <span class="wire"></span>
-    <span class="node">N agents</span>
-    <span class="wire"></span>
-    <span class="node">Software</span>
-  </div>
 
   <div class="links" role="navigation">
     {links.map((l) => (
@@ -322,6 +315,7 @@ const links = [
 
   /* links as a table */
   .links {
+    margin-top: 28px;
     border-top: 1px solid var(--rule);
   }
 

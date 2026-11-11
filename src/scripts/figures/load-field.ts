@@ -25,7 +25,7 @@ float map(vec3 p) {
   float amp = (0.5 + 0.55*e) * exp(-rm*0.09) * (0.7 + 0.3*hh.y);
   // the hot cell itself: a spire that shoots up during the event
   float spire = (rs < 0.5) ? 0.5 + 1.8*e : 0.0;
-  float ht = 0.05 + 0.06*hh.x + ring*amp + core + spire;
+  float ht = 0.035 + 0.035*hh.x + ring*amp + core + spire;
   ht *= 0.25 + 0.75*smoothstep(H + 1.0, H - 4.0, r);
 
   const float W = C*0.36;
@@ -39,13 +39,15 @@ float map(vec3 p) {
   d = min(d, ledge);
 
   if (gMarch && all(lessThan(abs(gi), vec2(H + 0.5)))) {
-    // step limit at cell borders, relaxed (up to one cell) above the tallest column within two
-    // cells, so rays high over the field don't burn their steps hopping cells
+    // step limit at cell borders, relaxed above the tallest neighboring column (capped at one
+    // cell, which can't reach a column two cells away) so rays over the field don't burn
+    // their steps hopping cells; above the tallest column anywhere, steps are free
     vec2 b = C*0.5 - abs(q);
-    float rn = max(rs - 2.0, 0.0);
-    float hb = 0.16 + (0.5 + 0.55*e)*exp(-max(rm - 2.5, 0.0)*0.09)
-             + (1.7 + 2.1*e)*exp(-rn*rn*0.16) + (rs < 2.5 ? 0.5 + 1.8*e : 0.0);
-    d = min(d, max(max(min(b.x, b.y), 0.0) + 0.015, min(p.z - hb, C)));
+    float rn = max(rs - 1.0, 0.0);
+    float hb = 0.16 + (0.5 + 0.55*e)*exp(-max(rm - 1.5, 0.0)*0.09)
+             + (1.7 + 2.1*e)*exp(-rn*rn*0.16) + (rs < 1.5 ? 0.5 + 1.8*e : 0.0);
+    float hg = 2.9 + 4.4*e;   // tallest column anywhere: free steps above it
+    d = min(d, max(max(min(b.x, b.y), 0.0) + 0.015, max(min(p.z - hb, C), p.z - hg)));
   }
   return d;
 }`;
@@ -58,5 +60,5 @@ export const LoadField: Figure = {
     span: 4.4, spanE: 0.12,
     el0: 0.9, el1: 0.98,
     az0: -0.8, azSpeed: 0.05,
-    exposure: 0.97,
+    exposure: 1.15,
 };

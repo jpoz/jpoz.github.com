@@ -73,5 +73,5 @@ export const Agents: Figure = {
     span: 4.9, spanE: 0.06,
     el0: 1.05, el1: 0.8,
     az0: -0.8, azSpeed: 0.05,
-    exposure: 0.9,
+    exposure: 1.0,
 };

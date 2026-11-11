@@ -35,5 +35,6 @@ export const Fabric: Figure = {
     span: 4.2, spanE: 0.12,
     el0: 1.0, el1: 0.9,
     az0: -0.8, azSpeed: 0.05,
-    exposure: 1.1,
+    exposure: 0.95,
+    narrow: { span: 11.5, cy: 0.63 },
 };

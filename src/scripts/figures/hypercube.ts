@@ -18,7 +18,7 @@ float map(vec3 p) {
   float flip = smoothstep(0.0, 1.0, e);
   float a = t*0.34 + PI*flip;
   float b = t*0.21 + 0.6;
-  float dist = 3.1 - 0.65*flip;
+  float dist = 3.1 - 0.55*flip;
 
   vec3 P[16];
   float R[16];
@@ -30,7 +30,7 @@ float map(vec3 p) {
     v.zw = rot(v.zw, b);
     float w = 1.0 / (dist - v.w);
     P[i] = v.xyz * w * 1.75;
-    R[i] = 0.036 + 0.085*w;   // strut radius at this vertex
+    R[i] = 0.036 + 0.085*min(w, 1.25);   // strut radius at this vertex
     bound = max(bound, length(P[i]) + 0.1 + 0.3*w);
   }
 
@@ -57,5 +57,5 @@ export const Hypercube: Figure = {
     span: 2.9, spanE: 0.1,
     el0: 1.05, el1: 0.85,
     az0: -0.8, azSpeed: 0.08,
-    exposure: 0.92,
+    exposure: 1.12,
 };

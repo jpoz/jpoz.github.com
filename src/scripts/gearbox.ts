@@ -226,7 +226,7 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
 
     const wide = canvas.clientWidth / canvas.clientHeight > 1.15;
     // full-bleed: centered, sized to fill the viewport (the UI panels sit on top)
-    const cx = wide ? 0.56 : 0.5;
+    const cx = wide ? 0.56 + (fig.offsetX ?? 0) : 0.5;
     // narrow: the text panel covers the bottom ~45%, so center in the open area above it
     const cy = wide ? 0.5 : (fig.narrow?.cy ?? 0.64);
     // on portrait screens size by width: the figure should span about the screen width

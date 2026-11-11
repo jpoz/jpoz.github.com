@@ -115,7 +115,8 @@ export const Pipeline: Figure = {
     map: MAP,
     target: [-0.45, 0.2, 0.0], targetE: [0, 0, -0.1],
     // on phones there is no side panel to clear: center the whole graph
-    narrow: { target: [0.6, 0, 0.1], span: 9.5 },
+    narrow: { target: [0.55, 0.1, 0.1], span: 10.6 },
+    exposure: 0.85,
     span: 5.6, spanE: 0.22,
     el0: 1.05, el1: 0.8,
     az0: -2.4, azSpeed: 0.05,
