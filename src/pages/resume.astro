@@ -84,10 +84,28 @@ const jobs = [
     bullets: ['Led backend architecture and scaling from 100 to 100,000+ customers.'],
   },
 ];
+
+const now = new Date();
+const rev = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}`;
 ---
 
 <Layout title="James Pozdena">
-<div id='resume'>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- console frame, same as the homepage -->
+<div class="frame" aria-hidden="true">
+  <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+  <div class="edge top-left"><span class="site-name">JPOZ.NET</span> <span>/ resume</span></div>
+  <div class="edge top-right">UTC <span id="clock">00:00:00</span></div>
+</div>
+
+<div id='resume' class='sheet'>
+  <div class='meta'>
+    <a href="/">&larr; Home</a>
+    <span>Rev <span id="rev">{rev}</span></span>
+    <a href="#" id="print-link">Print</a>
+  </div>
   <h1 class='name'>James Pozdena</h1>
   <table class='info'>
     <tr>
@@ -101,7 +119,7 @@ const jobs = [
   </table>
 
   <div class='section'>
-    <h1>Professional Summary</h1>
+    <h1><span class='n'>01</span>Professional Summary</h1>
     <p>
       Staff+ engineer who has spent a career solving hard product and infrastructure problems at scale, from
       fintech backends at Simple and Coinbase to Airbnb's messaging platform. Strong systems thinker who designs
@@ -114,14 +132,14 @@ const jobs = [
   </div>
 
   <div class='section skills'>
-    <h1>Core Skills</h1>
+    <h1><span class='n'>02</span>Core Skills</h1>
     <ul>
       {skills.map(([label, items]) => <li><strong>{label}:</strong> {items}</li>)}
     </ul>
   </div>
 
   <div class='section'>
-    <h1>Experience</h1>
+    <h1><span class='n'>03</span>Experience</h1>
 
     {jobs.map((job) => (
       <div class='job'>
@@ -142,4 +160,263 @@ const jobs = [
     ))}
   </div>
 </div>
+
+<script is:inline>
+  // Same build serves jpoz.com and www.jpoz.net: label with whichever domain this is.
+  if (/(^|\.)jpoz\.com$/.test(location.hostname)) {
+    document.querySelectorAll('.site-name').forEach((el) => (el.textContent = 'JPOZ.COM'));
+  }
+  (() => {
+    const pad = (n) => String(n).padStart(2, '0');
+    const clock = document.getElementById('clock');
+    const tick = () => {
+      const d = new Date();
+      clock.textContent = `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}`;
+    };
+    tick();
+    setInterval(tick, 1000);
+    document.getElementById('print-link').addEventListener('click', (ev) => {
+      ev.preventDefault();
+      window.print();
+    });
+  })();
+</script>
 </Layout>
+
+<style is:global>
+  /* Screen-only restyle to match the homepage console look. Print keeps resume.scss. */
+  @media screen {
+    body:has(#resume.sheet) {
+      --paper: #EFE8E7;
+      --ink: #2A292C;
+      --ink-2: #6B6668;
+      --ink-3: #9A9395;
+      --rule: rgba(42, 41, 44, 0.22);
+      --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+      --inset: 24px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    /* ---------- console frame ---------- */
+
+    .frame {
+      position: fixed;
+      inset: var(--inset);
+      z-index: 1;
+      pointer-events: none;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+    }
+    .frame .corner {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 0 solid var(--ink);
+    }
+    .frame .corner.tl { top: 0; left: 0; border-top-width: 1px; border-left-width: 1px; }
+    .frame .corner.tr { top: 0; right: 0; border-top-width: 1px; border-right-width: 1px; }
+    .frame .corner.bl { bottom: 0; left: 0; border-bottom-width: 1px; border-left-width: 1px; }
+    .frame .corner.br { bottom: 0; right: 0; border-bottom-width: 1px; border-right-width: 1px; }
+    .frame .edge { position: absolute; background: var(--paper); padding: 1px 6px; }
+    .frame .edge span:not(.site-name) { color: var(--ink-3); }
+    .frame .edge.top-left { top: 4px; left: 30px; }
+    .frame .edge.top-right { top: 4px; right: 30px; font-variant-numeric: tabular-nums; }
+
+    /* ---------- sheet ---------- */
+
+    #resume.sheet {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin: calc(var(--inset) + 56px) auto calc(var(--inset) + 72px);
+      padding: 26px 40px 34px;
+      color: var(--ink);
+      font-family: 'Work Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    /* paper + border above an offset halftone shadow */
+    #resume.sheet::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+    }
+    #resume.sheet::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      transform: translate(10px, 10px);
+      z-index: -2;
+      background-image:
+        radial-gradient(circle, rgba(42, 41, 44, 0.35) 1.1px, transparent 1.6px),
+        radial-gradient(circle, rgba(42, 41, 44, 0.35) 1.1px, transparent 1.6px);
+      background-size: 6px 6px;
+      background-position: 0 0, 3px 3px;
+    }
+
+    #resume.sheet a { color: var(--ink); }
+
+    #resume.sheet .meta {
+      display: flex;
+      gap: 22px;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      padding-bottom: 14px;
+      margin-bottom: 26px;
+      border-bottom: 1px solid var(--rule);
+    }
+    #resume.sheet .meta a { color: var(--ink-2); text-decoration: none; }
+    #resume.sheet .meta a:hover { color: var(--ink); }
+    #resume.sheet .meta #print-link { margin-left: auto; }
+
+    #resume.sheet h1.name {
+      margin: 0 0 18px;
+      text-align: left;
+      font-size: clamp(34px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+
+    #resume.sheet table.info {
+      width: 100%;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
+      color: var(--ink-2);
+      margin-bottom: 0;
+    }
+    #resume.sheet table.info td { padding: 10px 4px; }
+    #resume.sheet table.info .right { padding-bottom: 10px; color: var(--ink-3); }
+    #resume.sheet table.info a { color: var(--ink-2); text-decoration: none; }
+    #resume.sheet table.info a:hover { color: var(--ink); }
+
+    #resume.sheet .section { margin: 34px 0 0; }
+
+    #resume.sheet .section > h1 {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--ink);
+      text-align: left;
+      font-family: var(--mono);
+      font-size: 11.5px;
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    #resume.sheet .section > h1 .n { color: var(--ink-3); font-weight: 400; }
+
+    #resume.sheet p { margin: 0; color: var(--ink); }
+
+    #resume.sheet ul {
+      margin: 6px 0 0;
+      padding: 0;
+      list-style: none;
+      line-height: 1.55;
+    }
+    #resume.sheet li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+    }
+    #resume.sheet li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 0.68em;
+      width: 6px;
+      height: 1px;
+      background: var(--ink-2);
+    }
+    #resume.sheet .skills li strong {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-right: 4px;
+    }
+
+    #resume.sheet .job {
+      margin: 0;
+      padding: 16px 0 10px;
+      border-bottom: 1px solid var(--rule);
+    }
+    #resume.sheet .job:last-child { border-bottom: none; }
+    #resume.sheet .job h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+    }
+    #resume.sheet .job h4 {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      line-height: 1.6;
+    }
+    #resume.sheet .job .position { margin: 2px 0 0; }
+    #resume.sheet .job .position .desc {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1em;
+      border-bottom: none;
+      margin-bottom: 4px;
+    }
+    #resume.sheet .job .position .desc .title {
+      font-weight: 500;
+      color: var(--ink-2);
+      padding: 0;
+      line-height: 1.4;
+    }
+    #resume.sheet .job .position .desc .date {
+      flex-shrink: 0;
+      padding: 0;
+      line-height: 1.4;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 700px) {
+      body:has(#resume.sheet) { --inset: 12px; }
+      #resume.sheet {
+        margin: calc(var(--inset) + 34px) 14px calc(var(--inset) + 40px);
+        padding: 18px 20px 24px;
+        font-size: 14.5px;
+      }
+      #resume.sheet::before { transform: translate(6px, 6px); }
+      #resume.sheet table.info td { display: block; text-align: left; padding: 8px 2px 0; }
+      #resume.sheet table.info .right { padding-bottom: 8px; }
+      #resume.sheet .job .position .desc { flex-direction: column; gap: 2px; }
+    }
+  }
+
+  @media print {
+    .frame, #resume.sheet .meta, #resume.sheet .section > h1 .n { display: none; }
+  }
+</style>
