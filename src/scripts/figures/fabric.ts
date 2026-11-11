@@ -32,9 +32,10 @@ export const Fabric: Figure = {
     rows: [['Surface', 'gyroid'], ['Core', 'exposed']],
     map: MAP,
     target: [0, 0, 0], targetE: [0, 0, 0],
-    span: 4.2, spanE: 0.12,
+    span: 6.2, spanE: 0.2,
     el0: 1.0, el1: 0.9,
     az0: -0.8, azSpeed: 0.05,
     exposure: 0.95,
-    narrow: { span: 11.5, cy: 0.63 },
+    offsetX: 0.07,
+    narrow: { span: 12.5, spanE: 0.35, cy: 0.63 },
 };

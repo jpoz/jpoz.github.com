@@ -65,9 +65,10 @@ export const Consensus: Figure = {
     rows: [['Replicas', '5 / 5'], ['State', 'drift / agree']],
     map: MAP,
     target: [0, 0, 0], targetE: [0, 0, 0],
-    span: 3.5, spanE: 0.06,
+    span: 6.0, spanE: 0.04,
     el0: 1.0, el1: 0.8,
     az0: -0.9, azSpeed: 0.06,
     exposure: 1.05,
-    narrow: { span: 7.5 },
+    offsetX: 0.09,
+    narrow: { span: 10.8 },
 };

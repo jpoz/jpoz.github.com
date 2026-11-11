@@ -204,8 +204,9 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
     opts.onFigure?.(FIGURES[i], i, FIGURES.length);
   }
 
-  function frame(now: number) {
-    const dt = Math.min((now - last) / 1000, 0.1);
+  // Advance state and draw one frame. Returns true while something is still settling.
+  function draw(now: number) {
+    const dt = Math.min(Math.max((now - last) / 1000, 0), 0.1);
     last = now;
 
     // fade bookkeeping
@@ -241,7 +242,8 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
     // on portrait screens size by width: the figure should span about the screen width
     const fit = wide ? 1 : Math.min(Math.max(canvas.clientHeight / canvas.clientWidth, 1), 2.4);
     const baseSpan = wide ? fig.span : (fig.narrow?.span ?? fig.span * fit);
-    const span = baseSpan * (1 + fig.spanE * explode);
+    const spanE = wide ? fig.spanE : (fig.narrow?.spanE ?? fig.spanE);
+    const span = baseSpan * (1 + spanE * explode);
     const az = fig.az0 + (fig.azSpeed ? t * fig.azSpeed : 0.22 * Math.sin(t * 0.25)) + sx * 0.9;
     const el = fig.el0 + (fig.el1 - fig.el0) * explode + sy * 0.3;
 
@@ -285,6 +287,11 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
     if (STILL) {
       if (++framesDrawn === 3) document.body.dataset.frameReady = '1';
     }
+    return settling;
+  }
+
+  function frame(now: number) {
+    const settling = draw(now);
     if (!reduced || settling) {
       requestAnimationFrame(frame);
     } else {
@@ -303,10 +310,14 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
   // Track the canvas's own box, not just window resizes: layout can settle after
   // startup (fonts, UI panels, headless viewports), which left the drawing buffer
   // stale and stretched.
+  // Resizing the canvas clears its drawing buffer, so redraw right here (ResizeObserver
+  // runs after layout, before paint) instead of waiting a frame: otherwise every resize
+  // step paints a blank canvas and dragging the window edge flickers.
   new ResizeObserver(() => {
     if (Math.floor(canvas.clientWidth * Math.min(window.devicePixelRatio || 1, 2)) === W &&
         Math.floor(canvas.clientHeight * Math.min(window.devicePixelRatio || 1, 2)) === H) return;
     resize();
+    draw(performance.now());
     wake();
   }).observe(canvas);
 

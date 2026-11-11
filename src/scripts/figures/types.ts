@@ -23,5 +23,6 @@ export interface Figure {
   offsetX?: number;
   // phone / portrait overrides: span (world units across viewport height), vertical
   // center (0..1, bottom-up; default 0.64, above the text panel), and world target
-  narrow?: { span?: number; cy?: number; target?: [number, number, number] };
+  // and spanE (extra span fraction during the event phase; default spanE)
+  narrow?: { span?: number; spanE?: number; cy?: number; target?: [number, number, number] };
 }
