@@ -20,17 +20,24 @@ const links = [
 <!-- console frame: corner brackets + edge readouts -->
 <div class="frame" aria-hidden="true">
   <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-  <div class="edge top-left">JPOZ.NET <span>/ sys</span></div>
+  <div class="edge top-left"><span class="site-name">JPOZ.NET</span> <span>/ sys</span></div>
   <div class="edge top-right">UTC <span id="clock">00:00:00</span></div>
   <div class="edge bottom-left"><i class="led"></i>All systems nominal</div>
 </div>
 
 <div class="home">
   <div class="meta">
-    <span>JPOZ.NET</span>
+    <span class="site-name">JPOZ.NET</span>
     <span>v<span id="rev">{rev}</span></span>
     <span class="online"><i class="led"></i>online</span>
   </div>
+  <script is:inline>
+    // Same build serves jpoz.com and www.jpoz.net: label with whichever domain this is.
+    if (/(^|\.)jpoz\.com$/.test(location.hostname)) {
+      document.querySelectorAll('.site-name').forEach((el) => (el.textContent = 'JPOZ.COM'));
+      document.title = 'JPoz.com';
+    }
+  </script>
 
   <h1 class="title">
     Hi! I'm James.
@@ -180,7 +187,7 @@ const links = [
   .corner.br { bottom: 0; right: 0; border-bottom-width: 1px; border-right-width: 1px; }
 
   .edge { position: absolute; background: var(--paper); padding: 1px 6px; }
-  .edge span { color: var(--ink-3); }
+  .edge span:not(.site-name) { color: var(--ink-3); }
   .edge.top-left { top: 4px; left: 30px; }
   .edge.top-right { top: 4px; right: 30px; font-variant-numeric: tabular-nums; }
   .edge.bottom-left { bottom: 4px; left: 30px; }
