@@ -1,0 +1,867 @@
+---
+// /sys: a terminal. Not linked anywhere except the "/ sys" label on the homepage frame.
+import { execSync } from 'node:child_process';
+import { formatDate, getLegacyPosts, getPosts, legacyDate } from '../lib/posts';
+
+const sh = (cmd: string) => {
+  try {
+    return execSync(cmd, { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+  } catch {
+    return '';
+  }
+};
+
+const posts = (await getPosts()).map((p) => ({
+  slug: p.id,
+  title: p.data.title,
+  date: formatDate(p.data.date),
+  url: `/${p.id}`,
+}));
+const archive = (await getLegacyPosts()).map((p) => ({
+  slug: p.id,
+  title: p.data.title,
+  date: formatDate(legacyDate(p)),
+  url: `/blog/${p.id}.html`,
+}));
+
+const built = new Date();
+const data = {
+  posts,
+  archive,
+  build: {
+    hash: sh('git rev-parse --short HEAD') || 'unknown',
+    date: built.toISOString(),
+    rev: `${built.getFullYear()}.${String(built.getMonth() + 1).padStart(2, '0')}`,
+  },
+};
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>sys | jpoz</title>
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <script type="application/json" id="sys-data" set:html={JSON.stringify(data)} />
+
+  <div class="frame" aria-hidden="true">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    <div class="edge top-left"><a href="/" class="site-name">JPOZ.NET</a> <span>/ sys</span></div>
+    <div class="edge top-right">UTC <span id="clock">00:00:00</span></div>
+  </div>
+
+  <div class="console">
+    <section class="panel term" id="term">
+      <header><span id="title">guest@jpoz.net: ~</span></header>
+      <div class="out" id="out" role="log" aria-live="polite"></div>
+      <label class="line" id="line">
+        <span class="ps1">guest@jpoz:~$</span>
+        <input id="in" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Command">
+      </label>
+    </section>
+  </div>
+
+  <div class="halt" id="halt" hidden>
+    <p>It is now safe to close this tab.</p>
+    <button type="button" id="power">Power on</button>
+  </div>
+
+<script>
+  type PostRef = { slug: string; title: string; date: string; url: string };
+  type Data = { posts: PostRef[]; archive: PostRef[]; build: { hash: string; date: string; rev: string } };
+
+  const DATA: Data = JSON.parse(document.getElementById('sys-data')!.textContent!);
+  const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
+  const out = $('out');
+  const input = $<HTMLInputElement>('in');
+  const line = $('line');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const FIRST_COMMIT = Date.UTC(2009, 0, 7); // `git log --reverse | head -1`: "first commit"
+  const isCom = /(^|\.)jpoz\.com$/.test(location.hostname);
+  const HOST = isCom ? 'jpoz.com' : 'jpoz.net';
+
+  if (isCom) document.querySelectorAll('.site-name').forEach((el) => (el.textContent = 'JPOZ.COM'));
+  $('title').textContent = `guest@${HOST}: ~`;
+
+  const pad = (n: number, w = 2) => String(n).padStart(w, '0');
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const pick = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
+  const wait = (ms: number) => new Promise((r) => setTimeout(r, reduced ? 0 : ms));
+
+  // ---------- output ----------
+
+  function print(html = '', cls = '') {
+    const div = document.createElement('div');
+    if (cls) div.className = cls;
+    div.innerHTML = html || '&nbsp;';
+    out.appendChild(div);
+    out.scrollTop = out.scrollHeight;
+    return div;
+  }
+  const dim = (s: string) => `<span class="dim">${s}</span>`;
+  const b = (s: string) => `<b>${s}</b>`;
+  const cmd = (s: string) => `<button type="button" class="cmd" data-cmd="${esc(s)}">${esc(s)}</button>`;
+  const link = (href: string, label: string) => `<a href="${esc(href)}">${esc(label)}</a>`;
+
+  // ---------- log ----------
+
+  type Level = 'ok' | 'info' | 'warn' | 'err';
+  const LOG: string[] = [];
+  function log(level: Level, msg: string) {
+    const d = new Date();
+    LOG.push(`${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}  ${level.toUpperCase().padEnd(4)}  ${msg}`);
+    if (LOG.length > 200) LOG.shift();
+  }
+
+  const AMBIENT: [Level, string][] = [
+    ['ok', 'gearbox: figure rendered in 1 draw call'],
+    ['info', 'ideas.d: queue depth 47, accepting more anyway'],
+    ['info', 'agentd: 3 pull requests opened, 0 reviewed by a human'],
+    ['warn', 'side-project-07: no heartbeat since 2023'],
+    ['ok', 'cron: watered the plants (simulated)'],
+    ['info', 'drafts: 1 post 90% done, 90% remaining'],
+    ['ok', 'halftone: dots aligned to 45deg grid'],
+    ['warn', 'inbox: unread count overflowed int8'],
+    ['info', 'go build: 0.4s. nobody was surprised'],
+    ['ok', 'tests: green (they were also green yesterday)'],
+    ['info', 'cache: warm. coffee: warmer'],
+    ['warn', 'scope creep detected in sector 4'],
+    ['ok', 'dns: jpoz.com and jpoz.net still agree on things'],
+    ['info', 'agentd: asked a clarifying question nobody answered'],
+    ['ok', 'gc: freed 3 abandoned branch names'],
+    ['err', 'sleep: process not found'],
+  ];
+
+  function ambient() {
+    const [lvl, msg] = pick(AMBIENT);
+    log(lvl, msg);
+    setTimeout(ambient, 2500 + Math.random() * 4500);
+  }
+
+  // Real events about the visitor, mixed in with the fake ones.
+  let hiddenAt = 0;
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      hiddenAt = Date.now();
+      log('warn', 'operator looked away');
+    } else if (hiddenAt) {
+      log('info', `operator returned after ${Math.round((Date.now() - hiddenAt) / 1000)}s`);
+    }
+  });
+  let resizeT = 0;
+  addEventListener('resize', () => {
+    clearTimeout(resizeT);
+    resizeT = window.setTimeout(() => log('info', `display reconfigured: ${innerWidth}x${innerHeight}`), 400);
+  });
+  document.addEventListener('copy', () => log('warn', 'clipboard: operator is taking notes'));
+
+  // ---------- processes ----------
+
+  type Proc = { pid: number; name: string; cpu: number; mem: string; state: string; note: string };
+  const procs: Proc[] = [
+    { pid: 1, name: 'init', cpu: 0.1, mem: '4K', state: 'S', note: 'started 2009-01-07. still going.' },
+    { pid: 42, name: 'gearbox', cpu: 12, mem: '18M', state: 'R', note: 'draws the halftone machines on the homepage.' },
+    { pid: 88, name: 'coffee.d', cpu: 31, mem: '250ml', state: 'R', note: 'critical. do not kill.' },
+    { pid: 128, name: 'ideas --daemon', cpu: 22, mem: '∞', state: 'R', note: 'never sleeps. occasionally ships.' },
+    { pid: 256, name: 'agentd', cpu: 18, mem: '1.2G', state: 'R', note: 'writes Go. opens PRs. asks for approval.' },
+    { pid: 257, name: 'agentd', cpu: 14, mem: '1.1G', state: 'R', note: 'the second one. reviews the first one.' },
+    { pid: 404, name: 'side-project-07', cpu: 0, mem: '9M', state: 'Z', note: 'zombie. has a domain name though.' },
+    { pid: 503, name: 'inbox-zero', cpu: 0, mem: '2G', state: 'T', note: 'stopped. was never really running.' },
+    { pid: 777, name: 'blog-drafts', cpu: 0.4, mem: '64K', state: 'S', note: 'sleeping on a half-written post.' },
+    { pid: 1337, name: 'sys', cpu: 3, mem: '2M', state: 'R', note: 'this page. you are here.' },
+  ];
+  function jitter() {
+    for (const p of procs) {
+      if (p.state === 'R') p.cpu = Math.max(0.5, Math.min(60, p.cpu + (Math.random() - 0.5) * 8));
+    }
+  }
+
+  // ---------- clock ----------
+
+  let coffee = 0.82;
+  function tick() {
+    const d = new Date();
+    $('clock').textContent = `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}`;
+    coffee = Math.max(0, coffee - 0.0009);
+  }
+  function uptime(now = Date.now()) {
+    let s = Math.floor((now - FIRST_COMMIT) / 1000);
+    const y = Math.floor(s / (365.2425 * 86400));
+    s -= Math.floor(y * 365.2425 * 86400);
+    const dd = Math.floor(s / 86400);
+    s %= 86400;
+    return `${y}y ${dd}d ${pad(Math.floor(s / 3600))}:${pad(Math.floor(s / 60) % 60)}:${pad(s % 60)}`;
+  }
+
+  // ---------- filesystem ----------
+
+  const FILES: Record<string, () => string | Promise<string>> = {
+    'readme.txt': () => [
+      'Nothing here is load-bearing. Poke anything.',
+      'Type ' + cmd('help') + ' for commands.',
+      '',
+      dim('-- j'),
+    ].join('\n'),
+    'motd': () => pick([
+      'Today\'s forecast: 100% chance of shipping something small.',
+      'Remember: the agents write the code, you write the taste.',
+      'Reminder: the best interface is the one you deleted.',
+      'If it compiles, ship it. If it\'s Go, it compiles.',
+    ]),
+    'todo.txt': () => [
+      '[x] build a website (2009)',
+      '[x] rebuild the website (several times)',
+      '[x] halftone everything',
+      '[ ] finish that post',
+      '[ ] revive side-project-07',
+      '[ ] sleep',
+      '[x] hide a console behind a slash',
+    ].join('\n'),
+    'jpoz.txt': async () => {
+      const r = await fetch('/jpoz.txt');
+      return `<pre class="portrait">${esc(await r.text())}</pre>`;
+    },
+    '.secrets': () => [
+      'OPENAI_API_KEY=' + '█'.repeat(24),
+      'ANTHROPIC_API_KEY=' + '█'.repeat(24),
+      'WIFI_PASSWORD=hunter2',
+      '',
+      dim('# nice try.'),
+    ].join('\n'),
+  };
+  const HIDDEN = new Set(['.secrets']);
+
+  // ---------- commands ----------
+
+  type Cmd = { help?: string; run: (args: string[], raw: string) => void | Promise<void> };
+  let vimMode = false;
+  const history: string[] = [];
+
+  const COMMANDS: Record<string, Cmd> = {
+    help: {
+      help: 'this list',
+      run() {
+        const rows = Object.entries(COMMANDS)
+          .filter(([, c]) => c.help)
+          .map(([n, c]) => `  ${cmd(n)}${' '.repeat(Math.max(1, 11 - n.length))}${dim(c.help!)}`);
+        print(rows.join('\n'), 'pre');
+        print(dim('there are a few more. you\'ll find them.'));
+      },
+    },
+    ls: {
+      help: 'list files',
+      run(args) {
+        const all = args.some((a) => a.startsWith('-') && a.includes('a'));
+        const dir = args.find((a) => !a.startsWith('-'));
+        if (dir === 'posts' || dir === 'posts/') return listPosts(DATA.posts);
+        if (dir === 'archive' || dir === 'archive/') return listPosts(DATA.archive);
+        if (dir) return print(`ls: ${esc(dir)}: No such file or directory`, 'err');
+        const names = Object.keys(FILES).filter((f) => all || !HIDDEN.has(f));
+        const items = [...(all ? ['.', '..'] : []), 'posts/', 'archive/', ...names];
+        print(items.map((n) => (n.endsWith('/') ? cmd(`ls ${n}`) : n.startsWith('.') && n.length < 3 ? n : cmd(`cat ${n}`))).join('  '));
+      },
+    },
+    cat: {
+      help: 'read a file',
+      async run(args) {
+        const f = args[0];
+        if (!f) return print('usage: cat <file>', 'err');
+        const post = findPost(f);
+        if (post) {
+          print(`${b(esc(post.title))}\n${dim(post.date)}  ${link(post.url, post.url)}`, 'pre');
+          return;
+        }
+        const file = FILES[f.replace(/^~?\//, '')];
+        if (!file) return print(`cat: ${esc(f)}: No such file or directory`, 'err');
+        print(await file(), 'pre');
+      },
+    },
+    open: {
+      help: 'open resume | blog | github | x | home | <post>',
+      run(args) {
+        const t = (args[0] || '').toLowerCase();
+        const dest: Record<string, string> = {
+          resume: '/resume.html', blog: '/blog', home: '/', about: '/about',
+          github: 'https://github.com/jpoz', x: 'https://x.com/jpoz', twitter: 'https://x.com/jpoz',
+        };
+        const url = dest[t] ?? findPost(t)?.url;
+        if (!url) return print(`open: ${esc(t || '?')}: unknown target. try ${cmd('open resume')}`, 'err');
+        print(`opening ${link(url, url)} ...`);
+        log('info', `open ${url}`);
+        setTimeout(() => (url.startsWith('http') ? window.open(url, '_blank', 'noopener') : (location.href = url)), 450);
+      },
+    },
+    whoami: {
+      help: 'who are you',
+      run() {
+        print(`guest ${dim('(uid=1000, groups=curious)')}`);
+        print(dim('james is uid 0. you are somewhere near the front door.'));
+      },
+    },
+    neofetch: {
+      help: 'system summary',
+      run() {
+        const logo = [
+          '      ██ ██████  ',
+          '      ██ ██   ██ ',
+          '      ██ ██████  ',
+          ' ██   ██ ██      ',
+          '  █████  ██      ',
+        ];
+        const ua = navigator.userAgent;
+        const browser = /Firefox\//.test(ua) ? 'Firefox' : /Edg\//.test(ua) ? 'Edge' : /Chrome\//.test(ua) ? 'Chrome' : /Safari\//.test(ua) ? 'Safari' : 'something brave';
+        const info = [
+          `${b('guest')}@${b(HOST)}`,
+          dim('-'.repeat(18)),
+          `${b('OS')}       jpoz-os ${DATA.build.rev}`,
+          `${b('Kernel')}   #${DATA.build.hash}`,
+          `${b('Uptime')}   ${uptime()}`,
+          `${b('Shell')}    sys.sh 1.0`,
+          `${b('Display')}  ${screen.width}x${screen.height} @${devicePixelRatio}x`,
+          `${b('Client')}   ${browser}, ${navigator.hardwareConcurrency || '?'} cores`,
+          `${b('TZ')}       ${Intl.DateTimeFormat().resolvedOptions().timeZone}`,
+          `${b('Coffee')}   ${Math.round(coffee * 100)}%`,
+        ];
+        const rows = info.map((r, i) => `${logo[i] ?? ' '.repeat(17)}  ${r}`);
+        print(rows.join('\n'), 'pre');
+      },
+    },
+    uptime: {
+      help: 'how long this has been running',
+      run() {
+        print(`up ${uptime()} since the first commit ${dim('(2009-01-07, "first commit")')}`);
+        print(dim(`load average: ${procs.slice(0, 3).map((p) => (p.cpu / 20).toFixed(2)).join(', ')}`));
+      },
+    },
+    ps: {
+      help: 'process status',
+      run() {
+        jitter();
+        const rows = procs.map((p) => `${String(p.pid).padStart(5)}  ${p.cpu.toFixed(1).padStart(4)}  ${p.state}  ${p.name.padEnd(16)} ${dim(esc(p.note))}`);
+        print(`${dim('  PID  %CPU  S  NAME')}\n${rows.join('\n')}`, 'pre');
+        print(dim('try kill <pid>'));
+      },
+    },
+    kill: {
+      run(args) {
+        const pid = Number(args.filter((a) => !a.startsWith('-'))[0]);
+        const i = procs.findIndex((p) => p.pid === pid);
+        if (i < 0) return print(`kill: (${esc(args[0] ?? '')}) - No such process`, 'err');
+        const p = procs[i];
+        const replies: Record<string, string> = {
+          init: 'kill: init: refusing. it has been running since 2009.',
+          'coffee.d': 'kill: coffee.d: Operation not permitted. the system would halt.',
+          'ideas --daemon': 'killed ideas --daemon. respawned. it always respawns.',
+          sys: 'kill: sys: you are standing on it.',
+          'side-project-07': 'kill: side-project-07: already dead. renewed the domain anyway.',
+        };
+        if (replies[p.name]) {
+          print(replies[p.name], p.name.startsWith('ideas') ? '' : 'err');
+          log('warn', `kill ${pid} (${p.name}) rejected`);
+          return;
+        }
+        procs.splice(i, 1);
+        print(`[${pid}] ${esc(p.name)} terminated`);
+        log('err', `${p.name}: killed by guest`);
+        if (p.name === 'inbox-zero') print(dim('nobody noticed.'));
+        if (p.name === 'agentd') setTimeout(() => {
+          procs.push({ ...p, pid: p.pid + 1000 });
+            log('info', `agentd: respawned as ${p.pid + 1000}, opened a PR about it`);
+        }, 3000);
+      },
+    },
+    posts: {
+      help: 'recent writing',
+      run() { listPosts(DATA.posts); },
+    },
+    fortune: {
+      help: 'a little wisdom',
+      run() {
+        print(pick([
+          'The fastest code is the code that never shipped. The second fastest is Go.',
+          'Every abstraction is a bet that you will never have to look inside it.',
+          'A demo is a promise. A product is a promise kept on a bad day.',
+          'Make it work, make it right, make it a blog post.',
+          'The agent is only as good as the test you wrote before asking.',
+          'Most bugs are just two correct assumptions meeting for the first time.',
+          'Delete the feature. If anyone notices, that was the spec.',
+          '24 kilobytes is plenty.',
+        ]));
+      },
+    },
+    coffee: {
+      help: 'refuel',
+      async run() {
+        const frames = ['  (  )   (   )  )', '   ) (   )  (  (', '   ( )  (    ) )'];
+        const cup = ['  ________', ' |        |]', ' \\        /', '  `------\''];
+        const div = print('', 'pre');
+        for (let i = 0; i < (reduced ? 1 : 6); i++) {
+          div.textContent = [frames[i % 3], ...cup].join('\n');
+          await wait(220);
+        }
+        coffee = 1;
+        print('coffee.d: tank full.');
+        log('ok', 'coffee.d: refilled by guest');
+      },
+    },
+    ping: {
+      help: 'ping a host',
+      async run(args) {
+        const host = args[0] || HOST;
+        if (/^(james|jpoz)$/i.test(host)) {
+          print(`PING ${esc(host)}: probably building something.`);
+          await wait(900);
+          print(dim('Request timeout. Try ') + link('https://x.com/jpoz', 'x.com/jpoz') + dim(' instead.'));
+          return;
+        }
+        print(`PING ${esc(host)}: 56 data bytes`);
+        for (let i = 0; i < 4; i++) {
+          await wait(380);
+          print(`64 bytes from ${esc(host)}: icmp_seq=${i} ttl=64 time=${(4 + Math.random() * 20).toFixed(1)} ms`);
+        }
+      },
+    },
+    dmesg: {
+      help: 'system log',
+      run() { print(LOG.slice(-30).map(esc).join('\n') || dim('(empty)'), 'pre'); },
+    },
+    tail: { run() { return COMMANDS.dmesg.run([], 'dmesg'); } },
+    date: { run() { print(new Date().toString()); } },
+    echo: { run(_a, raw) { print(esc(raw.replace(/^echo\s?/, ''))); } },
+    history: {
+      run() { print(history.map((h, i) => `${String(i + 1).padStart(4)}  ${esc(h)}`).join('\n') || dim('(empty)'), 'pre'); },
+    },
+    clear: { help: 'clear the screen', run() { out.innerHTML = ''; } },
+    invert: {
+      help: 'lights off / on',
+      run() {
+        const on = document.documentElement.classList.toggle('night');
+        print(on ? 'night shift engaged.' : 'day shift resumed.');
+        log('info', `display: ${on ? 'night' : 'day'} mode`);
+      },
+    },
+    sudo: {
+      run(args) {
+        if (args.join(' ') === 'make me a sandwich') return print('okay.');
+        print('guest is not in the sudoers file. This incident will be reported.', 'err');
+        log('warn', 'sudo: incident reported to /dev/null');
+      },
+    },
+    rm: {
+      async run(args) {
+        if (!args.some((a) => /^-\w*r/.test(a))) return print(`rm: ${esc(args[0] ?? '')}: Read-only file system`, 'err');
+        const div = print('');
+        const steps = ['/bin', '/blog', '/resume', '/gearbox', '/coffee.d', '/ideas'];
+        for (const s of steps) {
+          div.innerHTML = `removing ${esc(s)} ...`;
+          await wait(260);
+        }
+        print(`rm: cannot remove '/': Read-only file system. ${dim('everything is fine.')}`, 'err');
+        log('err', 'rm -rf attempted. site still standing');
+      },
+    },
+    vim: {
+      run() {
+        vimMode = true;
+        print(`"[No Name]" 0L, 0B${' '.repeat(10)}${dim('-- you are now in vim --')}`);
+      },
+    },
+    emacs: { run() { print('emacs: try `vim`. it\'s just as easy to leave.'); } },
+    make: { run(args) { print(`make: *** No rule to make target '${esc(args[0] || 'sense')}'.  Stop.`, 'err'); } },
+    exit: { help: 'leave', run() { print('logout'); setTimeout(() => (location.href = '/'), 500); } },
+    reboot: { help: 'start over', run() { boot(true); } },
+    shutdown: { run() { halt(); } },
+    xyzzy: { run() { print('Nothing happens.'); } },
+    hello: { run() { print('hi! 👋'); } },
+    hi: { run() { print('hello!'); } },
+    '42': { run() { print('yes, but what was the question?'); } },
+    uname: { run(args) { print(args.includes('-a') ? `jpoz-os ${HOST} ${DATA.build.rev} #${DATA.build.hash} ${DATA.build.date} halftone_45deg GNU/Gopher` : 'jpoz-os'); } },
+    pwd: { run() { print('/home/guest'); } },
+    cd: { run(args) { print(args[0] ? `cd: ${esc(args[0])}: you can look, but you can't move in.` : ''); } },
+  };
+  COMMANDS.top = COMMANDS.ps;
+  COMMANDS.sysinfo = COMMANDS.neofetch;
+  COMMANDS.portrait = { run() { return COMMANDS.cat.run(['jpoz.txt'], 'cat jpoz.txt'); } };
+  COMMANDS.poweroff = COMMANDS.halt = COMMANDS.shutdown;
+
+  function findPost(q: string) {
+    const s = q.replace(/^(posts|archive)\//, '').replace(/\.html$/, '').toLowerCase();
+    return [...DATA.posts, ...DATA.archive].find((p) => p.slug.toLowerCase() === s);
+  }
+
+  function listPosts(list: PostRef[]) {
+    if (!list.length) return print(dim('(empty)'));
+    print(list.map((p) => `${dim(p.date)}  ${link(p.url, p.title)}`).join('\n'), 'pre');
+  }
+
+  async function run(raw: string) {
+    raw = raw.trim();
+    print(`${dim('guest@jpoz:~$')} ${esc(raw)}`, 'echo');
+    if (!raw) return;
+    history.push(raw);
+
+    if (vimMode) {
+      if (/^:(q|q!|wq|x|qa!?)$/.test(raw)) {
+        vimMode = false;
+        print('you escaped vim. most people never do.');
+        log('ok', 'vim: operator escaped');
+      } else {
+        print('E37: No write since last change (add ! to override)', 'err');
+      }
+      return;
+    }
+
+    const [name, ...args] = raw.split(/\s+/);
+    const c = COMMANDS[name.toLowerCase()];
+    if (!c) {
+      print(`sh: ${esc(name)}: command not found. try ${cmd('help')}`, 'err');
+      return;
+    }
+    line.classList.add('busy');
+    try {
+      await c.run(args, raw);
+    } finally {
+      line.classList.remove('busy');
+      out.scrollTop = out.scrollHeight;
+    }
+  }
+
+  // ---------- input ----------
+
+  let hIdx = 0;
+  input.addEventListener('keydown', async (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (line.classList.contains('busy')) return;
+      const v = input.value;
+      input.value = '';
+      hIdx = history.length + 1;
+      await run(v);
+      hIdx = history.length;
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      hIdx = Math.max(0, hIdx - 1);
+      input.value = history[hIdx] ?? '';
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      hIdx = Math.min(history.length, hIdx + 1);
+      input.value = history[hIdx] ?? '';
+    } else if (e.key === 'Tab') {
+      e.preventDefault();
+      complete();
+    } else if (e.key === 'l' && e.ctrlKey) {
+      e.preventDefault();
+      out.innerHTML = '';
+    } else if (e.key === 'c' && e.ctrlKey && input.selectionStart === input.selectionEnd) {
+      print(`${dim('guest@jpoz:~$')} ${esc(input.value)}^C`, 'echo');
+      input.value = '';
+    }
+  });
+
+  function complete() {
+    const v = input.value;
+    const parts = v.split(/\s+/);
+    let pool: string[];
+    if (parts.length <= 1) pool = Object.keys(COMMANDS).filter((n) => COMMANDS[n].help);
+    else if (parts[0] === 'open') pool = ['resume', 'blog', 'github', 'x', 'home', 'about', ...DATA.posts.map((p) => p.slug)];
+    else pool = [...Object.keys(FILES), 'posts/', 'archive/', ...DATA.posts.map((p) => `posts/${p.slug}`), ...DATA.archive.map((p) => `archive/${p.slug}`)];
+    const last = parts[parts.length - 1];
+    const hits = pool.filter((p) => p.startsWith(last));
+    if (hits.length === 1) {
+      parts[parts.length - 1] = hits[0];
+      input.value = parts.join(' ') + (hits[0].endsWith('/') ? '' : ' ');
+    } else if (hits.length > 1) {
+      print(`${dim('guest@jpoz:~$')} ${esc(v)}`, 'echo');
+      print(hits.map(esc).join('  '), 'dim');
+    }
+  }
+
+  out.addEventListener('click', (e) => {
+    const t = (e.target as HTMLElement).closest<HTMLButtonElement>('.cmd');
+    if (t && !line.classList.contains('busy')) {
+      run(t.dataset.cmd!);
+      input.focus({ preventScroll: true });
+    }
+  });
+  $('term').addEventListener('mouseup', () => {
+    if (!getSelection()?.toString()) input.focus({ preventScroll: true });
+  });
+
+  // ---------- boot / halt ----------
+
+  async function boot(again = false) {
+    line.classList.add('busy');
+    out.innerHTML = '';
+    const lines: [string, string][] = [
+      ['', `jpoz-os ${DATA.build.rev} (build #${DATA.build.hash})`],
+      ['ok', 'mounting /blog'],
+      ['ok', 'mounting /resume'],
+      ['ok', `indexing ${DATA.posts.length + DATA.archive.length} posts`],
+      ['ok', 'starting gearbox (halftone renderer)'],
+      ['ok', 'starting coffee.d'],
+      ['ok', 'starting agentd x2'],
+      ['warn', 'side-project-07: zombie, skipping'],
+      ['ok', 'starting ideas --daemon'],
+      ['ok', `binding ${HOST}:443`],
+    ];
+    for (const [s, t] of lines) {
+      print(s ? `[ ${s === 'ok' ? ' OK ' : 'WARN'} ] ${esc(t)}` : esc(t), s === 'warn' ? 'warn' : s ? '' : 'dim');
+      await wait(again ? 70 : 110 + Math.random() * 120);
+    }
+    print();
+    const last = new Date(Date.now() - (2 + Math.random() * 70) * 3600e3);
+    print(`Last login: ${last.toString().slice(0, 24)} on ttys00${Math.floor(Math.random() * 9)}`);
+    print(dim(`Type ${cmd('help')} for commands.`));
+    line.classList.remove('busy');
+    input.focus({ preventScroll: true });
+    log('ok', again ? 'system rebooted by guest' : 'tty0: guest session opened');
+  }
+
+  function halt() {
+    print('Broadcast message from guest@jpoz: the system is going down NOW!', 'warn');
+    log('err', 'shutdown requested');
+    setTimeout(() => {
+      $('halt').hidden = false;
+      $('power').focus();
+    }, reduced ? 0 : 700);
+  }
+  $('power').addEventListener('click', () => {
+    $('halt').hidden = true;
+    boot(true);
+  });
+
+  // ---------- start ----------
+
+  tick();
+  setInterval(tick, 1000);
+  log('info', `visitor tz ${Intl.DateTimeFormat().resolvedOptions().timeZone}`);
+  log('info', `display ${innerWidth}x${innerHeight} @${devicePixelRatio}x`);
+  if (document.referrer) log('info', `arrived from ${new URL(document.referrer).hostname}`);
+  setTimeout(ambient, 1800);
+  boot();
+</script>
+
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-K7ZEMM6EGS"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K7ZEMM6EGS');
+</script>
+</body>
+</html>
+
+<style is:global>
+  :root {
+    --paper: #EFE8E7;
+    --ink: #2A292C;
+    --ink-2: #6B6668;
+    --ink-3: #9A9395;
+    --rule: rgba(42, 41, 44, 0.22);
+    --dots: rgba(42, 41, 44, 0.35);
+    --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    --inset: 24px;
+  }
+  :root.night {
+    --paper: #1D1C1F;
+    --ink: #E9E2E1;
+    --ink-2: #A8A1A3;
+    --ink-3: #6E686A;
+    --rule: rgba(233, 226, 225, 0.18);
+    --dots: rgba(233, 226, 225, 0.22);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.55;
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .dim { color: var(--ink-3); }
+  b { font-weight: 500; }
+  a { color: inherit; }
+
+  /* ---------- frame (same as the homepage) ---------- */
+
+  .frame {
+    position: fixed;
+    inset: var(--inset);
+    z-index: 3;
+    pointer-events: none;
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .corner { position: absolute; width: 18px; height: 18px; border: 0 solid var(--ink); }
+  .corner.tl { top: 0; left: 0; border-top-width: 1px; border-left-width: 1px; }
+  .corner.tr { top: 0; right: 0; border-top-width: 1px; border-right-width: 1px; }
+  .corner.bl { bottom: 0; left: 0; border-bottom-width: 1px; border-left-width: 1px; }
+  .corner.br { bottom: 0; right: 0; border-bottom-width: 1px; border-right-width: 1px; }
+  .edge { position: absolute; background: var(--paper); padding: 1px 6px; font-variant-numeric: tabular-nums; transition: background 0.3s; }
+  .edge span { color: var(--ink-3); }
+  .edge a { pointer-events: auto; text-decoration: none; color: var(--ink-2); }
+  .edge a:hover { color: var(--ink); }
+  .edge.top-left { top: 4px; left: 30px; }
+  .edge.top-right { top: 4px; right: 30px; }
+
+  /* ---------- layout ---------- */
+
+  .console {
+    position: fixed;
+    inset: calc(var(--inset) + 22px);
+    display: flex;
+    justify-content: center;
+  }
+  .panel {
+    position: relative;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    min-height: 0;
+    transition: background 0.3s;
+  }
+  /* halftone drop shadow, like the homepage cards */
+  .panel::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    transform: translate(8px, 8px);
+    z-index: -1;
+    background-image: radial-gradient(circle, var(--dots) 1.1px, transparent 1.6px), radial-gradient(circle, var(--dots) 1.1px, transparent 1.6px);
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+  }
+  .panel > header {
+    display: flex;
+    gap: 14px;
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .panel > header { justify-content: center; text-transform: none; letter-spacing: 0.04em; color: var(--ink-3); }
+
+  /* ---------- terminal ---------- */
+
+  .term { display: flex; flex-direction: column; width: min(100%, 980px); }
+  .out {
+    flex: 1;
+    overflow-y: auto;
+    padding: 14px 16px 4px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
+  }
+  .out > div { white-space: pre-wrap; word-break: break-word; min-height: 1.55em; }
+  .out .pre { white-space: pre; overflow-x: auto; }
+  .out .err { color: var(--ink); }
+  .out .err::before { content: '! '; color: var(--ink-3); }
+  .out .warn { color: var(--ink-2); }
+  .out .echo { margin-top: 6px; }
+  .out a { text-underline-offset: 3px; text-decoration-color: var(--ink-3); }
+  .out a:hover { text-decoration-color: var(--ink); }
+  .cmd {
+    font: inherit;
+    color: var(--ink);
+    background: none;
+    border: none;
+    border-bottom: 1px dashed var(--ink-3);
+    padding: 0;
+    cursor: pointer;
+  }
+  .cmd:hover, .cmd:focus-visible {
+    outline: none;
+    background-image: radial-gradient(circle, var(--dots) 1px, transparent 1.5px), radial-gradient(circle, var(--dots) 1px, transparent 1.5px);
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+  }
+  .portrait { font-size: 6px; line-height: 1; letter-spacing: 0; color: var(--ink); }
+
+  .line {
+    display: flex;
+    gap: 9px;
+    align-items: baseline;
+    padding: 10px 16px 12px;
+    border-top: 1px solid var(--rule);
+    cursor: text;
+  }
+  .line .ps1 { color: var(--ink-3); white-space: nowrap; }
+  .line input {
+    flex: 1;
+    min-width: 0;
+    font: inherit;
+    font-size: max(12.5px, 16px * var(--touch, 0)); /* avoid iOS zoom-on-focus, see media query */
+    color: var(--ink);
+    background: none;
+    border: none;
+    outline: none;
+    caret-color: var(--ink);
+    padding: 0;
+  }
+  .line.busy input { opacity: 0.3; }
+  .line.busy .ps1::after { content: ' ...'; animation: blink 0.8s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ---------- shutdown ---------- */
+
+  .halt {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 18px;
+    background: #111;
+    color: #8a8486;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    animation: off 0.5s ease-in;
+  }
+  .halt[hidden] { display: none; }
+  .halt button {
+    font: inherit;
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #cfc8c7;
+    background: none;
+    border: 1px solid #555;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  .halt button:hover, .halt button:focus-visible { border-color: #cfc8c7; outline: none; }
+  @keyframes off {
+    0% { clip-path: inset(0 0 0 0); background: #fff; }
+    40% { clip-path: inset(49.5% 0 49.5% 0); background: #fff; }
+    100% { clip-path: inset(0 0 0 0); background: #111; }
+  }
+
+  /* ---------- narrow ---------- */
+
+  @media (max-width: 860px) {
+    :root { --inset: 12px; --touch: 1; }
+    .console { inset: calc(var(--inset) + 18px) calc(var(--inset) + 6px); }
+    .out { padding: 12px 12px 4px; font-size: 11.5px; }
+    .line { padding: 9px 12px 11px; }
+    .portrait { font-size: 3.4px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .halt { animation: none; }
+  }
+</style>

@@ -17,7 +17,8 @@ export default defineConfig({
     // Let `make dev` be reached over Tailscale by MagicDNS name, not just IP.
     server: { allowedHosts: ['.ts.net'] },
   },
-  integrations: [sitemap(), mdx()],
+  // /sys is a hidden page: keep it out of the sitemap.
+  integrations: [sitemap({ filter: (page) => !/\/sys(\.html)?$/.test(page) }), mdx()],
   markdown: {
     shikiConfig: { theme: 'github-light', wrap: true },
     smartypants: false,
