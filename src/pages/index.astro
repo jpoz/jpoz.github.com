@@ -8,7 +8,7 @@ const links = [
   { n: '01', label: 'GitHub', value: 'github.com/jpoz', href: 'https://github.com/jpoz', external: true },
   { n: '02', label: 'Resume', value: '/resume', href: '/resume.html', external: false },
   { n: '03', label: 'X', value: 'x.com/jpoz', href: 'https://x.com/jpoz', external: true },
-  { n: '04', label: 'Making of', value: 'how the graphics work', href: 'https://youtu.be/XX5PobqkE_Y', external: true },
+  { n: '04', label: 'Making of', value: 'how the graphics work', href: 'https://youtu.be/XX5PobqkE_Y', external: true, mobileOnly: true },
 ];
 ---
 
@@ -48,7 +48,7 @@ const links = [
 
   <div class="links" role="navigation">
     {links.map((l) => (
-      <a href={l.href} target={l.external ? '_blank' : undefined} rel={l.external ? 'noopener' : undefined}>
+      <a href={l.href} class={l.mobileOnly ? 'mobile-only' : undefined} target={l.external ? '_blank' : undefined} rel={l.external ? 'noopener' : undefined}>
         <span class="n">{l.n}</span>
         <span class="k">{l.label}</span>
         <span class="v">{l.value}</span>
@@ -68,6 +68,9 @@ const links = [
     <button type="button" id="tb-prev" aria-label="Previous view">&larr;</button>
     <button type="button" id="tb-next" aria-label="Next view">&rarr;</button>
   </div>
+  <a class="tb-video" href="https://youtu.be/XX5PobqkE_Y" target="_blank" rel="noopener">
+    <span>Making of</span><b>Watch the video</b><i>&nearr;</i>
+  </a>
 </div>
 
 <script>
@@ -347,6 +350,7 @@ const links = [
 
   /* halftone fill on hover, same 45deg dot grid as the render */
   .links a:hover,
+  .titleblock .tb-video:hover,
   .titleblock button:hover {
     background-image:
       radial-gradient(circle, rgba(42, 41, 44, 0.2) 1px, transparent 1.5px),
@@ -405,11 +409,27 @@ const links = [
   }
   .titleblock button:last-child { margin-right: -12px; }
 
+  .titleblock .tb-video {
+    pointer-events: auto;
+    display: grid;
+    grid-template-columns: 86px 1fr auto;
+    padding: 7px 12px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .titleblock .tb-video i { font-style: normal; transition: transform 0.2s; }
+  .titleblock .tb-video:hover i { transform: translate(2px, -2px); }
+  .titleblock .tb-video:focus-visible { outline: 1px solid var(--ink); outline-offset: -1px; }
+
+  /* the making-of link lives in the titleblock; the links table carries it only when that is hidden */
+  .links a.mobile-only { display: none; }
+
   /* ---------- narrow ---------- */
 
   @media (max-aspect-ratio: 115/100) {
     :root { --inset: 12px; }
     .edge.bottom-left, .titleblock { display: none; }
+    .links a.mobile-only { display: grid; }
     .home {
       left: 50%;
       top: auto;
