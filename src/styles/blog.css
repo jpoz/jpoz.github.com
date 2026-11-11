@@ -504,7 +504,7 @@ body.blog {
 
 .spec { margin-top: 64px; }
 .spec dl { margin: 0; }
-.spec div {
+.spec dl > div {
   display: grid;
   grid-template-columns: 40px 200px 1fr;
   column-gap: 12px;
@@ -547,8 +547,17 @@ body.blog {
   .prose pre { margin-left: -12px; margin-right: -12px; font-size: 13px; }
   .about-grid { grid-template-columns: 1fr; gap: 28px; padding-top: 40px; }
   .about-grid .plate { max-width: 200px; }
-  .spec div { grid-template-columns: 28px 1fr; }
+  .spec dl > div { grid-template-columns: 28px 1fr; }
   .spec dd { grid-column: 2; margin-top: 4px; }
+  /* the nav already marks the current section; drop the crumb so the masthead stays on one row */
+  .masthead { flex-wrap: nowrap; }
+  .masthead .brand .dim { display: none; }
+  /* pin the corners to the page, not the viewport, so they never sit on top of body text */
+  body.blog { position: relative; }
+  .frame { position: absolute; }
+  .intro { padding-bottom: 8px; }
+  .section-label { margin-top: 36px; }
+  .colophon { margin-top: 64px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

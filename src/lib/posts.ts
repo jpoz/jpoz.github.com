@@ -23,7 +23,12 @@ export const legacyDate = (p: LegacyPost) => new Date(p.id.slice(0, 10) + 'T12:0
 export const slugify = (s: string) =>
   s.toLowerCase().trim().replace(/[^\p{L}\p{N}\s-]/gu, '').replace(/\s+/g, '-');
 
-export const humanize = (s: string) => s.replace(/[-_]+/g, ' ').replace(/^\p{L}/u, (c) => c.toUpperCase());
+// tags and categories are stored lowercase; restore the usual casing of acronyms
+const CASING: Record<string, string> = { ai: 'AI', llm: 'LLM', llms: 'LLMs', json: 'JSON', xml: 'XML', xlsx: 'XLSX', wasm: 'Wasm', api: 'API', apis: 'APIs', ui: 'UI', cli: 'CLI', go: 'Go' };
+export const humanize = (s: string) =>
+  s.replace(/[-_]+/g, ' ')
+    .replace(/\p{L}[\p{L}\d]*/gu, (w) => CASING[w.toLowerCase()] ?? w)
+    .replace(/^\p{L}/u, (c) => c.toUpperCase());
 
 /** 2026.10.15 */
 export const formatDate = (d: Date) =>

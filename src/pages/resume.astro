@@ -112,7 +112,7 @@ const rev = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}
       <td class='left'>Louisville, CO</td>
       <td class='right'>
         <a target="_blank" href="https://github.com/jpoz">github.com/jpoz</a>
-        {' | '}
+        <span class="sep">{' | '}</span>
         <a target="_blank" href="https://www.linkedin.com/in/jpozdena/">linkedin.com/in/jpozdena</a>
       </td>
     </tr>
@@ -231,7 +231,9 @@ const rev = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}
     #resume.sheet {
       position: relative;
       z-index: 2;
-      max-width: 760px;
+      /* resume.scss sets width: 100%, which overflows once the side margins are added */
+      width: min(760px, calc(100% - 2 * (var(--inset) + 24px)));
+      max-width: none;
       margin: calc(var(--inset) + 56px) auto calc(var(--inset) + 72px);
       padding: 26px 40px 34px;
       color: var(--ink);
@@ -405,6 +407,7 @@ const rev = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}
     @media (max-width: 700px) {
       body:has(#resume.sheet) { --inset: 12px; }
       #resume.sheet {
+        width: auto;
         margin: calc(var(--inset) + 34px) 14px calc(var(--inset) + 40px);
         padding: 18px 20px 24px;
         font-size: 14.5px;
@@ -412,6 +415,13 @@ const rev = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}
       #resume.sheet::before { transform: translate(6px, 6px); }
       #resume.sheet table.info td { display: block; text-align: left; padding: 8px 2px 0; }
       #resume.sheet table.info .right { padding-bottom: 8px; }
+      /* one link per line instead of a wrapped "a | b" */
+      #resume.sheet table.info .sep { display: none; }
+      #resume.sheet table.info .right a { display: block; }
+      #resume.sheet table.info .right a + a { margin-top: 2px; }
+      /* corners pinned to the page so they don't peek out past the sheet while scrolling */
+      body:has(#resume.sheet) { position: relative; display: flow-root; }  /* flow-root: keep the sheet margin from collapsing through body */
+      .frame { position: absolute; }
       #resume.sheet .job .position .desc { flex-direction: column; gap: 2px; }
     }
   }
