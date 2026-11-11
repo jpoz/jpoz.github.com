@@ -62,8 +62,19 @@ const data = {
       <div class="out" id="out" role="log" aria-live="polite"></div>
       <label class="line" id="line">
         <span class="ps1">guest@jpoz:~$</span>
-        <input id="in" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Command">
+        <input id="in" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Command" enterkeyhint="go">
       </label>
+      <div class="keys" id="keys">
+        <button type="button" data-key="tab">tab</button>
+        <button type="button" data-key="up" aria-label="Previous command">&uarr;</button>
+        <button type="button" data-key="down" aria-label="Next command">&darr;</button>
+        <button type="button" data-cmd="help">help</button>
+        <button type="button" data-cmd="ls">ls</button>
+        <button type="button" data-cmd="ps">ps</button>
+        <button type="button" data-cmd="posts">posts</button>
+        <button type="button" data-cmd="neofetch">neofetch</button>
+        <button type="button" data-cmd="clear">clear</button>
+      </div>
     </section>
   </div>
 
@@ -82,6 +93,7 @@ const data = {
   const input = $<HTMLInputElement>('in');
   const line = $('line');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const touch = matchMedia('(hover: none) and (pointer: coarse)').matches;
   const FIRST_COMMIT = Date.UTC(2009, 0, 7); // `git log --reverse | head -1`: "first commit"
   const isCom = /(^|\.)jpoz\.com$/.test(location.hostname);
   const HOST = isCom ? 'jpoz.com' : 'jpoz.net';
@@ -108,6 +120,20 @@ const data = {
   const b = (s: string) => `<b>${s}</b>`;
   const cmd = (s: string) => `<button type="button" class="cmd" data-cmd="${esc(s)}">${esc(s)}</button>`;
   const link = (href: string, label: string) => `<a href="${esc(href)}">${esc(label)}</a>`;
+  // One output line that wraps with a hanging indent, so columns survive narrow screens.
+  const row = (html: string, hang = 0) => `<span class="row" style="--hang:${hang}ch">${html}</span>`;
+
+  // How many monospace columns fit in the output area right now.
+  function cols() {
+    const s = document.createElement('span');
+    s.textContent = '0'.repeat(10);
+    s.style.cssText = 'position:absolute;visibility:hidden;white-space:pre';
+    out.appendChild(s);
+    const w = s.getBoundingClientRect().width / 10;
+    s.remove();
+    const cs = getComputedStyle(out);
+    return Math.floor((out.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)) / w);
+  }
 
   // ---------- log ----------
 
@@ -249,8 +275,8 @@ const data = {
       run() {
         const rows = Object.entries(COMMANDS)
           .filter(([, c]) => c.help)
-          .map(([n, c]) => `  ${cmd(n)}${' '.repeat(Math.max(1, 11 - n.length))}${dim(c.help!)}`);
-        print(rows.join('\n'), 'pre');
+          .map(([n, c]) => row(`  ${cmd(n)}${' '.repeat(Math.max(1, 11 - n.length))}${dim(esc(c.help!))}`, 13));
+        print(rows.join(''));
         print(dim('there are a few more. you\'ll find them.'));
       },
     },
@@ -274,12 +300,12 @@ const data = {
         if (!f) return print('usage: cat <file>', 'err');
         const post = findPost(f);
         if (post) {
-          print(`${b(esc(post.title))}\n${dim(post.date)}  ${link(post.url, post.url)}`, 'pre');
+          print(`${b(esc(post.title))}\n${dim(post.date)}  ${link(post.url, post.url)}`);
           return;
         }
         const file = FILES[f.replace(/^~?\//, '')];
         if (!file) return print(`cat: ${esc(f)}: No such file or directory`, 'err');
-        print(await file(), 'pre');
+        print(await file());
       },
     },
     open: {
@@ -328,7 +354,8 @@ const data = {
           `${b('TZ')}       ${Intl.DateTimeFormat().resolvedOptions().timeZone}`,
           `${b('Coffee')}   ${Math.round(coffee * 100)}%`,
         ];
-        const rows = info.map((r, i) => `${logo[i] ?? ' '.repeat(17)}  ${r}`);
+        // The logo needs ~58 columns next to the info; on a phone, show the info alone.
+        const rows = cols() < 58 ? info : info.map((r, i) => `${logo[i] ?? ' '.repeat(17)}  ${r}`);
         print(rows.join('\n'), 'pre');
       },
     },
@@ -343,9 +370,13 @@ const data = {
       help: 'process status',
       run() {
         jitter();
-        const rows = procs.map((p) => `${String(p.pid).padStart(5)}  ${p.cpu.toFixed(1).padStart(4)}  ${p.state}  ${p.name.padEnd(16)} ${dim(esc(p.note))}`);
-        print(`${dim('  PID  %CPU  S  NAME')}\n${rows.join('\n')}`, 'pre');
-        print(dim('try kill <pid>'));
+        const head = (p: Proc) => `${String(p.pid).padStart(5)}  ${p.cpu.toFixed(1).padStart(4)}  ${p.state}  `;
+        // Wide: notes in a column. Narrow: notes on their own line under each process.
+        const rows = cols() < 72
+          ? procs.flatMap((p) => [row(head(p) + esc(p.name)), row(' '.repeat(7) + dim(esc(p.note)), 7)])
+          : procs.map((p) => row(`${head(p)}${esc(p.name.padEnd(16))} ${dim(esc(p.note))}`, 33));
+        print(row(dim('  PID  %CPU  S  NAME')) + rows.join(''));
+        print(dim('try kill &lt;pid&gt;'));
       },
     },
     kill: {
@@ -429,7 +460,7 @@ const data = {
     },
     dmesg: {
       help: 'system log',
-      run() { print(LOG.slice(-30).map(esc).join('\n') || dim('(empty)'), 'pre'); },
+      run() { print(LOG.slice(-30).map((l) => row(esc(l), 16)).join('') || dim('(empty)')); },
     },
     tail: { run() { return COMMANDS.dmesg.run([], 'dmesg'); } },
     date: { run() { print(new Date().toString()); } },
@@ -497,7 +528,7 @@ const data = {
 
   function listPosts(list: PostRef[]) {
     if (!list.length) return print(dim('(empty)'));
-    print(list.map((p) => `${dim(p.date)}  ${link(p.url, p.title)}`).join('\n'), 'pre');
+    print(list.map((p) => row(`${dim(p.date)}  ${link(p.url, p.title)}`, p.date.length + 2)).join(''));
   }
 
   async function run(raw: string) {
@@ -546,12 +577,10 @@ const data = {
       hIdx = history.length;
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      hIdx = Math.max(0, hIdx - 1);
-      input.value = history[hIdx] ?? '';
+      recall(-1);
     } else if (e.key === 'ArrowDown') {
       e.preventDefault();
-      hIdx = Math.min(history.length, hIdx + 1);
-      input.value = history[hIdx] ?? '';
+      recall(1);
     } else if (e.key === 'Tab') {
       e.preventDefault();
       complete();
@@ -563,6 +592,11 @@ const data = {
       input.value = '';
     }
   });
+
+  function recall(step: number) {
+    hIdx = Math.max(0, Math.min(history.length, hIdx + step));
+    input.value = history[hIdx] ?? '';
+  }
 
   function complete() {
     const v = input.value;
@@ -586,12 +620,44 @@ const data = {
     const t = (e.target as HTMLElement).closest<HTMLButtonElement>('.cmd');
     if (t && !line.classList.contains('busy')) {
       run(t.dataset.cmd!);
-      input.focus({ preventScroll: true });
+      // On a phone, focusing would pop the keyboard over the output you just asked for.
+      if (!touch) input.focus({ preventScroll: true });
     }
   });
   $('term').addEventListener('mouseup', () => {
-    if (!getSelection()?.toString()) input.focus({ preventScroll: true });
+    if (!touch && !getSelection()?.toString()) input.focus({ preventScroll: true });
   });
+
+  // Soft keys for phones: tab, history, and a few common commands.
+  const keys = $('keys');
+  // Keep the keyboard up (or down) as it was when a key is tapped.
+  keys.addEventListener('pointerdown', (e) => e.preventDefault());
+  keys.addEventListener('click', (e) => {
+    const t = (e.target as HTMLElement).closest<HTMLButtonElement>('button');
+    if (!t) return;
+    const k = t.dataset.key;
+    if (k === 'tab') complete();
+    else if (k === 'up') recall(-1);
+    else if (k === 'down') recall(1);
+    else if (t.dataset.cmd && !line.classList.contains('busy')) run(t.dataset.cmd);
+  });
+
+  // Fit the console to the visible area, so the on-screen keyboard doesn't cover the prompt.
+  const vv = window.visualViewport;
+  if (vv) {
+    const root = document.documentElement;
+    const fit = () => {
+      const top = Math.max(0, vv.offsetTop);
+      const bottom = Math.max(0, innerHeight - vv.height - vv.offsetTop);
+      root.style.setProperty('--vvt', `${top}px`);
+      root.style.setProperty('--vvb', `${bottom}px`);
+      root.classList.toggle('kb', bottom > 80);
+      out.scrollTop = out.scrollHeight;
+    };
+    vv.addEventListener('resize', fit);
+    vv.addEventListener('scroll', fit);
+    fit();
+  }
 
   // ---------- boot / halt ----------
 
@@ -619,7 +685,7 @@ const data = {
     print(`Last login: ${last.toString().slice(0, 24)} on ttys00${Math.floor(Math.random() * 9)}`);
     print(dim(`Type ${cmd('help')} for commands.`));
     line.classList.remove('busy');
-    input.focus({ preventScroll: true });
+    if (!touch) input.focus({ preventScroll: true });
     log('ok', again ? 'system rebooted by guest' : 'tty0: guest session opened');
   }
 
@@ -667,7 +733,14 @@ const data = {
     --dots: rgba(42, 41, 44, 0.35);
     --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
     --inset: 24px;
+    --py: 22px;
+    --px: 22px;
+    --sat: env(safe-area-inset-top, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+    --sar: env(safe-area-inset-right, 0px);
   }
+  :root.kb { --sab: 0px; }
   :root.night {
     --paper: #1D1C1F;
     --ink: #E9E2E1;
@@ -698,7 +771,10 @@ const data = {
 
   .frame {
     position: fixed;
-    inset: var(--inset);
+    top: calc(var(--vvt, 0px) + var(--inset) + var(--sat));
+    bottom: calc(var(--vvb, 0px) + var(--inset) + var(--sab));
+    left: calc(var(--inset) + var(--sal));
+    right: calc(var(--inset) + var(--sar));
     z-index: 3;
     pointer-events: none;
     font-size: 10.5px;
@@ -722,7 +798,10 @@ const data = {
 
   .console {
     position: fixed;
-    inset: calc(var(--inset) + 22px);
+    top: calc(var(--vvt, 0px) + var(--inset) + var(--sat) + var(--py));
+    bottom: calc(var(--vvb, 0px) + var(--inset) + var(--sab) + var(--py));
+    left: calc(var(--inset) + var(--sal) + var(--px));
+    right: calc(var(--inset) + var(--sar) + var(--px));
     display: flex;
     justify-content: center;
   }
@@ -768,6 +847,7 @@ const data = {
   }
   .out > div { white-space: pre-wrap; word-break: break-word; min-height: 1.55em; }
   .out .pre { white-space: pre; overflow-x: auto; }
+  .out .row { display: block; padding-left: var(--hang); text-indent: calc(-1 * var(--hang)); }
   .out .err { color: var(--ink); }
   .out .err::before { content: '! '; color: var(--ink-3); }
   .out .warn { color: var(--ink-2); }
@@ -789,7 +869,7 @@ const data = {
     background-size: 6px 6px;
     background-position: 0 0, 3px 3px;
   }
-  .portrait { font-size: 6px; line-height: 1; letter-spacing: 0; color: var(--ink); }
+  .portrait { font-size: 6px; line-height: 1; letter-spacing: 0; color: var(--ink); overflow-x: auto; }
 
   .line {
     display: flex;
@@ -813,6 +893,8 @@ const data = {
     padding: 0;
   }
   .line.busy input { opacity: 0.3; }
+
+  .keys { display: none; }
   .line.busy .ps1::after { content: ' ...'; animation: blink 0.8s steps(2) infinite; }
   @keyframes blink { 50% { opacity: 0; } }
 
@@ -854,11 +936,49 @@ const data = {
   /* ---------- narrow ---------- */
 
   @media (max-width: 860px) {
-    :root { --inset: 12px; --touch: 1; }
-    .console { inset: calc(var(--inset) + 18px) calc(var(--inset) + 6px); }
+    :root { --inset: 12px; --py: 18px; --px: 6px; --touch: 1; }
+    :root.kb { --inset: 4px; --py: 16px; }
     .out { padding: 12px 12px 4px; font-size: 11.5px; }
     .line { padding: 9px 12px 11px; }
-    .portrait { font-size: 3.4px; }
+    /* 97 columns, scaled to fit the width of the output */
+    .portrait { font-size: clamp(2.6px, (100vw - 80px) / 58, 6px); }
+  }
+
+  /* ---------- touch ---------- */
+
+  @media (hover: none) and (pointer: coarse) {
+    :root { --touch: 1; }
+    body { -webkit-tap-highlight-color: transparent; }
+    .out { line-height: 1.75; }
+    .out .cmd { touch-action: manipulation; }
+    .line { border-bottom: 1px solid var(--rule); }
+    .keys {
+      display: flex;
+      gap: 6px;
+      padding: 8px 12px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .keys::-webkit-scrollbar { display: none; }
+    .keys button {
+      flex: none;
+      min-width: 40px;
+      min-height: 34px;
+      padding: 0 11px;
+      font: inherit;
+      font-size: 12px;
+      color: var(--ink-2);
+      background: none;
+      border: 1px solid var(--rule);
+      border-radius: 0;
+      touch-action: manipulation;
+    }
+    .keys button:active {
+      color: var(--ink);
+      background-image: radial-gradient(circle, var(--dots) 1px, transparent 1.5px), radial-gradient(circle, var(--dots) 1px, transparent 1.5px);
+      background-size: 6px 6px;
+      background-position: 0 0, 3px 3px;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
