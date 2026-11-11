@@ -1,0 +1,188 @@
+---
+title: "Go Is the Best Language for AI-Written Code"
+meta_title: ""
+description: "Go's constraints, the things people used to complain about, turn out to be exactly the properties that make AI-generated code trustworthy."
+date: 2026-03-29T05:00:00Z
+image: "/images/posts/go-workers.webp"
+categories: ["thoughts"]
+authors: ["jpoz"]
+tags: ["ai", "go"]
+draft: false
+---
+
+You're picking the language for your next project.
+
+You open Claude, describe what you're building, and ask what language to use. It says Python. Of course it says Python. If you let AI pick, you're writing Python every time.
+
+But is that really the best choice? If you're building an LLM, sure, pick Python. The ecosystem is unmatched. But you're not building an LLM. You're building a backend service. And more importantly, you're not just picking a language for *you* to write in. You're picking a language for the AI to write in while you review its work.
+
+That changes the calculus entirely.
+
+I've spent the last year writing Go with AI doing most of the typing. I [built a spreadsheet formula engine](/posts/build-xlsx) with over 400 functions this way. The more I work like this, the more convinced I become: Go might be the best language we have for AI-written code.
+
+Let me show you what I mean.
+
+## One way to write it
+
+You start the project. You ask the AI to write a utility that reads a config file. If you chose Python, here's what comes back:
+
+```python
+with open("config.txt") as f:
+    data = f.read()
+```
+
+Fine. Clean. You move on. Next prompt, different context window, the AI writes:
+
+```python
+data = Path("config.txt").read_text()
+```
+
+Also fine. Different style. A few prompts later, a third approach:
+
+```python
+f = io.open("config.txt", encoding="utf-8")
+```
+
+Three files, three conventions, one codebase. Each is valid Python. None of them are wrong. But when you open a pull request with code from a dozen different prompts, it looks like it was written by a dozen different people, because it was.
+
+Now rewind. You chose Go instead.
+
+```go
+data, err := os.ReadFile("config.txt")
+if err != nil {
+    return err
+}
+```
+
+First prompt, tenth prompt, fiftieth prompt, it comes back the same way every time. Go has a deliberately small surface area. There's usually one obvious way to do something, and while Go isn't immune to choice (you can read a file with `os.ReadFile`, `os.Open` plus `io.ReadAll`, or `bufio.Scanner`), the range of options is narrow compared to most languages. An LLM picks whichever pattern it saw most recently in its context window. In Go, the options are close enough that the code stays consistent.
+
+`gofmt` takes this further. Every Go file in existence is formatted the same way. No debates, no config. When you're stitching together output from dozens of prompts, that consistency isn't cosmetic. It's structural.
+
+Then there's the [Go 1 compatibility promise](https://go.dev/doc/go1compat). Go has never had a breaking version change. The Go team has said that "Go 2, in the sense of breaking with the past and no longer compiling old programs, is never going to happen." Code from 2012 training data is still valid Go today. LLMs have 14+ years of consistent, non-breaking code to learn from. Compare that to Python 2 vs. 3, or JavaScript framework churn where last year's idiomatic React looks nothing like this year's.
+
+## The 2 AM pager
+
+You're generating a data pipeline. The AI writes a function that takes a user ID and returns their account balance. In Python:
+
+```python
+def get_balance(user_id):
+    row = db.query("SELECT balance FROM accounts WHERE id = ?", user_id)
+    return row["balance"]
+```
+
+Looks good. You ship it. At 2 AM, your pager goes off. Somewhere upstream, `user_id` is coming in as a string instead of an int. The query returns nothing. `row` is `None`. The function returns `None` instead of a number, and three services downstream are silently doing math on `None`.
+
+Rewind. You chose Go.
+
+```go
+func getBalance(userID int) (float64, error) {
+    var balance float64
+    err := db.QueryRow("SELECT balance FROM accounts WHERE id = ?", userID).Scan(&balance)
+    if err != nil {
+        return 0, err
+    }
+    return balance, nil
+}
+```
+
+The AI generates a version where `userID` is a `string`. You run `go build`. It fails in 200ms: type mismatch. The AI fixes it. You run `go build` again. It passes. The whole exchange takes seconds, not a production incident.
+
+Go's type system hits a sweet spot for AI. It's strict enough to catch real bugs but simple enough that LLMs rarely get tangled in it. Rust's borrow checker trips up models constantly: they'll generate code that's conceptually correct but fails to satisfy the compiler's ownership rules. Go gives you enough structure to catch mistakes without creating a puzzle the AI can't solve.
+
+Implicit interface satisfaction is underrated here. A type satisfies an interface just by having the right methods. No `implements` keyword, no declaration graph for the AI to track. If the methods match, it works. If they don't, the compiler tells you.
+
+## 600 lines to review
+
+You open a pull request. The AI wrote 600 lines across eight files. This is your job now: not writing, reviewing.
+
+In Python, you see this:
+
+```python
+def load_config(path):
+    data = open(path).read()
+    return json.loads(data)["database"]["host"]
+```
+
+Three lines. Clean. But your reviewer brain starts asking questions. What if the file is missing? What if the JSON is malformed? What if the structure doesn't have a "database" key? Maybe a `try/except` somewhere catches it. Maybe a decorator handles it. Maybe the framework swallows the exception. You trace three stack frames up, find nothing, and add a comment: "What happens if this fails?"
+
+The Go version of the same logic:
+
+```go
+func loadConfig(path string) (string, error) {
+    data, err := os.ReadFile(path)
+    if err != nil {
+        return "", err
+    }
+
+    var cfg Config
+    if err := json.Unmarshal(data, &cfg); err != nil {
+        return "", err
+    }
+    return cfg.Database.Host, nil
+}
+```
+
+More lines. More verbose. But every failure path is visible. If `err != nil` is missing after a function call, it's a red flag you can see in the diff. You don't need to reason about exception propagation or what some decorator might be swallowing.
+
+Go functions read top-to-bottom. No nested callbacks, no monadic chains, no decorator magic. What you see is what executes. Go culture pushes toward short, single-purpose functions, and AI naturally produces these. Diffs end up scoped to small, reviewable units rather than 200-line methods with six levels of nesting.
+
+The `if err != nil` pattern gets more criticism than almost anything else in Go. It's verbose. It's repetitive. All true. But when AI is the author and you're the reviewer, that verbosity becomes a feature. Every error path is explicit. Every branch is visible. No operator overloading, no implicit conversions, no metaprogramming. `a + b` always means addition or string concatenation. When you review a Go diff, you're reviewing *all* of the behavior, not just the parts the language lets you see.
+
+## The phantom package
+
+You ask the AI to add rate limiting. In Python, it reaches for a library:
+
+```python
+from ratelimit import limits, sleep_and_retry
+```
+
+You go to install it. `pip install ratelimit`. Wait, is it `ratelimit` or `rate-limit` or `python-ratelimit`? You check PyPI. The package exists, but it hasn't been updated in three years. Or maybe it doesn't exist at all, and the AI hallucinated it. You've seen that before.
+
+In Go, the AI writes:
+
+```go
+import (
+    "sync"
+    "time"
+)
+```
+
+It uses a `time.Ticker` and a `sync.Mutex` from the standard library. No third-party package. No hallucination risk.
+
+Go's standard library covers HTTP servers, JSON, crypto, testing, and more. LLMs are less likely to hallucinate fake packages when most needs are covered out of the box. Ask an AI to make an HTTP request in Python and it might reach for `requests`, `httpx`, `aiohttp`, or `urllib3`. In Go, it's `net/http`. Always.
+
+Sub-second compilation enables tight generate-compile-test loops. The difference between a 200ms compile and a 30-second build is the difference between a productive AI agent and a frustrating one.
+
+Go compiles to a single static binary. No virtualenvs, no interpreters, no dependency resolution at deploy time. And the resource efficiency compounds: [Lovable cut from 200 server instances to 10](https://lovable.dev/blog/from-python-to-go) after migrating 42,000 lines of Python to Go. When AI makes it easier to spin up more services, the per-service cost of your runtime matters more, not less.
+
+## What about Rust?
+
+Someone in the thread replies: "If you want compiler guarantees, why not Rust? It catches even more bugs than Go."
+
+They're right, it does. Rust's compiler is extraordinary. It catches memory bugs, data races, and lifetime errors that Go can't. If you're writing a database engine or an OS kernel, Rust is the better choice whether a human or an AI is writing it.
+
+But ask an AI to implement a simple HTTP handler in Rust, and watch what happens. The model generates something conceptually correct, then the borrow checker rejects it. The AI tries to fix the lifetime annotations, introduces a second error, adds an `Arc<Mutex<>>` it doesn't need, and three rounds later you're staring at code that compiles but is harder to understand than the problem it solves.
+
+This isn't a knock on Rust. The borrow checker exists because memory safety is genuinely hard, and Rust makes you prove your code is correct. The problem is that LLMs can't reason about ownership the way they can reason about types. They pattern-match, and Rust's ownership model requires a mental model of how data moves through a program. When the AI gets it wrong, the fix isn't a one-line type annotation. It's a restructuring of how the code works.
+
+Go sidesteps this entirely. The garbage collector means the AI never thinks about lifetimes. The type system is strict enough to catch the bugs that matter for a backend service, simple enough that the AI rarely fights the compiler for more than one round. Rust gives you a stronger proof of correctness, but Go gives you a faster loop, and when AI is generating dozens of functions an hour, the speed of that loop determines how much you ship.
+
+## What about TypeScript?
+
+Your coworker leans over. "What about TypeScript? It has types too."
+
+Fair point. TypeScript is the closest counterargument. It has strict types, a single dominant formatter (Prettier), fast compiler feedback, and a massive training corpus. If you're building for the browser, TypeScript with AI works well for the same structural reasons Go does.
+
+But TypeScript inherits JavaScript's surface area. Arrow functions and function declarations. Callbacks, promises, and async/await. Classes, closures, and plain objects. `import` and `require`. The type system is powerful but complex: conditional types, mapped types, template literal types, and inference rules that even experienced developers struggle to follow. An LLM can produce TypeScript that type-checks but is genuinely hard to review because the types themselves require interpretation.
+
+Go's advantage isn't that TypeScript is bad for AI. It's that Go is simpler to review, and review is the bottleneck. When AI writes the code, the language that's easiest to verify wins, and Go's smaller surface area makes verification faster.
+
+## The language AI deserves
+
+You look at what you shipped. Thousands of lines of Go, most of it generated, all of it consistent, type-checked, and readable. The compiler caught the dumb mistakes before you ever saw them. The code reviews were fast because every function told you exactly what it was doing.
+
+These qualities aren't new. Simplicity, consistency, fast feedback, no magic: Go was designed with these from the beginning. They were always valuable. But they were competing against expressiveness and flexibility, things that matter when humans write every line.
+
+The calculus changed. When AI writes the code and humans review it, the language that restricts the author and exposes everything to the reader wins. The [Go team sees it](https://go.dev/blog/llmpowered), and it shows in practice: when I built the [xlsx formula engine](/posts/build-xlsx), over 400 functions were generated by AI, and the vast majority compiled and passed tests on the first or second attempt. The failures were almost always caught by `go build` or `go test` before I ever read the code.
+
+That's the real argument. It's not that Go produces perfect AI-generated code. It's that Go's toolchain catches mistakes fast, its simplicity keeps the AI on a narrow path, and its verbosity means the reviewer can verify what's left. The best language for AI-written code isn't the most powerful one. It's the one where you can trust what you're reading.

@@ -1,0 +1,70 @@
+---
+title: "Twenty-Four Kilobytes"
+meta_title: ""
+description: "Six years ago, a CD+G karaoke renderer took me and my friends weeks of late nights. Today it took one prompt. I'm thrilled, and a little sad."
+date: 2026-10-15T05:00:00Z
+image: "/images/posts/twenty-four-kilobytes.webp"
+categories: ["thoughts"]
+authors: ["jpoz"]
+tags: ["ai", "rust", "wasm"]
+draft: false
+---
+
+{/*
+Still to do before publishing:
+- Name the bar? Add any specific bug war stories from the cdgo nights.
+*/}
+
+Six years ago a buddy of mine was opening a karaoke bar.
+
+In a pandemic.
+
+You couldn't pack a room full of strangers singing into the same microphone, so the only thing he could actually sell was private karaoke rooms. That meant he needed a backend for booking and running the rooms, and he needed a way to play the songs. Karaoke songs come as CD+G files, and to play them you have to render them.
+
+So I wrote [cdgo](https://github.com/jpoz/cdgo), a CD+G reader in Go.
+
+## Getting the bits right
+
+CD+G is an old format. It dates back to the 1980s, when someone figured out you could hide low-resolution graphics in the spare subcode channels of an audio CD. The data comes in as a stream of tiny packets, 300 per second, each one an instruction: load this palette, draw this 6x12 tile, XOR this tile over what's already there, scroll the screen, change the border color. There's no frame you can just decode. The picture on screen is the sum of every instruction that came before it.
+
+And there wasn't much on the internet about it. A couple of old spec write-ups, some forum posts, a few half-finished projects. Mostly it was reverse engineering. Read the bytes, form a theory, render something, look at the garbage on screen, form a new theory.
+
+It took forever. Many nights working on it with friends, feeding it different CDG files, finding bugs, arguing about which bit meant what. Masking and shifting, off by one, off by a nibble. Then making the output image efficient enough to actually keep up with the song.
+
+I still remember the night we got the right combination of settings and BAM, it made the first image. Real lyrics, real colors, on screen. It was so exciting. That feeling is a big part of why I got into this work in the first place.
+
+## One prompt
+
+Today I typed this:
+
+> make me a rust wasm cdg renderer for the web
+
+That was it. One shot, and I got [rcdg](https://github.com/jpoz/rcdg).
+
+It's perfect. It handles every instruction the format has: memory and border presets, normal and XOR tile blocks, scrolling with sub-tile offsets, transparent colors, and both halves of the color table. It stays in sync with the audio, so seeking and pausing just work. It even figured out that seeking backwards means replaying the stream from the start, because CD+G state is cumulative. That was one of the things that bit us back then.
+
+It even wrote its own demo song, "Twinkle, Twinkle, Little Star" as a generated `.cdg` file with a synthesized melody, so there's something to test with that has no copyright problem. It respects the real CD+G bandwidth of 300 packets per second.
+
+The whole thing compiles to about 24 KB of WebAssembly. No dependencies. No JS glue generator. Twenty-four kilobytes.
+
+## And then a video
+
+Then I gave it one more prompt (and a skill for making explainer videos) and asked for a video explaining the project. About an hour later, this popped out:
+
+<Youtube id="sR3trgoC2fE" title="rcdg: a CD+G renderer in Rust and WebAssembly" client:load />
+
+It's a detailed guide to how CD+G works and how the library implements it. The packet layout, the tile instructions, the palette, the scrolling. It's the explanation I wish I'd had six years ago, when we were squinting at hex dumps at midnight.
+
+It's amazing.
+
+## The part I miss
+
+I'll be honest, I'm a little sad.
+
+The weeks we spent on cdgo were some of the most fun I've had programming. I don't get to get in the weeds on a spec anymore. I don't get to stare at a byte until it gives up its secrets, or feel that jolt when the bit shifting finally lines up and the screen fills with color. The machine got to have that moment this time, if it had one at all.
+
+But I can't stay sad about it for long. What took a group of friends weeks of nights now takes one sentence, and the result is smaller, faster, and better documented than what we made. My buddy needed a karaoke player to keep his business alive. Today, anyone in his position could have one before lunch.
+
+That's the trade. The puzzle got easier, so the question changes. It's no longer "can we figure out how to build this?" It's "what should we build?"
+
+Our imaginations are the limitation now.

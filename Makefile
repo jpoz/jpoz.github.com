@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: help install dev build preview clean
+.PHONY: help install dev build preview deploy-jpoz-com clean
 
 node_modules: package.json package-lock.json
 	npm install
@@ -19,6 +19,9 @@ build: node_modules ## Build the static site into dist/
 
 preview: build ## Build, then serve dist/ locally
 	npm run preview
+
+deploy-jpoz-com: build ## Build, then deploy dist/ to the jpoz.com Cloudflare Worker
+	npx wrangler deploy
 
 clean: ## Remove build output and Astro cache
 	rm -rf dist .astro

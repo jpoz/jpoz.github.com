@@ -1,0 +1,10 @@
+// Cloudflare Worker that serves this site's static build on jpoz.com.
+// (www.jpoz.net is served from the same dist/ by GitHub Pages, see .github/workflows/deploy.yml.)
+{
+  "name": "blog",
+  "compatibility_date": "2025-06-04",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
