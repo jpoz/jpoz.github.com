@@ -1,0 +1,16 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+---
+
+<BlogLayout title="Not found" section="404" noindex>
+  <div class="wrap notfound">
+    <section class="intro">
+      <div class="label"><span>Error 404</span><span>Route not found</span></div>
+      <h1>Nothing here.<span>That page doesn't exist.</span></h1>
+    </section>
+    <ol class="post-list compact">
+      <li><a href="/"><span class="n">01</span><span class="date">Home</span><span class="t">jpoz.com</span><span class="arr">→</span></a></li>
+      <li><a href="/blog"><span class="n">02</span><span class="date">Writing</span><span class="t">All posts</span><span class="arr">→</span></a></li>
+    </ol>
+  </div>
+</BlogLayout>

@@ -1,0 +1,104 @@
+---
+import '../styles/blog.css';
+import { SITE_URL } from '../lib/posts';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  /** Section label shown after the site name in the masthead. */
+  section?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = 'Writing by James Pozdena on software, agents, and tools.',
+  image,
+  section = 'Writing',
+  noindex = false,
+} = Astro.props;
+
+const fullTitle = title ? `${title} | jpoz` : 'jpoz | writing';
+const url = new URL(Astro.url.pathname.replace(/\.html$/, ''), SITE_URL).href;
+const ogImage = image ? new URL(image, SITE_URL).href : undefined;
+const year = new Date().getFullYear();
+
+const nav = [
+  { label: 'Writing', href: '/blog' },
+  { label: 'About', href: '/about' },
+  { label: 'Resume', href: '/resume.html' },
+];
+const path = Astro.url.pathname.replace(/\.html$/, '');
+const current = (href: string) =>
+  href === '/blog'
+    ? path === '/blog' || path.startsWith('/page/') || path.startsWith('/tags') || path.startsWith('/categories')
+    : path === href.replace(/\.html$/, '');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="James Pozdena" />
+    <link rel="canonical" href={url} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title ?? 'jpoz'} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:creator" content="@jpoz" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="blog">
+    <!-- corner brackets, same console frame as the homepage -->
+    <div class="frame" aria-hidden="true">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+    </div>
+
+    <header class="masthead">
+      <a class="brand" href="/">
+        <span class="site-name">JPOZ.COM</span>
+        <span class="dim">/ {section}</span>
+      </a>
+      <nav aria-label="Site">
+        {nav.map((l) => (
+          <a href={l.href} aria-current={current(l.href) ? 'page' : undefined}>{l.label}</a>
+        ))}
+      </nav>
+    </header>
+    <script is:inline>
+      // One build serves jpoz.com and www.jpoz.net: label with whichever domain this is.
+      if (/(^|\.)jpoz\.net$/.test(location.hostname))
+        document.querySelectorAll('.site-name').forEach((el) => (el.textContent = 'JPOZ.NET'));
+    </script>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="colophon">
+      <span><i class="led"></i>All systems nominal</span>
+      <span class="links">
+        <a href="https://github.com/jpoz" rel="noopener">GitHub ↗</a>
+        <a href="https://x.com/jpoz" rel="noopener">X ↗</a>
+        <a href="https://www.linkedin.com/in/jpozdena/" rel="noopener">LinkedIn ↗</a>
+      </span>
+      <span class="dim">© {year} James Pozdena</span>
+    </footer>
+  </body>
+</html>

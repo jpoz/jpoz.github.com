@@ -1,6 +1,8 @@
 ---
+// 2013-2017 posts from the old jpoz.net.
 import { getCollection, render } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { formatDate, legacyDate } from '../../lib/posts';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -9,8 +11,21 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const date = legacyDate(post);
 ---
 
-<Layout title={post.data.title}>
-  <Content />
-</Layout>
+<BlogLayout title={post.data.title} section="Archive" noindex={post.data.published === false}>
+  <article class="narrow">
+    <header class="post-head">
+      <div class="meta">
+        <a href="/blog">← Writing</a>
+        <time datetime={date.toISOString().slice(0, 10)}>{formatDate(date)}</time>
+        <span class="right">Archive</span>
+      </div>
+      <h1>{post.data.title}</h1>
+    </header>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BlogLayout>

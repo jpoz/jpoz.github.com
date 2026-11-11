@@ -1,0 +1,67 @@
+---
+// Shared body of /blog and /page/<n>.
+import PostList from './PostList.astro';
+import { formatDate, getLegacyPosts, legacyDate, PER_PAGE, taxonomy, type Post } from '../lib/posts';
+
+interface Props {
+  posts: Post[];
+  page: number;
+}
+const { posts, page } = Astro.props;
+const pages = Math.ceil(posts.length / PER_PAGE);
+const shown = posts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+const legacy = page === 1 ? await getLegacyPosts() : [];
+const tags = taxonomy(posts, 'tags');
+const href = (n: number) => (n === 1 ? '/blog' : `/page/${n}`);
+---
+
+<div class="wrap">
+  <section class="intro">
+    <div class="label">
+      <span>Index</span>
+      <span>{posts.length} posts</span>
+      {pages > 1 && <span>Page {page} / {pages}</span>}
+    </div>
+    <h1>Writing.<span>Notes on building software.</span></h1>
+  </section>
+
+  <div class="section-label">Posts <span>{formatDate(posts[0].data.date)}</span></div>
+  <PostList posts={shown} start={(page - 1) * PER_PAGE + 1} />
+
+  {pages > 1 && (
+    <nav class="pager" aria-label="Pagination">
+      {page > 1 ? <a href={href(page - 1)}>← Newer</a> : <span />}
+      <span>{page} / {pages}</span>
+      {page < pages ? <a href={href(page + 1)}>Older →</a> : <span />}
+    </nav>
+  )}
+
+  {page === 1 && (
+    <>
+      <div class="section-label">Tags <span><a href="/tags" style="color:inherit">All →</a></span></div>
+      <ul class="chips" style="margin-top:18px">
+        {tags.map((t) => (
+          <li><a href={`/tags/${t.slug}`}>{t.name}<span class="count">{t.posts.length}</span></a></li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  {legacy.length > 0 && (
+    <>
+      <div class="section-label">Archive <span>2013 to 2017</span></div>
+      <ol class="post-list compact">
+        {legacy.map((p, i) => (
+          <li>
+            <a href={`/blog/${p.id}`}>
+              <span class="n">{String(i + 1).padStart(2, '0')}</span>
+              <span class="date">{formatDate(legacyDate(p))}</span>
+              <span class="t">{p.data.title}</span>
+              <span class="arr" aria-hidden="true">→</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </>
+  )}
+</div>

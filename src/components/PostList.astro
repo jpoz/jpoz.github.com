@@ -1,0 +1,25 @@
+---
+import { formatDate, summary, type Post } from '../lib/posts';
+
+interface Props {
+  posts: Post[];
+  /** Number shown on the first row. */
+  start?: number;
+  compact?: boolean;
+}
+const { posts, start = 1, compact = false } = Astro.props;
+---
+
+<ol class:list={['post-list', { compact }]}>
+  {posts.map((p, i) => (
+    <li>
+      <a href={`/${p.id}`}>
+        <span class="n">{String(start + i).padStart(2, '0')}</span>
+        <span class="date">{formatDate(p.data.date)}</span>
+        <span class="t">{p.data.title}</span>
+        <span class="arr" aria-hidden="true">→</span>
+        {!compact && <span class="d">{summary(p)}</span>}
+      </a>
+    </li>
+  ))}
+</ol>

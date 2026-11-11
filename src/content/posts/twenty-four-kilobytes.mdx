@@ -10,6 +10,9 @@ tags: ["ai", "rust", "wasm"]
 draft: false
 ---
 
+import Youtube from "../../components/Youtube.astro";
+
+
 {/*
 Still to do before publishing:
 - Name the bar? Add any specific bug war stories from the cdgo nights.
@@ -51,7 +54,7 @@ The whole thing compiles to about 24 KB of WebAssembly. No dependencies. No JS g
 
 Then I gave it one more prompt (and a skill for making explainer videos) and asked for a video explaining the project. About an hour later, this popped out:
 
-<Youtube id="sR3trgoC2fE" title="rcdg: a CD+G renderer in Rust and WebAssembly" client:load />
+<Youtube id="sR3trgoC2fE" title="rcdg: a CD+G renderer in Rust and WebAssembly" />
 
 It's a detailed guide to how CD+G works and how the library implements it. The packet layout, the tile instructions, the palette, the scrolling. It's the explanation I wish I'd had six years ago, when we were squinting at hex dumps at midnight.
 

@@ -1,0 +1,11 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import PostIndex from '../components/PostIndex.astro';
+import { getPosts } from '../lib/posts';
+
+const posts = await getPosts();
+---
+
+<BlogLayout title="Writing">
+  <PostIndex posts={posts} page={1} />
+</BlogLayout>

@@ -1,0 +1,28 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import { getPosts, taxonomy } from '../lib/posts';
+
+const terms = taxonomy(await getPosts(), 'categories');
+---
+
+<BlogLayout title="Categories">
+  <div class="wrap">
+    <section class="intro">
+      <div class="label"><span>Index</span><span>{terms.length} categories</span></div>
+      <h1>Categories.</h1>
+    </section>
+    <div class="section-label">All categories <span>Posts</span></div>
+    <ol class="post-list compact">
+      {terms.map((t, i) => (
+        <li>
+          <a href={`/categories/${t.slug}`}>
+            <span class="n">{String(i + 1).padStart(2, '0')}</span>
+            <span class="date">{t.posts.length} {t.posts.length === 1 ? 'post' : 'posts'}</span>
+            <span class="t">{t.name}</span>
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </div>
+</BlogLayout>

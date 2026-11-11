@@ -1,0 +1,71 @@
+---
+import { render } from 'astro:content';
+import BlogLayout from '../layouts/BlogLayout.astro';
+import PostList from '../components/PostList.astro';
+import { formatDate, getPosts, humanize, readingMinutes, related, slugify, SITE_URL, summary, type Post } from '../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { post: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props as { post: Post };
+const { title, meta_title, image, date, categories, tags } = post.data;
+const { Content } = await render(post);
+const more = related(post, await getPosts());
+const description = summary(post);
+const url = `${SITE_URL}/${post.id}`;
+---
+
+<BlogLayout title={meta_title || title} description={description} image={image}>
+  <article class="narrow">
+    <header class="post-head">
+      <div class="meta">
+        <a href="/blog">← Writing</a>
+        <time datetime={date.toISOString()}>{formatDate(date)}</time>
+        <span>{readingMinutes(post.body)} min read</span>
+        {categories.length > 0 && (
+          <span class="right">
+            {categories.map((c, i) => (
+              <>{i > 0 && ', '}<a href={`/categories/${slugify(c)}`}>{humanize(c)}</a></>
+            ))}
+          </span>
+        )}
+      </div>
+      <h1>{title}</h1>
+      {post.data.description && post.data.description !== 'meta description' && (
+        <p class="dek">{post.data.description}</p>
+      )}
+      {import.meta.env.DEV && <a class="label edit-link" href={`/__edit/${post.id}`}>Edit post →</a>}
+    </header>
+
+    {image && (
+      <figure class="plate panel">
+        <img src={image} alt="" loading="eager" />
+      </figure>
+    )}
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <footer class="post-foot">
+      {tags.length > 0 && (
+        <ul class="chips">
+          {tags.map((t) => <li><a href={`/tags/${slugify(t)}`}>#{humanize(t)}</a></li>)}
+        </ul>
+      )}
+      <span class="share label">
+        <a href={`https://x.com/intent/post?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`} rel="noopener">Share on X ↗</a>
+        <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`} rel="noopener">LinkedIn ↗</a>
+      </span>
+    </footer>
+  </article>
+
+  {more.length > 0 && (
+    <section class="narrow related">
+      <div class="section-label">Related <span>{more.length}</span></div>
+      <PostList posts={more} compact />
+    </section>
+  )}
+</BlogLayout>

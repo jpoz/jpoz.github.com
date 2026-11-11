@@ -1,0 +1,17 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import PostIndex from '../../components/PostIndex.astro';
+import { getPosts, PER_PAGE } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const pages = Math.ceil((await getPosts()).length / PER_PAGE);
+  return Array.from({ length: Math.max(0, pages - 1) }, (_, i) => ({ params: { n: String(i + 2) } }));
+}
+
+const posts = await getPosts();
+const page = Number(Astro.params.n);
+---
+
+<BlogLayout title={`Writing, page ${page}`}>
+  <PostIndex posts={posts} page={page} />
+</BlogLayout>
