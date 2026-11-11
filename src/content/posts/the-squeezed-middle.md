@@ -10,13 +10,6 @@ tags: ["ai"]
 draft: true
 ---
 
-<!--
-Still to do before publishing:
-- "Where I'm placing my bets" needs my real answer.
-- Opening/closing: did we actually build the Linear replacement, or just scope it? Adjust both to match.
-- Flip draft back to true until it's ready.
--->
-
 My coworker hates Linear.
 
 Not in a dramatic way. Just the slow, daily kind of hate you develop for a tool you're forced to open fifty times a day. So I started wondering: what would it actually take to replace it?
@@ -143,7 +136,15 @@ And the labs can't do everything. They have to choose, just like everyone else. 
 
 ## Where I'm placing my bets
 
-**[TODO: What am I building, avoiding, or watching? A few short paragraphs in the same voice. This is what makes the post feel earned instead of abstract.]**
+I'll be honest about my own work, because it's the easiest place to apply the test.
+
+I'm building [werkbook](https://github.com/jpoz/werkbook), a spreadsheet formula engine in Go. On paper it fails question two. I [built the base of it in a weekend](/posts/build-xlsx), with agents doing most of the typing. If a weekend gets you there, anyone can get there.
+
+But the weekend got me to 80%. The last 20% is the whole product. Real spreadsheets do strange things, and Excel has decades of quirks that nobody wrote down. Every file that breaks becomes a test case, and every test case makes the engine more correct for the next person. That's correctness as the product, and it compounds. A new model doesn't make it obsolete. It makes the agents chasing those edge cases faster.
+
+What I'm avoiding is anything that's a thin layer over a model. If I can describe the product as "the model, but for X," I assume it's on someone's roadmap already, and I move on.
+
+What I'm watching is the bottom of the diagram. If companies keep building their own tools, someone has to help them do it well. That means the infrastructure agents build on, and maybe the boring business of keeping all that homegrown software alive after the person who built it has left.
 
 ## Build the thing the next model makes better
 
