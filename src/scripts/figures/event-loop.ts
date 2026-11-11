@@ -66,6 +66,7 @@ float map(vec3 p) {
 }`;
 
 export const EventLoop: Figure = {
+    disabled: true,
     title: 'Event loop',
     rows: [['Knot', '(2, 5) torus'], ['Queue', '16 in flight']],
     map: MAP,

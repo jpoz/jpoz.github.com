@@ -80,19 +80,19 @@ float map(vec3 p) {
   }
 
   if (gMarch) {
-    // never step past the current layer slab (layers rotate independently)
-    float bz = Z*0.5 - abs(q.z);
-    if (abs(g.z - H) < H + 0.5) d = min(d, max(bz, 0.0) + 0.02);
-    // inside the lattice, never step past the current cell
-    if (all(lessThan(abs(g - H), vec3(H + 0.5)))) {
-      vec3 b = vec3(S, S, Z)*0.5 - abs(q);
-      d = min(d, max(min(b.x, min(b.y, b.z)), 0.0) + 0.02);
-    }
+    // never step past the current cell border on any axis where the ray is within
+    // the lattice's range (per axis, so rays passing above or beside the lattice
+    // can't overshoot into a neighbouring cell's geometry; z also covers the
+    // independently rotating layer slabs)
+    vec3 b = vec3(S, S, Z)*0.5 - abs(q);
+    b = mix(vec3(1e3), b, step(abs(g - H), vec3(H + 0.5)));
+    d = min(d, max(min(b.x, min(b.y, b.z)), 0.0) + 0.02);
   }
   return min(d, spine);
 }`;
 
 export const Mesh: Figure = {
+    disabled: true,
     title: 'Service mesh',
     rows: [['Topology', '5 x 5 x 5 lattice'], ['Traffic', 'packets in flight']],
     map: MAP,

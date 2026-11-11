@@ -66,6 +66,7 @@ float map(vec3 p) {
 }`;
 
 export const Agents: Figure = {
+    disabled: true,
     title: 'Agents',
     rows: [['Count', '1 + 128'], ['Mode', 'orbit / align']],
     map: MAP,

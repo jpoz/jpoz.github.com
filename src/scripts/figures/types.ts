@@ -6,6 +6,7 @@
 
 export interface Figure {
   title: string;
+  disabled?: boolean; // left out of the rotation (kept for later)
   rows: [string, string][];
   map: string;
   target: [number, number, number];

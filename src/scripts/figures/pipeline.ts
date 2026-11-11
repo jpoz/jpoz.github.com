@@ -110,6 +110,7 @@ float map(vec3 p) {
 }`;
 
 export const Pipeline: Figure = {
+    disabled: true,
     title: 'Pipeline',
     rows: [['Stages', '9 / 3-lane fan-out'], ['Flow', 'retry loop on fail']],
     map: MAP,

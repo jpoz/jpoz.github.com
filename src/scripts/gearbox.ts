@@ -146,17 +146,24 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
     my = ev.clientY / window.innerHeight - 0.5;
   });
 
-  // Click anywhere that isn't a link or control to toggle the exploded view.
+  // Click anywhere that isn't a link or control to toggle the exploded view. The first
+  // click takes over from the automatic cycle for the rest of this figure, and toggles
+  // relative to what is on screen, so every click visibly does something.
   let explodeKick = 0;
+  let manual = false;
+  let lastClick = -Infinity;
+  const CLICK_HOLD = 6000; // ms after a click before the page may advance
   window.addEventListener('pointerdown', (ev) => {
     if ((ev.target as HTMLElement).closest('a, button')) return;
-    explodeKick = explodeKick > 0.5 ? 0 : 1;
+    explodeKick = explode > 0.5 ? 0 : 1;
+    manual = true;
+    lastClick = performance.now();
     wake();
   });
 
   // Debug / capture params:
   //   ?raw          show the raw render instead of halftone dots
-  //   ?fig=N        start on figure N (0-based)
+  //   ?fig=N        start on figure N (0-based, among enabled figures; default random)
   //   ?t=SECONDS    freeze figure time (also freezes the camera orbit)
   //   ?e=0..1       freeze the event / explode phase
   // When t or e is given the page renders a still frame: no auto-advance, no mouse,
@@ -166,7 +173,7 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
   const FIX_T = params.has('t') ? parseFloat(params.get('t')!) : null;
   const FIX_E = params.has('e') ? parseFloat(params.get('e')!) : null;
   const STILL = FIX_T !== null || FIX_E !== null;
-  const START = params.has('fig') ? Math.max(0, Math.min(FIGURES.length - 1, parseInt(params.get('fig')!, 10) || 0)) : 0;
+  const START = params.has('fig') ? Math.max(0, Math.min(FIGURES.length - 1, parseInt(params.get('fig')!, 10) || 0)) : Math.floor(Math.random() * FIGURES.length);
   let framesDrawn = 0;
   const PERIOD = 14;      // one assemble / explode / reassemble cycle per figure
   const FADE_TIME = 0.7;
@@ -193,6 +200,7 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
     figStart = performance.now();
     explode = reduced ? 0.7 : 0;
     explodeKick = 0;
+    manual = false;
     opts.onFigure?.(FIGURES[i], i, FIGURES.length);
   }
 
@@ -212,11 +220,12 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
     const fig = FIGURES[index];
     const t = FIX_T ?? (reduced ? 3 : (now - figStart) / 1000);
 
-    if (!reduced && !STILL && pending === null && t > PERIOD) goTo(index + 1);
+    if (!reduced && !STILL && pending === null && t > PERIOD &&
+        now - lastClick > CLICK_HOLD) goTo(index + 1);
 
     const ph = Math.min(t / PERIOD, 1);
     const auto = smoothstep(0.3, 0.45, ph) - smoothstep(0.8, 0.95, ph);
-    const goal = reduced ? 0.7 : Math.max(auto, explodeKick);
+    const goal = manual ? explodeKick : reduced ? 0.7 : auto;
     explode += (goal - explode) * (1 - Math.exp(-dt * 3.5));
     if (FIX_E !== null) explode = FIX_E;
     if (STILL) { fade = 1; sx = 0; sy = 0; mx = 0; my = 0; }

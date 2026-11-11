@@ -50,6 +50,7 @@ float map(vec3 p) {
 }`;
 
 export const Hypercube: Figure = {
+    disabled: true,
     title: 'Hypercube',
     rows: [['Dimensions', '4'], ['Cells', '8 / edges 32']],
     map: MAP,
