@@ -141,10 +141,50 @@ export function startGearbox(canvas: HTMLCanvasElement, opts: GearboxOptions = {
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let mx = 0, my = 0, sx = 0, sy = 0;
+  let gyro = false; // once the device reports orientation, tilt drives the camera
   window.addEventListener('pointermove', (ev) => {
+    if (gyro && ev.pointerType !== 'mouse') return;
     mx = ev.clientX / window.innerWidth - 0.5;
     my = ev.clientY / window.innerHeight - 0.5;
   });
+
+  // Gyroscope: tilting the phone orbits the camera like moving the mouse does.
+  // Tilt is measured against a resting pose that slowly follows the device, so
+  // however the phone is held the figure settles back to its default view.
+  let restX: number | null = null, restY = 0;
+  const TILT_RANGE = 25; // degrees of tilt from rest for a full edge-of-screen move
+  const clampHalf = (v: number) => Math.max(-0.5, Math.min(0.5, v));
+  function onOrient(ev: DeviceOrientationEvent) {
+    if (ev.beta === null || ev.gamma === null) return;
+    // map device axes onto screen axes for the current orientation
+    const angle = (screen.orientation?.angle ?? (window as any).orientation ?? 0) as number;
+    let x = ev.gamma, y = ev.beta;
+    if (angle === 90) { x = ev.beta; y = -ev.gamma; }
+    else if (angle === -90 || angle === 270) { x = -ev.beta; y = ev.gamma; }
+    else if (angle === 180) { x = -ev.gamma; y = -ev.beta; }
+    if (restX === null) { restX = x; restY = y; }
+    restX += (x - restX) * 0.004;
+    restY += (y - restY) * 0.004;
+    gyro = true;
+    mx = clampHalf((x - restX) / (2 * TILT_RANGE));
+    my = clampHalf((y - restY) / (2 * TILT_RANGE));
+  }
+  const DOE = window.DeviceOrientationEvent as any;
+  if (DOE && !reduced) {
+    if (typeof DOE.requestPermission === 'function') {
+      // iOS only grants access from a user gesture: ask on the first tap
+      const ask = () => {
+        DOE.requestPermission()
+          .then((state: string) => {
+            if (state === 'granted') window.addEventListener('deviceorientation', onOrient);
+          })
+          .catch(() => {});
+      };
+      window.addEventListener('click', ask, { once: true });
+    } else {
+      window.addEventListener('deviceorientation', onOrient);
+    }
+  }
 
   // Click anywhere that isn't a link or control to toggle the exploded view. The first
   // click takes over from the automatic cycle for the rest of this figure, and toggles
