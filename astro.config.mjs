@@ -10,6 +10,8 @@ export default defineConfig({
   // Emit /resume.html instead of /resume/index.html so existing URLs keep working.
   build: { format: 'file' },
   trailingSlash: 'never',
+  // The about page was removed; send old links to the homepage.
+  redirects: { '/about': '/' },
   vite: {
     plugins: [devEditor()],
     // Let `make dev` be reached over Tailscale by MagicDNS name, not just IP.

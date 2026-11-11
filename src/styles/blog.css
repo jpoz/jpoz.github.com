@@ -482,42 +482,6 @@ body.blog {
 .embed { position: relative; aspect-ratio: 16 / 9; margin: 2em 0; }
 .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; padding: 10px; border: 0; }
 
-/* ---------- about ---------- */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 48px;
-  align-items: start;
-  padding-top: 64px;
-}
-.about-grid .plate { margin: 8px 0 0; }
-.about-grid h1 {
-  margin: 0 0 8px;
-  font-size: clamp(28px, 3.4vw, 40px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  color: var(--ink);
-}
-.about-grid .prose { margin-top: 28px; }
-
-.spec { margin-top: 64px; }
-.spec dl { margin: 0; }
-.spec dl > div {
-  display: grid;
-  grid-template-columns: 40px 200px 1fr;
-  column-gap: 12px;
-  padding: 12px 6px;
-  border-bottom: 1px solid var(--rule);
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-}
-.spec .n { color: var(--ink-3); font-size: 10.5px; }
-.spec dt { text-transform: uppercase; letter-spacing: 0.14em; font-weight: 500; color: var(--ink); }
-.spec dd { margin: 0; color: var(--ink-2); }
-
 /* ---------- 404 ---------- */
 
 .notfound { padding: 14vh 0 0; }
@@ -545,10 +509,6 @@ body.blog {
   .post-head .meta .right { margin-left: 0; }
   .post-head .dek { font-size: 19px; }
   .prose pre { margin-left: -12px; margin-right: -12px; font-size: 13px; }
-  .about-grid { grid-template-columns: 1fr; gap: 28px; padding-top: 40px; }
-  .about-grid .plate { max-width: 200px; }
-  .spec dl > div { grid-template-columns: 28px 1fr; }
-  .spec dd { grid-column: 2; margin-top: 4px; }
   /* the nav already marks the current section; drop the crumb so the masthead stays on one row */
   .masthead { flex-wrap: nowrap; }
   .masthead .brand .dim { display: none; }
