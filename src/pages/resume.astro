@@ -4,10 +4,7 @@ import Layout from '../layouts/Layout.astro';
 const skills = [
   ['Languages', 'Go, TypeScript, Ruby, Python, Rust'],
   ['Agents and AI', 'Applied AI / LLMs / LLMOps, agentic loops, harness and context engineering, human-in-the-loop workflows, agent frameworks, MCP, LLM evaluation and observability, agent memory, agent identity and permissioning, coding agents (Claude Code, Codex, Pi)'],
-  ['Developer Tooling', 'CLIs, build systems and monorepos, CI/CD, per-PR preview environments, agent-driven code changes'],
-  ['Platform', 'Agent runtimes, autonomous workflows, SDK/API design, distributed systems, concurrency, microservices, REST APIs'],
-  ['Data and Infra', 'Temporal, FastAPI, PostgreSQL, Kubernetes, Kata Containers, Kafka, DynamoDB, SQS, Redis, OpenTelemetry, Braintrust, Datadog, incident response'],
-  ['Leadership', 'Technical leadership, architecture review, design documentation, mentoring, cross-functional partnership with non-engineering teams'],
+  ['Infrastructure', 'Distributed systems, SDK/API design, Kubernetes, Kata Containers, Temporal, PostgreSQL, Kafka, DynamoDB, SQS, Redis, OpenTelemetry, Datadog, CI/CD, monorepo build systems, incident response'],
 ];
 
 const jobs = [
@@ -16,9 +13,9 @@ const jobs = [
     title: 'Member of Technical Staff',
     date: 'May 2026 - Present',
     bullets: [
-      'Built a software factory that let agents author 99% of code changes for a portfolio company: agents picked up Linear tickets and opened PRs, validated in per-PR preview environments through CI and human review, and Datadog alerts triggered agent triage and, when needed, fix PRs.',
-      'Designing and building the Go infrastructure that runs agentic runtimes and autonomous multi-step workflows: runtime, sidecar agent, CLI tooling, and deploy configuration.',
-      'Run untrusted agent code in isolated Kata Containers microVMs on Kubernetes.',
+      'Built a software factory that let agents author 99% of code changes for a portfolio company: 294 merged PRs across 4 repos in under four months, ramping to about 190 a month by October.',
+      'Agents picked up Linear tickets and opened PRs, validated in per-PR preview environments through CI and human review; Datadog alerts triggered agent triage and, when needed, fix PRs.',
+      'Designing and building the Go infrastructure that runs agentic runtimes and autonomous multi-step workflows (runtime, sidecar agent, CLI tooling, deploy configuration), with untrusted agent code isolated in Kata Containers microVMs on Kubernetes.',
       'Designing the agent workspace: memory that carries across runs, plus agent identity and scoped permissions. Lead its design documents and technical design sessions.',
     ],
   },
@@ -28,38 +25,35 @@ const jobs = [
     date: 'Feb 2025 - May 2026',
     bullets: [
       'Built and operated production LLM agents for internal operations and customer-facing product, plus the agent platform other teams built on.',
-      'Built a customer success agent that ran deep investigations into complex investor questions, cutting investigation time from hours to minutes and reducing escalations to engineering; drafted answers went to the CS team for review.',
-      'Ran agent runs and long-running background jobs as durable Temporal workflows.',
+      'Built a customer success agent that investigated complex investor questions, cutting investigation time from hours to minutes and reducing escalations to engineering; the CS team reviewed its drafted answers.',
       'Built custom MCP servers and an MCP platform that brings third-party MCP servers into our cloud agent platform, with OAuth and per-user credentials and tool access.',
-      'Built eval suites and tracing for AI-generated investment insights for GPs; ran competing model and prompt setups side by side, had GPs pick favorites, and fed their preferences back into the evals until 9 of 10 GPs we tested with called it impactful.',
+      'Built eval suites and tracing for AI-generated investment insights; ran competing model and prompt setups side by side and fed GP preferences back into the evals until 9 of 10 GPs we tested with called it impactful.',
     ],
   },
   {
-    company: 'Reviso',
-    title: 'Co-Founder',
-    date: 'Oct 2023 - Feb 2025',
+    company: 'Founder',
+    title: 'Co-Founder & CTO, moonrepo (Y Combinator W23); Co-Founder, Reviso',
+    date: 'Jan 2023 - Feb 2025',
     bullets: [
-      'Co-founded an AI document platform and built its custom AI rich-text editor from zero, owning technical direction and hands-on development.',
-    ],
-  },
-  {
-    company: 'moonrepo (Y Combinator W23)',
-    title: 'Co-Founder & CTO',
-    date: 'Jan 2023 - Oct 2023',
-    bullets: [
-      'Built moonbase, the paid cloud caching and CI insights platform on top of moon, an open-source Rust build system and monorepo tool (4K+ GitHub stars).',
-      'Led product and engineering for the commercial platform as CTO, from cloud infrastructure to customer-facing developer experience.',
+      'moonrepo: led product and engineering as CTO and built moonbase, the paid cloud caching and CI insights platform on top of moon, an open-source Rust build system and monorepo tool (4K+ GitHub stars).',
+      'Reviso: co-founded an AI document platform and built its custom AI rich-text editor from zero, owning technical direction and hands-on development.',
     ],
   },
   {
     company: 'Coinbase',
     location: 'Remote',
-    title: 'Senior Staff Software Engineer, Growth Foundations',
-    date: 'Nov 2020 - Feb 2023',
+    titles: [
+      ['Senior Staff Software Engineer, Growth Foundations', 'Aug 2022 - Feb 2023'],
+      ['Staff Software Engineer, Growth Foundations', 'Nov 2020 - Jul 2022'],
+    ],
     bullets: [
-      'Led technical initiatives on the Growth team through high-performance backend services in TypeScript and Go.',
-      "Architected and launched the Growth Notification Service across multiple channels, apps, and organizations; it sent billions of messages in its first quarter, then became Coinbase's Global Notification Service as every team migrated onto it.",
-      'Initiated and led a Technical Architecture Review Process that raised design quality across teams.',
+      'Technical lead for the Growth team: set its reliability and scalability roadmap and built high-throughput backend services in Go and TypeScript that became foundational parts of the platform; promoted from Staff to Senior Staff.',
+      'Architected and launched the Growth Notification Service with a team of 5, across multiple channels, apps, and organizations; it sent billions of messages in its first quarter, with bursts above 100K messages/second.',
+      "It replaced an error-prone legacy system and became Coinbase's Global Notification Service as 20+ teams migrated onto it, with zero incidents attributed to the service during my tenure.",
+      'Made notifications self-serve for product teams and gave marketing campaign capabilities the old system lacked.',
+      'Delivery was fast enough that broadcast sends spiked site traffic, so we added send-rate controls.',
+      "Built GUTS (Growth User Targeting System), the segmentation layer marketing used to target campaigns across Coinbase's 100M+ verified users; it powered multiple revenue-positive campaigns.",
+      'Started and ran a Technical Architecture Review Process for Growth (4 teams, ~30 engineers) that caught critical design flaws and consolidated duplicate systems; it became the official process and outlived my tenure.',
     ],
   },
   {
@@ -70,19 +64,39 @@ const jobs = [
   },
   {
     company: 'Airbnb',
-    title: 'Senior SWE → Engineering Manager → Staff SWE',
-    date: 'Feb 2016 - Mar 2020',
+    titles: [
+      ['Staff Software Engineer, Guest Store Messaging', 'Mar 2019 - Mar 2020'],
+      ['Lead Engineer, Service Excellence', 'Jan 2018 - Mar 2019'],
+      ['Engineering Manager, Service Excellence', 'Jan 2017 - Jan 2018'],
+      ['Senior Software Engineer, Service Excellence', 'Feb 2016 - Jan 2017'],
+    ],
     bullets: [
-      'Technical lead for the next-generation messaging inbox, migrating customer service traffic from email to in-app messaging and saving millions per year in service cost.',
-      'Managed and then led Service Excellence engineering, then returned to IC as Staff SWE on Guest Store messaging.',
+      "Tech lead and engineering manager for a team of 7 building Airbnb's next-generation support messaging inbox across web, iOS, Android, and backend; launched globally to thousands of support agents.",
+      'Moved 80-90% of customer service contacts from email to in-app messaging; the resulting agent productivity gain saved $10M in its first quarter.',
+      'The inbox began as a support-agent tool and was then adopted by the core product for guest and host messaging.',
+      'As Staff SWE, technical design lead for the next-generation inbox, opening the platform to new business units and aligning its roadmap with the teams building on it; restructured database access patterns to scale it.',
+      "Member of the company's service-oriented architecture leadership group; technical advisor on the migration of Airbnb's customer support operation off Zendesk.",
+      'Managed and mentored the team while staying hands-on as tech lead; taught internal engineering classes and designed new engineering interview material.',
+      'Joined as a full-stack engineer on customer support tooling, working from the API to the front end.',
     ],
   },
   {
     company: 'Simple Finance',
-    title: 'Software Architect / Backend Engineer',
-    date: 'Oct 2011 - Feb 2016',
-    bullets: ['Led backend architecture and scaling from 100 to 100,000+ customers.'],
+    titles: [
+      ['Software Architect', 'Mar 2013 - Feb 2016'],
+      ['Backend Engineer', 'Oct 2011 - Mar 2013'],
+    ],
+    bullets: [
+      'Led backend architecture and scaling from 100 to 100,000+ customers at one of the first US neobanks.',
+      'As Software Architect, set internal engineering strategy across product, support, and finance; grew the team 300%.',
+    ],
   },
+];
+
+const projects = [
+  ['APNS', 'https://github.com/jpoz/APNS', 'Ruby gem for the Apple Push Notification Service (500+ GitHub stars).'],
+  ['werkbook', 'https://github.com/jpoz/werkbook', 'Go library for reading, writing, and calculating XLSX spreadsheets, with a built-in formula engine.'],
+  ['mirra', 'https://github.com/jpoz/mirra', 'Go proxy for inspecting and debugging LLM traffic.'],
 ];
 
 const now = new Date();
@@ -121,13 +135,13 @@ const rev = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}
   <div class='section'>
     <h1><span class='n'>01</span>Professional Summary</h1>
     <p>
-      Staff+ engineer who has spent a career solving hard product and infrastructure problems at scale, from
-      fintech backends at Simple and Coinbase to Airbnb's messaging platform. Strong systems thinker who designs
-      architecture that holds up as scope grows: a growth-team notification service that became Coinbase's
-      company-wide platform, and an architecture review process that raised design quality across teams.
-      Currently applying that to AI agents in production, including a software factory where agents author 99%
-      of a company's code changes and a customer success agent that cut complex investigations from hours to
-      minutes.
+      Staff+ engineer who builds systems for one team that become the company's platform. At Coinbase, a
+      growth-team notification service became the company-wide Global Notification Service: 20+ teams, billions
+      of messages, no incidents attributed to it. At Airbnb, a support messaging inbox moved 80-90% of customer
+      service contacts off email, saved $10M in its first quarter, and grew into guest and host messaging in the
+      core product. Fifteen years across fintech and marketplaces as an IC, engineering manager, and Y Combinator
+      founder. Now building AI agents in production, including a software factory where agents author 99% of a
+      company's code changes.
     </p>
   </div>
 
@@ -146,10 +160,12 @@ const rev = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}
         <h2>{job.company}</h2>
         {job.location && <h4>{job.location}</h4>}
         <div class='position'>
-          <div class='desc'>
-            <span class='title'>{job.title}</span>
-            <span class='date'>{job.date}</span>
-          </div>
+          {(job.titles ?? [[job.title, job.date]]).map(([title, date]) => (
+            <div class='desc'>
+              <span class='title'>{title}</span>
+              <span class='date'>{date}</span>
+            </div>
+          ))}
           {job.bullets.length > 0 && (
             <ul>
               {job.bullets.map((bullet) => <li>{bullet}</li>)}
@@ -158,6 +174,24 @@ const rev = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}
         </div>
       </div>
     ))}
+  </div>
+
+  <div class='section skills'>
+    <h1><span class='n'>04</span>Open Source and Writing</h1>
+    <ul>
+      {projects.map(([name, url, desc]) => (
+        <li><strong><a target="_blank" href={url}>{name}</a>:</strong> {desc}</li>
+      ))}
+      <li>
+        <strong>Writing:</strong> "Teaching a Spreadsheet Engine to Teach Itself" (AngelList engineering blog); more
+        at <a href="/blog">jpoz.com/blog</a>.
+      </li>
+    </ul>
+  </div>
+
+  <div class='section'>
+    <h1><span class='n'>05</span>Education</h1>
+    <p>University of Oregon: B.S. Economics, minor in Business</p>
   </div>
 </div>
 
